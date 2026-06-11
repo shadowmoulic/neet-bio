@@ -1,4 +1,13 @@
-const supabase = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+let supabase = null;
+try {
+  if (window.supabase) {
+    supabase = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+  } else {
+    console.warn("Supabase SDK failed to load. Authentication will be disabled.");
+  }
+} catch (e) {
+  console.error("Failed to initialize Supabase:", e);
+}
 
 const Auth = (function() {
   let currentUser = null;
@@ -279,9 +288,14 @@ const Auth = (function() {
   }
 
   // Initial check
-  supabase.auth.onAuthStateChange((event, session) => {
-    refreshSession();
-  });
+  if (supabase) {
+    supabase.auth.onAuthStateChange((event, session) => {
+      refreshSession();
+    });
+  } else {
+    // If supabase failed to load, still update UI to show error or default state
+    updateTopBarUI();
+  }
 
   return {
     switchTab, togglePassword, showAuthModal, hideAuthModal, 
