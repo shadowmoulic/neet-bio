@@ -1,7 +1,7 @@
-let supabase = null;
+let supabaseClient = null;
 try {
   if (window.supabase) {
-    supabase = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+    supabaseClient = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
   } else {
     console.warn("Supabase SDK failed to load. Authentication will be disabled.");
   }
@@ -182,7 +182,7 @@ const Auth = (function() {
 
     try {
       if (authMode === 'signup') {
-        const { data, error } = await supabase.auth.signUp({ 
+        const { data, error } = await supabaseClient.auth.signUp({ 
           email, 
           password,
           options: {
@@ -202,7 +202,7 @@ const Auth = (function() {
            hideAuthModal();
         }
       } else {
-        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
         if (error) throw error;
         await refreshSession();
         hideAuthModal();
@@ -216,7 +216,7 @@ const Auth = (function() {
   }
 
   async function logout() {
-    await supabase.auth.signOut();
+    if (supabaseClient) await supabaseClient.auth.signOut();
     currentUser = null;
     currentRole = null;
     updateTopBarUI();
@@ -229,7 +229,8 @@ const Auth = (function() {
   async function fetchRole(userId) {
     // Fetch role from neet_users
     try {
-      const { data, error } = await supabase
+      if (!supabaseClient) return 'free';
+      const { data, error } = await supabaseClient
         .from('neet_users')
         .select('role')
         .eq('id', userId)
@@ -244,11 +245,21 @@ const Auth = (function() {
   }
 
   async function refreshSession() {
-    const { data: { session } } = await supabase.auth.getSession();
-    if (session && session.user) {
-      currentUser = session.user;
-      currentRole = await fetchRole(currentUser.id);
-    } else {
+    try {
+      if (!supabaseClient) throw new Error("Supabase client missing");
+      const { data: { session }, error } = await supabaseClient.auth.getSession();
+      if (error) {
+        console.error("Session error:", error);
+      }
+      if (session && session.user) {
+        currentUser = session.user;
+        currentRole = await fetchRole(currentUser.id);
+      } else {
+        currentUser = null;
+        currentRole = null;
+      }
+    } catch (err) {
+      console.error("Refresh session failed", err);
       currentUser = null;
       currentRole = null;
     }
@@ -288,8 +299,8 @@ const Auth = (function() {
   }
 
   // Initial check
-  if (supabase) {
-    supabase.auth.onAuthStateChange((event, session) => {
+  if (supabaseClient) {
+    supabaseClient.auth.onAuthStateChange((event, session) => {
       refreshSession();
     });
   } else {
