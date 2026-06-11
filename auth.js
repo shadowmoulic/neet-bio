@@ -1,11 +1,14 @@
 let supabaseClient = null;
 try {
-  if (window.supabase) {
+  if (typeof supabase !== 'undefined') {
+    supabaseClient = supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+  } else if (window.supabase) {
     supabaseClient = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
   } else {
-    console.warn("Supabase SDK failed to load. Authentication will be disabled.");
+    alert("Supabase SDK failed to load. Are you connected to the internet?");
   }
 } catch (e) {
+  alert("Failed to initialize Supabase: " + e.message);
   console.error("Failed to initialize Supabase:", e);
 }
 
@@ -80,7 +83,7 @@ const Auth = (function() {
             </div>
 
             <div class="auth-form-group signup-only">
-              <label>Phone Number</label>
+              <label>Phone Number (Optional)</label>
               <input type="tel" id="authPhone" class="auth-input">
             </div>
 
@@ -126,7 +129,7 @@ const Auth = (function() {
     
     // Toggle required fields
     document.getElementById('authName').required = (mode === 'signup');
-    document.getElementById('authPhone').required = (mode === 'signup');
+    document.getElementById('authPhone').required = false; // Optional
 
     document.getElementById('authSubmitBtn').textContent = mode === 'login' ? 'Login' : 'Sign Up';
     document.getElementById('authError').style.display = 'none';
@@ -181,6 +184,10 @@ const Auth = (function() {
     document.getElementById('authError').style.display = 'none';
 
     try {
+      if (!supabaseClient) {
+        throw new Error("Cannot connect to Supabase. Check your internet connection or ad-blocker.");
+      }
+      
       if (authMode === 'signup') {
         const { data, error } = await supabaseClient.auth.signUp({ 
           email, 
