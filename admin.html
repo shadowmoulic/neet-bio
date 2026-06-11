@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal - The Naturalist's Codex</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body { background: var(--bg); padding: 40px 20px; font-family: var(--sans); color: var(--ink); display: flex; justify-content: center; min-height: 100vh; }
+    .admin-container { width: 100%; max-width: 900px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    h1 { font-family: var(--serif); font-weight: 600; margin-bottom: 20px; text-align: center; }
+    
+    /* Gatephrase View */
+    #gateView { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 50vh; }
+    .gate-input { padding: 12px; font-size: 16px; width: 300px; border: 1px solid var(--line2); border-radius: 8px; background: var(--bg); color: var(--ink); margin-bottom: 16px; text-align: center; }
+    .gate-input:focus { outline: none; border-color: var(--gold); }
+    .error-msg { color: var(--bad); font-size: 14px; margin-top: 10px; display: none; }
+
+    /* Dashboard View */
+    #dashboardView { display: none; }
+    .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .search-box { padding: 10px 14px; border: 1px solid var(--line2); border-radius: 8px; background: var(--bg); color: var(--ink); width: 300px; }
+    .search-box:focus { outline: none; border-color: var(--gold); }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--line2); }
+    th { color: var(--ink-dim); font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; }
+    tr:hover { background: rgba(255,255,255,0.02); }
+    
+    .role-badge { display: inline-block; padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+    .role-free { background: rgba(255, 255, 255, 0.1); color: var(--ink-dim); }
+    .role-paid { background: rgba(212, 175, 55, 0.2); color: var(--gold); }
+    
+    .role-select { padding: 4px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line2); color: var(--ink); cursor: pointer; }
+    .role-select:focus { outline: none; border-color: var(--gold); }
+    
+    .loading { text-align: center; color: var(--ink-dim); padding: 40px; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <div class="admin-container">
+    
+    <!-- Gatephrase View -->
+    <div id="gateView">
+      <h1>Admin Portal</h1>
+      <p style="color:var(--ink-dim); margin-bottom: 20px;">Restricted Access</p>
+      <input type="password" id="gatephrase" class="gate-input" placeholder="Enter Gatephrase..." onkeydown="if(event.key === 'Enter') unlockAdmin()">
+      <button class="btn btn-primary" onclick="unlockAdmin()" id="unlockBtn">Unlock</button>
+      <div class="error-msg" id="gateError">Incorrect gatephrase or network error.</div>
+    </div>
+
+    <!-- Dashboard View -->
+    <div id="dashboardView">
+      <h1>User Management</h1>
+      <div class="toolbar">
+        <input type="text" id="searchBar" class="search-box" placeholder="Search by name, email, or phone..." oninput="filterUsers()">
+        <button class="btn btn-ghost" onclick="fetchUsers()">⟳ Refresh</button>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table id="usersTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Joined Date</th>
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="usersBody">
+            <tr><td colspan="6" class="loading">Loading users...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    let supabaseClient = null;
+    let gatephraseVal = '';
+    let allUsers = [];
+
+    // Initialize Supabase
+    try {
+      if (typeof supabase !== 'undefined') {
+        supabaseClient = supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+      } else if (window.supabase) {
+        supabaseClient = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+      } else {
+        alert("Supabase SDK failed to load.");
+      }
+    } catch (e) {
+      alert("Failed to initialize Supabase: " + e.message);
+    }
+
+    async function unlockAdmin() {
+      const input = document.getElementById('gatephrase').value;
+      const btn = document.getElementById('unlockBtn');
+      const errorMsg = document.getElementById('gateError');
+      
+      if (!input) return;
+      
+      btn.textContent = 'Verifying...';
+      btn.disabled = true;
+      errorMsg.style.display = 'none';
+
+      try {
+        // Attempt to call get_all_users. If unauthorized, it throws.
+        const { data, error } = await supabaseClient.rpc('get_all_users', { gatephrase: input });
+        
+        if (error) throw error;
+        
+        // Success!
+        gatephraseVal = input;
+        allUsers = data || [];
+        
+        document.getElementById('gateView').style.display = 'none';
+        document.getElementById('dashboardView').style.display = 'block';
+        
+        renderTable(allUsers);
+
+      } catch (err) {
+        console.error(err);
+        errorMsg.style.display = 'block';
+      } finally {
+        btn.textContent = 'Unlock';
+        btn.disabled = false;
+      }
+    }
+
+    async function fetchUsers() {
+      const tbody = document.getElementById('usersBody');
+      tbody.innerHTML = '<tr><td colspan="6" class="loading">Refreshing...</td></tr>';
+      
+      try {
+        const { data, error } = await supabaseClient.rpc('get_all_users', { gatephrase: gatephraseVal });
+        if (error) throw error;
+        allUsers = data || [];
+        filterUsers(); // Re-apply search filter
+      } catch (err) {
+        alert("Failed to refresh: " + err.message);
+      }
+    }
+
+    function filterUsers() {
+      const query = document.getElementById('searchBar').value.toLowerCase();
+      const filtered = allUsers.filter(u => {
+        const name = (u.name || '').toLowerCase();
+        const email = (u.email || '').toLowerCase();
+        const phone = (u.phone || '').toLowerCase();
+        return name.includes(query) || email.includes(query) || phone.includes(query);
+      });
+      renderTable(filtered);
+    }
+
+    function renderTable(users) {
+      const tbody = document.getElementById('usersBody');
+      if (users.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" class="loading">No users found.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = users.map(u => {
+        const date = new Date(u.created_at).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+        return `
+          <tr>
+            <td style="font-weight: 500">${u.name || '-'}</td>
+            <td style="color: var(--ink-dim)">${u.email || '-'}</td>
+            <td style="color: var(--ink-dim)">${u.phone || '-'}</td>
+            <td style="color: var(--ink-dim); font-size: 12px;">${date}</td>
+            <td><span class="role-badge role-${u.role}">${u.role}</span></td>
+            <td>
+              <select class="role-select" onchange="updateRole('${u.id}', this.value)">
+                <option value="free" ${u.role === 'free' ? 'selected' : ''}>Free</option>
+                <option value="paid" ${u.role === 'paid' ? 'selected' : ''}>Paid</option>
+              </select>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    async function updateRole(userId, newRole) {
+      try {
+        const { error } = await supabaseClient.rpc('update_user_role', {
+          gatephrase: gatephraseVal,
+          target_user_id: userId,
+          new_role: newRole
+        });
+        
+        if (error) throw error;
+        
+        // Optimistically update local data
+        const user = allUsers.find(u => u.id === userId);
+        if (user) user.role = newRole;
+        
+        filterUsers(); // Re-render
+
+      } catch (err) {
+        alert("Failed to update role: " + err.message);
+        fetchUsers(); // Revert on failure
+      }
+    }
+  </script>
+</body>
+</html>
