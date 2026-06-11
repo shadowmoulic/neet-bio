@@ -5,178 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Portal - NEET Bio</title>
+  <link rel="stylesheet" href="index.css">
   <style>
-    :root{
-      --bg:#0e1c17; --bg2:#13271f; --panel:#193024; --panel2:#1f3a2c;
-      --line:#2c4a3a; --line2:#3a5e49;
-      --ink:#f1ecdd; --ink-dim:#b4c3b3; --ink-faint:#7f9285;
-      --paper:#f6f1e4; --paper-ink:#222a20; --paper-dim:#5a6553; --paper-line:#ddd2ba;
-      --gold:#e2b35f; --gold-deep:#c0922f;
-      --plant:#62b173; --plant-d:#2f6b40;
-      --animal:#e58a5d; --animal-d:#a8512a;
-      --morph:#5fb6c4; --morph-d:#2c7e8c;
-      --anat:#bb8ed6; --anat-d:#7f4ea0;
-      --ok:#5fc27e; --bad:#e9745f; --warn:#e2b35f;
-      --r:16px; --rs:10px;
-      --sans:'Inter',system-ui,-apple-system,sans-serif;
-      --serif:'Fraunces','Georgia',serif;
-      --mono:'Spline Sans Mono',ui-monospace,monospace;
-      --shadow:0 10px 30px -12px rgba(0,0,0,.6);
-      --c:var(--gold); --c-d:var(--gold-deep);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-    .btn { padding: 10px 16px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: 0.2s; }
-    .btn-primary { background: var(--gold); color: var(--bg); box-shadow: 0 4px 12px rgba(226, 179, 95, 0.3); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(226, 179, 95, 0.4); }
-    .btn-ghost { background: transparent; color: var(--ink-dim); border: 1px solid var(--line2); }
-    .btn-ghost:hover { background: rgba(255, 255, 255, 0.05); color: var(--ink); }
-    
-    body { background: var(--bg); padding: 40px 20px; font-family: var(--sans); color: var(--ink); display: flex; justify-content: center; min-height: 100vh; }
-
-    .admin-container {
-      width: 100%;
-      max-width: 900px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    h1 {
-      font-family: var(--serif);
-      font-weight: 600;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    /* Gatephrase View */
-    #gateView {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 50vh;
-    }
-
-    .gate-input {
-      padding: 12px;
-      font-size: 16px;
-      width: 300px;
-      border: 1px solid var(--line2);
-      border-radius: 8px;
-      background: var(--bg);
-      color: var(--ink);
-      margin-bottom: 16px;
-      text-align: center;
-    }
-
-    .gate-input:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-
-    .error-msg {
-      color: var(--bad);
-      font-size: 14px;
-      margin-top: 10px;
-      display: none;
-    }
-
-    /* Dashboard View */
-    #dashboardView {
-      display: none;
-    }
-
-    .toolbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .search-box {
-      padding: 10px 14px;
-      border: 1px solid var(--line2);
-      border-radius: 8px;
-      background: var(--bg);
-      color: var(--ink);
-      width: 300px;
-    }
-
-    .search-box:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    th,
-    td {
-      text-align: left;
-      padding: 12px;
-      border-bottom: 1px solid var(--line2);
-    }
-
-    th {
-      color: var(--ink-dim);
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 0.05em;
-    }
-
-    tr:hover {
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    .role-badge {
-      display: inline-block;
-      padding: 4px 8px;
-      border-radius: 12px;
-      font-size: 11px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    .role-free {
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--ink-dim);
-    }
-
-    .role-paid {
-      background: rgba(212, 175, 55, 0.2);
-      color: var(--gold);
-    }
-
-    .role-select {
-      padding: 4px 8px;
-      border-radius: 6px;
-      background: var(--bg);
-      border: 1px solid var(--line2);
-      color: var(--ink);
-      cursor: pointer;
-    }
-
-    .role-select:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-
-    .loading {
-      text-align: center;
-      color: var(--ink-dim);
-      padding: 40px;
-      font-style: italic;
-    }
+    /* Admin specific styles */
+    .admin-container { width: 100%; max-width: 900px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    h1 { font-family: var(--serif); font-weight: 600; margin-bottom: 20px; text-align: center; }
+    #gateView { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 50vh; }
+    .gate-input { padding: 12px; font-size: 16px; width: 300px; border: 1px solid var(--line2); border-radius: 8px; background: var(--bg); color: var(--ink); margin-bottom: 16px; text-align: center; }
+    .gate-input:focus { outline: none; border-color: var(--gold); }
+    .error-msg { color: var(--bad); font-size: 14px; margin-top: 10px; display: none; }
+    #dashboardView { display: none; }
+    .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .search-box { padding: 10px 14px; border: 1px solid var(--line2); border-radius: 8px; background: var(--bg); color: var(--ink); width: 300px; }
+    .search-box:focus { outline: none; border-color: var(--gold); }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--line2); }
+    th { color: var(--ink-dim); font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; }
+    tr:hover { background: rgba(255,255,255,0.02); }
+    .role-badge { display: inline-block; padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+    .role-free { background: rgba(255, 255, 255, 0.1); color: var(--ink-dim); }
+    .role-paid { background: rgba(212, 175, 55, 0.2); color: var(--gold); }
+    .role-select { padding: 4px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line2); color: var(--ink); cursor: pointer; }
+    .role-select:focus { outline: none; border-color: var(--gold); }
+    .loading { text-align: center; color: var(--ink-dim); padding: 40px; font-style: italic; }
   </style>
 </head>
 
