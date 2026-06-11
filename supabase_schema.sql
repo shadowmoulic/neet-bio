@@ -42,7 +42,9 @@ begin
 end;
 $$;
 
--- 6. Create the trigger on auth.users
+-- 6. Drop the trigger if it already exists, then create the trigger on auth.users
+drop trigger if exists on_auth_user_created on auth.users;
+
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
