@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Naturalist's Codex — Class 11 Bio (Ch 3–6)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1c17; --bg2:#13271f; --panel:#193024; --panel2:#1f3a2c;
+  --line:#2c4a3a; --line2:#3a5e49;
+  --ink:#f1ecdd; --ink-dim:#b4c3b3; --ink-faint:#7f9285;
+  --paper:#f6f1e4; --paper-ink:#222a20; --paper-dim:#5a6553; --paper-line:#ddd2ba;
+  --gold:#e2b35f; --gold-deep:#c0922f;
+  --plant:#62b173; --plant-d:#2f6b40;
+  --animal:#e58a5d; --animal-d:#a8512a;
+  --morph:#5fb6c4; --morph-d:#2c7e8c;
+  --anat:#bb8ed6; --anat-d:#7f4ea0;
+  --ok:#5fc27e; --bad:#e9745f; --warn:#e2b35f;
+  --r:16px; --rs:10px;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --serif:'Fraunces','Georgia',serif;
+  --mono:'Spline Sans Mono',ui-monospace,monospace;
+  --shadow:0 10px 30px -12px rgba(0,0,0,.6);
+  --c:var(--gold); --c-d:var(--gold-deep);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans); background:var(--bg); color:var(--ink);
+  line-height:1.55; -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%),
+                   radial-gradient(900px 500px at -10% 110%, #16291f 0, transparent 55%);
+  background-attachment:fixed; min-height:100vh; overflow-x:hidden;
+}
+::selection{background:var(--gold);color:#1a130a}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.hidden{display:none!important}
+
+/* ---------- Top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50; display:flex;align-items:center;gap:14px;
+  padding:12px clamp(14px,4vw,40px); background:rgba(14,28,23,.82);
+  backdrop-filter:blur(12px); border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:11px;cursor:pointer}
+.brand .mark{
+  width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#1a130a;
+  font-family:var(--serif);font-weight:900;font-size:20px;box-shadow:0 6px 18px -6px var(--gold-deep);
+}
+.brand h1{font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:.2px;line-height:1.05}
+.brand h1 span{display:block;font-family:var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+.topbar .spacer{flex:1}
+.xp-pill{display:flex;align-items:center;gap:9px;background:var(--panel);border:1px solid var(--line);padding:7px 13px;border-radius:999px;font-size:13px}
+.xp-pill b{font-family:var(--mono);color:var(--gold);font-weight:600}
+.lvl-badge{font-size:11px;font-weight:700;color:var(--bg);background:var(--gold);padding:2px 8px;border-radius:999px}
+.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--panel);display:grid;place-items:center;font-size:16px;transition:.18s}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+main{max-width:1080px;margin:0 auto;padding:clamp(18px,4vw,40px) clamp(14px,4vw,40px) 90px}
+
+/* ---------- Hero / Home ---------- */
+.hero{position:relative;padding:30px 0 8px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+.hero h2{font-family:var(--serif);font-weight:900;font-size:clamp(34px,7vw,62px);line-height:.98;letter-spacing:-.02em}
+.hero h2 em{font-style:italic;font-weight:500;color:var(--gold)}
+.hero p{max-width:560px;margin:16px auto 0;color:var(--ink-dim);font-size:15.5px}
+.hero-stats{display:flex;gap:26px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat b{display:block;font-family:var(--mono);font-size:24px;color:var(--ink)}
+.hero-stat span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+
+.section-label{display:flex;align-items:center;gap:14px;margin:42px 0 18px}
+.section-label h3{font-family:var(--serif);font-size:22px;font-weight:600;white-space:nowrap}
+.section-label .rule{height:1px;background:linear-gradient(90deg,var(--line2),transparent);flex:1}
+.section-label .n{font-family:var(--mono);font-size:12px;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+
+/* ---------- Chapter cards ---------- */
+.chapters{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.chap-card{
+  position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  background:var(--panel);padding:22px 20px 18px;text-align:left;transition:.2s;
+}
+.chap-card:hover{transform:translateY(-4px);border-color:var(--cc);box-shadow:0 18px 40px -20px var(--cc)}
+.chap-card .tag{position:absolute;top:0;left:22px;background:var(--cc);color:#10130d;font-size:10.5px;font-weight:800;letter-spacing:.1em;padding:4px 10px;border-radius:0 0 8px 8px;text-transform:uppercase}
+.chap-card .glyph{font-size:34px;margin:14px 0 10px;filter:saturate(1.1)}
+.chap-card h4{font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.08}
+.chap-card .sub{font-size:12.5px;color:var(--ink-dim);margin-top:4px}
+.chap-card .meter{height:6px;border-radius:99px;background:var(--bg);margin-top:16px;overflow:hidden}
+.chap-card .meter i{display:block;height:100%;background:var(--cc);width:0;transition:width .6s}
+.chap-card .pct{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-faint);margin-top:7px;font-family:var(--mono)}
+
+/* ---------- Mode grid ---------- */
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.mode-card{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);padding:20px;text-align:left;transition:.18s;display:flex;flex-direction:column;gap:6px;min-height:140px}
+.mode-card:hover{transform:translateY(-3px);border-color:var(--c);background:var(--panel2)}
+.mode-card .mi{font-size:26px}
+.mode-card h4{font-family:var(--serif);font-size:18px;font-weight:600}
+.mode-card p{font-size:12.5px;color:var(--ink-dim);flex:1}
+.mode-card .go{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:11px;font-weight:700;font-size:14px;transition:.16s;border:1px solid transparent}
+.btn-primary{background:linear-gradient(135deg,var(--c),var(--c-d));color:#15110a}
+.btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line2);color:var(--ink);background:var(--panel)}
+.btn-ghost:hover{border-color:var(--c);color:var(--c)}
+.btn-sm{padding:8px 14px;font-size:12.5px;border-radius:9px}
+.back-link{display:inline-flex;align-items:center;gap:7px;color:var(--ink-dim);font-size:13px;font-weight:600;margin-bottom:18px;transition:.15s}
+.back-link:hover{color:var(--c)}
+
+/* ---------- View header ---------- */
+.view-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.view-head .t .chip{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:6px;padding:2px 9px;margin-bottom:10px}
+.view-head .t h2{font-family:var(--serif);font-size:clamp(26px,5vw,38px);font-weight:600;line-height:1}
+.view-head .t p{color:var(--ink-dim);font-size:14px;margin-top:7px;max-width:480px}
+
+/* ---------- Notes ---------- */
+.notes-wrap{display:grid;grid-template-columns:200px 1fr;gap:26px;margin-top:26px;align-items:start}
+.notes-toc{position:sticky;top:78px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);padding:14px;font-size:13px}
+.notes-toc b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px}
+.notes-toc a{display:block;padding:6px 9px;border-radius:8px;color:var(--ink-dim);cursor:pointer;transition:.13s;border-left:2px solid transparent}
+.notes-toc a:hover,.notes-toc a.active{color:var(--ink);background:var(--bg);border-left-color:var(--c)}
+.note-sec{background:var(--paper);color:var(--paper-ink);border-radius:var(--r);padding:26px 28px;margin-bottom:18px;scroll-margin-top:80px;box-shadow:var(--shadow)}
+.note-sec h3{font-family:var(--serif);font-size:23px;font-weight:600;color:var(--paper-ink);margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.note-sec h3 .num{font-family:var(--mono);font-size:12px;background:var(--c);color:#15110a;border-radius:6px;padding:3px 8px;font-weight:600}
+.note-sec h4{font-family:var(--serif);font-size:16.5px;font-weight:600;margin:20px 0 7px;color:var(--anat-d);}
+.note-sec p{margin:9px 0;color:#34402f;font-size:14.5px}
+.note-sec ul,.note-sec ol{margin:8px 0 8px 4px;padding-left:20px}
+.note-sec li{margin:5px 0;color:#34402f;font-size:14.3px}
+.note-sec b,.note-sec strong{color:#1c241a}
+.note-sec em{color:var(--anat-d);font-style:italic}
+.kw{background:#efe7d0;border-bottom:2px solid var(--gold);padding:0 3px;border-radius:3px;font-weight:600}
+table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.3px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+table.cmp th{background:var(--paper-ink);color:var(--paper);padding:9px 11px;text-align:left;font-weight:600;font-size:12.5px}
+table.cmp td{padding:8px 11px;border-top:1px solid var(--paper-line);color:#34402f;vertical-align:top}
+table.cmp tr:nth-child(even) td{background:#efe9da}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0;padding:14px;background:#efe9da;border-radius:10px;border:1px dashed var(--paper-line)}
+.flow .node{background:#fff;border:1px solid var(--paper-line);border-radius:8px;padding:7px 12px;font-size:12.8px;font-weight:600;color:#2a3326}
+.flow .arr{color:var(--gold-deep);font-weight:900}
+.formula{font-family:var(--mono);background:#2a3326;color:#f6f1e4;padding:12px 16px;border-radius:10px;margin:12px 0;font-size:13.5px;display:block;overflow-x:auto}
+.formula .hl{color:var(--gold)}
+.callout{border-left:4px solid var(--gold);background:#efe7cf;padding:11px 15px;border-radius:0 10px 10px 0;margin:13px 0;font-size:13.6px;color:#3a3324}
+.callout b{color:#5a4a1c}
+
+/* ---------- Mnemonics ---------- */
+.mnem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:24px}
+.mnem{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(160deg,var(--panel2),var(--panel));padding:20px;position:relative;overflow:hidden}
+.mnem::before{content:"🧠";position:absolute;right:-8px;top:-8px;font-size:54px;opacity:.07}
+.mnem h4{font-family:var(--serif);font-size:16px;font-weight:600;margin-bottom:8px;color:var(--gold)}
+.mnem .device{font-family:var(--serif);font-size:19px;font-weight:600;font-style:italic;color:var(--ink);line-height:1.3;margin-bottom:10px}
+.mnem .device b{color:var(--c);font-style:normal}
+.mnem .expand{font-size:13px;color:var(--ink-dim)}
+.mnem .expand .row{display:flex;gap:8px;margin:4px 0}
+.mnem .expand .row .L{font-weight:800;color:var(--c);font-family:var(--mono);flex:none;width:18px}
+
+/* ---------- Flashcards ---------- */
+.fc-stage{max-width:560px;margin:30px auto 0;text-align:center}
+.fc-progress{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--ink-dim);margin-bottom:14px;font-family:var(--mono)}
+.fc-bar{height:6px;background:var(--panel);border-radius:99px;overflow:hidden;margin-bottom:20px}
+.fc-bar i{display:block;height:100%;background:var(--c);width:0;transition:.4s}
+.flashcard{perspective:1600px;height:300px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}
+.flashcard.flip .fc-inner{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px;box-shadow:var(--shadow)}
+.fc-front{background:var(--paper);color:var(--paper-ink)}
+.fc-back{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--c);transform:rotateY(180deg);color:var(--ink)}
+.fc-face .lab{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-bottom:14px;opacity:.6}
+.fc-front .lab{color:var(--c-d)}
+.fc-back .lab{color:var(--c)}
+.fc-face .body{font-family:var(--serif);font-size:21px;font-weight:500;line-height:1.34}
+.fc-back .body{font-family:var(--sans);font-size:16px;font-weight:500}
+.fc-face .hint{font-size:12px;color:var(--paper-dim);margin-top:14px;font-style:italic}
+.fc-tap{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;opacity:.5;letter-spacing:.1em}
+.fc-judge{display:flex;gap:12px;justify-content:center;margin-top:22px}
+.fc-actions{display:flex;justify-content:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+.judge-btn{flex:1;max-width:200px;padding:13px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid}
+.judge-known{background:rgba(95,194,126,.12);border-color:var(--ok);color:var(--ok)}
+.judge-known:hover{background:rgba(95,194,126,.22)}
+.judge-again{background:rgba(233,116,95,.12);border-color:var(--bad);color:var(--bad)}
+.judge-again:hover{background:rgba(233,116,95,.22)}
+
+/* ---------- Active recall ---------- */
+.ar-stage{max-width:620px;margin:28px auto 0}
+.ar-card{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);padding:24px}
+.ar-q{font-family:var(--serif);font-size:21px;font-weight:500;line-height:1.35;margin-bottom:6px}
+.ar-hint-btn{font-size:12px;color:var(--c);font-weight:700;margin-bottom:14px;display:inline-block}
+.ar-hint{font-size:13px;color:var(--ink-dim);background:var(--bg);border-radius:8px;padding:9px 12px;margin-bottom:14px;border-left:3px solid var(--c)}
+.ar-input{width:100%;min-height:120px;background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:14px;color:var(--ink);font-family:inherit;font-size:15px;resize:vertical}
+.ar-input:focus{outline:none;border-color:var(--c)}
+.ar-answer{margin-top:16px;background:var(--paper);color:var(--paper-ink);border-radius:12px;padding:18px 20px}
+.ar-answer .lab{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--c-d);margin-bottom:8px}
+.ar-answer .txt{font-size:14.5px;line-height:1.6;color:#34402f}
+.ar-answer .txt b{color:#1c241a}
+.self-grade{margin-top:18px}
+.self-grade .lab{font-size:12px;color:var(--ink-dim);text-align:center;margin-bottom:10px}
+.grade-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.grade-btn{padding:10px 16px;border-radius:10px;font-weight:700;font-size:13px;border:1px solid var(--line2);background:var(--panel)}
+.grade-btn[data-g="0"]:hover{border-color:var(--bad);color:var(--bad)}
+.grade-btn[data-g="1"]:hover{border-color:var(--warn);color:var(--warn)}
+.grade-btn[data-g="2"]:hover{border-color:var(--ok);color:var(--ok)}
+
+/* ---------- Quiz / Boss MCQ ---------- */
+.quiz-stage{max-width:640px;margin:24px auto 0}
+.quiz-hud{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:13px}
+.quiz-hud .lives{letter-spacing:2px}
+.quiz-hud .qnum{font-family:var(--mono);color:var(--ink-dim)}
+.quiz-hud .score{font-family:var(--mono);color:var(--c);font-weight:600}
+.quiz-bar{height:6px;background:var(--panel);border-radius:99px;overflow:hidden;margin-bottom:20px}
+.quiz-bar i{display:block;height:100%;background:var(--c);transition:.3s}
+.timer-bar{height:4px;background:var(--panel);border-radius:99px;overflow:hidden;margin-bottom:18px}
+.timer-bar i{display:block;height:100%;background:var(--warn);width:100%}
+.mcq-q{font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.34;margin-bottom:20px}
+.mcq-opts{display:grid;gap:11px}
+.opt{display:flex;align-items:center;gap:13px;border:1px solid var(--line2);border-radius:12px;padding:14px 16px;background:var(--panel);text-align:left;font-size:14.5px;transition:.13s;width:100%}
+.opt:hover:not(.locked){border-color:var(--c);background:var(--panel2)}
+.opt .key{width:26px;height:26px;flex:none;border-radius:7px;border:1px solid var(--line2);display:grid;place-items:center;font-size:13px;font-weight:700;font-family:var(--mono)}
+.opt.correct{border-color:var(--ok);background:rgba(95,194,126,.14)}
+.opt.correct .key{background:var(--ok);color:#0e1c17;border-color:var(--ok)}
+.opt.wrong{border-color:var(--bad);background:rgba(233,116,95,.14)}
+.opt.wrong .key{background:var(--bad);color:#0e1c17;border-color:var(--bad)}
+.opt.locked{cursor:default}
+.mcq-explain{margin-top:16px;border-radius:12px;padding:15px 17px;font-size:13.8px;line-height:1.55;display:none;border-left:4px solid var(--c)}
+.mcq-explain.show{display:block}
+.mcq-explain.ok{background:rgba(95,194,126,.1);border-left-color:var(--ok)}
+.mcq-explain.no{background:rgba(233,116,95,.1);border-left-color:var(--bad)}
+.mcq-explain b{color:var(--c)}
+.mcq-next{margin-top:18px;text-align:right}
+
+/* ---------- Match-up ---------- */
+.match-stage{max-width:760px;margin:22px auto 0}
+.match-hud{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-size:14px;font-family:var(--mono)}
+.match-hud .time{color:var(--warn)}
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.match-col{display:flex;flex-direction:column;gap:10px}
+.match-col h5{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);text-align:center;font-weight:700}
+.tile{border:1px solid var(--line2);border-radius:11px;padding:13px 14px;background:var(--panel);font-size:13.8px;transition:.13s;text-align:left}
+.tile:hover:not(.matched){border-color:var(--c)}
+.tile.sel{border-color:var(--c);background:var(--panel2);box-shadow:0 0 0 2px var(--c) inset}
+.tile.matched{opacity:.32;border-style:dashed;cursor:default;pointer-events:none}
+.tile.miss{animation:shake .35s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+/* ---------- Build the Pathway ---------- */
+.path-stage{max-width:680px;margin:22px auto 0}
+.path-prompt{border:1px solid var(--line);background:var(--panel);border-radius:var(--r);padding:18px 20px;margin-bottom:18px}
+.path-prompt h4{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:4px}
+.path-prompt p{font-size:13.5px;color:var(--ink-dim)}
+.path-slots{display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.slot{min-height:50px;border:1.5px dashed var(--line2);border-radius:11px;display:flex;align-items:center;gap:12px;padding:8px 12px;transition:.13s}
+.slot .idx{width:26px;height:26px;flex:none;border-radius:7px;background:var(--bg);display:grid;place-items:center;font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
+.slot.filled{border-style:solid;background:var(--panel)}
+.slot.ok{border-color:var(--ok);background:rgba(95,194,126,.1)}
+.slot.no{border-color:var(--bad);background:rgba(233,116,95,.1)}
+.slot .chiptxt{font-size:14px;font-weight:600}
+.path-pool{display:flex;flex-wrap:wrap;gap:9px;padding:14px;border:1px dashed var(--line);border-radius:var(--r);background:var(--bg2);min-height:60px}
+.pchip{border:1px solid var(--line2);border-radius:9px;padding:9px 14px;background:var(--panel);font-size:13.5px;font-weight:600;transition:.13s}
+.pchip:hover{border-color:var(--c);transform:translateY(-2px)}
+.pchip.used{display:none}
+
+/* ---------- Result / completion ---------- */
+.result{max-width:520px;margin:40px auto 0;text-align:center;border:1px solid var(--line);background:var(--panel);border-radius:var(--r);padding:36px 30px}
+.result .big{font-size:64px;margin-bottom:8px}
+.result h3{font-family:var(--serif);font-size:30px;font-weight:600}
+.result .scoreline{font-family:var(--mono);font-size:18px;color:var(--c);margin:12px 0}
+.result p{color:var(--ink-dim);font-size:14px;margin-bottom:20px}
+.result .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ring{--p:0;width:120px;height:120px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;
+  background:conic-gradient(var(--c) calc(var(--p)*1%),var(--panel2) 0)}
+.ring span{width:92px;height:92px;border-radius:50%;background:var(--panel);display:grid;place-items:center;font-family:var(--mono);font-size:26px;font-weight:600}
+
+/* toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--panel2);border:1px solid var(--c);color:var(--ink);padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;z-index:200;transition:.3s;box-shadow:var(--shadow)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast .xp{color:var(--gold);font-family:var(--mono)}
+
+footer{text-align:center;padding:30px 20px;color:var(--ink-faint);font-size:12px;border-top:1px solid var(--line);margin-top:40px}
+footer b{color:var(--ink-dim)}
+
+@media(max-width:760px){
+  .notes-wrap{grid-template-columns:1fr}
+  .notes-toc{position:static;display:flex;flex-wrap:wrap;gap:4px}
+  .notes-toc b{width:100%}
+  .notes-toc a{flex:1;min-width:120px;text-align:center;border-left:none;border-bottom:2px solid transparent}
+  .brand h1{font-size:15px}
+  .match-grid{gap:9px}
+  .tile{font-size:12.5px;padding:11px}
+}
+.fade{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pop{animation:pop .3s ease}
+@keyframes pop{0%{transform:scale(.96);opacity:0}100%{transform:scale(1);opacity:1}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="App.home()">
+    <div class="mark">N</div>
+    <h1>The Naturalist's Codex<span>Class 11 Bio · Ch 3–6</span></h1>
+  </div>
+  <div class="spacer"></div>
+  <div class="xp-pill"><span class="lvl-badge" id="lvlBadge">Lv 1</span> <b id="xpVal">0</b> XP</div>
+  <button class="icon-btn" title="Reset all progress" onclick="App.resetAll()">⟳</button>
+</div>
+
+<main id="app"></main>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  <b>The Naturalist's Codex</b> — an active-recall study app for NCERT Class 11 Biology, Chapters 3–6.<br>
+  Built for understanding & memory. Progress is saved on this device.
+</footer>
+
+<script>
+/* ============================================================
+   DATA  — original learning content covering every concept in
+   NCERT Class 11 Biology Ch 3 (Plant Kingdom), Ch 4 (Animal
+   Kingdom), Ch 5 (Morphology), Ch 6 (Anatomy of Flowering Plants)
+   ============================================================ */
+const DATA = { chapters: {} };
+
+/* ====== data_plant.js ====== */
+/* ===== CHAPTER 3 · PLANT KINGDOM ===== */
+DATA.chapters.plant = {
+id:"plant", num:3, title:"Plant Kingdom", subtitle:"Algae · Bryophytes · Pteridophytes · Gymnosperms · Angiosperms",
+color:"#62b173", colorD:"#2f6b40", glyph:"🌿",
+
+notes:[
+{
+id:"classif", heading:"Classification Systems",
+html:`
+<p>Earlier, plants were grouped using only a few visible traits. Over time, three broad approaches to classification developed:</p>
+<table class="cmp"><thead><tr><th>System</th><th>Basis</th><th>Example / Note</th></tr></thead><tbody>
+<tr><td><b>Artificial</b></td><td>One or a few <span class="kw">superficial vegetative characters</span> (e.g. number of stamens)</td><td>Linnaeus' system; gave equal weight to vegetative & sexual traits, separated closely related groups</td></tr>
+<tr><td><b>Natural</b></td><td><span class="kw">Natural affinities</span> — many characters together, including internal features (anatomy, embryology, phytochemistry)</td><td>Bentham &amp; Hooker</td></tr>
+<tr><td><b>Phylogenetic</b></td><td><span class="kw">Evolutionary relationships</span> — assumes organisms of a group share a common ancestor</td><td>Modern systems; uses molecular data too</td></tr>
+</tbody></table>
+<h4>Newer tools</h4>
+<ul>
+<li><b>Numerical Taxonomy</b> — uses computers; all observable characters are given codes &amp; numbers, processed so hundreds of traits can be considered at once.</li>
+<li><b>Cytotaxonomy</b> — based on <span class="kw">cytological information</span> such as chromosome number, structure and behaviour.</li>
+<li><b>Chemotaxonomy</b> — uses <span class="kw">chemical constituents</span> of the plant to resolve confusions.</li>
+</ul>
+<div class="callout"><b>Big idea:</b> Classification moved from "what looks similar" → to "what is truly related by evolution."</div>
+`
+},
+{
+id:"algae", heading:"Algae",
+html:`
+<p><b>Algae</b> are chlorophyll-bearing, simple, thalloid (no true root–stem–leaf), largely aquatic autotrophs. The plant body is a <span class="kw">thallus</span>.</p>
+<h4>Reproduction</h4>
+<ul>
+<li><b>Vegetative</b> — by fragmentation; each fragment grows into a new thallus.</li>
+<li><b>Asexual</b> — mostly by <span class="kw">zoospores</span> (flagellated, motile).</li>
+<li><b>Sexual</b> — fusion of gametes: <em>isogamous</em> (similar gametes, e.g. <i>Ulothrix</i>), <em>anisogamous</em> (dissimilar in size, e.g. some <i>Chlamydomonas</i>), <em>oogamous</em> (large non-motile female + small motile male, e.g. <i>Volvox</i>, <i>Fucus</i>).</li>
+</ul>
+<h4>The three classes — compare carefully</h4>
+<table class="cmp"><thead><tr><th>Feature</th><th>Chlorophyceae (Green)</th><th>Phaeophyceae (Brown)</th><th>Rhodophyceae (Red)</th></tr></thead><tbody>
+<tr><td><b>Pigments</b></td><td>Chlorophyll <b>a, b</b></td><td>Chl <b>a, c</b> + <span class="kw">fucoxanthin</span></td><td>Chl <b>a, d</b> + <span class="kw">phycoerythrin</span> (r-phycoerythrin)</td></tr>
+<tr><td><b>Colour</b></td><td>Grass green</td><td>Olive-green to brown</td><td>Red</td></tr>
+<tr><td><b>Stored food</b></td><td>Starch</td><td>Laminarin / Mannitol</td><td>Floridean starch</td></tr>
+<tr><td><b>Cell wall</b></td><td>Cellulose</td><td>Cellulose + algin</td><td>Cellulose, pectin + polysulphate esters</td></tr>
+<tr><td><b>Flagella</b></td><td>2–8, equal, apical</td><td>2, unequal, lateral</td><td><span class="kw">Absent</span></td></tr>
+<tr><td><b>Habitat</b></td><td>Mostly freshwater</td><td>Mostly marine</td><td>Mostly marine (warm waters)</td></tr>
+<tr><td><b>Examples</b></td><td><i>Chlamydomonas, Volvox, Ulothrix, Spirogyra, Chara</i></td><td><i>Ectocarpus, Dictyota, Laminaria, Sargassum, Fucus</i></td><td><i>Polysiphonia, Porphyra, Gracilaria, Gelidium</i></td></tr>
+</tbody></table>
+<h4>Economic & ecological importance</h4>
+<ul>
+<li>At least half of Earth's <span class="kw">CO₂ fixation</span> (photosynthesis) is by algae.</li>
+<li>Food: <i>Porphyra, Laminaria, Sargassum</i>. </li>
+<li>Hydrocolloids: <b>algin</b> (brown algae), <b>carrageen</b> (red algae). <b>Agar</b> from <i>Gelidium</i> &amp; <i>Gracilaria</i> — used for culture media &amp; ice-creams.</li>
+<li><i>Chlorella</i> &amp; <i>Spirulina</i> — protein-rich food supplements (even for space travellers).</li>
+</ul>
+`
+},
+{
+id:"bryo", heading:"Bryophytes",
+html:`
+<p><b>Bryophytes</b> are the "<span class="kw">amphibians of the plant kingdom</span>" — they live on land but need water to complete sexual reproduction. They lack true vascular tissue.</p>
+<ul>
+<li>The main plant body is the <span class="kw">gametophyte</span> (haploid, dominant, photosynthetic). It bears <b>rhizoids</b> for anchorage.</li>
+<li>Male organ = <b>antheridium</b> (produces flagellated antherozoids); female organ = <b>archegonium</b> (flask-shaped, produces one egg).</li>
+<li>Water is needed so antherozoids can swim to the archegonium → fertilisation forms the <b>zygote</b>.</li>
+<li>Zygote → <span class="kw">sporophyte</span> (diploid, partly dependent on the gametophyte). It makes spores by meiosis; spores germinate into new gametophytes.</li>
+</ul>
+<div class="flow">
+<span class="node">Spore</span><span class="arr">→</span><span class="node">Gametophyte (n)</span><span class="arr">→</span><span class="node">Antheridium + Archegonium</span><span class="arr">→</span><span class="node">Fertilisation (needs water)</span><span class="arr">→</span><span class="node">Zygote (2n)</span><span class="arr">→</span><span class="node">Sporophyte → meiosis → Spores</span>
+</div>
+<h4>Liverworts</h4>
+<p>Grow in moist, shady places; thalloid (e.g. <i>Marchantia</i>). Asexual reproduction by <span class="kw">gemmae</span> (green buds in gemma cups) or fragmentation.</p>
+<h4>Mosses</h4>
+<p>Two stages: (1) <b>protonema</b> — creeping green filamentous stage from a spore; (2) <b>leafy stage</b> — upright with spirally arranged leaves, bearing sex organs. Examples: <i>Funaria, Polytrichum, Sphagnum</i>.</p>
+<div class="callout"><b>Importance:</b> <i>Sphagnum</i> (bog/peat moss) provides peat (fuel) &amp; is used as packing for transporting living material because it holds water. Mosses form mats that reduce soil erosion.</div>
+`
+},
+{
+id:"pterido", heading:"Pteridophytes",
+html:`
+<p><b>Pteridophytes</b> are the <span class="kw">first true land plants with vascular tissue</span> (xylem &amp; phloem). Examples: <i>Selaginella, Equisetum, Pteris, Adiantum, Lycopodium, Salvinia, Marsilea</i>.</p>
+<ul>
+<li>The dominant phase is the <span class="kw">sporophyte</span> (2n) — differentiated into true <b>roots, stem and leaves</b>.</li>
+<li>Leaves may be small (<b>microphylls</b>, e.g. <i>Selaginella</i>) or large (<b>macrophylls</b>, e.g. ferns).</li>
+<li>Sporophytes bear <b>sporangia</b>, often grouped in clusters called <span class="kw">sori</span> on leaf-like <b>sporophylls</b>.</li>
+<li>Sporangia produce spores by <b>meiosis</b>. Spores germinate into a small, free-living, photosynthetic <span class="kw">prothallus</span> (the gametophyte) that needs cool, damp, shady soil.</li>
+<li>The gametophyte bears antheridia &amp; archegonia; <b>water is needed</b> for fertilisation (like bryophytes).</li>
+</ul>
+<h4>Homospory vs Heterospory</h4>
+<table class="cmp"><thead><tr><th></th><th>Homosporous</th><th>Heterosporous</th></tr></thead><tbody>
+<tr><td><b>Spores</b></td><td>One kind of spore</td><td>Two kinds — large <b>megaspores</b> &amp; small <b>microspores</b></td></tr>
+<tr><td><b>Examples</b></td><td>Most pteridophytes</td><td><i>Selaginella, Salvinia</i></td></tr>
+<tr><td><b>Significance</b></td><td>—</td><td>Megaspores develop into female gametophyte <span class="kw">retained on the parent</span> → a key evolutionary step toward the <b>seed habit</b></td></tr>
+</tbody></table>
+<div class="callout"><b>Heterospory is the precursor to the seed.</b> Retention of the developing female gametophyte and zygote on the parent foreshadows seed plants.</div>
+`
+},
+{
+id:"gymno", heading:"Gymnosperms",
+html:`
+<p><b>Gymnosperms</b> bear <span class="kw">naked seeds</span> — the ovules are not enclosed in an ovary, so the seeds are not covered by a fruit. Examples: <i>Cycas, Pinus, Ginkgo, Cedrus, Ephedra</i>.</p>
+<ul>
+<li>Range from small to giant trees (e.g. <i>Sequoia</i>, the redwood — one of the tallest trees).</li>
+<li>Roots usually tap roots; <i>Cycas</i> has special <b>coralloid roots</b> with N₂-fixing cyanobacteria; <i>Pinus</i> has <b>mycorrhiza</b>.</li>
+<li><span class="kw">Heterosporous</span> — produce microspores &amp; megaspores. Reproductive structures are borne on <b>cones / strobili</b>.</li>
+<li>Male cones bear <b>microsporophylls</b> with microsporangia → pollen grains (microspores).</li>
+<li>Female cones bear <b>megasporophylls</b> with ovules; the megaspore develops into a female gametophyte bearing archegonia.</li>
+<li><b>No water needed</b> for fertilisation — pollen is carried by <span class="kw">wind</span> to the ovule; a pollen tube delivers male gametes.</li>
+<li>After fertilisation the zygote → embryo, ovule → naked seed.</li>
+</ul>
+<div class="callout"><b>Key advance:</b> The seed habit + wind pollination free gymnosperms from dependence on external water for reproduction.</div>
+`
+},
+{
+id:"angio", heading:"Angiosperms",
+html:`
+<p><b>Angiosperms</b> = flowering plants. Seeds develop <span class="kw">inside an ovary</span>, which matures into a <b>fruit</b>. They range from the tiny <i>Wolffia</i> to giant <i>Eucalyptus</i> (~100 m).</p>
+<ul>
+<li><b>Stamen</b> (male): anther holds pollen sacs → <b>pollen grains</b> (microspores) → male gametes.</li>
+<li><b>Pistil/carpel</b> (female): ovary contains ovules; each ovule has an <b>embryo sac</b> (female gametophyte) with an egg + two <b>polar nuclei</b>.</li>
+<li><span class="kw">Double fertilisation</span> (unique to angiosperms): one male gamete + egg → <b>zygote</b> (2n); other male gamete + two polar nuclei → <b>primary endosperm nucleus</b> (3n) → triploid endosperm to feed the embryo.</li>
+</ul>
+<h4>Two classes</h4>
+<table class="cmp"><thead><tr><th>Feature</th><th>Dicotyledons</th><th>Monocotyledons</th></tr></thead><tbody>
+<tr><td>Cotyledons in seed</td><td>Two</td><td>One</td></tr>
+<tr><td>Leaf venation</td><td>Reticulate (net-like)</td><td>Parallel</td></tr>
+<tr><td>Root</td><td>Tap root</td><td>Fibrous root</td></tr>
+<tr><td>Floral parts</td><td>In 4s or 5s (tetra/pentamerous)</td><td>In 3s (trimerous)</td></tr>
+</tbody></table>
+`
+},
+{
+id:"lifecycle", heading:"Plant Life Cycles & Alternation of Generations",
+html:`
+<p>Plants alternate between a haploid <b>gametophyte</b> (makes gametes by mitosis) and a diploid <b>sporophyte</b> (makes spores by meiosis). Which phase dominates defines the life-cycle type.</p>
+<table class="cmp"><thead><tr><th>Type</th><th>Dominant phase</th><th>Other phase</th><th>Found in</th></tr></thead><tbody>
+<tr><td><b>Haplontic</b></td><td>Gametophyte (n) — free-living, dominant</td><td>Only the <b>zygote</b> is diploid (no free-living sporophyte)</td><td>Many algae — <i>Volvox, Spirogyra, Chlamydomonas</i></td></tr>
+<tr><td><b>Diplontic</b></td><td>Sporophyte (2n) — free-living, dominant</td><td>Gametophyte is reduced (a few cells); only <b>gametes</b> are haploid</td><td>Seed plants — gymnosperms &amp; angiosperms; alga <i>Fucus</i></td></tr>
+<tr><td><b>Haplo-diplontic</b></td><td>Both multicellular &amp; free-living, but one dominates</td><td>—</td><td>Bryophytes (gametophyte dominant) &amp; Pteridophytes (sporophyte dominant); algae <i>Ectocarpus, Polysiphonia, Kelps</i></td></tr>
+</tbody></table>
+<div class="formula"><span class="hl">Gametophyte (n)</span> → gametes → fertilisation → <span class="hl">Zygote (2n)</span> → Sporophyte (2n) → meiosis → spores → Gametophyte (n) ...</div>
+<div class="callout"><b>Memory anchor:</b> Moss &amp; ferns = "in-between" (haplo-diplontic). Bryophyte → gametophyte boss. Pteridophyte → sporophyte boss.</div>
+`
+}
+],
+
+mnemonics:[
+{title:"The 3 algae classes (in evolutionary green→brown→red order)", device:`<b>G</b>reen <b>B</b>rats <b>R</b>un — "Chl-orophyceae, Pha-eophyceae, Rho-dophyceae"`, expand:[
+ {L:"G",t:"Chlorophyceae — Green — Chl a+b — Starch"},
+ {L:"B",t:"Phaeophyceae — Brown — fucoxanthin — Laminarin/Mannitol"},
+ {L:"R",t:"Rhodophyceae — Red — phycoerythrin — Floridean starch — NO flagella"}
+]},
+{title:"Brown-algae pigment", device:`<b>F</b>ucoxanthin makes it <b>F</b>uscous (brown)`, expand:[
+ {L:"F",t:"Fucoxanthin → brown colour (Phaeophyceae)"},
+ {L:"P",t:"Phycoerythrin → red (Rhodophyceae)"}
+]},
+{title:"Red algae has NO flagella & lives deep", device:`<b>R</b>ed = <b>R</b>esting (no flagella), <b>R</b>eaches deep water (phycoerythrin absorbs blue light)`, expand:[
+ {L:"!",t:"Only red algae lack flagella entirely"}
+]},
+{title:"Plant groups, simple → complex", device:`<b>A</b>ll <b>B</b>otanists <b>P</b>refer <b>G</b>reen <b>A</b>cres`, expand:[
+ {L:"A",t:"Algae (thalloid, aquatic)"},
+ {L:"B",t:"Bryophytes (amphibians of plant kingdom)"},
+ {L:"P",t:"Pteridophytes (first vascular plants)"},
+ {L:"G",t:"Gymnosperms (naked seeds)"},
+ {L:"A",t:"Angiosperms (flowers + fruit)"}
+]},
+{title:"Bryophyte = amphibian", device:`<b>B</b>ryophyte = <b>B</b>aby that still <b>B</b>athes — needs water to reproduce`, expand:[
+ {L:"♂",t:"Antheridium → Antherozoids (swim)"},
+ {L:"♀",t:"Archegonium → egg (flask-shaped)"}
+]},
+{title:"Heterosporous pteridophytes", device:`<b>S</b>ally <b>S</b>plits two spore sizes — <b>S</b>elaginella & <b>S</b>alvinia`, expand:[
+ {L:"S",t:"Selaginella + Salvinia = heterosporous (mega + micro spores)"}
+]},
+{title:"Life-cycle bosses", device:`Algae = <b>Haplo</b>boss · Seed plants = <b>Diplo</b>boss · Moss/Fern = <b>Both</b>`, expand:[
+ {L:"H",t:"Haplontic: gametophyte dominant (Volvox, Spirogyra, Chlamydomonas)"},
+ {L:"D",t:"Diplontic: sporophyte dominant (gymnosperms, angiosperms)"},
+ {L:"B",t:"Haplo-diplontic: bryophytes (gameto-dom) & pteridophytes (sporo-dom)"}
+]},
+{title:"Agar source", device:`<b>Gel</b>idium + <b>Gra</b>cilaria give <b>Gel</b> (agar)`, expand:[
+ {L:"A",t:"Agar = from red algae Gelidium & Gracilaria"}
+]}
+],
+
+flashcards:[
+{front:"What is the plant body of an alga called?", back:"A thallus — there is no differentiation into true root, stem or leaf."},
+{front:"Pigments & stored food of Chlorophyceae (green algae)", back:"Chlorophyll a & b; food stored as starch. Cell wall of cellulose. e.g. Spirogyra, Chara, Volvox."},
+{front:"Pigment that gives brown algae their colour", back:"Fucoxanthin (Phaeophyceae). Food stored as laminarin or mannitol."},
+{front:"Which algae class lacks flagella entirely?", back:"Rhodophyceae (red algae). Red colour from phycoerythrin; food = floridean starch."},
+{front:"Why are bryophytes called 'amphibians of the plant kingdom'?", back:"They live on land but still need water for sexual reproduction (antherozoids swim to the egg)."},
+{front:"Dominant phase in bryophytes vs pteridophytes", back:"Bryophytes → gametophyte dominant. Pteridophytes → sporophyte dominant (true roots, stem, leaves)."},
+{front:"Two stages in the life of a moss", back:"(1) Protonema — creeping green filamentous stage; (2) Leafy stage — upright, bears sex organs."},
+{front:"What is a prothallus?", back:"The small, free-living, photosynthetic gametophyte of a pteridophyte; needs cool, damp, shady soil."},
+{front:"Define heterospory & give two examples", back:"Production of two kinds of spores — micro & megaspores. Examples: Selaginella and Salvinia. It is a precursor to the seed habit."},
+{front:"Why are gymnosperm seeds called 'naked'?", back:"Ovules are not enclosed in an ovary, so seeds are not covered by a fruit."},
+{front:"Special roots of Cycas and Pinus", back:"Cycas → coralloid roots (N₂-fixing cyanobacteria). Pinus → mycorrhizal roots (fungal association)."},
+{front:"What is double fertilisation?", back:"Unique to angiosperms: one male gamete + egg → zygote (2n); other male gamete + 2 polar nuclei → triploid (3n) endosperm."},
+{front:"Dicot vs Monocot: cotyledons, venation, root", back:"Dicot: 2 cotyledons, reticulate venation, tap root. Monocot: 1 cotyledon, parallel venation, fibrous root."},
+{front:"Name the three classification systems", back:"Artificial (few characters), Natural (many natural affinities — Bentham & Hooker), Phylogenetic (evolutionary relationships)."},
+{front:"Cytotaxonomy vs Chemotaxonomy", back:"Cytotaxonomy uses chromosome number/structure/behaviour; Chemotaxonomy uses chemical constituents of the plant."},
+{front:"Source of agar", back:"Red algae — Gelidium and Gracilaria. Used in culture media & food (ice-creams)."},
+{front:"Algae that are protein-rich food supplements", back:"Chlorella and Spirulina."},
+{front:"Three life-cycle patterns", back:"Haplontic (gametophyte dominant – algae), Diplontic (sporophyte dominant – seed plants), Haplo-diplontic (both free-living – bryophytes & pteridophytes)."},
+{front:"Male & female sex organs in bryophytes", back:"Antheridium (male, makes antherozoids) and Archegonium (female, flask-shaped, makes one egg)."},
+{front:"What are sori?", back:"Clusters of sporangia found on the underside of fern sporophylls."}
+],
+
+recall:[
+{q:"Compare the three classes of algae on the basis of pigments, stored food and one example each.", hint:"Green / Brown / Red. Think colour-causing pigment.", a:"<b>Chlorophyceae (green):</b> chlorophyll a & b; food = starch; e.g. Spirogyra, Volvox. <b>Phaeophyceae (brown):</b> chl a, c + fucoxanthin; food = laminarin/mannitol; e.g. Laminaria, Sargassum. <b>Rhodophyceae (red):</b> chl a, d + phycoerythrin; food = floridean starch; no flagella; e.g. Porphyra, Gracilaria."},
+{q:"Explain why bryophytes are called the 'amphibians of the plant kingdom'.", hint:"What do they still depend on for reproduction?", a:"They are land plants but the male antherozoids must <b>swim through water</b> to reach the egg in the archegonium for fertilisation. So they require water to complete sexual reproduction, like amphibians."},
+{q:"Describe the alternation of generations in a moss, naming the dominant phase.", hint:"Spore → ? → sex organs → zygote → ?", a:"Spore germinates into a creeping <b>protonema</b>, which develops the <b>leafy gametophyte</b> (dominant, haploid). It bears antheridia & archegonia; with water, fertilisation gives a <b>zygote (2n)</b> that grows into the partly dependent <b>sporophyte</b>, which makes spores by meiosis."},
+{q:"What is heterospory and why is it evolutionarily important?", hint:"Two spore types; what stays on the parent?", a:"Heterospory = production of two kinds of spores, large <b>megaspores</b> and small <b>microspores</b> (seen in Selaginella & Salvinia). The megaspore develops a female gametophyte <b>retained on the parent plant</b>, foreshadowing the <b>seed habit</b> of higher plants."},
+{q:"How do gymnosperms reproduce without water, and what makes their seeds 'naked'?", hint:"Cones, wind, no ovary.", a:"They are heterosporous; reproductive structures are on <b>cones</b>. <b>Wind</b> carries pollen to the ovule and a pollen tube delivers the male gametes, so no external water is needed. Ovules are <b>not enclosed in an ovary</b>, so the resulting seeds lie exposed (naked) on megasporophylls."},
+{q:"Explain double fertilisation in angiosperms and its products.", hint:"Two male gametes — two fusions.", a:"In the embryo sac, one male gamete fuses with the egg → <b>diploid zygote (2n)</b> (syngamy); the second male gamete fuses with the <b>two polar nuclei</b> → <b>triploid primary endosperm nucleus (3n)</b> (triple fusion). The endosperm nourishes the developing embryo. This double event is unique to angiosperms."},
+{q:"Distinguish haplontic, diplontic and haplo-diplontic life cycles with examples.", hint:"Which phase is the free-living 'boss'?", a:"<b>Haplontic:</b> gametophyte dominant & free-living, only zygote is diploid (Volvox, Spirogyra, Chlamydomonas). <b>Diplontic:</b> sporophyte dominant, gametophyte reduced (gymnosperms, angiosperms). <b>Haplo-diplontic:</b> both phases multicellular & free-living — bryophytes (gametophyte dominant) and pteridophytes (sporophyte dominant)."},
+{q:"List the economic uses of algae.", hint:"Food, gels, supplements, CO₂.", a:"Algae fix ~half of global CO₂. Food: Porphyra, Laminaria, Sargassum. Hydrocolloids: algin (brown), carrageen (red), <b>agar</b> (Gelidium, Gracilaria). Chlorella & Spirulina are protein-rich supplements."},
+{q:"Differentiate the three systems of classification.", hint:"Few traits / many traits / evolution.", a:"<b>Artificial</b> — based on one or few superficial characters (Linnaeus). <b>Natural</b> — based on many natural affinities including internal features (Bentham & Hooker). <b>Phylogenetic</b> — based on evolutionary relationships and common ancestry."},
+{q:"State the distinguishing features of pteridophytes that make them the 'first true land plants'.", hint:"Vascular tissue + body parts.", a:"They are the first plants with <b>vascular tissue (xylem & phloem)</b>. The dominant <b>sporophyte</b> has true <b>roots, stem and leaves</b>; it bears sporangia (often in sori). Spores form a free-living prothallus (gametophyte) and water is still needed for fertilisation."},
+{q:"Give one defining example organism for each major plant group.", hint:"Algae→Bryo→Pterido→Gymno→Angio.", a:"Algae: Spirogyra/Volvox; Bryophyte: Marchantia (liverwort) / Funaria (moss); Pteridophyte: Selaginella / Pteris (fern); Gymnosperm: Cycas / Pinus; Angiosperm: any flowering plant (e.g. pea, maize)."}
+],
+
+mcqs:[
+{q:"In which algal class is the stored food floridean starch?", o:["Chlorophyceae","Phaeophyceae","Rhodophyceae","Both a & b"], c:2, e:"Floridean starch is the reserve food of <b>red algae (Rhodophyceae)</b>. Green algae store starch; brown algae store laminarin/mannitol."},
+{q:"Fucoxanthin is the characteristic pigment of:", o:["Green algae","Brown algae","Red algae","Bryophytes"], c:1, e:"<b>Brown algae (Phaeophyceae)</b> owe their colour to fucoxanthin (a xanthophyll)."},
+{q:"Which group is referred to as the 'amphibians of the plant kingdom'?", o:["Algae","Bryophytes","Pteridophytes","Gymnosperms"], c:1, e:"<b>Bryophytes</b> — they live on land but need water for fertilisation."},
+{q:"The dominant phase in a pteridophyte life cycle is the:", o:["Gametophyte","Sporophyte","Zygote","Prothallus"], c:1, e:"In pteridophytes the <b>sporophyte</b> dominates (true roots, stem, leaves). The gametophyte is the small prothallus."},
+{q:"Naked seeds are characteristic of:", o:["Angiosperms","Pteridophytes","Gymnosperms","Bryophytes"], c:2, e:"<b>Gymnosperms</b> bear ovules not enclosed in an ovary, so the seeds are naked."},
+{q:"Double fertilisation is a feature unique to:", o:["Gymnosperms","Angiosperms","Pteridophytes","Brown algae"], c:1, e:"Only <b>angiosperms</b> show double fertilisation → diploid zygote + triploid endosperm."},
+{q:"Coralloid roots with nitrogen-fixing cyanobacteria are found in:", o:["Pinus","Cycas","Cedrus","Ginkgo"], c:1, e:"<b>Cycas</b> has coralloid roots harbouring N₂-fixing cyanobacteria."},
+{q:"Which classification system is based on evolutionary relationships?", o:["Artificial","Natural","Phylogenetic","Numerical"], c:2, e:"<b>Phylogenetic</b> systems assume members of a group share a common ancestor."},
+{q:"Selaginella and Salvinia are examples of:", o:["Homosporous pteridophytes","Heterosporous pteridophytes","Liverworts","Brown algae"], c:1, e:"Both are <b>heterosporous</b> — they form micro- and megaspores, a step toward the seed habit."},
+{q:"Agar is obtained from:", o:["Chlorella","Sargassum","Gelidium and Gracilaria","Spirogyra"], c:2, e:"<b>Agar</b> comes from the red algae Gelidium and Gracilaria."},
+{q:"In a haplontic life cycle, the only diploid stage is the:", o:["Gametophyte","Spore","Zygote","Sporophyte tissue"], c:2, e:"In haplontic cycles (e.g. Volvox, Spirogyra) only the <b>zygote</b> is diploid; it undergoes meiosis."},
+{q:"The female sex organ of a bryophyte is the:", o:["Antheridium","Archegonium","Sporangium","Sorus"], c:1, e:"The flask-shaped <b>archegonium</b> produces a single egg; the antheridium is the male organ."},
+{q:"Reticulate venation and tap roots are typical of:", o:["Monocots","Dicots","Mosses","Ferns"], c:1, e:"<b>Dicots</b> show reticulate (net) venation, tap roots and floral parts in 4s/5s."},
+{q:"Chlorella and Spirulina are used as:", o:["Sources of agar","Protein-rich food supplements","Brown pigments","Soil binders"], c:1, e:"Both are unicellular algae rich in protein, used as food supplements."},
+{q:"Which class of algae completely lacks flagellated cells?", o:["Chlorophyceae","Phaeophyceae","Rhodophyceae","None"], c:2, e:"<b>Rhodophyceae</b> (red algae) have no flagella at any stage."},
+{q:"Cytotaxonomy is based primarily on:", o:["Chemical constituents","Chromosome data","Flower colour","Computer codes"], c:1, e:"Cytotaxonomy uses cytological data — chromosome number, structure and behaviour."},
+{q:"The triploid tissue formed in angiosperm double fertilisation is the:", o:["Zygote","Embryo","Endosperm","Nucellus"], c:2, e:"The primary endosperm nucleus (3n) forms the <b>endosperm</b>, which nourishes the embryo."},
+{q:"Sphagnum is economically important as a source of:", o:["Agar","Peat / packing material","Algin","Carrageen"], c:1, e:"<b>Sphagnum</b> (peat moss) provides peat fuel and is used as moist packing material."},
+{q:"Pollination in gymnosperms is generally achieved by:", o:["Water","Insects","Wind","Birds"], c:2, e:"Gymnosperms are <b>wind-pollinated</b>; pollen reaches the ovule directly."},
+{q:"Which is the correct simple-to-complex order?", o:["Algae→Pteridophytes→Bryophytes→Gymnosperms→Angiosperms","Algae→Bryophytes→Pteridophytes→Gymnosperms→Angiosperms","Bryophytes→Algae→Pteridophytes→Angiosperms→Gymnosperms","Algae→Bryophytes→Gymnosperms→Pteridophytes→Angiosperms"], c:1, e:"Correct order: Algae → Bryophytes → Pteridophytes → Gymnosperms → Angiosperms."}
+],
+
+match:[
+{term:"Chlorophyceae", def:"Green algae; chlorophyll a & b; starch"},
+{term:"Phaeophyceae", def:"Brown algae; fucoxanthin; laminarin"},
+{term:"Rhodophyceae", def:"Red algae; phycoerythrin; no flagella"},
+{term:"Marchantia", def:"A liverwort"},
+{term:"Funaria", def:"A moss"},
+{term:"Selaginella", def:"Heterosporous pteridophyte"},
+{term:"Cycas", def:"Gymnosperm with coralloid roots"},
+{term:"Double fertilisation", def:"Unique to angiosperms"},
+{term:"Prothallus", def:"Free-living gametophyte of a fern"},
+{term:"Agar", def:"From Gelidium & Gracilaria"},
+{term:"Haplontic", def:"Gametophyte dominant (Volvox)"},
+{term:"Diplontic", def:"Sporophyte dominant (seed plants)"}
+],
+
+pathways:[
+{title:"Bryophyte life cycle", prompt:"Arrange the moss life cycle from spore onward.", steps:["Spore","Protonema","Leafy gametophyte (n)","Antheridium + Archegonium","Fertilisation (needs water)","Zygote (2n)","Sporophyte → meiosis"]},
+{title:"Plant groups: simple → complex", prompt:"Order the five plant groups by increasing complexity.", steps:["Algae","Bryophytes","Pteridophytes","Gymnosperms","Angiosperms"]},
+{title:"Alternation of generations", prompt:"Order the generic alternation of generations.", steps:["Gametophyte (n)","Gametes","Fertilisation","Zygote (2n)","Sporophyte (2n)","Meiosis","Spores (n)"]},
+{title:"Algae by evolutionary pigment shift", prompt:"Order algae classes green → brown → red.", steps:["Chlorophyceae (green)","Phaeophyceae (brown)","Rhodophyceae (red)"]}
+]
+};
+
+/* ====== data_animal.js ====== */
+/* ===== CHAPTER 4 · ANIMAL KINGDOM ===== */
+DATA.chapters.animal = {
+id:"animal", num:4, title:"Animal Kingdom", subtitle:"Basis of classification · Porifera to Mammalia",
+color:"#e58a5d", colorD:"#a8512a", glyph:"🦋",
+
+notes:[
+{
+id:"basis", heading:"Basis of Classification",
+html:`
+<p>Over a million animal species are known, so a shared framework is essential. Animals are grouped using fundamental features that cut across appearances.</p>
+<h4>1. Levels of organisation</h4>
+<ul>
+<li><b>Cellular level</b> — cells loosely arranged (Porifera).</li>
+<li><b>Tissue level</b> — cells form tissues (Coelenterata, Ctenophora).</li>
+<li><b>Organ level</b> — tissues form organs (Platyhelminthes onward).</li>
+<li><b>Organ-system level</b> — organs form systems (Aschelminthes onward).</li>
+</ul>
+<h4>2. Symmetry</h4>
+<ul>
+<li><b>Asymmetrical</b> — no plane divides into equal halves (most sponges).</li>
+<li><b>Radial</b> — any plane through the central axis gives equal halves (Coelenterates, Ctenophores, adult echinoderms).</li>
+<li><b>Bilateral</b> — only one plane divides into identical left & right halves (most animals).</li>
+</ul>
+<h4>3. Germ layers</h4>
+<ul>
+<li><b>Diploblastic</b> — two layers: ectoderm + endoderm, with mesoglea between (Coelenterates).</li>
+<li><b>Triploblastic</b> — three layers: ecto-, meso-, endoderm (Platyhelminthes → Chordates).</li>
+</ul>
+<h4>4. Coelom (body cavity)</h4>
+<table class="cmp"><thead><tr><th>Type</th><th>Body cavity</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Coelomate</b></td><td>True coelom lined by mesoderm</td><td>Annelids, arthropods, molluscs, echinoderms, hemichordates, chordates</td></tr>
+<tr><td><b>Pseudocoelomate</b></td><td>Cavity not lined by mesoderm (mesoderm in scattered pouches)</td><td>Aschelminthes (round worms)</td></tr>
+<tr><td><b>Acoelomate</b></td><td>No body cavity</td><td>Platyhelminthes</td></tr>
+</tbody></table>
+<h4>5. Segmentation & 6. Notochord</h4>
+<p><b>Metameric segmentation</b> — body externally & internally divided into serial segments (Annelida). <b>Notochord</b> — a rod formed on the dorsal side during embryonic development; animals <span class="kw">with</span> it = Chordates, <span class="kw">without</span> it = Non-chordates.</p>
+`
+},
+{
+id:"nonchordata1", heading:"Porifera → Aschelminthes",
+html:`
+<table class="cmp"><thead><tr><th>Phylum</th><th>Key features</th><th>Symmetry / layers / coelom</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Porifera</b> (sponges)</td><td>Cellular level; <span class="kw">water canal system</span> (ostia→spongocoel→osculum); <b>choanocytes</b> (collar cells) line canals; spicules/spongin skeleton; hermaphrodite; indirect development</td><td>Mostly asymmetrical; "porocyte" body</td><td><i>Sycon, Spongilla, Euspongia</i></td></tr>
+<tr><td><b>Coelenterata / Cnidaria</b></td><td>Tissue level; <span class="kw">cnidoblasts</span> (stinging cells) for defence/prey; central gastro-vascular cavity (coelenteron) with one opening; two forms — <b>polyp</b> (fixed) & <b>medusa</b> (free), with metagenesis</td><td>Radial; diploblastic</td><td><i>Hydra, Adamsia, Physalia, Aurelia, Pennatula</i></td></tr>
+<tr><td><b>Ctenophora</b> (comb jellies)</td><td>Marine; 8 external <b>comb plates (ctenes)</b> for locomotion; <span class="kw">bioluminescent</span>; digestion both extra- & intracellular</td><td>Radial; diploblastic</td><td><i>Pleurobrachia, Ctenoplana</i></td></tr>
+<tr><td><b>Platyhelminthes</b> (flatworms)</td><td>Organ level; dorso-ventrally flattened; mostly endoparasites; <span class="kw">flame cells</span> for osmoregulation/excretion; hooks & suckers in parasites</td><td>Bilateral; triploblastic; <b>acoelomate</b></td><td><i>Taenia</i> (tapeworm), <i>Fasciola</i> (liver fluke), <i>Planaria</i></td></tr>
+<tr><td><b>Aschelminthes</b> (round worms)</td><td>Organ-system level; circular in cross-section; many parasitic; sexes separate (<span class="kw">dioecious</span>) with sexual dimorphism</td><td>Bilateral; triploblastic; <b>pseudocoelomate</b></td><td><i>Ascaris, Wuchereria</i> (filaria), <i>Ancylostoma</i> (hookworm)</td></tr>
+</tbody></table>
+<div class="callout"><b>Choanocytes</b> = the signature cell of sponges. <b>Cnidoblasts</b> = the signature cell of cnidarians. <b>Flame cells</b> = the signature cell of flatworms.</div>
+`
+},
+{
+id:"nonchordata2", heading:"Annelida → Echinodermata → Hemichordata",
+html:`
+<table class="cmp"><thead><tr><th>Phylum</th><th>Key features</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Annelida</b></td><td><span class="kw">Metameric segmentation</span>; coelomate; closed circulation; <b>nephridia</b> for excretion & osmoregulation; longitudinal & circular muscles; <i>Nereis</i> has parapodia</td><td><i>Nereis, Pheretima</i> (earthworm), <i>Hirudinaria</i> (leech)</td></tr>
+<tr><td><b>Arthropoda</b> (largest phylum)</td><td><span class="kw">Jointed appendages</span>; chitinous <b>exoskeleton</b>; body = head, thorax, abdomen; <b>open</b> circulatory system; respiration via gills/book gills/book lungs/trachea; sensory & compound eyes</td><td><i>Apis</i> (bee), <i>Bombyx</i> (silkworm), <i>Laccifer</i> (lac insect), <i>Anopheles, Locusta, Limulus</i> (king crab, a living fossil)</td></tr>
+<tr><td><b>Mollusca</b> (2nd largest)</td><td>Soft body covered by a <b>mantle</b>; usually a calcareous shell; muscular foot; <span class="kw">radula</span> (rasping feeding organ); gills for respiration</td><td><i>Pila</i> (apple snail), <i>Pinctada</i> (pearl oyster), <i>Sepia, Loligo, Octopus, Aplysia</i> (sea hare), <i>Dentalium, Chaetopleura</i></td></tr>
+<tr><td><b>Echinodermata</b></td><td>Spiny endoskeleton of calcareous ossicles; unique <span class="kw">water vascular system</span> (tube feet) for locomotion, food capture & respiration; <b>marine</b>; adults radial but larvae bilateral</td><td><i>Asterias</i> (starfish), <i>Echinus</i> (sea urchin), <i>Antedon</i> (sea lily), <i>Cucumaria</i> (sea cucumber), <i>Ophiura</i> (brittle star)</td></tr>
+<tr><td><b>Hemichordata</b></td><td>Worm-like marine animals; have a rudimentary <span class="kw">stomochord</span> in the collar (not a true notochord); proboscis–collar–trunk body</td><td><i>Balanoglossus, Saccoglossus</i></td></tr>
+</tbody></table>
+<div class="callout"><b>Water vascular system</b> = the unique identity of echinoderms. <b>Radula</b> = molluscs. <b>Metameric segmentation + nephridia</b> = annelids.</div>
+`
+},
+{
+id:"chordata", heading:"Chordata — fundamental features & lower groups",
+html:`
+<p>Four features define <b>Chordata</b> (at least at some life stage):</p>
+<div class="flow">
+<span class="node">Notochord</span><span class="node">Dorsal hollow nerve cord</span><span class="node">Pharyngeal gill slits</span><span class="node">Post-anal tail</span>
+</div>
+<table class="cmp"><thead><tr><th>Subphylum</th><th>Notochord</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Urochordata</b> (Tunicata)</td><td>Present only in the <span class="kw">larval tail</span></td><td><i>Ascidia, Salpa, Doliolum</i></td></tr>
+<tr><td><b>Cephalochordata</b></td><td>Extends from head to tail, <span class="kw">persists throughout life</span></td><td><i>Branchiostoma</i> (Amphioxus / lancelet)</td></tr>
+<tr><td><b>Vertebrata</b></td><td>Notochord replaced by a <b>vertebral column</b> in the adult; have a cranium</td><td>Fishes → Mammals</td></tr>
+</tbody></table>
+<div class="callout"><b>All vertebrates are chordates, but all chordates are not vertebrates.</b> Vertebrates additionally have a backbone and a skull.</div>
+`
+},
+{
+id:"vertebrata", heading:"Vertebrata — the seven classes",
+html:`
+<table class="cmp"><thead><tr><th>Class</th><th>Hallmarks</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Cyclostomata</b></td><td><span class="kw">Jawless</span>; circular sucking mouth; no scales/paired fins; ectoparasites on fish; cartilaginous skeleton</td><td><i>Petromyzon</i> (lamprey), <i>Myxine</i> (hagfish)</td></tr>
+<tr><td><b>Chondrichthyes</b></td><td>Marine; <span class="kw">cartilaginous</span> endoskeleton; placoid scales; ventral mouth; no air bladder so must swim; internal fertilisation</td><td><i>Scoliodon</i> (dogfish), <i>Pristis</i> (sawfish), <i>Carcharodon</i> (great white), <i>Trygon</i> (sting ray)</td></tr>
+<tr><td><b>Osteichthyes</b></td><td><span class="kw">Bony</span> endoskeleton; cycloid/ctenoid scales; <b>air bladder</b> regulates buoyancy; operculum over gills; mostly external fertilisation, oviparous</td><td><i>Labeo</i> (rohu), <i>Catla, Clarias</i> (magur), <i>Exocoetus</i> (flying fish), <i>Hippocampus</i> (sea horse)</td></tr>
+<tr><td><b>Amphibia</b></td><td>Live on land & water; moist skin (no scales); two pairs of limbs; 3-chambered heart; <span class="kw">external fertilisation</span>, oviparous</td><td><i>Rana</i> (frog), <i>Bufo</i> (toad), <i>Hyla</i> (tree frog), <i>Salamandra, Ichthyophis</i> (limbless)</td></tr>
+<tr><td><b>Reptilia</b></td><td>Creeping; dry, <span class="kw">scaly</span> skin; mostly 3-chambered heart (crocodile 4); <b>cold-blooded</b>; internal fertilisation; lay shelled eggs on land</td><td><i>Chelone</i> (turtle), <i>Testudo</i> (tortoise), <i>Naja</i> (cobra), <i>Crocodilus, Hemidactylus</i> (wall lizard)</td></tr>
+<tr><td><b>Aves</b> (birds)</td><td><span class="kw">Feathers</span>; forelimbs → wings; beak; <b>4-chambered</b> heart; warm-blooded; bones pneumatic (air-filled); oviparous</td><td><i>Corvus</i> (crow), <i>Columba</i> (pigeon), <i>Struthio</i> (ostrich), <i>Neophron</i> (vulture)</td></tr>
+<tr><td><b>Mammalia</b></td><td><span class="kw">Mammary glands</span> (milk); hair/fur; external ears (pinna); <b>4-chambered</b> heart; warm-blooded; mostly viviparous</td><td><i>Ornithorhynchus</i> (egg-laying platypus), <i>Macropus</i> (kangaroo), <i>Pteropus</i> (flying fox), <i>Balaenoptera</i> (blue whale), <i>Panthera, Homo</i></td></tr>
+</tbody></table>
+<div class="callout"><b>Warm-blooded (homeothermic):</b> only <b>Aves & Mammalia</b>. <b>4-chambered heart:</b> Aves, Mammalia, and crocodiles. Everything else is cold-blooded.</div>
+`
+}
+],
+
+mnemonics:[
+{title:"Non-chordate phyla in order", device:`<b>P</b>lease <b>C</b>ome <b>C</b>lear <b>P</b>lates <b>A</b>fter <b>A</b> <b>M</b>eal & <b>E</b>at <b>H</b>oney`, expand:[
+ {L:"P",t:"Porifera"},{L:"C",t:"Coelenterata"},{L:"C",t:"Ctenophora"},{L:"P",t:"Platyhelminthes"},{L:"A",t:"Aschelminthes"},{L:"A",t:"Annelida"},{L:"M",t:"Mollusca... wait — Arthropoda comes first"},{L:"E",t:"Echinodermata"},{L:"H",t:"Hemichordata"}
+]},
+{title:"Easier phyla order", device:`<b>P</b>orifera, <b>C</b>oelenterata, <b>C</b>tenophora, <b>P</b>latyhelminthes, <b>A</b>schelminthes, <b>A</b>nnelida, <b>A</b>rthropoda, <b>M</b>ollusca, <b>E</b>chinodermata, <b>H</b>emichordata → "PCC-PA-AAM-EH"`, expand:[
+ {L:"3",t:"Three As in a row: Aschelminthes, Annelida, Arthropoda"}
+]},
+{title:"Signature cells", device:`Sponge <b>C</b>hoir (Choanocytes) · Cnidarian <b>C</b>annon (Cnidoblasts) · Flatworm <b>F</b>lame (Flame cells)`, expand:[
+ {L:"C",t:"Choanocytes — Porifera"},
+ {L:"C",t:"Cnidoblasts — Coelenterata"},
+ {L:"F",t:"Flame cells — Platyhelminthes"}
+]},
+{title:"Coelom trio", device:`<b>A</b>coelomate flatworms · <b>Pseudo</b>coelomate round worms · <b>True</b> coelom from Annelids on`, expand:[
+ {L:"A",t:"Platyhelminthes = acoelomate"},
+ {L:"P",t:"Aschelminthes = pseudocoelomate"},
+ {L:"T",t:"Annelida onward = true coelomate"}
+]},
+{title:"Vertebrate classes in order", device:`<b>C</b>ute <b>C</b>hubby <b>O</b>tters <b>A</b>re <b>R</b>eally <b>A</b>dorable <b>M</b>ammals`, expand:[
+ {L:"C",t:"Cyclostomata (jawless)"},{L:"C",t:"Chondrichthyes (cartilage fish)"},{L:"O",t:"Osteichthyes (bony fish)"},{L:"A",t:"Amphibia"},{L:"R",t:"Reptilia"},{L:"A",t:"Aves"},{L:"M",t:"Mammalia"}
+]},
+{title:"Who is warm-blooded?", device:`Only <b>A</b>ves & <b>M</b>ammals stay warm — "AM = Always Mild"`, expand:[
+ {L:"♨",t:"Homeothermic = Aves + Mammalia only"}
+]},
+{title:"4-chambered hearts", device:`<b>B</b>irds, <b>M</b>ammals & the <b>C</b>rocodile — "BMC has 4 rooms"`, expand:[
+ {L:"4",t:"Crocodile is the reptile exception with a 4-chambered heart"}
+]},
+{title:"Echinoderm identity", device:`<b>E</b>chinoderm = <b>E</b>xclusive <b>W</b>ater <b>V</b>ascular system + spines, all marine`, expand:[
+ {L:"WVS",t:"Tube feet run on the water vascular system"}
+]},
+{title:"Egg-laying mammal", device:`<b>Ornitho</b>rhynchus the platypus lays eggs — "Ornitho = bird-like, so it lays like a bird"`, expand:[
+ {L:"🥚",t:"Platypus (Ornithorhynchus) & echidna are egg-laying mammals"}
+]}
+],
+
+flashcards:[
+{front:"The four fundamental chordate features", back:"(1) Notochord, (2) dorsal hollow nerve cord, (3) pharyngeal gill slits, (4) post-anal tail — present at least at some life stage."},
+{front:"Signature cell of Porifera", back:"Choanocytes (collar cells) that line the canal system and drive the water current."},
+{front:"Signature cell of Coelenterata", back:"Cnidoblasts (stinging cells) used for defence and capturing prey."},
+{front:"Signature cell of Platyhelminthes", back:"Flame cells — used for excretion and osmoregulation."},
+{front:"Coelom status: flatworm vs roundworm vs annelid", back:"Platyhelminthes = acoelomate; Aschelminthes = pseudocoelomate; Annelida onward = true coelomate."},
+{front:"Which phylum is the largest? Its hallmark?", back:"Arthropoda — jointed appendages, chitinous exoskeleton, open circulatory system."},
+{front:"Unique organ system of echinoderms", back:"Water vascular system (tube feet) for locomotion, feeding & respiration. All echinoderms are marine."},
+{front:"What is the radula?", back:"A rasping, file-like feeding organ found in molluscs."},
+{front:"Diploblastic vs triploblastic — give the phyla", back:"Diploblastic (2 germ layers): Coelenterata & Ctenophora. Triploblastic: Platyhelminthes through Chordates."},
+{front:"Polyp vs medusa", back:"Two body forms of cnidarians: polyp is sessile (e.g. Hydra); medusa is free-swimming (e.g. jellyfish). Alternation = metagenesis."},
+{front:"Cyclostomata distinguishing feature + examples", back:"Jawless vertebrates with a circular sucking mouth; ectoparasites on fish. Petromyzon, Myxine."},
+{front:"Chondrichthyes vs Osteichthyes skeleton & air bladder", back:"Chondrichthyes: cartilaginous skeleton, NO air bladder (must keep swimming). Osteichthyes: bony skeleton, air bladder present."},
+{front:"Which animal classes are warm-blooded?", back:"Only Aves (birds) and Mammalia."},
+{front:"Which animals have a 4-chambered heart?", back:"Aves, Mammalia, and crocodiles (the reptile exception)."},
+{front:"Reptilian skin & fertilisation", back:"Dry, cornified scaly skin; internal fertilisation; lay shelled eggs on land; cold-blooded."},
+{front:"Amphibian fertilisation & skin", back:"External fertilisation, oviparous; moist skin without scales; usually 3-chambered heart."},
+{front:"Defining feature of Mammalia", back:"Mammary glands (milk for young); body hair; external pinna; mostly viviparous; 4-chambered heart."},
+{front:"Notochord in the three chordate subphyla", back:"Urochordata: only in larval tail. Cephalochordata: head-to-tail, lifelong. Vertebrata: replaced by vertebral column in adult."},
+{front:"Metameric segmentation + nephridia → which phylum?", back:"Annelida (e.g. earthworm Pheretima, leech Hirudinaria)."},
+{front:"Name an egg-laying mammal", back:"Ornithorhynchus (platypus) — an oviparous (egg-laying) mammal."}
+],
+
+recall:[
+{q:"List the six fundamental bases used to classify animals.", hint:"Organisation, symmetry, layers...", a:"(1) Levels of organisation, (2) symmetry, (3) diploblastic/triploblastic organisation, (4) presence/type of coelom, (5) segmentation, (6) presence of a notochord."},
+{q:"Distinguish acoelomate, pseudocoelomate and coelomate with one example each.", hint:"Is the cavity lined by mesoderm?", a:"<b>Acoelomate</b> — no body cavity (Platyhelminthes). <b>Pseudocoelomate</b> — cavity not lined by mesoderm (Aschelminthes/round worms). <b>Coelomate</b> — true coelom lined by mesoderm (Annelida, Arthropoda, Mollusca, Echinodermata, Chordata)."},
+{q:"Name the signature cell of Porifera, Coelenterata and Platyhelminthes and its function.", hint:"Collar, sting, flame.", a:"<b>Choanocytes</b> (Porifera) — collar cells driving the water current. <b>Cnidoblasts</b> (Coelenterata) — sting cells for defence/prey capture. <b>Flame cells</b> (Platyhelminthes) — excretion & osmoregulation."},
+{q:"Why is Arthropoda the largest phylum? State its distinguishing features.", hint:"Joints, skeleton, circulation.", a:"Arthropoda contains the most species. Hallmarks: <b>jointed appendages</b>, a chitinous <b>exoskeleton</b>, body divided into head–thorax–abdomen, an <b>open circulatory system</b>, and varied respiratory organs (gills, book gills, book lungs, tracheae). e.g. Apis, Bombyx, Anopheles, Limulus."},
+{q:"Describe the unique feature of echinoderms and where they live.", hint:"Tube feet.", a:"Echinoderms have a <b>water vascular system</b> operating tube feet for locomotion, food capture and respiration, plus a spiny calcareous endoskeleton. They are exclusively <b>marine</b>; adults are radially symmetrical but larvae are bilateral. e.g. Asterias, Echinus, Cucumaria."},
+{q:"List the four fundamental features of chordates and explain how the three subphyla differ in notochord.", hint:"Notochord position over life.", a:"Features: notochord, dorsal hollow nerve cord, pharyngeal gill slits, post-anal tail. <b>Urochordata</b> — notochord only in larval tail; <b>Cephalochordata</b> — notochord head-to-tail throughout life; <b>Vertebrata</b> — notochord replaced by a vertebral column in the adult."},
+{q:"Compare Chondrichthyes and Osteichthyes (skeleton, scales, air bladder, fertilisation).", hint:"Cartilage vs bone.", a:"<b>Chondrichthyes:</b> cartilaginous skeleton, placoid scales, ventral mouth, NO air bladder (must swim continuously), internal fertilisation (e.g. Scoliodon, Trygon). <b>Osteichthyes:</b> bony skeleton, cycloid/ctenoid scales, operculum, air bladder present, mostly external fertilisation & oviparous (e.g. Labeo, Hippocampus)."},
+{q:"Which vertebrate classes are warm-blooded and which have a 4-chambered heart?", hint:"AM and the croc.", a:"<b>Warm-blooded (homeothermic):</b> only Aves and Mammalia. <b>4-chambered heart:</b> Aves, Mammalia, and the crocodile (the reptilian exception). All other vertebrates are cold-blooded."},
+{q:"Give the distinguishing features of Amphibia and Reptilia.", hint:"Skin & where eggs are laid.", a:"<b>Amphibia:</b> moist scaleless skin, two pairs of limbs, 3-chambered heart, external fertilisation, lay eggs in water (Rana, Bufo, Ichthyophis). <b>Reptilia:</b> dry cornified scaly skin, internal fertilisation, lay shelled eggs on land, cold-blooded, mostly 3-chambered heart (Naja, Chelone, Crocodilus)."},
+{q:"State the defining features of Mammalia and name an egg-laying mammal.", hint:"Milk, hair, pinna.", a:"Mammals have <b>mammary glands</b> (milk), body hair, external pinna, a 4-chambered heart, are warm-blooded and mostly viviparous. The egg-laying (oviparous) mammal is <b>Ornithorhynchus</b> (platypus)."}
+],
+
+mcqs:[
+{q:"Choanocytes (collar cells) are characteristic of:", o:["Coelenterata","Porifera","Annelida","Echinodermata"], c:1, e:"<b>Porifera</b> (sponges) have choanocytes lining the canal system."},
+{q:"Which phylum is acoelomate?", o:["Annelida","Arthropoda","Platyhelminthes","Mollusca"], c:2, e:"<b>Platyhelminthes</b> have no body cavity (acoelomate)."},
+{q:"Cnidoblasts are found in:", o:["Porifera","Coelenterata","Ctenophora","Platyhelminthes"], c:1, e:"<b>Coelenterata (Cnidaria)</b> use cnidoblasts for defence and capturing prey."},
+{q:"The largest animal phylum is:", o:["Mollusca","Chordata","Arthropoda","Annelida"], c:2, e:"<b>Arthropoda</b> is the largest phylum (jointed appendages, chitin exoskeleton)."},
+{q:"The water vascular system is the unique feature of:", o:["Mollusca","Echinodermata","Hemichordata","Annelida"], c:1, e:"Only <b>Echinodermata</b> possess a water vascular system with tube feet."},
+{q:"Metameric segmentation is best shown by:", o:["Round worms","Flatworms","Annelids","Sponges"], c:2, e:"<b>Annelida</b> show true metameric segmentation; they also have nephridia."},
+{q:"The radula is a feeding organ of:", o:["Arthropods","Molluscs","Echinoderms","Annelids"], c:1, e:"The rasping <b>radula</b> belongs to molluscs."},
+{q:"In which subphylum does the notochord persist throughout life?", o:["Urochordata","Cephalochordata","Vertebrata","All chordates"], c:1, e:"<b>Cephalochordata</b> (e.g. Branchiostoma) retain the notochord head-to-tail for life."},
+{q:"Jawless vertebrates that are ectoparasites on fish belong to:", o:["Chondrichthyes","Cyclostomata","Osteichthyes","Amphibia"], c:1, e:"<b>Cyclostomata</b> (Petromyzon, Myxine) are jawless."},
+{q:"An air bladder is present in:", o:["Chondrichthyes","Osteichthyes","Both","Neither"], c:1, e:"<b>Osteichthyes</b> (bony fish) have an air bladder; cartilaginous fish lack it and must keep swimming."},
+{q:"Which classes are warm-blooded?", o:["Reptilia & Aves","Aves & Mammalia","Amphibia & Mammalia","Only Mammalia"], c:1, e:"Only <b>Aves and Mammalia</b> are homeothermic (warm-blooded)."},
+{q:"Which reptile has a 4-chambered heart?", o:["Cobra","Turtle","Crocodile","Wall lizard"], c:2, e:"The <b>crocodile</b> is the reptilian exception with a 4-chambered heart."},
+{q:"Diploblastic organisation is seen in:", o:["Porifera & Annelida","Coelenterata & Ctenophora","Platyhelminthes","Echinodermata"], c:1, e:"<b>Coelenterata and Ctenophora</b> have two germ layers (diploblastic)."},
+{q:"Pheretima and Hirudinaria belong to:", o:["Mollusca","Annelida","Arthropoda","Aschelminthes"], c:1, e:"Earthworm (Pheretima) and leech (Hirudinaria) are <b>Annelids</b>."},
+{q:"An egg-laying mammal is:", o:["Macropus","Pteropus","Ornithorhynchus","Balaenoptera"], c:2, e:"<b>Ornithorhynchus</b> (platypus) is an oviparous mammal."},
+{q:"Pleurobrachia and Ctenoplana belong to:", o:["Coelenterata","Ctenophora","Porifera","Echinodermata"], c:1, e:"They are <b>Ctenophores</b> (comb jellies), known for bioluminescence and comb plates."},
+{q:"Flame cells perform which function in flatworms?", o:["Locomotion","Digestion","Excretion & osmoregulation","Reproduction"], c:2, e:"<b>Flame cells</b> handle excretion and osmoregulation in Platyhelminthes."},
+{q:"Bilateral larva but radial adult is characteristic of:", o:["Annelida","Echinodermata","Mollusca","Arthropoda"], c:1, e:"<b>Echinoderms</b> have bilateral larvae and radially symmetric adults."},
+{q:"Balanoglossus is an example of:", o:["Hemichordata","Cephalochordata","Urochordata","Cyclostomata"], c:0, e:"<b>Balanoglossus</b> is a hemichordate (has a stomochord, not a true notochord)."},
+{q:"Which feature is NOT one of the four basic chordate characters?", o:["Notochord","Dorsal hollow nerve cord","Pharyngeal gill slits","Ventral solid nerve cord"], c:3, e:"Chordates have a <b>dorsal hollow</b> nerve cord, not a ventral solid one (that is the non-chordate pattern)."}
+],
+
+match:[
+{term:"Porifera", def:"Choanocytes; water canal system"},
+{term:"Coelenterata", def:"Cnidoblasts; polyp & medusa"},
+{term:"Ctenophora", def:"Comb plates; bioluminescent"},
+{term:"Platyhelminthes", def:"Flame cells; acoelomate"},
+{term:"Aschelminthes", def:"Round worms; pseudocoelomate"},
+{term:"Annelida", def:"Metameric segments; nephridia"},
+{term:"Arthropoda", def:"Jointed legs; chitin exoskeleton"},
+{term:"Mollusca", def:"Mantle; radula; muscular foot"},
+{term:"Echinodermata", def:"Water vascular system; marine"},
+{term:"Cyclostomata", def:"Jawless; sucking mouth"},
+{term:"Aves", def:"Feathers; pneumatic bones"},
+{term:"Mammalia", def:"Mammary glands; pinna"}
+],
+
+pathways:[
+{title:"Non-chordate phyla order", prompt:"Arrange the non-chordate phyla in the standard sequence.", steps:["Porifera","Coelenterata","Ctenophora","Platyhelminthes","Aschelminthes","Annelida","Arthropoda","Mollusca","Echinodermata","Hemichordata"]},
+{title:"Vertebrate classes order", prompt:"Order the seven vertebrate classes (simple → advanced).", steps:["Cyclostomata","Chondrichthyes","Osteichthyes","Amphibia","Reptilia","Aves","Mammalia"]},
+{title:"Sponge water flow", prompt:"Trace the path of water through a sponge.", steps:["Ostia","Spongocoel","Osculum"]},
+{title:"Chordate subphyla by notochord extent", prompt:"Order subphyla from least to most notochord persistence.", steps:["Urochordata (larval tail only)","Cephalochordata (lifelong, full length)","Vertebrata (replaced by vertebral column)"]}
+]
+};
+
+/* ====== data_morph.js ====== */
+/* ===== CHAPTER 5 · MORPHOLOGY OF FLOWERING PLANTS ===== */
+DATA.chapters.morph = {
+id:"morph", num:5, title:"Morphology of Flowering Plants", subtitle:"Root · Stem · Leaf · Inflorescence · Flower · Fruit · Seed · Families",
+color:"#5fb6c4", colorD:"#2c7e8c", glyph:"🌸",
+
+notes:[
+{
+id:"root", heading:"The Root",
+html:`
+<p>The root is the usually <b>underground</b>, non-green descending part that anchors the plant and absorbs water & minerals.</p>
+<h4>Types</h4>
+<table class="cmp"><thead><tr><th>Type</th><th>Origin</th><th>Found in</th></tr></thead><tbody>
+<tr><td><b>Tap root</b></td><td>Develops from the radicle; one main root with branches</td><td>Dicots (mustard)</td></tr>
+<tr><td><b>Fibrous root</b></td><td>Many roots from the base of the stem</td><td>Monocots (wheat)</td></tr>
+<tr><td><b>Adventitious</b></td><td>Arise from parts other than the radicle</td><td>Banyan, grass, <i>Monstera</i></td></tr>
+</tbody></table>
+<h4>Regions of the root</h4>
+<div class="flow"><span class="node">Root cap</span><span class="arr">→</span><span class="node">Region of meristematic activity</span><span class="arr">→</span><span class="node">Region of elongation</span><span class="arr">→</span><span class="node">Region of maturation (root hairs)</span></div>
+<h4>Modifications</h4>
+<ul>
+<li><b>Storage:</b> carrot, turnip (tap roots); sweet potato (adventitious) store food.</li>
+<li><b>Prop roots:</b> hanging supportive roots of the banyan.</li>
+<li><b>Stilt roots:</b> supporting roots from lower nodes of maize & sugarcane.</li>
+<li><b>Pneumatophores:</b> roots that grow upward for gas exchange in mangroves (<i>Rhizophora</i>).</li>
+</ul>
+`
+},
+{
+id:"stem", heading:"The Stem",
+html:`
+<p>The stem is the ascending axis bearing nodes, internodes, buds, leaves, flowers & fruits; it develops from the <b>plumule</b>. (Tip: nodes &amp; buds tell a stem from a root.)</p>
+<table class="cmp"><thead><tr><th>Modification</th><th>Form</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Underground</b> (storage, perennation)</td><td>Tuber, rhizome, corm, bulb</td><td>Potato (tuber), ginger (rhizome), <i>Colocasia</i> (corm), onion (bulb)</td></tr>
+<tr><td><b>Subaerial</b> (vegetative propagation)</td><td>Runner, stolon, offset, sucker</td><td>Grass (runner), strawberry, <i>Pistia</i>/<i>Eichhornia</i> (offset), mint (sucker)</td></tr>
+<tr><td><b>Aerial</b></td><td>Stem tendril, thorn, phylloclade</td><td>Cucumber/grapevine (tendrils), <i>Citrus</i>/<i>Bougainvillea</i> (thorns), <i>Opuntia</i> (phylloclade)</td></tr>
+</tbody></table>
+<div class="callout"><b>Test:</b> A potato is a stem (it has nodes, eyes/buds &amp; scale leaves), while a sweet potato is a root (no nodes).</div>
+`
+},
+{
+id:"leaf", heading:"The Leaf",
+html:`
+<p>The leaf is a flattened lateral outgrowth of the stem borne at a node; it is the chief organ of photosynthesis. Parts: <b>leaf base, petiole, lamina</b>.</p>
+<h4>Venation</h4>
+<ul><li><b>Reticulate</b> — veins form a network (dicots).</li><li><b>Parallel</b> — veins run parallel (monocots).</li></ul>
+<h4>Leaf types</h4>
+<table class="cmp"><thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead><tbody>
+<tr><td><b>Simple</b></td><td>Lamina entire or incised but not reaching the midrib</td><td>Mango, guava</td></tr>
+<tr><td><b>Pinnately compound</b></td><td>Leaflets along a common axis (rachis)</td><td>Neem</td></tr>
+<tr><td><b>Palmately compound</b></td><td>Leaflets attached at a common point (petiole tip)</td><td><i>Silk cotton</i></td></tr>
+</tbody></table>
+<h4>Phyllotaxy (arrangement on stem)</h4>
+<ul><li><b>Alternate</b> — one leaf per node (china rose, mustard).</li><li><b>Opposite</b> — two per node (Calotropis, guava).</li><li><b>Whorled</b> — more than two per node (<i>Alstonia</i>).</li></ul>
+<div class="callout"><b>Modifications:</b> tendrils (pea), spines (cactus), phyllode (Australian acacia), storage (onion fleshy leaves), pitcher (insectivorous Nepenthes).</div>
+`
+},
+{
+id:"inflo", heading:"Inflorescence",
+html:`
+<p>An <b>inflorescence</b> is the arrangement of flowers on the floral axis. Two main types:</p>
+<table class="cmp"><thead><tr><th>Type</th><th>Growth of main axis</th><th>Flower opening order</th></tr></thead><tbody>
+<tr><td><b>Racemose</b></td><td>Continues to grow; flowers borne laterally</td><td>Acropetal — older below, younger above</td></tr>
+<tr><td><b>Cymose</b></td><td>Tip ends in a flower; limited growth</td><td>Basipetal — older at top/centre, younger below</td></tr>
+</tbody></table>
+`
+},
+{
+id:"flower", heading:"The Flower",
+html:`
+<p>The flower is the reproductive unit. Four whorls on the <b>thalamus</b>: <b>calyx (sepals), corolla (petals), androecium (stamens), gynoecium (carpels)</b>. Calyx + corolla are accessory; androecium + gynoecium are reproductive.</p>
+<h4>Symmetry</h4>
+<ul><li><b>Actinomorphic</b> (radial) — mustard, chilli.</li><li><b>Zygomorphic</b> (bilateral) — pea, <i>Cassia</i>.</li></ul>
+<h4>Position of ovary (with respect to other whorls)</h4>
+<table class="cmp"><thead><tr><th>Term</th><th>Ovary position</th><th>Example</th></tr></thead><tbody>
+<tr><td><b>Hypogynous</b></td><td>Superior ovary; other parts below</td><td>Mustard, china rose</td></tr>
+<tr><td><b>Perigynous</b></td><td>Half-inferior; parts at the rim, ~same level</td><td>Rose, plum</td></tr>
+<tr><td><b>Epigynous</b></td><td>Inferior ovary; parts above</td><td>Guava, cucumber, sunflower</td></tr>
+</tbody></table>
+<h4>Aestivation (arrangement of sepals/petals in bud)</h4>
+<ul><li><b>Valvate</b> — margins touch, no overlap (Calotropis).</li><li><b>Twisted</b> — one margin overlaps the next (china rose).</li><li><b>Imbricate</b> — overlapping but not in a set direction (Cassia).</li><li><b>Vexillary</b> — special pea type: largest standard covers two wings, which cover the keel.</li></ul>
+<h4>Placentation (arrangement of ovules in ovary)</h4>
+<table class="cmp"><thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead><tbody>
+<tr><td><b>Marginal</b></td><td>Ovules on the ventral suture, one chamber</td><td>Pea</td></tr>
+<tr><td><b>Axile</b></td><td>Placenta axial, ovules in chambers</td><td>Tomato, lemon, china rose</td></tr>
+<tr><td><b>Parietal</b></td><td>Ovules on inner wall / false septum</td><td>Mustard, <i>Argemone</i></td></tr>
+<tr><td><b>Free central</b></td><td>On central axis, no septa</td><td><i>Dianthus</i>, <i>Primrose</i></td></tr>
+<tr><td><b>Basal</b></td><td>Placenta at base, single ovule</td><td>Sunflower, marigold</td></tr>
+</tbody></table>
+`
+},
+{
+id:"fruit-seed", heading:"Fruit, Seed & Floral Formula",
+html:`
+<h4>Fruit</h4>
+<p>A fruit develops from the ovary after fertilisation. Wall = <b>pericarp</b> (epicarp + mesocarp + endocarp). A <b>true fruit</b> develops from the ovary only; a <b>false fruit</b> involves the thalamus too (apple).</p>
+<ul><li><b>Drupe</b> — single seed, stony endocarp (mango, coconut).</li></ul>
+<h4>Seed</h4>
+<table class="cmp"><thead><tr><th></th><th>Dicot seed (gram/bean)</th><th>Monocot seed (maize)</th></tr></thead><tbody>
+<tr><td>Cotyledons</td><td>Two, often store food</td><td>One; endosperm stores food</td></tr>
+<tr><td>Special parts</td><td>Plumule, radicle, hilum, micropyle</td><td>Scutellum, coleoptile, coleorhiza, aleurone layer</td></tr>
+</tbody></table>
+<h4>Reading a Floral Formula — symbols</h4>
+<div class="formula">
+Br = bracteate · <span class="hl">⊕</span> actinomorphic · <span class="hl">%</span> zygomorphic · ⚥ bisexual<br>
+K = calyx · C = corolla · P = perianth · A = androecium · G = gynoecium<br>
+G (underlined) = superior ovary · G̅ (line above) = inferior ovary · ( ) = fusion · + = whorls
+</div>
+<div class="callout"><b>Example (mustard, Brassicaceae):</b> ⊕ ⚥ K2+2 C4 A2+4 <u>G(2)</u> — radial, bisexual, 4 sepals (2+2), 4 petals, 6 stamens (2 short + 4 long = tetradynamous), bicarpellary superior ovary.</div>
+`
+},
+{
+id:"families", heading:"Three Families",
+html:`
+<table class="cmp"><thead><tr><th></th><th>Fabaceae (pea)</th><th>Solanaceae (potato)</th><th>Liliaceae (lily)</th></tr></thead><tbody>
+<tr><td><b>Root</b></td><td>Tap, root nodules</td><td>Tap</td><td>Fibrous (monocot)</td></tr>
+<tr><td><b>Calyx/Corolla</b></td><td>K5 (united) · C5 papilionaceous (1 standard, 2 wings, 2 keel)</td><td>K(5), C(5) united</td><td>Perianth P3+3 (tepals)</td></tr>
+<tr><td><b>Androecium</b></td><td>A(9)+1 (diadelphous)</td><td>A5, epipetalous</td><td>A3+3</td></tr>
+<tr><td><b>Gynoecium</b></td><td>Monocarpellary, superior, marginal</td><td>Bicarpellary, syncarpous, superior, axile, obliquely placed</td><td>Tricarpellary, syncarpous, superior, axile</td></tr>
+<tr><td><b>Aestivation</b></td><td>Vexillary</td><td>Valvate</td><td>Valvate</td></tr>
+<tr><td><b>Examples / uses</b></td><td>Gram, pea, groundnut (pulses, dyes, fodder, N₂-fixing)</td><td>Tomato, potato, brinjal, tobacco, belladonna (food, medicine)</td><td>Onion, garlic, tulip, <i>Aloe</i>, <i>Colchicine</i></td></tr>
+</tbody></table>
+<div class="formula">Fabaceae: % ⚥ K(5) C5 A(9)+1 <u>G1</u><br>Solanaceae: ⊕ ⚥ K(5) C(5) A5 <u>G(2)</u><br>Liliaceae: ⊕ ⚥ P(3+3) A3+3 <u>G(3)</u></div>
+`
+}
+],
+
+mnemonics:[
+{title:"Root regions (tip → up)", device:`<b>C</b>aps <b>M</b>ake <b>E</b>longated <b>M</b>ature roots`, expand:[
+ {L:"C",t:"Root Cap"},{L:"M",t:"Meristematic region"},{L:"E",t:"Elongation region"},{L:"M",t:"Maturation region (root hairs)"}
+]},
+{title:"Stem vs root quick test", device:`<b>S</b>tem has <b>S</b>egments (nodes) — potato is a stem; sweet potato (no nodes) is a root`, expand:[
+ {L:"!",t:"Eyes/buds + nodes ⇒ it's a stem"}
+]},
+{title:"Placentation types", device:`<b>M</b>y <b>A</b>unt <b>P</b>uts <b>F</b>resh <b>B</b>asil — Marginal, Axile, Parietal, Free-central, Basal`, expand:[
+ {L:"M",t:"Marginal — pea"},{L:"A",t:"Axile — tomato/lemon"},{L:"P",t:"Parietal — mustard"},{L:"F",t:"Free central — Dianthus"},{L:"B",t:"Basal — sunflower"}
+]},
+{title:"Ovary position", device:`<b>Hypo</b> = ovary on <b>top</b> (superior) · <b>Epi</b> = ovary <b>under</b> everyone (inferior)`, expand:[
+ {L:"Hypo",t:"Hypogynous → superior ovary (mustard)"},
+ {L:"Peri",t:"Perigynous → half-inferior (rose)"},
+ {L:"Epi",t:"Epigynous → inferior ovary (guava, cucumber)"}
+]},
+{title:"Aestivation set", device:`<b>V</b>ery <b>T</b>idy <b>I</b>vy <b>V</b>ines — Valvate, Twisted, Imbricate, Vexillary`, expand:[
+ {L:"V",t:"Valvate — Calotropis"},{L:"T",t:"Twisted — china rose"},{L:"I",t:"Imbricate — Cassia"},{L:"V",t:"Vexillary — pea"}
+]},
+{title:"Racemose vs cymose", device:`<b>R</b>acemose <b>R</b>ises (axis keeps growing, opens bottom→up)`, expand:[
+ {L:"R",t:"Racemose = acropetal, indefinite axis"},
+ {L:"C",t:"Cymose = basipetal, axis ends in a flower"}
+]},
+{title:"Pea (Fabaceae) corolla", device:`<b>S</b>tandard, <b>W</b>ings, <b>K</b>eel — "SWK = the pea flag"`, expand:[
+ {L:"S",t:"1 large standard (vexillum)"},{L:"W",t:"2 wings"},{L:"K",t:"2 keel petals"}
+]},
+{title:"Fabaceae stamens", device:`<b>9 + 1</b> diadelphous — nine fused, one free`, expand:[
+ {L:"A",t:"A(9)+1 in pea family"}
+]}
+],
+
+flashcards:[
+{front:"Tap vs fibrous vs adventitious root — origin", back:"Tap: from radicle (dicots). Fibrous: cluster from stem base (monocots). Adventitious: from any part other than the radicle (banyan)."},
+{front:"Name the four regions of a root, tip to base", back:"Root cap → meristematic region → region of elongation → region of maturation (bears root hairs)."},
+{front:"Pneumatophores — what & where?", back:"Roots that grow upward out of the soil for gas exchange in waterlogged mangroves (e.g. Rhizophora)."},
+{front:"How do you tell a potato (stem) from a sweet potato (root)?", back:"Potato is a stem tuber — has nodes, 'eyes' (buds) and scale leaves. Sweet potato is a root — no nodes."},
+{front:"Reticulate vs parallel venation", back:"Reticulate (net-like) = dicots; parallel = monocots."},
+{front:"Simple vs compound leaf", back:"Simple: lamina not divided to the midrib. Compound: lamina divided into leaflets — pinnate (neem) or palmate (silk cotton)."},
+{front:"Three types of phyllotaxy", back:"Alternate (one/node, china rose), opposite (two/node, guava), whorled (>two/node, Alstonia)."},
+{front:"Racemose vs cymose inflorescence", back:"Racemose: main axis keeps growing, flowers open acropetally (bottom→top). Cymose: axis ends in a flower, flowers open basipetally."},
+{front:"Four floral whorls (outer → inner)", back:"Calyx (sepals) → corolla (petals) → androecium (stamens) → gynoecium (carpels)."},
+{front:"Hypogynous, perigynous, epigynous", back:"Position of ovary: hypogynous = superior (mustard); perigynous = half-inferior (rose); epigynous = inferior (guava, cucumber)."},
+{front:"Five placentation types", back:"Marginal (pea), axile (tomato/lemon), parietal (mustard), free central (Dianthus), basal (sunflower)."},
+{front:"Vexillary aestivation", back:"Pea-type: large standard covers two wings, which cover two keel petals (Fabaceae)."},
+{front:"What is the pericarp?", back:"The wall of a fruit, made of epicarp + mesocarp + endocarp; develops from the ovary wall."},
+{front:"True vs false fruit", back:"True fruit develops from the ovary alone; false fruit also involves the thalamus (e.g. apple)."},
+{front:"Dicot vs monocot seed food store", back:"Dicot (gram): food in the two cotyledons. Monocot (maize): food in the endosperm; embryo has scutellum, coleoptile, coleorhiza."},
+{front:"Fabaceae floral formula", back:"% ⚥ K(5) C5 (papilionaceous) A(9)+1 diadelphous G1 (superior, marginal). Root nodules fix N₂."},
+{front:"Solanaceae floral formula", back:"⊕ ⚥ K(5) C(5) A5 epipetalous G(2) (superior, axile, obliquely placed). e.g. potato, tomato, tobacco."},
+{front:"Liliaceae floral formula", back:"⊕ ⚥ P(3+3) A3+3 G(3) (superior). Monocot; e.g. onion, garlic, tulip, Aloe."},
+{front:"Stamen condition in mustard", back:"Tetradynamous — 6 stamens, 4 long + 2 short (A2+4)."},
+{front:"Examples of stem tendrils & thorns", back:"Stem tendrils: cucumber, grapevine. Stem thorns: Citrus, Bougainvillea."}
+],
+
+recall:[
+{q:"List the four regions of a root from tip to base and name the structures of the maturation region.", hint:"Cap first.", a:"Root cap → region of meristematic activity → region of elongation → region of maturation. The maturation region bears fine <b>root hairs</b> for water/mineral absorption."},
+{q:"Describe four root modifications with one example each.", hint:"Storage, prop, stilt, breathing.", a:"<b>Storage</b> (carrot, turnip, sweet potato), <b>prop roots</b> (banyan — hanging supports), <b>stilt roots</b> (maize, sugarcane — from lower nodes), <b>pneumatophores</b> (Rhizophora — grow up for gas exchange)."},
+{q:"How is a stem distinguished from a root, and how can you tell a potato is a stem?", hint:"Nodes and buds.", a:"A stem bears <b>nodes, internodes and buds</b> and develops from the plumule; a root lacks nodes/buds and develops from the radicle. A potato has 'eyes' (axillary buds), nodes and scale leaves, proving it is an underground <b>stem tuber</b>."},
+{q:"Differentiate the two types of inflorescence by axis growth and flower-opening order.", hint:"Acropetal vs basipetal.", a:"<b>Racemose:</b> main axis continues growing, flowers borne laterally and open <b>acropetally</b> (older below, younger above). <b>Cymose:</b> the axis tip terminates in a flower (limited growth) and flowers open <b>basipetally</b> (older at top/centre)."},
+{q:"Name and describe the five types of placentation with examples.", hint:"Where ovules attach.", a:"<b>Marginal</b> — ovules on ventral suture, one chamber (pea). <b>Axile</b> — placenta axial, ovules in chambers (tomato, lemon). <b>Parietal</b> — on inner wall/false septum (mustard). <b>Free central</b> — on a central column without septa (Dianthus). <b>Basal</b> — at the base, single ovule (sunflower)."},
+{q:"Explain hypogynous, perigynous and epigynous flowers.", hint:"Where is the ovary?", a:"Based on the ovary's position relative to other whorls: <b>hypogynous</b> = ovary superior, other parts below (mustard, china rose); <b>perigynous</b> = ovary half-inferior, parts at the rim (rose, plum); <b>epigynous</b> = ovary inferior, parts above (guava, cucumber, sunflower)."},
+{q:"Write and explain the floral formula of the Fabaceae (pea family).", hint:"Papilionaceous + diadelphous.", a:"<b>% ⚥ K(5) C5 A(9)+1 G1</b>: zygomorphic, bisexual; calyx of 5 fused sepals; corolla papilionaceous (1 standard, 2 wings, 2 keel, vexillary aestivation); 10 stamens diadelphous (9 fused + 1 free); monocarpellary superior ovary with marginal placentation. Roots bear N₂-fixing nodules."},
+{q:"Compare dicot and monocot seeds.", hint:"Cotyledons & food store.", a:"<b>Dicot (gram):</b> two cotyledons that often store food; has plumule, radicle, hilum, micropyle. <b>Monocot (maize):</b> one cotyledon (scutellum); food stored in the <b>endosperm</b>; embryo protected by coleoptile (shoot) and coleorhiza (root)."},
+{q:"Define the four aestivation types with an example each.", hint:"Bud arrangement.", a:"<b>Valvate</b> — margins meet without overlap (Calotropis). <b>Twisted</b> — one margin regularly overlaps the next (china rose). <b>Imbricate</b> — overlapping with no fixed direction (Cassia). <b>Vexillary</b> — pea type: standard covers wings, wings cover keel."},
+{q:"List the parts of a fruit and distinguish a true from a false fruit.", hint:"Pericarp layers.", a:"A fruit consists of the <b>pericarp</b> (epicarp + mesocarp + endocarp) enclosing seeds, developing from the ovary. A <b>true fruit</b> forms from the ovary only; a <b>false fruit</b> also develops from the thalamus or other floral parts (apple)."}
+],
+
+mcqs:[
+{q:"Pneumatophores are found in:", o:["Banyan","Maize","Rhizophora (mangrove)","Carrot"], c:2, e:"Mangroves like <b>Rhizophora</b> form upward 'breathing' roots (pneumatophores)."},
+{q:"Stilt roots arise in:", o:["Banyan","Maize and sugarcane","Mustard","Sweet potato"], c:1, e:"<b>Maize and sugarcane</b> develop supporting stilt roots from lower nodes."},
+{q:"A potato is a modified:", o:["Root","Stem (tuber)","Leaf","Fruit"], c:1, e:"The potato is an underground <b>stem tuber</b> — it has nodes, eyes (buds) and scale leaves."},
+{q:"Parallel venation is characteristic of:", o:["Dicots","Monocots","Ferns","Mosses"], c:1, e:"<b>Monocots</b> show parallel venation; dicots show reticulate."},
+{q:"In racemose inflorescence, flowers open:", o:["Basipetally","Acropetally","Simultaneously","Randomly"], c:1, e:"Racemose = <b>acropetal</b> (older flowers below, younger above); the axis keeps growing."},
+{q:"Marginal placentation is seen in:", o:["Tomato","Pea","Mustard","Sunflower"], c:1, e:"<b>Pea</b> shows marginal placentation (ovules along the ventral suture)."},
+{q:"Axile placentation occurs in:", o:["Pea","Mustard","Lemon/tomato","Dianthus"], c:2, e:"<b>Lemon and tomato</b> show axile placentation."},
+{q:"An epigynous flower (inferior ovary) is:", o:["Mustard","China rose","Guava","Pea"], c:2, e:"<b>Guava</b> (and cucumber, sunflower) have an inferior ovary → epigynous."},
+{q:"Vexillary aestivation is typical of:", o:["Solanaceae","Liliaceae","Fabaceae","Brassicaceae"], c:2, e:"The pea family <b>Fabaceae</b> shows vexillary aestivation."},
+{q:"Diadelphous stamens A(9)+1 are found in:", o:["Liliaceae","Fabaceae","Solanaceae","Asteraceae"], c:1, e:"<b>Fabaceae</b> — nine fused stamens + one free (diadelphous)."},
+{q:"The fruit wall is collectively called the:", o:["Testa","Pericarp","Tegmen","Aleurone"], c:1, e:"The fruit wall is the <b>pericarp</b> (epicarp + mesocarp + endocarp)."},
+{q:"In a maize seed, the stored food is mainly in the:", o:["Cotyledons","Endosperm","Radicle","Plumule"], c:1, e:"Monocot (maize) seeds store food in the <b>endosperm</b>; the single cotyledon is the scutellum."},
+{q:"Tetradynamous condition (4 long + 2 short stamens) is seen in:", o:["Pea","Mustard","Lily","Tomato"], c:1, e:"<b>Mustard</b> (Brassicaceae) shows tetradynamous stamens (A2+4)."},
+{q:"Onion and garlic belong to which family?", o:["Fabaceae","Solanaceae","Liliaceae","Brassicaceae"], c:2, e:"Onion, garlic, tulip and Aloe belong to <b>Liliaceae</b> (monocots)."},
+{q:"An apple is an example of a:", o:["True fruit","False fruit","Drupe","Berry"], c:1, e:"Apple is a <b>false fruit</b> — the fleshy edible part develops from the thalamus."},
+{q:"Phylloclade (flattened green stem) is seen in:", o:["Pea","Opuntia","Onion","Banyan"], c:1, e:"<b>Opuntia</b> has a phylloclade — a flattened photosynthetic stem."},
+{q:"Whorled phyllotaxy means:", o:["One leaf per node","Two leaves per node","More than two leaves per node","No leaves"], c:2, e:"<b>Whorled</b> phyllotaxy has more than two leaves at a node (e.g. Alstonia)."},
+{q:"Root nodules that fix nitrogen are a feature of:", o:["Solanaceae","Liliaceae","Fabaceae","Asteraceae"], c:2, e:"<b>Fabaceae</b> roots bear nodules with N₂-fixing bacteria."},
+{q:"In the floral formula, an underlined G indicates:", o:["Inferior ovary","Superior ovary","Fused carpels","Bisexual flower"], c:1, e:"An <b>underlined G</b> denotes a superior ovary (hypogynous); a bar above G denotes inferior."},
+{q:"The standard, wings and keel together form the corolla of:", o:["Lily","Pea (papilionaceous)","Tomato","Mustard"], c:1, e:"The <b>papilionaceous</b> pea corolla = 1 standard + 2 wings + 2 keel petals."}
+],
+
+match:[
+{term:"Tap root", def:"From radicle; dicots"},
+{term:"Pneumatophore", def:"Breathing root of mangroves"},
+{term:"Potato", def:"Underground stem tuber"},
+{term:"Racemose", def:"Axis grows; acropetal flowers"},
+{term:"Cymose", def:"Axis ends in a flower; basipetal"},
+{term:"Marginal placentation", def:"Pea"},
+{term:"Axile placentation", def:"Tomato / lemon"},
+{term:"Hypogynous", def:"Superior ovary (mustard)"},
+{term:"Epigynous", def:"Inferior ovary (guava)"},
+{term:"Vexillary", def:"Pea-flag aestivation"},
+{term:"Diadelphous", def:"A(9)+1 stamens (Fabaceae)"},
+{term:"Pericarp", def:"Epicarp + mesocarp + endocarp"}
+],
+
+pathways:[
+{title:"Regions of the root (tip → base)", prompt:"Order the four regions starting from the root tip.", steps:["Root cap","Meristematic region","Region of elongation","Region of maturation (root hairs)"]},
+{title:"Floral whorls (outer → inner)", prompt:"Arrange the floral whorls from outermost to innermost.", steps:["Calyx (sepals)","Corolla (petals)","Androecium (stamens)","Gynoecium (carpels)"]},
+{title:"From flower to fruit", prompt:"Order the events from pollination to fruit.", steps:["Pollination","Fertilisation","Ovary develops","Ovary wall → pericarp","Ovules → seeds","Fruit"]},
+{title:"Reticulate path: which group?", prompt:"Order placentation by ovule attachment site (outside → centre → base).", steps:["Parietal (wall)","Axile (axis with septa)","Free central (axis, no septa)","Basal (base)"]}
+]
+};
+
+/* ====== data_anat.js ====== */
+/* ===== CHAPTER 6 · ANATOMY OF FLOWERING PLANTS ===== */
+DATA.chapters.anat = {
+id:"anat", num:6, title:"Anatomy of Flowering Plants",
+subtitle:"Tissues · Tissue systems · Root, stem & leaf anatomy · Secondary growth",
+color:"#bb8ed6", colorD:"#7f4ea0", glyph:"🔬",
+
+notes:[
+{
+id:"meristem", heading:"Meristematic Tissues",
+html:`
+<p>Anatomy is the study of <span class="kw">internal structure</span>. Though flowering plants look very different outside, they are built from similar tissues inside. A <b>tissue</b> is a group of cells with a common origin, usually performing a common function.</p>
+<p>On the basis of dividing ability, tissues are <b>meristematic</b> (actively dividing) or <b>permanent</b> (lost the ability to divide).</p>
+<h4>Types of meristem — by position</h4>
+<table class="cmp"><thead><tr><th>Meristem</th><th>Location</th><th>Function</th></tr></thead><tbody>
+<tr><td><b>Apical</b></td><td>Tips of root &amp; shoot</td><td>Primary growth — increase in <span class="kw">length</span></td></tr>
+<tr><td><b>Intercalary</b></td><td>At base of leaves / internodes (e.g. grasses)</td><td>Part of primary meristem left behind; helps regrowth after grazing/mowing</td></tr>
+<tr><td><b>Lateral</b></td><td>Along the sides (vascular cambium, cork cambium)</td><td>Secondary growth — increase in <span class="kw">girth/thickness</span></td></tr>
+</tbody></table>
+<div class="callout"><b>Primary vs secondary meristem:</b> Apical &amp; intercalary are <b>primary</b> (present from the embryo). Lateral meristems are <b>secondary</b> (appear later). Cells left behind by the shoot apex that form the leaf primordia and axillary buds give rise to nodes/internodes.</div>
+<h4>Growth zones in the root tip</h4>
+<div class="flow">
+<span class="node">Region of meristematic activity</span><span class="arr">→</span><span class="node">Region of elongation</span><span class="arr">→</span><span class="node">Region of maturation</span>
+</div>
+<p>Cells made by the apical meristem differentiate and mature into permanent tissues — this is <span class="kw">differentiation</span>. When a mature cell regains the ability to divide it is <b>dedifferentiation</b> (e.g. cork cambium, interfascicular cambium); when such tissue again loses dividing ability it is <b>redifferentiation</b>.</p>
+`
+},
+{
+id:"simple", heading:"Simple Permanent Tissues",
+html:`
+<p>A <b>simple tissue</b> is made of only <span class="kw">one type of cell</span>. There are three: parenchyma, collenchyma and sclerenchyma.</p>
+<table class="cmp"><thead><tr><th>Feature</th><th>Parenchyma</th><th>Collenchyma</th><th>Sclerenchyma</th></tr></thead><tbody>
+<tr><td><b>Cell wall</b></td><td>Thin, cellulosic</td><td>Thickened at <span class="kw">corners</span> (cellulose, hemicellulose, pectin)</td><td>Thick, <span class="kw">lignified</span> with narrow lumen</td></tr>
+<tr><td><b>Living?</b></td><td>Living</td><td>Living</td><td>Usually <b>dead</b> at maturity</td></tr>
+<tr><td><b>Shape/arrangement</b></td><td>Isodiametric; little space</td><td>Oval/round; in layers below epidermis, often in patches</td><td>Long fibres or short sclereids (stone cells)</td></tr>
+<tr><td><b>Main job</b></td><td>Storage, photosynthesis (chlorenchyma), secretion</td><td>Mechanical support to growing parts; flexibility</td><td>Mechanical strength &amp; rigidity</td></tr>
+<tr><td><b>Where</b></td><td>Everywhere — bulk of soft tissue</td><td>Petioles, leaf margins, dicot stem hypodermis</td><td>Fibres (jute, flax) &amp; sclereids (nut shells, pear grit)</td></tr>
+</tbody></table>
+<div class="callout"><b>Sclerenchyma = two kinds:</b> <b>Fibres</b> (long, narrow, pointed ends, in bundles) and <b>sclereids</b> (short, isodiametric stone cells — give the gritty texture of guava/pear and hardness to seed coats &amp; nut shells).</div>
+<p>Note: collenchyma is the <span class="kw">only living mechanical tissue</span> and the only one giving support <i>plus</i> flexibility to growing organs.</p>
+`
+},
+{
+id:"complex", heading:"Complex Permanent Tissues — Xylem & Phloem",
+html:`
+<p>A <b>complex tissue</b> is made of <span class="kw">more than one type of cell</span> working as a unit. The two complex tissues — xylem and phloem — together make up the <b>vascular bundle</b>.</p>
+<h4>Xylem — conducts water &amp; minerals upward; gives mechanical strength</h4>
+<table class="cmp"><thead><tr><th>Element</th><th>Living/Dead</th><th>Role</th></tr></thead><tbody>
+<tr><td><b>Tracheids</b></td><td>Dead, elongated, tapering, lignified</td><td>Chief water-conducting element; present in <span class="kw">all</span> vascular plants</td></tr>
+<tr><td><b>Vessels</b> (trachea)</td><td>Dead tube with wide lumen, perforated end walls</td><td>Efficient water conduction; characteristic of <span class="kw">angiosperms</span></td></tr>
+<tr><td><b>Xylem fibres</b></td><td>Dead, thick-walled</td><td>Mechanical support</td></tr>
+<tr><td><b>Xylem parenchyma</b></td><td><b>Living</b></td><td>Stores food; radial conduction of water</td></tr>
+</tbody></table>
+<p><b>Primary xylem</b> is of two kinds by the order in which it matures: <span class="kw">protoxylem</span> (first formed) and <span class="kw">metaxylem</span> (later formed).</p>
+<table class="cmp"><thead><tr><th>Arrangement</th><th>Protoxylem position</th><th>Found in</th></tr></thead><tbody>
+<tr><td><b>Endarch</b></td><td>Towards the centre (proto inside, meta outside)</td><td><span class="kw">Stems</span></td></tr>
+<tr><td><b>Exarch</b></td><td>Towards the periphery (proto outside)</td><td><span class="kw">Roots</span></td></tr>
+</tbody></table>
+<h4>Phloem — conducts food (sucrose), mostly downward, but in both directions</h4>
+<ul>
+<li><b>Sieve tube elements</b> — long tube-like living cells joined end to end; end walls are perforated <span class="kw">sieve plates</span>. Lose nucleus at maturity; controlled by companion cell.</li>
+<li><b>Companion cells</b> — specialised parenchyma linked to sieve tubes by pits; keep the pressure gradient for transport.</li>
+<li><b>Phloem parenchyma</b> — stores food &amp; resins; <span class="kw">absent in most monocots</span>.</li>
+<li><b>Phloem fibres (bast fibres)</b> — the only dead element; sclerenchymatous; commercial fibres of jute, flax, hemp.</li>
+</ul>
+<div class="callout"><b>Remember:</b> Primary phloem matures as <b>protophloem</b> (narrow sieve tubes) then <b>metaphloem</b> (bigger). Only the sieve-tube element + companion cell are found together in angiosperms.</div>
+`
+},
+{
+id:"systems", heading:"The Tissue Systems",
+html:`
+<p>Based on structure &amp; location, all tissues of a plant fall into three <b>tissue systems</b> (a classification by J. von Sachs).</p>
+<table class="cmp"><thead><tr><th>Tissue system</th><th>Made of</th><th>Function</th></tr></thead><tbody>
+<tr><td><b>Epidermal</b></td><td>Epidermal cells, <span class="kw">stomata</span>, trichomes &amp; root hairs</td><td>Outer protective covering; gas exchange; reduces water loss (cuticle)</td></tr>
+<tr><td><b>Ground</b></td><td>Parenchyma, collenchyma, sclerenchyma (everything except epidermis &amp; vascular)</td><td>Photosynthesis, storage, support; includes cortex, pericycle, pith, medullary rays</td></tr>
+<tr><td><b>Vascular</b></td><td>Xylem + phloem (the vascular bundles)</td><td>Conduction of water, minerals &amp; food</td></tr>
+</tbody></table>
+<h4>The epidermal system in detail</h4>
+<ul>
+<li>Usually single-layered; outer wall often covered by waxy <span class="kw">cuticle</span> (absent in roots).</li>
+<li>A <b>stoma</b> = a pore guarded by two bean-shaped (kidney) <b>guard cells</b>; in grasses guard cells are dumb-bell shaped. Surrounding specialised cells = <b>subsidiary cells</b>. The whole apparatus = <span class="kw">stomatal apparatus</span>.</li>
+<li><b>Trichomes</b> (shoot hairs) — usually multicellular; help prevent water loss. <b>Root hairs</b> — unicellular extensions that absorb water &amp; minerals.</li>
+</ul>
+<h4>Kinds of vascular bundles</h4>
+<table class="cmp"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><b>Radial</b></td><td>Xylem &amp; phloem on <span class="kw">different radii</span>, alternating — typical of <b>roots</b></td></tr>
+<tr><td><b>Conjoint</b></td><td>Xylem &amp; phloem on the <span class="kw">same radius</span>, phloem usually outside xylem — typical of <b>stems &amp; leaves</b></td></tr>
+<tr><td><b>Open</b></td><td>Cambium present between xylem &amp; phloem → can show secondary growth (<b>dicot stem</b>)</td></tr>
+<tr><td><b>Closed</b></td><td>No cambium → no secondary growth (<b>monocot stem</b>)</td></tr>
+</tbody></table>
+`
+},
+{
+id:"rootstem", heading:"Anatomy of Root & Stem (Dicot vs Monocot)",
+html:`
+<h4>Dicot root vs Monocot root</h4>
+<table class="cmp"><thead><tr><th>Feature</th><th>Dicot root (e.g. gram)</th><th>Monocot root (e.g. maize)</th></tr></thead><tbody>
+<tr><td><b>Xylem arches</b></td><td>2–4 (di/tetrarch); <span class="kw">limited number</span></td><td>Many — <span class="kw">polyarch</span></td></tr>
+<tr><td><b>Pith</b></td><td>Small or absent</td><td>Large, well developed</td></tr>
+<tr><td><b>Secondary growth</b></td><td>Present</td><td>Absent</td></tr>
+<tr><td><b>Common</b></td><td colspan="2">Both: epiblema (with root hairs) → cortex → endodermis with <span class="kw">Casparian strips</span> → pericycle → radial &amp; exarch vascular bundles. Pericycle gives rise to lateral roots.</td></tr>
+</tbody></table>
+<h4>Dicot stem vs Monocot stem</h4>
+<table class="cmp"><thead><tr><th>Feature</th><th>Dicot stem (e.g. sunflower)</th><th>Monocot stem (e.g. maize)</th></tr></thead><tbody>
+<tr><td><b>Vascular bundles</b></td><td>In a <span class="kw">ring</span>; conjoint, open, endarch</td><td><span class="kw">Scattered</span> in ground tissue; conjoint, closed</td></tr>
+<tr><td><b>Bundle sheath</b></td><td>Absent</td><td>Sclerenchymatous sheath present</td></tr>
+<tr><td><b>Ground tissue</b></td><td>Differentiated into hypodermis (collenchyma), cortex, endodermis, pericycle, pith</td><td>Not differentiated; ground parenchyma throughout</td></tr>
+<tr><td><b>Special feature</b></td><td>Medullary rays between bundles</td><td><span class="kw">Water-containing cavity</span> in each bundle (in monocots like maize)</td></tr>
+<tr><td><b>Secondary growth</b></td><td>Present (open bundles)</td><td>Absent (closed bundles)</td></tr>
+</tbody></table>
+<div class="callout"><b>Endodermis with Casparian strip:</b> the innermost cortex layer; its tangential &amp; radial walls have a band of <span class="kw">suberin</span> (the Casparian strip) that forces water to pass through the cell membrane — a checkpoint for entry into the stele.</div>
+`
+},
+{
+id:"leaf", heading:"Anatomy of the Leaf (Dorsiventral vs Isobilateral)",
+html:`
+<p>The leaf blade in section shows three parts: <b>epidermis</b>, <b>mesophyll</b> (the photosynthetic ground tissue) and <b>vascular system</b> (veins).</p>
+<table class="cmp"><thead><tr><th>Feature</th><th>Dorsiventral (Dicot) leaf</th><th>Isobilateral (Monocot) leaf</th></tr></thead><tbody>
+<tr><td><b>Orientation</b></td><td>Held more or less horizontal; two distinct faces</td><td>Held vertical/erect; both faces alike</td></tr>
+<tr><td><b>Mesophyll</b></td><td>Differentiated into <span class="kw">palisade</span> (upper, columnar) &amp; <span class="kw">spongy</span> (lower, loose)</td><td>Not differentiated — uniform spongy-type cells</td></tr>
+<tr><td><b>Stomata</b></td><td>More on the lower surface</td><td>Equal on both surfaces</td></tr>
+<tr><td><b>Special cells</b></td><td>—</td><td><span class="kw">Bulliform (motor) cells</span> in upper epidermis — lose turgor to roll/fold the leaf, reducing water loss</td></tr>
+<tr><td><b>Vein endings</b></td><td>Reticulate venation</td><td>Parallel venation; similar-sized bundles in a row</td></tr>
+</tbody></table>
+<h4>Kranz anatomy — the C₄ leaf</h4>
+<p>In C₄ plants (maize, sorghum, sugarcane) the vascular bundles are surrounded by a ring of large, thick-walled <span class="kw">bundle-sheath cells</span> rich in chloroplasts and without intercellular spaces — the <b>Kranz</b> ("wreath") arrangement. This separates the two stages of C₄ photosynthesis spatially and makes these plants very efficient.</p>
+<div class="flow">
+<span class="node">Upper epidermis</span><span class="arr">→</span><span class="node">Palisade</span><span class="arr">→</span><span class="node">Spongy mesophyll</span><span class="arr">→</span><span class="node">Vascular bundle (vein)</span><span class="arr">→</span><span class="node">Lower epidermis + stomata</span>
+</div>
+`
+},
+{
+id:"secondary", heading:"Secondary Growth",
+html:`
+<p><b>Secondary growth</b> increases the <span class="kw">girth/diameter</span> of stems &amp; roots. It is brought about by two lateral meristems: the <b>vascular cambium</b> and the <b>cork cambium</b>.</p>
+<h4>1 · Vascular cambium → secondary vascular tissue</h4>
+<ul>
+<li>In the dicot stem, the cambium between xylem &amp; phloem (<b>intrafascicular</b>) joins with cells of the medullary ray that dedifferentiate (<b>interfascicular cambium</b>) to form a continuous <span class="kw">cambial ring</span>.</li>
+<li>The cambium cuts off cells: <b>inwards → secondary xylem</b>, <b>outwards → secondary phloem</b>. Far more xylem is made, so the bulk of a tree trunk is secondary xylem (wood).</li>
+</ul>
+<h4>Spring wood vs Autumn wood → Annual rings</h4>
+<table class="cmp"><thead><tr><th></th><th>Spring / Early wood</th><th>Autumn / Late wood</th></tr></thead><tbody>
+<tr><td><b>Cambium activity</b></td><td>High</td><td>Low</td></tr>
+<tr><td><b>Vessels</b></td><td>Wider, more numerous</td><td>Narrower, fewer</td></tr>
+<tr><td><b>Appearance</b></td><td>Lighter, less dense</td><td>Darker, denser</td></tr>
+</tbody></table>
+<p>One ring of spring + autumn wood = one <span class="kw">annual ring</span>. Counting rings estimates a tree's age (<b>dendrochronology</b>).</p>
+<table class="cmp"><thead><tr><th>Heartwood (duramen)</th><th>Sapwood (alburnum)</th></tr></thead><tbody>
+<tr><td>Inner, dark, dead; tylose-filled; no conduction; gives strength &amp; durability</td><td>Outer, lighter, living; conducts water</td></tr>
+</tbody></table>
+<h4>2 · Cork cambium (phellogen) → periderm</h4>
+<ul>
+<li>As girth grows the epidermis breaks, so a cork cambium (<b>phellogen</b>) develops in the cortex.</li>
+<li>It cuts off <b>cork (phellem)</b> outside — dead, suberised, waterproof — and <b>secondary cortex (phelloderm)</b> inside.</li>
+<li>Phellem + phellogen + phelloderm = <span class="kw">periderm</span>.</li>
+<li><b>Lenticels</b> — lens-shaped openings in the cork for gas exchange.</li>
+</ul>
+<div class="callout"><b>Bark</b> = all tissues outside the vascular cambium (secondary phloem + periderm). "Early bark" = soft/inner; "late bark" = hard/outer. Commercial cork comes from <i>Quercus suber</i> (cork oak).</div>
+`
+}
+],
+
+mnemonics:[
+{title:"The three simple tissues", device:`"<b>P</b>oor <b>C</b>ats <b>S</b>truggle" — <b>P</b>arenchyma → <b>C</b>ollenchyma → <b>S</b>clerenchyma`,
+expand:[{L:"P",t:"Parenchyma — living, thin-walled, storage"},{L:"C",t:"Collenchyma — living, corner-thickened, flexible support"},{L:"S",t:"Sclerenchyma — dead, lignified, hard support"}]},
+{title:"Xylem elements", device:`"<b>T</b>iny <b>V</b>essels <b>F</b>eed <b>P</b>lants" — <b>T</b>racheids, <b>V</b>essels, <b>F</b>ibres, <b>P</b>arenchyma`,
+expand:[{L:"T",t:"Tracheids — in all vascular plants"},{L:"V",t:"Vessels — angiosperm hallmark"},{L:"F",t:"Fibres — support"},{L:"P",t:"Parenchyma — the only LIVING xylem cell"}]},
+{title:"Phloem elements", device:`"<b>S</b>ome <b>C</b>ompanions <b>P</b>refer <b>F</b>ibre" — <b>S</b>ieve tube, <b>C</b>ompanion cell, <b>P</b>arenchyma, <b>F</b>ibres`,
+expand:[{L:"S",t:"Sieve tube — loses nucleus, has sieve plates"},{L:"C",t:"Companion cell — controls the sieve tube"},{L:"P",t:"Phloem parenchyma — absent in most monocots"},{L:"F",t:"Phloem fibres — the only DEAD phloem cell"}]},
+{title:"Endarch vs Exarch", device:`"<b>S</b>tem is <b>EN</b>d; <b>R</b>oot is <b>EX</b>"`,
+expand:[{L:"EN",t:"ENdarch = protoxylem towards centre = STEM"},{L:"EX",t:"EXarch = protoxylem towards periphery = ROOT"}]},
+{title:"Three tissue systems", device:`"<b>E</b>very <b>G</b>arden <b>V</b>egetates" — <b>E</b>pidermal, <b>G</b>round, <b>V</b>ascular`,
+expand:[{L:"E",t:"Epidermal — protection (skin)"},{L:"G",t:"Ground — everything in between"},{L:"V",t:"Vascular — the plumbing (xylem+phloem)"}]},
+{title:"Periderm layers", device:`"<b>Cork</b> on a <b>Phello</b>-sandwich" — Phellem · Phellogen · Phelloderm`,
+expand:[{L:"1",t:"Phellem (cork) — outside, dead, waterproof"},{L:"2",t:"Phellogen (cork cambium) — the meristem in the middle"},{L:"3",t:"Phelloderm (secondary cortex) — inside, living"}]},
+{title:"Dicot vs Monocot stem bundles", device:`"<b>D</b>icots <b>R</b>ing, <b>M</b>onocots <b>S</b>catter"`,
+expand:[{L:"D",t:"Dicot = bundles in a Ring, OPEN (with cambium)"},{L:"M",t:"Monocot = bundles Scattered, CLOSED (no cambium)"}]},
+{title:"Spring vs Autumn wood", device:`"<b>S</b>pring is <b>W</b>ide & <b>L</b>ight; <b>A</b>utumn is <b>N</b>arrow & <b>D</b>ark"`,
+expand:[{L:"S",t:"Spring wood — wide vessels, light, high cambial activity"},{L:"A",t:"Autumn wood — narrow vessels, dark, low activity"},{L:"+",t:"Spring + Autumn = ONE annual ring"}]}
+],
+
+flashcards:[
+{front:"What is a tissue?", back:"A group of cells with a common origin, usually performing a common function."},
+{front:"Which meristem causes increase in girth?", back:"Lateral meristem (vascular cambium & cork cambium) — secondary growth."},
+{front:"Function of intercalary meristem?", back:"Located at base of internodes/leaves (grasses); allows regrowth after grazing or mowing. It is a primary meristem."},
+{front:"Define differentiation.", back:"The process by which cells derived from meristems mature to perform specific functions, gaining specific walls/structures."},
+{front:"Only LIVING mechanical tissue?", back:"Collenchyma — gives support AND flexibility to growing organs."},
+{front:"Two types of sclerenchyma?", back:"Fibres (long, narrow, pointed) and sclereids (short, isodiametric stone cells, e.g. pear grit, nut shells)."},
+{front:"Which xylem element is the ONLY living one?", back:"Xylem parenchyma — stores food and helps radial conduction."},
+{front:"Water-conducting element present in ALL vascular plants?", back:"Tracheids. Vessels (with wide lumen & perforated end walls) are characteristic of angiosperms."},
+{front:"Endarch vs Exarch?", back:"Endarch = protoxylem toward centre (STEMS). Exarch = protoxylem toward periphery (ROOTS)."},
+{front:"What controls the enucleate sieve tube?", back:"The companion cell — a specialised parenchyma cell connected by pits, maintaining the pressure gradient."},
+{front:"Only DEAD element of phloem?", back:"Phloem fibres (bast fibres) — sclerenchymatous; source of jute, flax, hemp."},
+{front:"The three tissue systems?", back:"Epidermal, Ground, and Vascular tissue systems."},
+{front:"What is the Casparian strip?", back:"A band of suberin on radial & tangential walls of endodermal cells that blocks the apoplast, forcing water through the cell membrane."},
+{front:"Radial vs Conjoint vascular bundle?", back:"Radial = xylem & phloem on different radii (roots). Conjoint = both on same radius, phloem outside xylem (stems & leaves)."},
+{front:"Open vs Closed vascular bundle?", back:"Open = cambium present, shows secondary growth (dicot stem). Closed = no cambium, no secondary growth (monocot stem)."},
+{front:"Bulliform cells — what & where?", back:"Large empty motor cells in the upper epidermis of monocot (isobilateral) leaves; lose turgor to roll the leaf and reduce water loss."},
+{front:"What is Kranz anatomy?", back:"A wreath of large, chloroplast-rich, thick-walled bundle-sheath cells around veins in C₄ plants (maize, sorghum) — enables efficient C₄ photosynthesis."},
+{front:"What does the vascular cambium produce inward vs outward?", back:"Inward → secondary xylem (wood, more of it). Outward → secondary phloem."},
+{front:"What makes one annual ring?", back:"One season of spring (early) wood + autumn (late) wood. Used to estimate a tree's age."},
+{front:"Heartwood vs Sapwood?", back:"Heartwood (duramen): inner, dark, dead, non-conducting, durable. Sapwood (alburnum): outer, light, living, conducts water."},
+{front:"What three layers make the periderm?", back:"Phellem (cork) + Phellogen (cork cambium) + Phelloderm (secondary cortex)."},
+{front:"What are lenticels?", back:"Lens-shaped openings in the cork (periderm) that permit gas exchange between inner tissues and the atmosphere."}
+],
+
+recall:[
+{q:"Compare the cell wall, living status and function of parenchyma, collenchyma and sclerenchyma.", hint:"Think wall thickness + lignin + living/dead.",
+a:`<b>Parenchyma:</b> thin cellulosic wall, living, does storage/photosynthesis. <b>Collenchyma:</b> wall thickened at corners, living, flexible mechanical support to growing parts. <b>Sclerenchyma:</b> thick lignified wall, dead at maturity, rigid mechanical strength (fibres + sclereids).`},
+{q:"List the four elements of xylem and state which is living.", hint:"One of them is alive.",
+a:`Tracheids, vessels, xylem fibres and xylem parenchyma. <b>Xylem parenchyma is the only living element</b>; it stores food and aids radial water conduction.`},
+{q:"Explain endarch and exarch and say where each occurs.", hint:"Position of protoxylem.",
+a:`<b>Endarch</b> — protoxylem lies towards the centre (centripetal maturation) → found in <b>stems</b>. <b>Exarch</b> — protoxylem lies towards the periphery → found in <b>roots</b>.`},
+{q:"Why does a sieve tube need a companion cell?", hint:"What did the sieve tube lose?",
+a:`The mature sieve-tube element <b>loses its nucleus</b>, so it cannot run its own metabolism. The companion cell (connected by pit fields) provides regulation and maintains the pressure gradient that drives food (sucrose) transport.`},
+{q:"Distinguish the vascular bundles of a dicot stem from a monocot stem.", hint:"Ring vs scattered; open vs closed.",
+a:`<b>Dicot stem:</b> bundles arranged in a ring; conjoint, <b>open</b> (cambium present), endarch → secondary growth possible. <b>Monocot stem:</b> bundles <b>scattered</b> in ground tissue; conjoint, <b>closed</b> (no cambium), each with a sclerenchymatous sheath and water cavity → no secondary growth.`},
+{q:"What is the Casparian strip and why does it matter?", hint:"Endodermis + suberin.",
+a:`A band of <b>suberin</b> on the radial and tangential walls of <b>endodermal</b> cells. It is impermeable to water, so water/minerals cannot pass through the wall (apoplast) at the endodermis and must cross the <b>cell membrane</b>, giving the plant control over what enters the stele.`},
+{q:"How does a dorsiventral (dicot) leaf differ internally from an isobilateral (monocot) leaf?", hint:"Mesophyll & bulliform cells.",
+a:`<b>Dicot/dorsiventral:</b> mesophyll split into upper <b>palisade</b> + lower <b>spongy</b>; more stomata on lower surface. <b>Monocot/isobilateral:</b> uniform (undifferentiated) mesophyll; stomata equal on both faces; <b>bulliform cells</b> in upper epidermis roll the leaf to cut water loss.`},
+{q:"Describe how the cambial ring forms in a dicot stem.", hint:"Intrafascicular + interfascicular.",
+a:`The <b>intrafascicular</b> cambium (already present inside each vascular bundle) joins with newly formed <b>interfascicular</b> cambium (from dedifferentiated medullary-ray cells between bundles) to make a continuous <b>cambial ring</b> that then produces secondary xylem inwards and secondary phloem outwards.`},
+{q:"What are annual rings and how are spring and autumn wood different?", hint:"Activity high vs low.",
+a:`<b>Spring/early wood:</b> cambium very active → wide, numerous vessels, lighter colour. <b>Autumn/late wood:</b> cambium less active → narrow, fewer vessels, darker, denser. One spring + one autumn band = a single <b>annual ring</b>, used to estimate age.`},
+{q:"Name the three layers of the periderm and the function of lenticels.", hint:"All start with 'phell-'.",
+a:`<b>Phellem</b> (cork, outer, dead, suberised), <b>phellogen</b> (cork cambium, the meristem) and <b>phelloderm</b> (secondary cortex, inner, living). <b>Lenticels</b> are pores in the cork that allow gaseous exchange.`}
+],
+
+mcqs:[
+{q:"Which meristem is responsible for increase in girth of the plant?", o:["Apical meristem","Intercalary meristem","Lateral meristem","Ground meristem"], c:2, e:`<b>Lateral meristem</b> (vascular & cork cambium) brings about secondary growth — increase in girth. Apical & intercalary increase length.`},
+{q:"The only living mechanical tissue in plants is:", o:["Sclerenchyma","Collenchyma","Xylem fibre","Tracheid"], c:1, e:`<b>Collenchyma</b> is living and provides flexible support; the others are dead at maturity.`},
+{q:"Vessels with wide lumen and perforated end walls are characteristic of:", o:["All vascular plants","Gymnosperms only","Angiosperms","Pteridophytes only"], c:2, e:`<b>Vessels</b> are typical of angiosperms. Tracheids occur in all vascular plants.`},
+{q:"Which is the only living element of xylem?", o:["Tracheid","Vessel","Xylem fibre","Xylem parenchyma"], c:3, e:`<b>Xylem parenchyma</b> is living and stores food / aids radial conduction.`},
+{q:"In roots, the protoxylem lies towards the periphery. This arrangement is called:", o:["Endarch","Exarch","Mesarch","Centrarch"], c:1, e:`Roots are <b>exarch</b> (protoxylem peripheral). Stems are endarch.`},
+{q:"The enucleate cell of the phloem that conducts food is the:", o:["Companion cell","Sieve tube element","Phloem fibre","Phloem parenchyma"], c:1, e:`The mature <b>sieve tube element</b> loses its nucleus and is controlled by the companion cell.`},
+{q:"Phloem parenchyma is generally absent in:", o:["Dicot stems","Dicot roots","Most monocots","Gymnosperms"], c:2, e:`Phloem parenchyma is <b>absent in most monocots</b>.`},
+{q:"The Casparian strip is found in the:", o:["Epidermis","Endodermis","Pericycle","Pith"], c:1, e:`The <b>endodermis</b> bears Casparian strips of suberin that regulate water entry into the stele.`},
+{q:"Bulliform cells are found in the:", o:["Upper epidermis of some monocot leaves","Lower epidermis of dicot leaves","Mesophyll of dicot leaves","Root cortex"], c:0, e:`<b>Bulliform (motor) cells</b> in the upper epidermis of isobilateral leaves roll/fold the leaf to reduce transpiration.`},
+{q:"Vascular bundles that are conjoint, open and endarch are typical of:", o:["Monocot stem","Dicot stem","Dicot root","Monocot root"], c:1, e:`<b>Dicot stems</b> have conjoint, open (cambium present), endarch bundles arranged in a ring.`},
+{q:"Scattered, closed vascular bundles are a feature of:", o:["Dicot stem","Monocot stem","Dicot root","Dorsiventral leaf"], c:1, e:`<b>Monocot stems</b> have scattered bundles that are closed (no cambium) → no secondary growth.`},
+{q:"Radial vascular bundles are characteristic of:", o:["Stems","Leaves","Roots","Floral parts"], c:2, e:`In <b>roots</b>, xylem & phloem lie on different radii (radial bundles).`},
+{q:"Kranz anatomy is associated with:", o:["C₃ plants","C₄ plants","CAM plants","Aquatic plants"], c:1, e:`<b>C₄ plants</b> (maize, sorghum, sugarcane) show Kranz anatomy — a wreath of bundle-sheath cells.`},
+{q:"The cambium cuts off more cells towards which side?", o:["Outside (phloem)","Inside (xylem)","Equal both sides","Neither"], c:1, e:`Far more <b>secondary xylem</b> is formed inwards, so wood makes up the bulk of the trunk.`},
+{q:"One annual ring is made up of:", o:["Only spring wood","Only autumn wood","Spring + autumn wood of one year","Two years of growth"], c:2, e:`One <b>spring (early) + autumn (late) wood</b> band of a single season = one annual ring.`},
+{q:"The dark, central, non-conducting wood of an old trunk is called:", o:["Sapwood","Heartwood","Bark","Periderm"], c:1, e:`<b>Heartwood (duramen)</b> is dead, dark and durable; sapwood conducts water.`},
+{q:"The cork cambium is also called:", o:["Phellem","Phellogen","Phelloderm","Periderm"], c:1, e:`The cork cambium = <b>phellogen</b>; it makes phellem (cork) outside and phelloderm inside.`},
+{q:"Bark, in the technical sense, includes:", o:["Only cork","Secondary phloem + periderm","Only secondary xylem","Pith + cortex"], c:1, e:`<b>Bark</b> = all tissues outside the vascular cambium = secondary phloem + periderm.`},
+{q:"Gaseous exchange through the cork is permitted by:", o:["Stomata","Hydathodes","Lenticels","Trichomes"], c:2, e:`<b>Lenticels</b> are lens-shaped openings in the periderm for gas exchange.`},
+{q:"Which tissue system includes the cortex, pericycle and pith?", o:["Epidermal","Ground","Vascular","Dermal"], c:1, e:`The <b>ground tissue system</b> comprises all tissue except the epidermis and vascular bundles.`}
+],
+
+match:[
+{term:"Collenchyma", def:"Living support tissue, thickened at corners"},
+{term:"Sclereid", def:"Short stone cell giving pears their gritty feel"},
+{term:"Tracheid", def:"Water-conducting element present in all vascular plants"},
+{term:"Companion cell", def:"Regulates the enucleate sieve tube"},
+{term:"Casparian strip", def:"Suberin band in the endodermis"},
+{term:"Exarch", def:"Protoxylem toward periphery (roots)"},
+{term:"Bulliform cells", def:"Motor cells that roll a monocot leaf"},
+{term:"Kranz anatomy", def:"Bundle-sheath wreath in C₄ leaves"},
+{term:"Phellogen", def:"Cork cambium"},
+{term:"Lenticel", def:"Pore in cork for gas exchange"},
+{term:"Heartwood", def:"Inner dark dead durable wood"},
+{term:"Annual ring", def:"One season of spring + autumn wood"}
+],
+
+pathways:[
+{title:"Root tip growth zones", prompt:"Order the regions from the very tip upward.",
+steps:["Region of meristematic activity","Region of elongation","Region of maturation"]},
+{title:"Cell fate in development", prompt:"Arrange the developmental sequence.",
+steps:["Meristematic cell divides","Differentiation into permanent tissue","Dedifferentiation regains division","Redifferentiation loses division again"]},
+{title:"Periderm formation (outside → in)", prompt:"Order the periderm layers from outermost to innermost.",
+steps:["Phellem (cork)","Phellogen (cork cambium)","Phelloderm (secondary cortex)"]},
+{title:"Secondary growth steps", prompt:"Put the events of dicot-stem secondary growth in order.",
+steps:["Intra- & interfascicular cambium join into a ring","Cambium cuts off secondary xylem inward & phloem outward","Epidermis ruptures, cork cambium arises in cortex","Periderm + secondary phloem form the bark"]}
+]
+};
+
+/* ============ ENGINE ============ */
+/* ============================================================
+   THE NATURALIST'S CODEX — app engine
+   ============================================================ */
+const MODES = [
+  {k:"notes",     mi:"📖", t:"Study Notes",      d:"Every section with flow diagrams, comparison tables & formulas — your reference."},
+  {k:"mnemonics", mi:"🧠", t:"Mnemonics",        d:"Memory hooks for examples, names and tricky concepts."},
+  {k:"flashcards",mi:"🃏", t:"Flashcards",       d:"Flip, self-judge, and track what you've mastered."},
+  {k:"recall",    mi:"✍️", t:"Active Recall",    d:"Type the answer from memory, reveal, then self-grade. The core engine."},
+  {k:"quiz",      mi:"⚔️", t:"Quiz Battle",      d:"Rapid MCQs with instant explanations."},
+  {k:"match",     mi:"🔗", t:"Match-Up",         d:"Race the clock to pair terms with their meanings."},
+  {k:"pathway",   mi:"🧩", t:"Build the Pathway",d:"Drag the steps into the correct sequence."},
+  {k:"boss",      mi:"👑", t:"Boss Battle",      d:"Every concept & hard name in one long run. 3 lives — clear them all."}
+];
+
+const App = (function(){
+  const LSKEY = "naturalist_codex_v1";
+  const app = document.getElementById("app");
+  const toastEl = document.getElementById("toast");
+  let S = load();
+
+  /* ---------- persistence ---------- */
+  function fresh(){
+    const s = {xp:0, mastered:{}, recalled:{}, best:{}};
+    Object.keys(DATA.chapters).forEach(c=>{ s.mastered[c]={}; s.recalled[c]={}; s.best[c]={}; });
+    return s;
+  }
+  function load(){
+    try{
+      const raw = localStorage.getItem(LSKEY);
+      if(!raw) return fresh();
+      const s = JSON.parse(raw);
+      Object.keys(DATA.chapters).forEach(c=>{
+        s.mastered = s.mastered||{}; s.recalled=s.recalled||{}; s.best=s.best||{};
+        s.mastered[c]=s.mastered[c]||{}; s.recalled[c]=s.recalled[c]||{}; s.best[c]=s.best[c]||{};
+      });
+      return s;
+    }catch(e){ return fresh(); }
+  }
+  function save(){ try{ localStorage.setItem(LSKEY, JSON.stringify(S)); }catch(e){} }
+
+  /* ---------- XP / level ---------- */
+  function level(xp){ return Math.floor(xp/150)+1; }
+  function updateHUD(){
+    document.getElementById("xpVal").textContent = S.xp;
+    document.getElementById("lvlBadge").textContent = "Lv "+level(S.xp);
+  }
+  let toastT=null;
+  function addXP(n,msg){
+    const before=level(S.xp); S.xp+=n; save(); updateHUD();
+    const after=level(S.xp);
+    showToast((msg||"Nice!")+` <span class="xp">+${n} XP</span>`+(after>before?` · Level ${after}! 🎉`:""));
+  }
+  function showToast(html){
+    toastEl.innerHTML=html; toastEl.classList.add("show");
+    clearTimeout(toastT); toastT=setTimeout(()=>toastEl.classList.remove("show"),2200);
+  }
+
+  /* ---------- helpers ---------- */
+  function setAccent(ch){
+    document.documentElement.style.setProperty("--c", ch?ch.color:"var(--gold)");
+    document.documentElement.style.setProperty("--c-d", ch?ch.colorD:"var(--gold-deep)");
+  }
+  function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+  function render(html){ app.innerHTML=html; app.classList.remove("fade"); void app.offsetWidth; app.classList.add("fade"); window.scrollTo(0,0); }
+  function chapProgress(c){
+    const ch=DATA.chapters[c];
+    const totN = ch.flashcards.length + ch.recall.length;
+    const done = Object.keys(S.mastered[c]||{}).length + Object.keys(S.recalled[c]||{}).filter(k=>S.recalled[c][k]>=1).length;
+    return Math.min(100, Math.round(100*done/Math.max(1,totN)));
+  }
+
+  /* ============================ HOME ============================ */
+  function home(){
+    setAccent(null);
+    const chaps = Object.values(DATA.chapters);
+    let totCards=0, totMcq=0, totMnem=0;
+    chaps.forEach(c=>{ totCards+=c.flashcards.length; totMcq+=c.mcqs.length; totMnem+=c.mnemonics.length; });
+    const cards = chaps.map(c=>{
+      const p=chapProgress(c.id);
+      return `<button class="chap-card" style="--cc:${c.color}" onclick="App.chapter('${c.id}')">
+        <span class="tag">Chapter ${c.num}</span>
+        <div class="glyph">${c.glyph}</div>
+        <h4>${c.title}</h4>
+        <div class="sub">${c.subtitle}</div>
+        <div class="meter"><i style="width:${p}%"></i></div>
+        <div class="pct"><span>${p}% memorised</span><span>${c.flashcards.length} cards</span></div>
+      </button>`;
+    }).join("");
+    render(`
+      <section class="hero">
+        <div class="eyebrow">Active-Recall Study System</div>
+        <h2>The Naturalist's <em>Codex</em></h2>
+        <p>A field journal for NCERT Class 11 Biology, Chapters 3–6. Learn every concept, then lock it into memory through eight interactive game modes.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>4</b><span>Chapters</span></div>
+          <div class="hero-stat"><b>${totCards}</b><span>Flashcards</span></div>
+          <div class="hero-stat"><b>${totMcq}</b><span>Quiz Qs</span></div>
+          <div class="hero-stat"><b>${totMnem}</b><span>Mnemonics</span></div>
+        </div>
+      </section>
+      <div class="section-label"><h3>Choose a chapter</h3><div class="rule"></div></div>
+      <div class="chapters">${cards}</div>
+      <div class="section-label"><h3>How to use it</h3><div class="rule"></div></div>
+      <div class="modes">${MODES.map(m=>`<div class="mode-card"><div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p></div>`).join("")}</div>
+    `);
+  }
+
+  /* ========================= CHAPTER HUB ========================= */
+  function chapter(id){
+    const ch=DATA.chapters[id]; setAccent(ch);
+    const p=chapProgress(id);
+    const grid = MODES.map(m=>`
+      <button class="mode-card" onclick="App.mode('${id}','${m.k}')">
+        <div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p>
+        <span class="go">Open ${m.mi==="👑"?"boss":"mode"} →</span>
+      </button>`).join("");
+    render(`
+      <a class="back-link" onclick="App.home()">← All chapters</a>
+      <div class="view-head"><div class="t">
+        <span class="chip">Chapter ${ch.num}</span>
+        <h2>${ch.glyph} ${ch.title}</h2>
+        <p>${ch.subtitle}</p>
+      </div>
+      <div class="hero-stat"><b>${p}%</b><span>Memorised</span></div></div>
+      <div class="modes" style="margin-top:24px">${grid}</div>
+    `);
+  }
+
+  function mode(id,k){
+    const ch=DATA.chapters[id]; setAccent(ch);
+    if(k==="notes") return notes(ch);
+    if(k==="mnemonics") return mnemonics(ch);
+    if(k==="flashcards") return flashcards(ch);
+    if(k==="recall") return recall(ch);
+    if(k==="quiz") return quiz(ch,false);
+    if(k==="boss") return quiz(ch,true);
+    if(k==="match") return match(ch);
+    if(k==="pathway") return pathway(ch);
+  }
+
+  function head(ch,title,sub){
+    return `<a class="back-link" onclick="App.chapter('${ch.id}')">← ${ch.title}</a>
+      <div class="view-head"><div class="t"><span class="chip">${ch.glyph} Ch ${ch.num}</span><h2>${title}</h2><p>${sub}</p></div></div>`;
+  }
+
+  /* ============================ NOTES ============================ */
+  function notes(ch){
+    const toc = ch.notes.map((n,i)=>`<a onclick="App.scrollNote('${n.id}')" id="toc-${n.id}">${i+1}. ${n.heading}</a>`).join("");
+    const secs = ch.notes.map((n,i)=>`
+      <div class="note-sec" id="note-${n.id}">
+        <h3><span class="num">${ch.num}.${i+1}</span> ${n.heading}</h3>
+        ${n.html}
+      </div>`).join("");
+    render(`${head(ch,"Study Notes","Everything you need, organised section by section. Tables compare, flows sequence, call-outs flag the big ideas.")}
+      <div class="notes-wrap">
+        <nav class="notes-toc"><b>On this page</b>${toc}</nav>
+        <div>${secs}</div>
+      </div>`);
+  }
+  function scrollNote(nid){
+    const t=document.getElementById("note-"+nid);
+    if(t) t.scrollIntoView({behavior:"smooth",block:"start"});
+  }
+
+  /* ========================== MNEMONICS ========================== */
+  function mnemonics(ch){
+    const grid = ch.mnemonics.map(m=>`
+      <div class="mnem">
+        <h4>${m.title}</h4>
+        <div class="device">${m.device}</div>
+        <div class="expand">${m.expand.map(e=>`<div class="row"><span class="L">${e.L}</span><span>${e.t}</span></div>`).join("")}</div>
+      </div>`).join("");
+    render(`${head(ch,"Mnemonics","Quirky hooks beat rote memory. Read each device, then the breakdown underneath.")}
+      <div class="mnem-grid">${grid}</div>`);
+  }
+
+  /* ========================== FLASHCARDS ========================= */
+  let fc={};
+  function flashcards(ch){
+    fc={ch, order:shuffle(ch.flashcards.map((_,i)=>i)), pos:0, flipped:false};
+    renderCard();
+  }
+  function renderCard(){
+    const {ch,order,pos}=fc;
+    if(pos>=order.length) return fcDone();
+    const idx=order[pos], card=ch.flashcards[idx];
+    const masteredCount=Object.keys(S.mastered[ch.id]).length;
+    render(`${head(ch,"Flashcards","Tap the card to flip. Be honest — judge whether you knew it.")}
+      <div class="fc-stage">
+        <div class="fc-progress"><span>Card ${pos+1} / ${order.length}</span><span>${masteredCount} mastered ✓</span></div>
+        <div class="fc-bar"><i style="width:${Math.round(100*pos/order.length)}%"></i></div>
+        <div class="flashcard" id="fcard" onclick="App.fcFlip()">
+          <div class="fc-inner">
+            <div class="fc-face fc-front"><div class="lab">Term</div><div class="body">${card.front}</div><div class="fc-tap">tap to reveal</div></div>
+            <div class="fc-face fc-back"><div class="lab">Answer</div><div class="body">${card.back}</div><div class="fc-tap">tap to flip back</div></div>
+          </div>
+        </div>
+        <div class="fc-judge" id="fcjudge" style="visibility:hidden">
+          <button class="judge-btn judge-again" onclick="App.fcJudge(false)">↻ Again</button>
+          <button class="judge-btn judge-known" onclick="App.fcJudge(true)">✓ I knew it</button>
+        </div>
+      </div>`);
+  }
+  function fcFlip(){
+    const c=document.getElementById("fcard"); fc.flipped=!fc.flipped;
+    c.classList.toggle("flip",fc.flipped);
+    if(fc.flipped) document.getElementById("fcjudge").style.visibility="visible";
+  }
+  function fcJudge(known){
+    const {ch,order,pos}=fc, idx=order[pos];
+    if(known){ if(!S.mastered[ch.id][idx]){ S.mastered[ch.id][idx]=1; addXP(5,"Mastered a card"); } else { save(); } }
+    else { delete S.mastered[ch.id][idx]; fc.order.push(idx); save(); }
+    fc.pos++; fc.flipped=false; renderCard();
+  }
+  function fcDone(){
+    const {ch}=fc, m=Object.keys(S.mastered[ch.id]).length, tot=ch.flashcards.length;
+    render(`${head(ch,"Flashcards","")}
+      <div class="result">
+        <div class="ring" style="--p:${Math.round(100*m/tot)}"><span>${m}/${tot}</span></div>
+        <h3>Deck complete</h3>
+        <div class="scoreline">${m} of ${tot} cards mastered</div>
+        <p>Cards you marked "Again" were reshuffled back in. Come back tomorrow to keep them locked in.</p>
+        <div class="actions">
+          <button class="btn btn-ghost" onclick="App.chapter('${ch.id}')">← Modes</button>
+          <button class="btn btn-primary" onclick="App.mode('${ch.id}','flashcards')">Run again</button>
+        </div>
+      </div>`);
+  }
+
+  /* ========================= ACTIVE RECALL ======================= */
+  let ar={};
+  function recall(ch){ ar={ch, order:shuffle(ch.recall.map((_,i)=>i)), pos:0}; renderRecall(); }
+  function renderRecall(){
+    const {ch,order,pos}=ar;
+    if(pos>=order.length) return arDone();
+    const idx=order[pos], item=ch.recall[idx];
+    render(`${head(ch,"Active Recall","Write your answer from memory first. Retrieval — not re-reading — is what builds lasting memory.")}
+      <div class="ar-stage">
+        <div class="fc-progress"><span>Prompt ${pos+1} / ${order.length}</span></div>
+        <div class="fc-bar" style="margin-bottom:18px"><i style="width:${Math.round(100*pos/order.length)}%"></i></div>
+        <div class="ar-card">
+          <div class="ar-q">${item.q}</div>
+          <a class="ar-hint-btn" onclick="App.arHint()" id="arHintBtn">Need a hint?</a>
+          <div class="ar-hint" id="arHint" style="display:none">${item.hint}</div>
+          <textarea class="ar-input" id="arInput" placeholder="Type everything you can remember…"></textarea>
+          <div style="margin-top:14px;text-align:right"><button class="btn btn-primary" onclick="App.arReveal()">Reveal answer</button></div>
+          <div id="arReveal"></div>
+        </div>
+      </div>`);
+    setTimeout(()=>{const t=document.getElementById("arInput"); if(t) t.focus();},60);
+  }
+  function arHint(){ document.getElementById("arHint").style.display="block"; document.getElementById("arHintBtn").style.display="none"; }
+  function arReveal(){
+    const {ch,order,pos}=ar, item=ch.recall[order[pos]];
+    document.getElementById("arReveal").innerHTML=`
+      <div class="ar-answer"><div class="lab">Model answer</div><div class="txt">${item.a}</div></div>
+      <div class="self-grade"><div class="lab">How did you do?</div>
+        <div class="grade-row">
+          <button class="grade-btn" data-g="0" onclick="App.arGrade(0)">Missed it</button>
+          <button class="grade-btn" data-g="1" onclick="App.arGrade(1)">Partly</button>
+          <button class="grade-btn" data-g="2" onclick="App.arGrade(2)">Nailed it</button>
+        </div>
+      </div>`;
+  }
+  function arGrade(g){
+    const {ch,order,pos}=ar, idx=order[pos];
+    S.recalled[ch.id][idx]=g; const xp=[2,5,10][g]; addXP(xp, ["Keep at it","Getting there","Nailed it!"][g]);
+    if(g===0) ar.order.push(idx);
+    ar.pos++; renderRecall();
+  }
+  function arDone(){
+    const {ch}=ar, good=Object.keys(S.recalled[ch.id]).filter(k=>S.recalled[ch.id][k]>=1).length, tot=ch.recall.length;
+    render(`${head(ch,"Active Recall","")}
+      <div class="result"><div class="ring" style="--p:${Math.round(100*good/tot)}"><span>${good}/${tot}</span></div>
+        <h3>Session complete</h3><div class="scoreline">${good} of ${tot} recalled well</div>
+        <p>Prompts you missed were queued again. Spaced repetition over several days is the real magic.</p>
+        <div class="actions"><button class="btn btn-ghost" onclick="App.chapter('${ch.id}')">← Modes</button>
+        <button class="btn btn-primary" onclick="App.mode('${ch.id}','recall')">Again</button></div>
+      </div>`);
+  }
+
+  /* ===================== QUIZ & BOSS BATTLE ====================== */
+  let qz={};
+  function quiz(ch,boss){
+    const pool=shuffle(ch.mcqs.map((_,i)=>i));
+    const order = boss?pool:pool.slice(0,Math.min(10,pool.length));
+    qz={ch,boss,order,pos:0,score:0,lives:boss?3:0,locked:false};
+    renderQ();
+  }
+  function renderQ(){
+    const {ch,boss,order,pos,score,lives}=qz;
+    if(pos>=order.length) return qzDone(true);
+    const q=ch.mcqs[order[pos]], keys=["A","B","C","D"];
+    const opts=q.o.map((o,i)=>`<button class="opt" id="opt${i}" onclick="App.qzPick(${i})"><span class="key">${keys[i]}</span><span>${o}</span></button>`).join("");
+    render(`${head(ch, boss?"👑 Boss Battle":"Quiz Battle", boss?"Every question in the chapter. Three lives. Clear them all.":"Ten questions, instant feedback. Read the explanation each time.")}
+      <div class="quiz-stage">
+        <div class="quiz-hud">
+          <span class="qnum">Q ${pos+1} / ${order.length}</span>
+          ${boss?`<span class="lives">${"❤️".repeat(lives)}${"🖤".repeat(3-lives)}</span>`:``}
+          <span class="score">Score ${score}</span>
+        </div>
+        <div class="quiz-bar"><i style="width:${Math.round(100*pos/order.length)}%"></i></div>
+        <div class="mcq-q">${q.q}</div>
+        <div class="mcq-opts">${opts}</div>
+        <div class="mcq-explain" id="exp"></div>
+        <div class="mcq-next" id="next" style="display:none"><button class="btn btn-primary" onclick="App.qzNext()">Next →</button></div>
+      </div>`);
+  }
+  function qzPick(i){
+    if(qz.locked) return; qz.locked=true;
+    const {ch,boss,order,pos}=qz, q=ch.mcqs[order[pos]], correct=q.c;
+    document.querySelectorAll(".opt").forEach((el,j)=>{ el.classList.add("locked");
+      if(j===correct) el.classList.add("correct"); if(j===i&&i!==correct) el.classList.add("wrong"); });
+    const exp=document.getElementById("exp"), ok=(i===correct);
+    exp.className="mcq-explain show "+(ok?"ok":"no");
+    exp.innerHTML=(ok?"<b>Correct! </b>":"<b>Not quite. </b>")+q.e;
+    document.getElementById("next").style.display="block";
+    if(ok){ qz.score++; addXP(boss?10:8,"Correct"); }
+    else if(boss){ qz.lives--; if(qz.lives<=0){ setTimeout(()=>qzDone(false),700); } }
+  }
+  function qzNext(){ qz.locked=false; qz.pos++; renderQ(); }
+  function qzDone(cleared){
+    const {ch,boss,order,score}=qz, pct=Math.round(100*score/order.length);
+    let emoji= !cleared?"💀": pct>=80?"🏆": pct>=50?"👍":"📚";
+    let title= boss&&!cleared?"Defeated!": boss?"Boss cleared!":"Quiz complete";
+    let msg = boss&&!cleared?"You ran out of lives. Review the notes and flashcards, then challenge the boss again.":
+              pct>=80?"Excellent recall — these concepts are sticking.":"Solid effort. Revisit the ones you missed in flashcards & recall.";
+    if(cleared&&boss){ const prev=S.best[ch.id].boss||0; if(score>prev){ S.best[ch.id].boss=score; save(); } addXP(40,"Boss cleared!"); }
+    render(`${head(ch, boss?"👑 Boss Battle":"Quiz Battle","")}
+      <div class="result"><div class="big">${emoji}</div>
+        <div class="ring" style="--p:${pct}"><span>${score}/${order.length}</span></div>
+        <h3>${title}</h3><div class="scoreline">${pct}% correct</div><p>${msg}</p>
+        <div class="actions"><button class="btn btn-ghost" onclick="App.chapter('${ch.id}')">← Modes</button>
+        <button class="btn btn-primary" onclick="App.mode('${ch.id}','${boss?'boss':'quiz'}')">${boss?"Rematch":"Play again"}</button></div>
+      </div>`);
+  }
+
+  /* ============================ MATCH-UP ========================= */
+  let mt={};
+  function match(ch){
+    const picks=shuffle(ch.match).slice(0,8);
+    mt={ch, pairs:picks, left:shuffle(picks.map((p,i)=>({i,txt:p.term}))),
+        right:shuffle(picks.map((p,i)=>({i,txt:p.def}))), sel:null, matched:0, t:0, timer:null};
+    renderMatch();
+    mt.timer=setInterval(()=>{ mt.t++; const el=document.getElementById("mtime"); if(el) el.textContent=fmt(mt.t); },1000);
+  }
+  function fmt(s){ return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0"); }
+  function renderMatch(){
+    const {ch,pairs,left,right}=mt;
+    render(`${head(ch,"Match-Up","Pick a term, then its meaning. Beat the clock.")}
+      <div class="match-stage">
+        <div class="match-hud"><span>Matched ${mt.matched} / ${pairs.length}</span><span class="time" id="mtime">${fmt(mt.t)}</span></div>
+        <div class="match-grid">
+          <div class="match-col"><h5>Terms</h5>${left.map(o=>`<button class="tile" data-side="L" data-i="${o.i}" onclick="App.mtPick(this,'L',${o.i})">${o.txt}</button>`).join("")}</div>
+          <div class="match-col"><h5>Meanings</h5>${right.map(o=>`<button class="tile" data-side="R" data-i="${o.i}" onclick="App.mtPick(this,'R',${o.i})">${o.txt}</button>`).join("")}</div>
+        </div>
+      </div>`);
+  }
+  function mtPick(elm,side,i){
+    if(elm.classList.contains("matched")) return;
+    if(!mt.sel){ clearSel(); mt.sel={elm,side,i}; elm.classList.add("sel"); return; }
+    if(mt.sel.elm===elm){ elm.classList.remove("sel"); mt.sel=null; return; }
+    if(mt.sel.side===side){ clearSel(); mt.sel={elm,side,i}; elm.classList.add("sel"); return; }
+    if(mt.sel.i===i){ // correct
+      mt.sel.elm.classList.remove("sel"); mt.sel.elm.classList.add("matched"); elm.classList.add("matched");
+      mt.sel=null; mt.matched++; document.querySelector(".match-hud span").textContent=`Matched ${mt.matched} / ${mt.pairs.length}`;
+      if(mt.matched===mt.pairs.length) mtDone();
+    } else { // wrong
+      const a=mt.sel.elm; elm.classList.add("miss"); a.classList.add("miss");
+      setTimeout(()=>{elm.classList.remove("miss");a.classList.remove("miss","sel");},380); mt.sel=null;
+    }
+  }
+  function clearSel(){ document.querySelectorAll(".tile.sel").forEach(t=>t.classList.remove("sel")); }
+  function mtDone(){
+    clearInterval(mt.timer); const {ch,t,pairs}=mt;
+    const bonus=Math.max(10, 60-t), xp=pairs.length*4+bonus;
+    const prev=S.best[ch.id].match; if(prev==null||t<prev){ S.best[ch.id].match=t; save(); }
+    addXP(xp,"Match complete!");
+    setTimeout(()=>render(`${head(ch,"Match-Up","")}
+      <div class="result"><div class="big">🔗</div><h3>All matched!</h3>
+        <div class="scoreline">Time ${fmt(t)}</div>
+        <p>Best for this chapter: ${fmt(S.best[ch.id].match)}. Speed comes with familiarity — run it again.</p>
+        <div class="actions"><button class="btn btn-ghost" onclick="App.chapter('${ch.id}')">← Modes</button>
+        <button class="btn btn-primary" onclick="App.mode('${ch.id}','match')">Play again</button></div>
+      </div>`),420);
+  }
+
+  /* ======================= BUILD THE PATHWAY ===================== */
+  let pw={};
+  function pathway(ch){ pw={ch, idx:Math.floor(Math.random()*ch.pathways.length)}; renderPath(); }
+  function renderPath(){
+    const {ch,idx}=pw, p=ch.pathways[idx];
+    pw.answer=p.steps; pw.slots=new Array(p.steps.length).fill(null);
+    pw.pool=shuffle(p.steps.map((s,i)=>({s,i})));
+    render(`${head(ch,"Build the Pathway","Click the steps in the right order. They snap into the slots below.")}
+      <div class="path-stage">
+        <div class="path-prompt"><h4>${p.title}</h4><p>${p.prompt}</p></div>
+        <div class="path-slots" id="slots">${pw.slots.map((_,i)=>`<div class="slot" id="slot${i}" onclick="App.pwUnslot(${i})"><span class="idx">${i+1}</span><span class="chiptxt"></span></div>`).join("")}</div>
+        <div class="path-pool" id="pool">${pw.pool.map((c,k)=>`<button class="pchip" id="chip${k}" onclick="App.pwPlace(${k})">${c.s}</button>`).join("")}</div>
+        <div class="mcq-next" style="margin-top:18px;text-align:center;display:flex;gap:12px;justify-content:center">
+          <button class="btn btn-ghost" onclick="App.pwReset()">Reset</button>
+          <button class="btn btn-primary" onclick="App.pwCheck()">Check order</button>
+        </div>
+      </div>`);
+  }
+  function pwPlace(k){
+    const slotI=pw.slots.indexOf(null); if(slotI<0) return;
+    pw.slots[slotI]=pw.pool[k]; 
+    const slot=document.getElementById("slot"+slotI);
+    slot.classList.add("filled"); slot.querySelector(".chiptxt").textContent=pw.pool[k].s;
+    slot.dataset.chip=k; document.getElementById("chip"+k).classList.add("used");
+  }
+  function pwUnslot(i){
+    const c=pw.slots[i]; if(!c) return;
+    const slot=document.getElementById("slot"+i); const k=slot.dataset.chip;
+    pw.slots[i]=null; slot.classList.remove("filled","ok","no"); slot.querySelector(".chiptxt").textContent="";
+    document.getElementById("chip"+k).classList.remove("used");
+  }
+  function pwReset(){ renderPath(); }
+  function pwCheck(){
+    if(pw.slots.includes(null)){ showToast("Fill every slot first"); return; }
+    let correct=0;
+    pw.slots.forEach((c,i)=>{ const slot=document.getElementById("slot"+i);
+      if(c.s===pw.answer[i]){ slot.classList.add("ok"); correct++; } else slot.classList.add("no"); });
+    if(correct===pw.answer.length){ addXP(15,"Pathway solved!");
+      setTimeout(()=>render(`${head(pw.ch,"Build the Pathway","")}
+        <div class="result"><div class="big">🧩</div><h3>Correct sequence!</h3>
+        <div class="scoreline">${correct}/${pw.answer.length} in order</div>
+        <p>Sequencing forces you to understand <em>why</em> one step follows another.</p>
+        <div class="actions"><button class="btn btn-ghost" onclick="App.chapter('${pw.ch.id}')">← Modes</button>
+        <button class="btn btn-primary" onclick="App.mode('${pw.ch.id}','pathway')">New pathway</button></div></div>`),700);
+    } else showToast(`${correct} of ${pw.answer.length} in the right place — tap a slot to remove & retry`);
+  }
+
+  /* ============================ RESET ============================ */
+  function resetAll(){
+    if(confirm("Reset all XP, mastery and progress on this device?")){ S=fresh(); save(); updateHUD(); home(); }
+  }
+
+  /* init */
+  updateHUD(); home();
+
+  return {home,chapter,mode,resetAll,scrollNote,
+    fcFlip,fcJudge,arHint,arReveal,arGrade,qzPick,qzNext,
+    mtPick,pwPlace,pwUnslot,pwReset,pwCheck};
+})();
+
+</script>
+</body>
+</html>
