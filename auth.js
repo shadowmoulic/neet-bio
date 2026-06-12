@@ -103,6 +103,9 @@ const Auth = (function() {
             
             <button type="submit" class="btn btn-primary auth-btn" id="authSubmitBtn">Login</button>
             <div class="auth-error" id="authError"></div>
+            <div class="auth-form-group login-only" style="text-align:center; margin-top: 8px">
+              <button type="button" onclick="Auth.forgotPassword()" style="background:none;border:none;color:var(--gold);font-size:13px;cursor:pointer;text-decoration:underline">Forgot password?</button>
+            </div>
           </form>
         </div>
       </div>
@@ -328,6 +331,39 @@ const Auth = (function() {
     }
   }
 
+  async function forgotPassword() {
+    const email = document.getElementById('authEmail').value.trim();
+    const errEl = document.getElementById('authError');
+    
+    if (!email) {
+      errEl.textContent = 'Enter your email above first, then click Forgot password.';
+      errEl.style.display = 'block';
+      return;
+    }
+
+    if (!supabaseClient) {
+      errEl.textContent = 'Cannot connect to server.';
+      errEl.style.display = 'block';
+      return;
+    }
+
+    errEl.style.display = 'none';
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin + window.location.pathname
+    });
+
+    if (error) {
+      errEl.textContent = error.message;
+      errEl.style.display = 'block';
+    } else {
+      errEl.style.color = 'var(--ok)';
+      errEl.textContent = '✅ Reset link sent! Check your email inbox.';
+      errEl.style.display = 'block';
+      // Reset colour after a moment so next errors show red
+      setTimeout(() => { errEl.style.color = ''; }, 6000);
+    }
+  }
+
   // Initial check
   if (supabaseClient) {
     supabaseClient.auth.onAuthStateChange((event, session) => {
@@ -339,9 +375,9 @@ const Auth = (function() {
   }
 
   return {
-    switchTab, togglePassword, showAuthModal, hideAuthModal, 
+    switchTab, togglePassword, showAuthModal, hideAuthModal,
     handleAuthSubmit, logout, showPremiumModal, hidePremiumModal,
-    showSignupPromptModal, hideSignupPromptModal,
+    showSignupPromptModal, hideSignupPromptModal, forgotPassword,
     getCurrentUser: () => currentUser,
     getCurrentRole: () => currentRole
   };
