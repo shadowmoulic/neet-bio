@@ -1,6 +1,6 @@
 /* ====== example.js ====== */
 /* 
-  Template for a new chapter in The Naturalist's Codex.
+  Template for a new chapter in NEET Bio.
   Use this format to generate additional chapters.
 */
 
@@ -58,9 +58,9 @@ DATA.chapters.example = {
 
   // 5. Active Recall (Questions and Model Answers)
   recall: [
-    { 
-      q: "Explain the fluid mosaic model of the cell membrane.", 
-      hint: "Think about lipids and proteins.", 
+    {
+      q: "Explain the fluid mosaic model of the cell membrane.",
+      hint: "Think about lipids and proteins.",
       a: "The cell membrane is a <b>phospholipid bilayer</b> with embedded proteins that can move laterally, making it 'fluid'. It resembles a 'mosaic' because of the varied protein components."
     }
   ],

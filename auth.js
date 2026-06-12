@@ -1,9 +1,12 @@
+const SUPA_URL = 'https://yjocgelojlzrnnsotvgj.supabase.co';
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlqb2NnZWxvamx6cm5uc290dmdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxNTQ1NjYsImV4cCI6MjA5MTczMDU2Nn0.OkJpTyweZAqWwGF3mNGqAHgiPgP0K77udiccPvzKVGw';
+
 let supabaseClient = null;
 try {
   if (typeof supabase !== 'undefined') {
-    supabaseClient = supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+    supabaseClient = supabase.createClient(SUPA_URL, SUPA_KEY);
   } else if (window.supabase) {
-    supabaseClient = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+    supabaseClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
   } else {
     alert("Supabase SDK failed to load. Are you connected to the internet?");
   }
@@ -115,6 +118,18 @@ const Auth = (function() {
           <p style="font-size:12px; color:var(--ink-faint); margin-top:16px">Once paid, your account will be manually upgraded.</p>
         </div>
       </div>
+
+      <!-- Signup Prompt Modal -->
+      <div class="modal-overlay" id="signupPromptModal">
+        <div class="modal-box premium-box">
+          <button class="modal-close" onclick="Auth.hideSignupPromptModal()">&times;</button>
+          <div class="premium-icon">🔒</div>
+          <h2 class="modal-title" style="margin-bottom: 10px">Signup to see it</h2>
+          <p class="premium-desc">You need a free account to unlock this chapter and track your mastery.</p>
+          <button class="btn btn-primary auth-btn" onclick="Auth.hideSignupPromptModal(); Auth.switchTab('signup'); Auth.showAuthModal()">Sign Up Now</button>
+          <button class="btn btn-ghost auth-btn" onclick="Auth.hideSignupPromptModal(); Auth.switchTab('login'); Auth.showAuthModal()">Already have an account? Login</button>
+        </div>
+      </div>
     `);
     updateTopBarUI();
   });
@@ -163,6 +178,14 @@ const Auth = (function() {
 
   function hidePremiumModal() {
     document.getElementById('premiumModal').classList.remove('active');
+  }
+
+  function showSignupPromptModal() {
+    document.getElementById('signupPromptModal').classList.add('active');
+  }
+
+  function hideSignupPromptModal() {
+    document.getElementById('signupPromptModal').classList.remove('active');
   }
 
   function showError(msg) {
@@ -318,6 +341,7 @@ const Auth = (function() {
   return {
     switchTab, togglePassword, showAuthModal, hideAuthModal, 
     handleAuthSubmit, logout, showPremiumModal, hidePremiumModal,
+    showSignupPromptModal, hideSignupPromptModal,
     getCurrentUser: () => currentUser,
     getCurrentRole: () => currentRole
   };

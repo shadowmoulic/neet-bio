@@ -152,7 +152,7 @@
         if (typeof Auth !== 'undefined') {
           const user = Auth.getCurrentUser();
           if (!user) {
-            Auth.showAuthModal();
+            Auth.showSignupPromptModal();
             return;
           }
           const role = Auth.getCurrentRole();
