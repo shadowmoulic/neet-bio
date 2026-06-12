@@ -348,9 +348,7 @@ const Auth = (function() {
     }
 
     errEl.style.display = 'none';
-    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-      redirectTo: window.location.origin + window.location.pathname
-    });
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(email);
 
     if (error) {
       errEl.textContent = error.message;
