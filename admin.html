@@ -82,6 +82,8 @@
   <script src="config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
+    const SUPA_URL = 'https://yjocgelojlzrnnsotvgj.supabase.co';
+    const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlqb2NnZWxvamx6cm5uc290dmdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxNTQ1NjYsImV4cCI6MjA5MTczMDU2Nn0.OkJpTyweZAqWwGF3mNGqAHgiPgP0K77udiccPvzKVGw';
     let supabaseClient = null;
     let gatephraseVal = '';
     let allUsers = [];
@@ -89,9 +91,9 @@
     // Initialize Supabase
     try {
       if (typeof supabase !== 'undefined') {
-        supabaseClient = supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+        supabaseClient = supabase.createClient(SUPA_URL, SUPA_KEY);
       } else if (window.supabase) {
-        supabaseClient = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+        supabaseClient = window.supabase.createClient(SUPA_URL, SUPA_KEY);
       } else {
         alert("Supabase SDK failed to load.");
       }
