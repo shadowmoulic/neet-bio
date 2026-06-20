@@ -7,7 +7,23 @@ DATA.chapters['brain_divisionlab01cellcyclehtml'] = {
   "color": "#5B4BD6",
   "colorD": "#3E32A0",
   "glyph": "🧬",
-  "notes": [],
+  "notes": [
+    {
+      "id": "cellcycle",
+      "heading": "Cell Cycle & Interphase",
+      "html": "\n      <p>The <span class=\"term\">cell cycle</span> is the sequence of events by which a cell duplicates its genome, synthesises other constituents, and divides into two cells.</p>\n      <p><b>Interphase</b> occupies >95% of the cycle. It has three phases:</p>\n      <ul>\n        <li><b>G1 (Gap 1):</b> Cell is metabolically active and grows continuously; no DNA replication.</li>\n        <li><b>S (Synthesis):</b> DNA replication occurs. DNA amount doubles (2C → 4C); chromosome number remains the same (2n). Centriole duplicates in the cytoplasm of animal cells.</li>\n        <li><b>G2 (Gap 2):</b> Proteins are synthesised as the cell prepares for mitosis; growth continues.</li>\n      </ul>\n      <div class=\"callout\"><b>G0 (Quiescent) Phase:</b> Cells that exit G1 phase to enter an inactive state. They remain metabolically active but do not divide unless called upon (e.g., heart cells).</div>\n    "
+    },
+    {
+      "id": "mitosis",
+      "heading": "Mitosis (M Phase)",
+      "html": "\n      <p>Mitosis is an <b>equational division</b>, producing two genetically identical diploid daughter cells. It has four karyokinesis stages:</p>\n      <table class=\"cmp\">\n        <thead>\n          <tr><th>Stage</th><th>Key Events</th></tr>\n        </thead>\n        <tbody>\n          <tr><td><b>Prophase</b></td><td>Chromatin condenses; centrosomes move to opposite poles; spindle fibers form; nuclear envelope, nucleolus, Golgi and ER disappear.</td></tr>\n          <tr><td><b>Metaphase</b></td><td>Spindle fibers attach to kinetochores; chromosomes align at the equator (metaphase plate).</td></tr>\n          <tr><td><b>Anaphase</b></td><td>Centromeres split; sister chromatids separate and move to opposite poles.</td></tr>\n          <tr><td><b>Telophase</b></td><td>Chromosomes decondense at the poles; nuclear envelope reforms; nucleolus, Golgi and ER reappear.</td></tr>\n        </tbody>\n      </table>\n      <div class=\"callout\"><b>Cytokinesis:</b> Plant cells divide by cell plate formation (inside-out); animal cells divide by cleavage furrow formation (outside-in).</div>\n    "
+    },
+    {
+      "id": "meiosis",
+      "heading": "Meiosis",
+      "html": "\n      <p>Meiosis is a <b>reductional division</b> that halves the chromosome number (diploid → haploid), producing four non-identical haploid cells.</p>\n      <h4>Meiosis I (Prophase I Stages)</h4>\n      <ul>\n        <li><b>Leptotene:</b> Chromosomes become gradually visible under light microscope.</li>\n        <li><b>Zygotene:</b> Synapsis of homologous chromosomes occurs, forming bivalents (tetrads) and the synaptonemal complex.</li>\n        <li><b>Pachytene:</b> Crossing over occurs between non-sister chromatids of homologous chromosomes at recombination nodules (recombinase enzyme).</li>\n        <li><b>Diplotene:</b> Dissolution of synaptonemal complex; chiasmata (X-shaped structures) become visible.</li>\n        <li><b>Diakinesis:</b> Terminalisation of chiasmata; spindle assembly; nucleolus and nuclear envelope disappear.</li>\n      </ul>\n      <div class=\"callout\"><b>Anaphase I vs. Anaphase II:</b> In Anaphase I, homologous chromosomes separate while sister chromatids remain associated. In Anaphase II, sister chromatids separate.</div>\n    "
+    }
+  ],
   "mnemonics": [
     {
       "title": "Mitosis sequence",
@@ -514,6 +530,88 @@ DATA.chapters['brain_divisionlab01cellcyclehtml'] = {
       "e": "It halves then restores the number at fertilisation, and shuffles genes for evolution."
     }
   ],
-  "match": [],
-  "pathways": []
+  "match": [
+    {
+      "term": "G1 phase",
+      "def": "Cell growth, no DNA replication"
+    },
+    {
+      "term": "S phase",
+      "def": "DNA replication (content doubles)"
+    },
+    {
+      "term": "G2 phase",
+      "def": "Protein synthesis, preparing for mitosis"
+    },
+    {
+      "term": "G0 phase",
+      "def": "Quiescent stage, metabolically active but suspended division"
+    },
+    {
+      "term": "Prophase",
+      "def": "Chromatin condensation, spindle formation"
+    },
+    {
+      "term": "Metaphase",
+      "def": "Chromosomes align at equator"
+    },
+    {
+      "term": "Anaphase",
+      "def": "Centromeres split, sister chromatids move apart"
+    },
+    {
+      "term": "Telophase",
+      "def": "Two nuclei reform, chromosomes decondense"
+    },
+    {
+      "term": "Zygotene",
+      "def": "Synapsis of homologous chromosomes (bivalent forms)"
+    },
+    {
+      "term": "Pachytene",
+      "def": "Crossing over & recombination"
+    },
+    {
+      "term": "Diplotene",
+      "def": "Dissolution of synaptonemal complex, chiasmata visible"
+    },
+    {
+      "term": "Diakinesis",
+      "def": "Terminalisation of chiasmata, nuclear envelope breaks down"
+    }
+  ],
+  "pathways": [
+    {
+      "title": "Mitosis Stages",
+      "prompt": "Order the stages of cell division from start to finish.",
+      "steps": [
+        "Prophase",
+        "Metaphase",
+        "Anaphase",
+        "Telophase",
+        "Cytokinesis"
+      ]
+    },
+    {
+      "title": "Interphase Phases",
+      "prompt": "Order the phases of cell growth and DNA synthesis.",
+      "steps": [
+        "G1 phase",
+        "S phase",
+        "G2 phase",
+        "M phase"
+      ]
+    },
+    {
+      "title": "Prophase I Sub-stages",
+      "prompt": "Order the sub-stages of meiotic prophase I.",
+      "steps": [
+        "Leptotene",
+        "Zygotene",
+        "Pachytene",
+        "Diplotene",
+        "Diakinesis"
+      ]
+    }
+  ]
 };

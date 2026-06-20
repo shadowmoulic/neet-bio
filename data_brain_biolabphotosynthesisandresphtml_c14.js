@@ -7,8 +7,68 @@ DATA.chapters['brain_biolabphotosynthesisandresphtml_c14'] = {
   "color": "#f5a524",
   "colorD": "#3d2a08",
   "glyph": "🦠",
-  "notes": [],
-  "mnemonics": [],
+  "notes": [
+    {
+      "id": "140",
+      "heading": "Introduction",
+      "html": "\n    <p>All energy for life comes from <b>oxidation of food</b>. <span class=\"term\">Respiration</span> = breaking C–C bonds of complex compounds by oxidation, releasing energy trapped as <b>ATP</b> — the energy currency of the cell.</p>\n    <p>Compounds oxidised = <b>respiratory substrates</b> (usually carbohydrates, sometimes fats, proteins, organic acids). Energy is released in small, enzyme-controlled steps. Photosynthesis happens in chloroplasts; respiration in the <b>cytoplasm and mitochondria</b>.</p>"
+    },
+    {
+      "id": "141",
+      "heading": "Do Plants Breathe?",
+      "html": "\n    <p>Plants need O₂ and release CO₂ but have <b>no specialised organs</b> — they use <b>stomata and lenticels</b> for diffusion. Reasons they manage without lungs:</p>\n    <ul><li>Each part handles its own gas exchange; little transport between parts.</li>\n        <li>Gas-exchange demand is low (roots/stems/leaves respire slowly).</li>\n        <li>Diffusion distances are short; living cells lie near the surface.</li>\n        <li>Loose <b>parenchyma</b> packing creates connected air spaces.</li></ul>\n    <div class=\"formula\">C₆H₁₂O₆ + 6 O₂  →  6 CO₂ + 6 H₂O + energy (mostly heat)</div>\n    <p>Cells avoid releasing all energy as heat by oxidising glucose in many small steps coupled to ATP synthesis. Some organisms are <b>facultative</b> or <b>obligate anaerobes</b>; all retain machinery for glycolysis.</p>"
+    },
+    {
+      "id": "142",
+      "heading": "Glycolysis",
+      "html": "\n    <p><b>Glycos</b> (sugar) + <b>lysis</b> (splitting). Scheme by <b>Embden, Meyerhof & Parnas (EMP pathway)</b>. Occurs in the <b>cytoplasm</b> of all cells; in anaerobes it is the only respiration.</p>\n    <p>Glucose (from sucrose via <b>invertase</b>, or storage carbs) is partially oxidised to <b>2 pyruvic acid</b> through 10 enzyme-controlled steps.</p>\n    <ul>\n      <li><b>ATP used</b> at 2 steps: glucose → glucose-6-P; fructose-6-P → fructose-1,6-bisphosphate.</li>\n      <li><b>NADH+H⁺ formed</b> when PGAL → BPGA.</li>\n      <li><b>ATP made</b> at: BPGA → PGA; PEP → pyruvate.</li>\n      <li><b>Net gain: 2 ATP + 2 NADH</b> per glucose.</li>\n    </ul>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">Glucose</span><span class=\"farrow\">→</span><span class=\"fnode\">G-6-P</span><span class=\"farrow\">→</span><span class=\"fnode\">F-6-P</span><span class=\"farrow\">→</span><span class=\"fnode\">F-1,6-BP</span><span class=\"farrow\">→</span><span class=\"fnode\">PGAL</span><span class=\"farrow\">→</span><span class=\"fnode\">BPGA</span><span class=\"farrow\">→</span><span class=\"fnode\">PGA</span><span class=\"farrow\">→</span><span class=\"fnode\">PEP</span><span class=\"farrow\">→</span><span class=\"fnode hl\">Pyruvate</span></div><div class=\"cap\">Glycolysis (EMP pathway).</div></div>"
+    },
+    {
+      "id": "143",
+      "heading": "Fermentation",
+      "html": "\n    <p>Anaerobic, incomplete oxidation of pyruvate:</p>\n    <table class=\"cmp\"><tr><th></th><th>Alcoholic</th><th>Lactic acid</th></tr>\n      <tr><td>Product</td><td>CO₂ + ethanol</td><td>Lactic acid</td></tr>\n      <tr><td>Enzymes</td><td>Pyruvic acid decarboxylase, alcohol dehydrogenase</td><td>Lactate dehydrogenase</td></tr>\n      <tr><td>Where</td><td>Yeast</td><td>Some bacteria; muscle in low O₂</td></tr></table>\n    <p>NADH+H⁺ is reoxidised to NAD⁺. Less than <b>7%</b> of glucose's energy is released; net only <b>2 ATP</b>; products are hazardous. Yeast die at ~<b>13% alcohol</b>.</p>"
+    },
+    {
+      "id": "144",
+      "heading": "Aerobic Respiration",
+      "html": "\n    <p>In mitochondria, with O₂. Two crucial events: <b>(1)</b> complete oxidation of pyruvate (matrix) and <b>(2)</b> passing electrons to O₂ with ATP synthesis (inner membrane).</p>\n    <p><b>Link reaction:</b> pyruvate → acetyl CoA by <b>pyruvate dehydrogenase</b> (needs NAD⁺ & CoA):</p>\n    <div class=\"formula\">Pyruvate + CoA + NAD⁺ → Acetyl CoA + CO₂ + NADH + H⁺</div>\n    <p><b>14.4.1 Krebs / TCA cycle</b> (Hans Krebs), in the matrix:</p>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">Acetyl CoA + OAA</span><span class=\"farrow\">→</span><span class=\"fnode\">Citric acid (6C)</span><span class=\"farrow\">→</span><span class=\"fnode\">α-KG (5C)</span><span class=\"farrow\">→</span><span class=\"fnode\">Succinyl-CoA</span><span class=\"farrow\">→</span><span class=\"fnode\">Succinic (4C)</span><span class=\"farrow\">→</span><span class=\"fnode\">Malic (4C)</span><span class=\"farrow\">→</span><span class=\"fnode hl\">OAA (4C)</span></div><div class=\"cap\">Per turn: 3 NADH, 1 FADH₂, 1 GTP→ATP, 2 CO₂.</div></div>\n    <p>After glycolysis + link + Krebs (per glucose): <b>8 NADH, 2 FADH₂, 2 ATP</b> (from TCA), plus 2 NADH & 2 ATP net from glycolysis.</p>\n    <p><b>14.4.2 ETS & oxidative phosphorylation</b> (inner membrane):</p>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">NADH→Complex I</span><span class=\"farrow\">→</span><span class=\"fnode\">Ubiquinone (+FADH₂/II)</span><span class=\"farrow\">→</span><span class=\"fnode\">Complex III</span><span class=\"farrow\">→</span><span class=\"fnode\">Cyt c</span><span class=\"farrow\">→</span><span class=\"fnode\">Complex IV</span><span class=\"farrow\">→</span><span class=\"fnode hl\">O₂ → H₂O</span></div><div class=\"cap\">Electrons flow to O₂, the final acceptor.</div></div>\n    <ul><li><b>1 NADH → 3 ATP; 1 FADH₂ → 2 ATP.</b></li>\n        <li>O₂ is the <b>terminal acceptor</b>, reduced to water.</li>\n        <li><b>Oxidative phosphorylation</b> uses redox energy (not light) to build the proton gradient.</li>\n        <li><b>ATP synthase (Complex V):</b> F1 = ATP-making headpiece; F0 = proton channel. <b>2 H⁺ per ATP</b> flow from intermembrane space to matrix.</li></ul>"
+    },
+    {
+      "id": "145",
+      "heading": "The Respiratory Balance Sheet",
+      "html": "\n    <p>Net <b>38 ATP</b> per glucose (aerobic) — a theoretical figure under assumptions:</p>\n    <ul><li>A sequential, orderly pathway functions step after step.</li>\n        <li>Glycolytic NADH enters mitochondria for oxidative phosphorylation.</li>\n        <li>No intermediates are withdrawn for other syntheses.</li>\n        <li>Only glucose is respired (no alternative substrates).</li></ul>\n    <table class=\"cmp\"><tr><th></th><th>Fermentation</th><th>Aerobic respiration</th></tr>\n      <tr><td>Breakdown</td><td>Partial</td><td>Complete (to CO₂ + H₂O)</td></tr>\n      <tr><td>Net ATP / glucose</td><td>2</td><td>38</td></tr>\n      <tr><td>NADH reoxidation</td><td>Slow</td><td>Vigorous</td></tr></table>"
+    },
+    {
+      "id": "146",
+      "heading": "Amphibolic Pathway",
+      "html": "\n    <p>Glucose is the favoured substrate. Others enter at points along the pathway:</p>\n    <ul><li><b>Fats</b> → glycerol (→ PGAL) + fatty acids (→ acetyl CoA).</li>\n        <li><b>Proteins</b> → amino acids (after deamination) → enter at pyruvate, acetyl CoA, or within Krebs.</li></ul>\n    <p>Because the same intermediates are used in both <b>breakdown (catabolism)</b> and <b>synthesis (anabolism)</b>, the respiratory pathway is <b>amphibolic</b>, not merely catabolic.</p>"
+    },
+    {
+      "id": "147",
+      "heading": "Respiratory Quotient",
+      "html": "\n    <div class=\"formula\">RQ = volume of CO₂ evolved / volume of O₂ consumed</div>\n    <table class=\"cmp\"><tr><th>Substrate</th><th>RQ</th></tr>\n      <tr><td>Carbohydrates</td><td>1.0</td></tr>\n      <tr><td>Proteins</td><td>≈ 0.9</td></tr>\n      <tr><td>Fats</td><td>&lt; 1 (≈ 0.7)</td></tr></table>\n    <p>RQ depends on the substrate. In living organisms substrates are usually mixed — pure fats or proteins are never used alone.</p>"
+    }
+  ],
+  "mnemonics": [
+    {
+      "title": "RQ values",
+      "device": "<b>C</b>arb 1, <b>P</b>ro 0.9, <b>F</b>at 0.7",
+      "expand": [
+        {
+          "L": "C",
+          "t": "Carbohydrates (RQ = 1.0)"
+        },
+        {
+          "L": "P",
+          "t": "Proteins (RQ ≈ 0.9)"
+        },
+        {
+          "L": "F",
+          "t": "Fats/lipids (RQ ≈ 0.7)"
+        }
+      ]
+    }
+  ],
   "flashcards": [
     {
       "front": "Define cellular respiration",
@@ -585,6 +645,131 @@ DATA.chapters['brain_biolabphotosynthesisandresphtml_c14'] = {
       "e": "Two pyruvates each release 1 CO₂ + 1 NADH → 2 CO₂ and 2 NADH per glucose."
     }
   ],
-  "match": [],
-  "pathways": []
+  "match": [
+    {
+      "term": "Glycolysis",
+      "def": "Cytoplasm"
+    },
+    {
+      "term": "Link reaction & Krebs cycle",
+      "def": "Mitochondrial matrix"
+    },
+    {
+      "term": "Electron Transport System",
+      "def": "Inner mitochondrial membrane"
+    },
+    {
+      "term": "Fermentation",
+      "def": "Cytoplasm (anaerobic)"
+    },
+    {
+      "term": "Pyruvate → Acetyl CoA",
+      "def": "Oxidative decarboxylation"
+    },
+    {
+      "term": "ATP synthase (F0/F1)",
+      "def": "Synthesises ATP from proton gradient"
+    },
+    {
+      "term": "Invertase",
+      "def": "Splits sucrose into glucose + fructose"
+    },
+    {
+      "term": "Hexokinase",
+      "def": "Phosphorylates glucose to glucose-6-P"
+    },
+    {
+      "term": "Lactate dehydrogenase",
+      "def": "Pyruvate → lactic acid"
+    },
+    {
+      "term": "Alcohol dehydrogenase",
+      "def": "Forms ethanol in fermentation"
+    },
+    {
+      "term": "Citrate synthase",
+      "def": "Acetyl CoA + OAA → citric acid"
+    },
+    {
+      "term": "Cytochrome c",
+      "def": "Mobile carrier between Complex III & IV"
+    },
+    {
+      "term": "Net ATP from glycolysis",
+      "def": "2"
+    },
+    {
+      "term": "ATP per NADH (ETS)",
+      "def": "3"
+    },
+    {
+      "term": "ATP per FADH₂ (ETS)",
+      "def": "2"
+    },
+    {
+      "term": "Total ATP per glucose (aerobic)",
+      "def": "38"
+    },
+    {
+      "term": "RQ of carbohydrates",
+      "def": "1.0"
+    },
+    {
+      "term": "RQ of fats",
+      "def": "≈ 0.7"
+    }
+  ],
+  "pathways": [
+    {
+      "title": "Glycolysis (EMP pathway)",
+      "prompt": "Order the key molecules from glucose to pyruvate",
+      "steps": [
+        "Glucose (6C)",
+        "Glucose-6-phosphate",
+        "Fructose-6-phosphate",
+        "Fructose-1,6-bisphosphate",
+        "Triose phosphate (PGAL)",
+        "1,3-bisphosphoglycerate (BPGA)",
+        "3-phosphoglyceric acid (PGA)",
+        "Phosphoenolpyruvate (PEP)",
+        "Pyruvic acid (3C)"
+      ]
+    },
+    {
+      "title": "Aerobic respiration overview",
+      "prompt": "Order the four phases of complete oxidation",
+      "steps": [
+        "Glycolysis: glucose → 2 pyruvate (cytoplasm)",
+        "Link reaction: pyruvate → acetyl CoA",
+        "Krebs cycle: acetyl CoA fully oxidised",
+        "ETS: NADH/FADH₂ oxidised, electrons to O₂",
+        "Oxidative phosphorylation makes ATP"
+      ]
+    },
+    {
+      "title": "The Krebs / citric acid cycle",
+      "prompt": "Order the carbon intermediates",
+      "steps": [
+        "Acetyl CoA (2C) + Oxaloacetic acid (4C)",
+        "Citric acid (6C)",
+        "α-ketoglutaric acid (5C)",
+        "Succinyl-CoA",
+        "Succinic acid (4C)",
+        "Malic acid (4C)",
+        "Oxaloacetic acid regenerated (4C)"
+      ]
+    },
+    {
+      "title": "The Electron Transport System",
+      "prompt": "Order the carriers electrons pass through",
+      "steps": [
+        "NADH → Complex I (NADH dehydrogenase)",
+        "Ubiquinone (also fed by FADH₂/Complex II)",
+        "Complex III (cytochrome bc1)",
+        "Cytochrome c (mobile carrier)",
+        "Complex IV (cytochrome c oxidase)",
+        "Oxygen → reduced to water"
+      ]
+    }
+  ]
 };

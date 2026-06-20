@@ -7,8 +7,78 @@ DATA.chapters['brain_biolabphotosynthesisandresphtml_c13'] = {
   "color": "#34d399",
   "colorD": "#0f3b2c",
   "glyph": "🦠",
-  "notes": [],
-  "mnemonics": [],
+  "notes": [
+    {
+      "id": "131",
+      "heading": "What Do We Know?",
+      "html": "\n    <p>Green plants are <span class=\"term\">autotrophs</span> — they synthesise their own food by <b>photosynthesis</b>, a physico-chemical process that uses light energy to build organic compounds. All other organisms are <span class=\"term\">heterotrophs</span> that depend on them.</p>\n    <p>Photosynthesis matters for two reasons: it is the <b>primary source of all food</b> on earth, and it <b>releases oxygen</b> into the atmosphere.</p>\n    <ul>\n      <li>Early experiments showed <b>chlorophyll, light and CO₂</b> are all required.</li>\n      <li>A <b>variegated / partly-covered leaf</b> tested for starch makes starch only in green, light-exposed parts.</li>\n      <li>The <b>half-leaf-in-KOH</b> experiment (KOH absorbs CO₂) showed CO₂ is required — only the exposed half made starch.</li>\n    </ul>"
+    },
+    {
+      "id": "132",
+      "heading": "Early Experiments",
+      "html": "\n    <ul>\n      <li><b>Joseph Priestley (1770):</b> a candle/mouse fouls air in a bell jar; a mint plant restores it. <i>Plants restore to the air whatever burning candles and breathing animals remove.</i> (He discovered O₂ in 1774.)</li>\n      <li><b>Jan Ingenhousz:</b> sunlight is essential; only green parts release O₂ (bubbles around green parts of an aquatic plant in light).</li>\n      <li><b>Julius von Sachs (1854):</b> glucose is produced as plants grow, stored as starch, in the green chloroplasts.</li>\n      <li><b>T.W. Engelmann:</b> prism + <i>Cladophora</i> + aerobic bacteria → first <b>action spectrum</b>; bacteria gathered in blue and red light.</li>\n      <li><b>Cornelius van Niel:</b> photosynthesis is light-dependent; hydrogen from an oxidisable compound reduces CO₂. In green plants H₂O is the donor → <b>O₂ comes from water</b>.</li>\n    </ul>\n    <div class=\"formula\">6 CO₂ + 12 H₂O  --light-->  C₆H₁₂O₆ + 6 H₂O + 6 O₂</div>\n    <div class=\"callout\"><div class=\"ct\">Why 12 waters?</div>Twelve water molecules are written because the six O₂ released come from water; six water molecules are reformed on the product side.</div>"
+    },
+    {
+      "id": "133",
+      "heading": "Where Does Photosynthesis Take Place?",
+      "html": "\n    <p>It occurs in the <b>green parts</b> of plants — chiefly leaves, where <b>mesophyll cells</b> hold many <b>chloroplasts</b> aligned to catch light.</p>\n    <p>Inside the chloroplast: a membrane system of <span class=\"term\">grana</span> and <span class=\"term\">stroma lamellae</span>, plus the <span class=\"term\">stroma</span> (matrix).</p>\n    <ul>\n      <li><b>Membrane system</b> → traps light energy, makes ATP & NADPH (<b>light reactions / photochemical</b>).</li>\n      <li><b>Stroma</b> → enzymatic synthesis of sugar → starch (<b>dark / carbon reactions</b>).</li>\n    </ul>\n    <div class=\"callout\"><div class=\"ct\">Note</div>\"Dark reactions\" do <b>not</b> occur in darkness — they simply aren't <i>directly</i> light-driven; they depend on the ATP & NADPH made in light.</div>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode\">Outer membrane</span><span class=\"farrow\">→</span><span class=\"fnode\">Inner membrane</span><span class=\"farrow\">→</span><span class=\"fnode\">Stroma + lamellae</span><span class=\"farrow\">→</span><span class=\"fnode hl\">Grana</span></div>\n      <div class=\"cap\">Chloroplast also contains ribosomes, starch granules and lipid droplets.</div></div>"
+    },
+    {
+      "id": "134",
+      "heading": "Pigments Involved",
+      "html": "\n    <p>Paper chromatography of leaf pigments reveals <b>four</b> pigments:</p>\n    <table class=\"cmp\"><tr><th>Pigment</th><th>Colour</th><th>Role</th></tr>\n      <tr><td>Chlorophyll a</td><td>Bright / blue-green</td><td>Chief pigment; reaction centre</td></tr>\n      <tr><td>Chlorophyll b</td><td>Yellow-green</td><td>Accessory</td></tr>\n      <tr><td>Xanthophylls</td><td>Yellow</td><td>Accessory</td></tr>\n      <tr><td>Carotenoids</td><td>Yellow to orange</td><td>Accessory; prevent photo-oxidation</td></tr></table>\n    <p>Pigments absorb light at specific wavelengths. Chlorophyll a absorbs maximally in the <b>blue and red</b> regions — matching where photosynthesis (action spectrum) peaks, so it is the chief pigment.</p>\n    <p><b>Accessory pigments</b> absorb extra wavelengths, transfer energy to chlorophyll a, and protect it from <b>photo-oxidation</b>. The absorption and action spectra roughly overlap but not one-to-one.</p>"
+    },
+    {
+      "id": "135",
+      "heading": "Light Reaction",
+      "html": "\n    <p>The light (photochemical) phase includes <b>light absorption, water splitting, O₂ release, and formation of ATP & NADPH</b>.</p>\n    <p>Pigments are organised into two <b>Light Harvesting Complexes (LHC)</b> in <b>Photosystem I (PS I)</b> and <b>Photosystem II (PS II)</b> — named by order of discovery, not function.</p>\n    <ul>\n      <li>All pigments except one chlorophyll a = the <b>antenna</b>.</li>\n      <li>The single chlorophyll a = the <b>reaction centre</b>.</li>\n      <li><b>PS I:</b> reaction centre <span class=\"term\">P700</span> (peak 700 nm). <b>PS II:</b> <span class=\"term\">P680</span> (peak 680 nm).</li>\n    </ul>"
+    },
+    {
+      "id": "136",
+      "heading": "Electron Transport & the Z-Scheme",
+      "html": "\n    <p>In <b>PS II</b>, P680 absorbs 680 nm light; excited electrons jump out, are caught by an acceptor, and pass <b>downhill</b> through cytochromes (ETS) to <b>PS I</b>. In PS I, P700 electrons (excited by 700 nm) pass to a higher-redox acceptor, then downhill to <b>NADP⁺ → NADPH + H⁺</b>. The whole path looks like a <b>\"Z\"</b> on a redox scale.</p>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">PS II / P680</span><span class=\"farrow\">→<small>e⁻</small></span><span class=\"fnode\">Acceptor</span><span class=\"farrow\">→</span><span class=\"fnode\">Cytochromes</span><span class=\"farrow\">→</span><span class=\"fnode hl\">PS I / P700</span><span class=\"farrow\">→</span><span class=\"fnode\">Acceptor</span><span class=\"farrow\">→</span><span class=\"fnode\">NADPH</span></div>\n      <div class=\"cap\">The Z-scheme of electron flow.</div></div>\n    <p><b>13.6.1 Splitting of water</b> replaces PS II's lost electrons; it is on the inner (lumen) side of the thylakoid:</p>\n    <div class=\"formula\">2 H₂O  →  4 H⁺ + O₂ + 4 e⁻</div>\n    <p><b>13.6.2 Photophosphorylation</b> = ATP synthesis in light.</p>\n    <table class=\"cmp\"><tr><th></th><th>Non-cyclic</th><th>Cyclic</th></tr>\n      <tr><td>Photosystems</td><td>PS II then PS I (series)</td><td>Only PS I</td></tr>\n      <tr><td>Products</td><td>ATP + NADPH (+ O₂)</td><td>Only ATP</td></tr>\n      <tr><td>Location</td><td>Grana lamellae</td><td>Stroma lamellae (no PS II, no NADP reductase)</td></tr></table>\n    <p><b>13.6.3 Chemiosmotic hypothesis:</b> ATP synthesis is linked to a <b>proton gradient</b> across the thylakoid membrane; protons accumulate in the <b>lumen</b> (lowering its pH) because: (a) water splitting releases H⁺ in the lumen; (b) electron transport pumps H⁺ from stroma to lumen; (c) NADP⁺ reduction removes H⁺ from the stroma.</p>\n    <p>Protons flow back through the <b>CF0</b> channel of <b>ATP synthase</b>; this causes a conformational change in <b>CF1</b> (facing the stroma) that makes ATP. Chemiosmosis needs: a <b>membrane, proton pump, proton gradient and ATP synthase</b>.</p>"
+    },
+    {
+      "id": "137",
+      "heading": "Where ATP & NADPH Are Used — The Calvin Cycle",
+      "html": "\n    <p>O₂ diffuses out; <b>ATP & NADPH drive sugar synthesis</b> in the stroma (biosynthetic phase — depends on light products, not light directly).</p>\n    <p><b>Melvin Calvin</b> (using ¹⁴C) found the first product of CO₂ fixation in C3 plants is <span class=\"term\">3-PGA</span> (3 carbons). The primary CO₂ acceptor is the 5-carbon <span class=\"term\">RuBP</span>.</p>\n    <p>The Calvin cycle has three stages:</p>\n    <ul>\n      <li><b>Carboxylation:</b> RuBP + CO₂ →(<b>RuBisCO</b>) 2 × 3-PGA.</li>\n      <li><b>Reduction:</b> 2 ATP + 2 NADPH per CO₂ → triose phosphate / sugar.</li>\n      <li><b>Regeneration:</b> 1 ATP per turn regenerates RuBP.</li>\n    </ul>\n    <div class=\"callout\"><div class=\"ct\">The maths</div>Per CO₂: <b>3 ATP + 2 NADPH</b>. For one glucose (6 turns): <b>In</b> = 6 CO₂, 18 ATP, 12 NADPH · <b>Out</b> = 1 glucose, 18 ADP, 12 NADP⁺.</div>"
+    },
+    {
+      "id": "138",
+      "heading": "The C4 Pathway",
+      "html": "\n    <p>C4 plants (dry tropical) form a 4-carbon acid (<b>OAA</b>) first, but still use the Calvin cycle for biosynthesis. They have special <b>Kranz anatomy</b>: large <b>bundle-sheath cells</b> with many chloroplasts, thick gas-impervious walls, and no intercellular spaces.</p>\n    <p><b>Hatch–Slack pathway:</b></p>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">PEP + CO₂</span><span class=\"farrow\">→<small>PEPcase</small></span><span class=\"fnode\">OAA (4C)</span><span class=\"farrow\">→</span><span class=\"fnode\">malic/aspartic acid</span><span class=\"farrow\">→</span><span class=\"fnode\">bundle sheath</span><span class=\"farrow\">→<small>→CO₂</small></span><span class=\"fnode hl\">Calvin cycle</span></div>\n      <div class=\"cap\">Mesophyll lacks RuBisCO; bundle-sheath is rich in RuBisCO but lacks PEPcase.</div></div>\n    <p>C4 special features: special leaf anatomy, tolerate higher temperatures, respond to high light, <b>lack photorespiration</b>, greater biomass productivity.</p>"
+    },
+    {
+      "id": "139",
+      "heading": "Photorespiration",
+      "html": "\n    <p><b>RuBisCO</b> (the most abundant enzyme in the world) binds both CO₂ and O₂ — competitively. In <b>C3 plants</b>, when O₂ binds, RuBP forms one PGA + one <b>phosphoglycolate (2C)</b>.</p>\n    <ul><li>No sugar synthesised.</li><li>No ATP or NADPH made.</li><li>CO₂ is released and ATP is wasted.</li><li>Biological function unknown.</li></ul>\n    <p><b>C4 plants avoid it</b> by concentrating CO₂ in bundle-sheath cells, so RuBisCO works as a carboxylase — explaining their higher productivity.</p>"
+    },
+    {
+      "id": "1310",
+      "heading": "Factors Affecting Photosynthesis",
+      "html": "\n    <p><b>Internal:</b> number, size, age & orientation of leaves, mesophyll cells, chloroplasts, internal CO₂, chlorophyll amount. <b>External:</b> light, temperature, CO₂, water.</p>\n    <div class=\"callout\"><div class=\"ct\">Blackman's Law of Limiting Factors (1905)</div>If a process is affected by more than one factor, its rate is set by the factor <b>nearest its minimal value</b>.</div>\n    <ul>\n      <li><b>Light:</b> linear at low intensity; <b>light saturation at ~10% of full sunlight</b>; rarely limiting except in shade; excess light breaks down chlorophyll.</li>\n      <li><b>CO₂:</b> major limiting factor (0.03–0.04% of air). C4 saturate ~360 µl/L; C3 respond beyond 450 µl/L. Greenhouse tomato/bell-pepper are CO₂-enriched.</li>\n      <li><b>Temperature:</b> dark reactions are enzymatic & temperature-controlled; C4 have higher optima; tropical &gt; temperate plants.</li>\n      <li><b>Water:</b> acts indirectly — stress closes stomata (less CO₂) and wilts leaves.</li>\n    </ul>"
+    }
+  ],
+  "mnemonics": [
+    {
+      "title": "Calvin cycle stages",
+      "device": "<b>C</b>ar-<b>R</b>ed-<b>R</b>eg",
+      "expand": [
+        {
+          "L": "C",
+          "t": "Carboxylation — CO2 fixed to RuBP using RuBisCO"
+        },
+        {
+          "L": "R",
+          "t": "Reduction — ATP and NADPH used to form G3P/glucose"
+        },
+        {
+          "L": "R",
+          "t": "Regeneration — RuBP regenerated using 1 ATP"
+        }
+      ]
+    }
+  ],
   "flashcards": [
     {
       "front": "What is photosynthesis?",
@@ -711,6 +781,118 @@ DATA.chapters['brain_biolabphotosynthesisandresphtml_c13'] = {
       "e": "It traces electron flow from PS II uphill, down the ETS to PS I, then to NADP⁺."
     }
   ],
-  "match": [],
-  "pathways": []
+  "match": [
+    {
+      "term": "Joseph Priestley",
+      "def": "Plants restore 'damaged' air (discovered O₂)"
+    },
+    {
+      "term": "Jan Ingenhousz",
+      "def": "Sunlight essential; only green parts release O₂"
+    },
+    {
+      "term": "Julius von Sachs",
+      "def": "Glucose made in green parts, stored as starch"
+    },
+    {
+      "term": "T.W. Engelmann",
+      "def": "First action spectrum (prism + Cladophora)"
+    },
+    {
+      "term": "Cornelius van Niel",
+      "def": "O₂ comes from water, not CO₂"
+    },
+    {
+      "term": "Melvin Calvin",
+      "def": "Worked out the Calvin (C3) cycle with ¹⁴C"
+    },
+    {
+      "term": "Chlorophyll a",
+      "def": "Chief pigment; reaction centre"
+    },
+    {
+      "term": "Chlorophyll b / carotenoids",
+      "def": "Accessory pigments transferring energy"
+    },
+    {
+      "term": "P700",
+      "def": "Reaction centre of Photosystem I"
+    },
+    {
+      "term": "P680",
+      "def": "Reaction centre of Photosystem II"
+    },
+    {
+      "term": "Carotenoids",
+      "def": "Protect chlorophyll a from photo-oxidation"
+    },
+    {
+      "term": "LHC / antenna",
+      "def": "Pigment-protein complex harvesting light"
+    },
+    {
+      "term": "RuBP",
+      "def": "5-carbon primary CO₂ acceptor (C3)"
+    },
+    {
+      "term": "PGA",
+      "def": "3-carbon first product (C3)"
+    },
+    {
+      "term": "PEP",
+      "def": "Primary CO₂ acceptor in C4 mesophyll"
+    },
+    {
+      "term": "OAA",
+      "def": "4-carbon first product (C4)"
+    },
+    {
+      "term": "RuBisCO",
+      "def": "Most abundant enzyme; carboxylase + oxygenase"
+    },
+    {
+      "term": "18 ATP + 12 NADPH",
+      "def": "Needed to make one glucose"
+    }
+  ],
+  "pathways": [
+    {
+      "title": "The Z-scheme of electron flow",
+      "prompt": "Order the events of the light reaction",
+      "steps": [
+        "Light (680 nm) excites P680 in PS II",
+        "Electrons picked up by an electron acceptor",
+        "Electrons pass downhill through cytochromes (ETS)",
+        "Electrons reach Photosystem I",
+        "Light (700 nm) excites P700 in PS I",
+        "Electrons passed to a higher-redox acceptor",
+        "Electrons reduce NADP⁺ to NADPH + H⁺"
+      ]
+    },
+    {
+      "title": "The Calvin cycle (C3 pathway)",
+      "prompt": "Order the three stages and their flow",
+      "steps": [
+        "CO₂ combines with RuBP (carboxylation)",
+        "Two molecules of 3-PGA are formed",
+        "ATP & NADPH reduce PGA (reduction)",
+        "Triose phosphate / sugar is formed",
+        "ATP regenerates RuBP (regeneration)",
+        "Cycle continues with a new CO₂"
+      ]
+    },
+    {
+      "title": "The C4 (Hatch–Slack) pathway",
+      "prompt": "Trace CO₂ from air to sugar",
+      "steps": [
+        "CO₂ + PEP in mesophyll (by PEPcase)",
+        "OAA (4C) is formed in mesophyll",
+        "Converted to malic/aspartic acid (4C)",
+        "Transported to bundle-sheath cells",
+        "Broken down to release CO₂ + 3C molecule",
+        "CO₂ enters the Calvin cycle (RuBisCO)",
+        "3C returns to mesophyll → regenerates PEP"
+      ]
+    }
+  ]
 };

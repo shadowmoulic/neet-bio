@@ -78,156 +78,136 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
   ],
   "flashcards": [
     {
-      "q": "Plasma vs serum?",
-      "a": "Plasma = fluid part of blood with clotting factors (~55%). Serum = plasma minus clotting factors (fibrinogen).",
-      "hint": "Clotting factors"
+      "front": "Plasma vs serum?",
+      "back": "Plasma = fluid part of blood with clotting factors (~55%). Serum = plasma minus clotting factors (fibrinogen)."
     },
     {
-      "q": "Normal RBC count and lifespan?",
-      "a": "~5–5.5 million/mm³; lifespan ~120 days; biconcave, no nucleus in mammals.",
-      "hint": "120 days"
+      "front": "Normal RBC count and lifespan?",
+      "back": "~5–5.5 million/mm³; lifespan ~120 days; biconcave, no nucleus in mammals."
     },
     {
-      "q": "Most abundant WBC?",
-      "a": "Neutrophils (60–65%) — phagocytic granulocytes.",
-      "hint": "~65%"
+      "front": "Most abundant WBC?",
+      "back": "Neutrophils (60–65%) — phagocytic granulocytes."
     },
     {
-      "q": "Rarest WBC?",
-      "a": "Basophils (0.5–1%) — release histamine & heparin.",
-      "hint": "Histamine"
+      "front": "Rarest WBC?",
+      "back": "Basophils (0.5–1%) — release histamine & heparin."
     },
     {
-      "q": "Which protein is needed for clotting?",
-      "a": "Fibrinogen (and prothrombin) — made in the liver; fibrin forms the clot mesh.",
-      "hint": "Fibrin precursor"
+      "front": "Which protein is needed for clotting?",
+      "back": "Fibrinogen (and prothrombin) — made in the liver; fibrin forms the clot mesh."
     },
     {
-      "q": "Universal donor and universal recipient blood groups?",
-      "a": "O is the universal donor (no antigens); AB is the universal recipient (no antibodies).",
-      "hint": "O / AB"
+      "front": "Universal donor and universal recipient blood groups?",
+      "back": "O is the universal donor (no antigens); AB is the universal recipient (no antibodies)."
     },
     {
-      "q": "What antibodies are present in blood group A?",
-      "a": "Anti-B antibodies (antigen A on RBC).",
-      "hint": "Opposite antibody"
+      "front": "What antibodies are present in blood group A?",
+      "back": "Anti-B antibodies (antigen A on RBC)."
     },
     {
-      "q": "What is erythroblastosis foetalis?",
-      "a": "Destruction of an Rh⁺ foetus’s RBCs by anti-Rh antibodies from a sensitised Rh⁻ mother during a later pregnancy.",
-      "hint": "Rh incompatibility"
+      "front": "What is erythroblastosis foetalis?",
+      "back": "Destruction of an Rh⁺ foetus’s RBCs by anti-Rh antibodies from a sensitised Rh⁻ mother during a later pregnancy."
     },
     {
-      "q": "Role of calcium in clotting?",
-      "a": "Ca²⁺ ions are essential cofactors at several steps of the clotting cascade.",
-      "hint": "Essential ion"
+      "front": "Role of calcium in clotting?",
+      "back": "Ca²⁺ ions are essential cofactors at several steps of the clotting cascade."
     },
     {
-      "q": "What is lymph and a key function?",
-      "a": "Colourless tissue fluid (lymphocytes, no RBC, few proteins); absorbs/transports fats via lacteals and returns fluid to blood.",
-      "hint": "Lacteals, fats"
+      "front": "What is lymph and a key function?",
+      "back": "Colourless tissue fluid (lymphocytes, no RBC, few proteins); absorbs/transports fats via lacteals and returns fluid to blood."
     },
     {
-      "q": "Which valve lies between the left atrium and left ventricle?",
-      "a": "The bicuspid (mitral) valve.",
-      "hint": "LAB"
+      "front": "Which valve lies between the left atrium and left ventricle?",
+      "back": "The bicuspid (mitral) valve."
     },
     {
-      "q": "Pacemaker of the heart?",
-      "a": "The SA (sino-atrial) node in the right atrium — sets the heart rhythm (~70–75/min).",
-      "hint": "SA node"
+      "front": "Pacemaker of the heart?",
+      "back": "The SA (sino-atrial) node in the right atrium — sets the heart rhythm (~70–75/min)."
     },
     {
-      "q": "Sequence of the heart’s conducting system?",
-      "a": "SA node → AV node → Bundle of His → bundle branches → Purkinje fibres.",
-      "hint": "SA→AV→His→Purkinje"
+      "front": "Sequence of the heart’s conducting system?",
+      "back": "SA node → AV node → Bundle of His → bundle branches → Purkinje fibres."
     },
     {
-      "q": "Cardiac output formula and normal value?",
-      "a": "CO = Stroke Volume × Heart Rate ≈ 70 mL × 72 ≈ 5 L/min.",
-      "hint": "SV × HR"
+      "front": "Cardiac output formula and normal value?",
+      "back": "CO = Stroke Volume × Heart Rate ≈ 70 mL × 72 ≈ 5 L/min."
     },
     {
-      "q": "What causes the \"lubb\" and \"dup\" heart sounds?",
-      "a": "Lubb (S1): AV valves close (start of ventricular systole). Dup (S2): semilunar valves close (end of ventricular systole).",
-      "hint": "Valve closures"
+      "front": "What causes the \"lubb\" and \"dup\" heart sounds?",
+      "back": "Lubb (S1): AV valves close (start of ventricular systole). Dup (S2): semilunar valves close (end of ventricular systole)."
     },
     {
-      "q": "What do the P, QRS and T waves of an ECG represent?",
-      "a": "P = atrial depolarisation; QRS = ventricular depolarisation; T = ventricular repolarisation.",
-      "hint": "Depolarise / repolarise"
+      "front": "What do the P, QRS and T waves of an ECG represent?",
+      "back": "P = atrial depolarisation; QRS = ventricular depolarisation; T = ventricular repolarisation."
     },
     {
-      "q": "What is double circulation?",
-      "a": "Blood flows through the heart twice — pulmonary (heart↔lungs) and systemic (heart↔body) circuits.",
-      "hint": "Two circuits"
+      "front": "What is double circulation?",
+      "back": "Blood flows through the heart twice — pulmonary (heart↔lungs) and systemic (heart↔body) circuits."
     },
     {
-      "q": "Hepatic portal system carries blood from ___ to ___?",
-      "a": "From the intestine to the liver before it returns to the heart.",
-      "hint": "Gut → liver"
+      "front": "Hepatic portal system carries blood from ___ to ___?",
+      "back": "From the intestine to the liver before it returns to the heart."
     },
     {
-      "q": "Define angina pectoris.",
-      "a": "Chest pain due to insufficient oxygen reaching the heart muscle.",
-      "hint": "Chest pain, low O₂"
+      "front": "Define angina pectoris.",
+      "back": "Chest pain due to insufficient oxygen reaching the heart muscle."
     },
     {
-      "q": "Normal vs hypertensive blood pressure?",
-      "a": "Normal ~120/80 mmHg; hypertension is repeatedly above 140/90 mmHg.",
-      "hint": "120/80 vs 140/90"
+      "front": "Normal vs hypertensive blood pressure?",
+      "back": "Normal ~120/80 mmHg; hypertension is repeatedly above 140/90 mmHg."
     }
   ],
   "recall": [
     {
       "q": "Name the formed elements of blood and one function of each.",
-      "a": "RBCs (erythrocytes) — transport O₂/CO₂ via haemoglobin; WBCs (leucocytes) — immunity/defence; Platelets (thrombocytes) — blood clotting.",
-      "hint": "RBC, WBC, platelet"
+      "hint": "RBC, WBC, platelet",
+      "a": "RBCs (erythrocytes) — transport O₂/CO₂ via haemoglobin; WBCs (leucocytes) — immunity/defence; Platelets (thrombocytes) — blood clotting."
     },
     {
       "q": "Describe the ABO blood grouping with antigens and antibodies.",
-      "a": "Group A: antigen A, anti-B antibody. Group B: antigen B, anti-A. Group AB: both antigens, no antibody (universal recipient). Group O: no antigen, both antibodies (universal donor).",
-      "hint": "Antigen on RBC, antibody in plasma"
+      "hint": "Antigen on RBC, antibody in plasma",
+      "a": "Group A: antigen A, anti-B antibody. Group B: antigen B, anti-A. Group AB: both antigens, no antibody (universal recipient). Group O: no antigen, both antibodies (universal donor)."
     },
     {
       "q": "Explain the mechanism of blood clotting.",
-      "a": "Injury exposes tissue/platelet factors → thrombokinase (thromboplastin) forms → with Ca²⁺ it converts prothrombin to thrombin → thrombin converts soluble fibrinogen to insoluble fibrin threads, which trap cells forming the clot.",
-      "hint": "Thromboplastin → thrombin → fibrin"
+      "hint": "Thromboplastin → thrombin → fibrin",
+      "a": "Injury exposes tissue/platelet factors → thrombokinase (thromboplastin) forms → with Ca²⁺ it converts prothrombin to thrombin → thrombin converts soluble fibrinogen to insoluble fibrin threads, which trap cells forming the clot."
     },
     {
       "q": "Describe the structure of the human heart.",
-      "a": "Four-chambered (2 atria, 2 ventricles) in a double-walled pericardium. AV valves (tricuspid right, bicuspid left) prevent backflow into atria; semilunar valves guard the aorta and pulmonary artery. Septa keep oxygenated and deoxygenated blood separate.",
-      "hint": "4 chambers, valves, pericardium"
+      "hint": "4 chambers, valves, pericardium",
+      "a": "Four-chambered (2 atria, 2 ventricles) in a double-walled pericardium. AV valves (tricuspid right, bicuspid left) prevent backflow into atria; semilunar valves guard the aorta and pulmonary artery. Septa keep oxygenated and deoxygenated blood separate."
     },
     {
       "q": "Trace the conducting system of the heart.",
-      "a": "SA node (pacemaker) in the right atrium initiates the impulse → AV node → Bundle of His → right & left bundle branches → Purkinje fibres, contracting the ventricles. The heart is myogenic.",
-      "hint": "SA → AV → His → Purkinje"
+      "hint": "SA → AV → His → Purkinje",
+      "a": "SA node (pacemaker) in the right atrium initiates the impulse → AV node → Bundle of His → right & left bundle branches → Purkinje fibres, contracting the ventricles. The heart is myogenic."
     },
     {
       "q": "Define cardiac cycle, cardiac output and stroke volume.",
-      "a": "Cardiac cycle = events of one heartbeat (~0.8 s): atrial systole, ventricular systole, joint diastole. Stroke volume = blood pumped per beat (~70 mL). Cardiac output = SV × heart rate ≈ 5 L/min.",
-      "hint": "Cycle, SV, CO = SV×HR"
+      "hint": "Cycle, SV, CO = SV×HR",
+      "a": "Cardiac cycle = events of one heartbeat (~0.8 s): atrial systole, ventricular systole, joint diastole. Stroke volume = blood pumped per beat (~70 mL). Cardiac output = SV × heart rate ≈ 5 L/min."
     },
     {
       "q": "Draw/explain the segments of a normal ECG.",
-      "a": "P wave = atrial depolarisation; QRS complex = ventricular depolarisation; T wave = ventricular repolarisation. The number of QRS complexes per minute gives heart rate; abnormal waves indicate disease.",
-      "hint": "P, QRS, T"
+      "hint": "P, QRS, T",
+      "a": "P wave = atrial depolarisation; QRS complex = ventricular depolarisation; T wave = ventricular repolarisation. The number of QRS complexes per minute gives heart rate; abnormal waves indicate disease."
     },
     {
       "q": "What is double circulation? Name its components.",
-      "a": "Blood passes through the heart twice per circuit. Pulmonary circulation: right ventricle → lungs → left atrium. Systemic circulation: left ventricle → body → right atrium. Also hepatic portal and coronary circulation.",
-      "hint": "Pulmonary + systemic"
+      "hint": "Pulmonary + systemic",
+      "a": "Blood passes through the heart twice per circuit. Pulmonary circulation: right ventricle → lungs → left atrium. Systemic circulation: left ventricle → body → right atrium. Also hepatic portal and coronary circulation."
     },
     {
       "q": "How is the heart’s activity regulated?",
-      "a": "The SA node is self-exciting (myogenic) but is modulated by the autonomic nervous system — sympathetic nerves increase rate & force, parasympathetic (vagus) decreases rate; adrenal medulla hormones (adrenaline) also raise cardiac output.",
-      "hint": "Autonomic + adrenaline"
+      "hint": "Autonomic + adrenaline",
+      "a": "The SA node is self-exciting (myogenic) but is modulated by the autonomic nervous system — sympathetic nerves increase rate & force, parasympathetic (vagus) decreases rate; adrenal medulla hormones (adrenaline) also raise cardiac output."
     },
     {
       "q": "List four disorders of the circulatory system.",
-      "a": "Hypertension (high BP), coronary artery disease/atherosclerosis, angina pectoris (chest pain from low O₂), and heart failure / myocardial infarction (heart attack).",
-      "hint": "BP, CAD, angina, heart failure"
+      "hint": "BP, CAD, angina, heart failure",
+      "a": "Hypertension (high BP), coronary artery disease/atherosclerosis, angina pectoris (chest pain from low O₂), and heart failure / myocardial infarction (heart attack)."
     }
   ],
   "mcqs": [
@@ -239,7 +219,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Lymph",
         "Tissue fluid"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Serum = plasma minus clotting factors (chiefly fibrinogen)."
     },
     {
@@ -250,7 +230,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "O",
         "B"
       ],
-      "a": 2,
+      "c": 2,
       "e": "O has no A/B antigens, so it can be given to any group."
     },
     {
@@ -261,7 +241,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Eosinophils",
         "Monocytes"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Neutrophils make up 60–65% of WBCs and are phagocytic."
     },
     {
@@ -272,7 +252,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Bundle of His",
         "Purkinje fibres"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The SA node in the right atrium initiates each heartbeat."
     },
     {
@@ -283,7 +263,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Ventricle & aorta",
         "Atria"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Bicuspid/mitral valve is the left AV valve (LAB — Left Atrium Bicuspid)."
     },
     {
@@ -294,7 +274,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "The aorta",
         "SA node"
       ],
-      "a": 1,
+      "c": 1,
       "e": "S1 (lubb) = closure of atrioventricular valves at the start of ventricular systole."
     },
     {
@@ -305,7 +285,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Ventricular repolarisation",
         "Atrial repolarisation"
       ],
-      "a": 1,
+      "c": 1,
       "e": "QRS = depolarisation (contraction) of the ventricles."
     },
     {
@@ -316,7 +296,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "SV × HR",
         "HR ÷ SV"
       ],
-      "a": 2,
+      "c": 2,
       "e": "CO = Stroke Volume × Heart Rate (~70 mL × 72 ≈ 5 L/min)."
     },
     {
@@ -327,7 +307,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Fibrin",
         "Thrombin"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Thrombin converts soluble fibrinogen into insoluble fibrin threads."
     },
     {
@@ -338,7 +318,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "MN group",
         "Plasma proteins"
       ],
-      "a": 1,
+      "c": 1,
       "e": "It results from Rh incompatibility between an Rh⁻ mother and Rh⁺ foetus."
     },
     {
@@ -349,7 +329,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "RBCs",
         "Water"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Lymph has no RBCs and fewer proteins; it contains lymphocytes."
     },
     {
@@ -360,7 +340,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Oxygenated blood to heart",
         "Deoxygenated blood to body"
       ],
-      "a": 1,
+      "c": 1,
       "e": "It carries deoxygenated blood from the right ventricle to the lungs."
     },
     {
@@ -371,7 +351,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "120/min",
         "150/min"
       ],
-      "a": 1,
+      "c": 1,
       "e": "About 70–75 beats per minute at rest."
     },
     {
@@ -382,7 +362,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Atherosclerosis",
         "Cardiac arrest"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Angina pectoris is chest pain from inadequate oxygen supply to the myocardium."
     },
     {
@@ -393,7 +373,7 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Liver to heart",
         "Lungs to heart"
       ],
-      "a": 1,
+      "c": 1,
       "e": "It carries blood from the digestive tract to the liver before reaching the heart."
     },
     {
@@ -404,93 +384,93 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Basophil",
         "Eosinophil"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Monocytes are the largest WBCs and are phagocytic."
     }
   ],
   "match": [
     {
-      "t": "Neutrophil",
-      "d": "Most abundant WBC (phagocyte)"
+      "term": "Neutrophil",
+      "def": "Most abundant WBC (phagocyte)"
     },
     {
-      "t": "Basophil",
-      "d": "Releases histamine/heparin (rarest)"
+      "term": "Basophil",
+      "def": "Releases histamine/heparin (rarest)"
     },
     {
-      "t": "O group",
-      "d": "Universal donor"
+      "term": "O group",
+      "def": "Universal donor"
     },
     {
-      "t": "AB group",
-      "d": "Universal recipient"
+      "term": "AB group",
+      "def": "Universal recipient"
     },
     {
-      "t": "SA node",
-      "d": "Pacemaker"
+      "term": "SA node",
+      "def": "Pacemaker"
     },
     {
-      "t": "Bicuspid valve",
-      "d": "Left AV valve"
+      "term": "Bicuspid valve",
+      "def": "Left AV valve"
     },
     {
-      "t": "P wave",
-      "d": "Atrial depolarisation"
+      "term": "P wave",
+      "def": "Atrial depolarisation"
     },
     {
-      "t": "T wave",
-      "d": "Ventricular repolarisation"
+      "term": "T wave",
+      "def": "Ventricular repolarisation"
     },
     {
-      "t": "Fibrin",
-      "d": "Forms the clot mesh"
+      "term": "Fibrin",
+      "def": "Forms the clot mesh"
     },
     {
-      "t": "Pulmonary artery",
-      "d": "Deoxygenated blood to lungs"
+      "term": "Pulmonary artery",
+      "def": "Deoxygenated blood to lungs"
     },
     {
-      "t": "Lacteals",
-      "d": "Absorb fats into lymph"
+      "term": "Lacteals",
+      "def": "Absorb fats into lymph"
     },
     {
-      "t": "Angina pectoris",
-      "d": "Chest pain from low O₂"
+      "term": "Angina pectoris",
+      "def": "Chest pain from low O₂"
     }
   ],
   "pathways": [
     {
       "title": "Blood clotting cascade",
+      "prompt": "The enzyme cascade ends in a fibrin mesh forming the clot.",
       "steps": [
         "Injury & platelet aggregation",
         "Thrombokinase (thromboplastin) released",
         "Prothrombin → Thrombin (needs Ca²⁺)",
         "Fibrinogen → Fibrin threads",
         "Clot/coagulum traps blood cells"
-      ],
-      "e": "The enzyme cascade ends in a fibrin mesh forming the clot."
+      ]
     },
     {
       "title": "Cardiac impulse conduction",
+      "prompt": "The myogenic impulse spreads from pacemaker to ventricular muscle.",
       "steps": [
         "SA node fires",
         "AV node",
         "Bundle of His",
         "Bundle branches",
         "Purkinje fibres → ventricles contract"
-      ],
-      "e": "The myogenic impulse spreads from pacemaker to ventricular muscle."
+      ]
     },
     {
       "title": "Pulmonary circulation path",
+      "prompt": "Deoxygenated blood is sent to the lungs and returns oxygenated.",
       "steps": [
         "Right ventricle",
         "Pulmonary artery",
         "Lungs (oxygenation)",
         "Pulmonary veins",
         "Left atrium"
-      ],
-      "e": "Deoxygenated blood is sent to the lungs and returns oxygenated."
+      ]
     }
   ]
 };

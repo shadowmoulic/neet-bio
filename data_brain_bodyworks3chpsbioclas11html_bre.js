@@ -7,8 +7,58 @@ DATA.chapters['brain_bodyworks3chpsbioclas11html_bre'] = {
   "color": "#3498db",
   "colorD": "#2980b9",
   "glyph": "🦠",
-  "notes": [],
-  "mnemonics": [],
+  "notes": [
+    {
+      "id": "141",
+      "heading": "Respiratory Organs",
+      "html": "\n    <p>Breathing exchanges atmospheric <b>O₂</b> for the <b>CO₂</b> made by cells, in two phases — <b>inspiration</b> and <b>expiration</b>. Animals respire by different structures depending on habitat and body plan:</p>\n    <ul>\n      <li><b>Body surface</b> — sponges, coelenterates, flatworms.</li>\n      <li><b>Moist skin / cuticle</b> — earthworms (cutaneous).</li>\n      <li><b>Tracheal tubes</b> — insects.</li>\n      <li><b>Gills (branchial)</b> — fishes, prawns.</li>\n      <li><b>Lungs (pulmonary)</b> — terrestrial vertebrates.</li>\n    </ul>\n    <p><b>Human air passage:</b></p>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">Nostrils</span><span class=\"farrow\">→</span><span class=\"fnode\">Nasal chamber</span><span class=\"farrow\">→</span><span class=\"fnode\">Pharynx</span><span class=\"farrow\">→</span><span class=\"fnode\">Larynx</span><span class=\"farrow\">→</span><span class=\"fnode\">Trachea</span><span class=\"farrow\">→</span><span class=\"fnode\">Bronchi → bronchioles</span><span class=\"farrow\">→</span><span class=\"fnode hl\">Alveoli</span></div>\n      <div class=\"cap\">Conducting part (to terminal bronchioles) cleans, warms & humidifies air; alveoli + ducts are the exchange part.</div></div>\n    <ul>\n      <li>The <b>larynx</b> (sound box) helps produce sound; the <b>epiglottis</b> guards the glottis during swallowing.</li>\n      <li>The trachea and bronchi have <b>incomplete cartilage rings</b> to stop collapse; the trachea divides at about the 5th thoracic vertebra.</li>\n      <li>Lungs sit in the thoracic chamber, covered by a <b>double-walled pleura</b> with lubricating pleural fluid.</li>\n    </ul>"
+    },
+    {
+      "id": "142",
+      "heading": "Mechanism of Breathing & Lung Volumes",
+      "html": "\n    <p>Air movement follows <b>Boyle's law</b> (pressure ∝ 1/volume at constant temperature):</p>\n    <table class=\"cmp\"><tr><th></th><th>Inspiration</th><th>Expiration (normal)</th></tr>\n      <tr><td>Diaphragm</td><td>Contracts, flattens</td><td>Relaxes, domes up</td></tr>\n      <tr><td>External intercostals</td><td>Contract; ribs & sternum up/out</td><td>Relax</td></tr>\n      <tr><td>Thoracic & lung volume</td><td>Increase</td><td>Decrease</td></tr>\n      <tr><td>Intra-pulmonary pressure</td><td>Below atmospheric → air in</td><td>Above atmospheric → air out (passive)</td></tr></table>\n    <p>A healthy human breathes <b>12–16 times/min</b>. Volumes are measured with a <b>spirometer</b>.</p>\n    <table class=\"cmp\"><tr><th>Volume</th><th>Meaning</th><th>Approx.</th></tr>\n      <tr><td>Tidal Volume (TV)</td><td>Air per normal breath</td><td>~500 mL</td></tr>\n      <tr><td>IRV</td><td>Extra air on forced inspiration</td><td>2500–3000 mL</td></tr>\n      <tr><td>ERV</td><td>Extra air on forced expiration</td><td>1000–1100 mL</td></tr>\n      <tr><td>Residual Volume (RV)</td><td>Air left after forced expiration</td><td>1100–1200 mL</td></tr></table>\n    <div class=\"callout\"><div class=\"ct\">Capacities</div>IC = TV + IRV · EC = TV + ERV · FRC = ERV + RV · <b>VC = ERV + TV + IRV</b> (~3.5–4.5 L) · <b>TLC = VC + RV</b> (~6000 mL).</div>"
+    },
+    {
+      "id": "143",
+      "heading": "Exchange of Gases",
+      "html": "\n    <p>Gas exchange at the alveoli (and at tissues) happens by <b>simple diffusion</b>, driven by <b>partial-pressure gradients</b>. The diffusion membrane has three thin layers — alveolar squamous epithelium, capillary endothelium and the basement substance between (~0.2 mm).</p>\n    <table class=\"cmp\"><tr><th>Partial pressure (mm Hg)</th><th>O₂</th><th>CO₂</th></tr>\n      <tr><td>Atmospheric air</td><td>159</td><td>0.3</td></tr>\n      <tr><td>Alveoli</td><td>104</td><td>40</td></tr>\n      <tr><td>Oxygenated blood</td><td>95</td><td>40</td></tr>\n      <tr><td>Tissues / deoxygenated blood</td><td>40</td><td>45</td></tr></table>\n    <p>O₂ diffuses alveoli → blood → tissues; CO₂ diffuses tissues → blood → alveoli. CO₂ is ~20–25× more soluble than O₂, so it diffuses readily despite a smaller gradient.</p>"
+    },
+    {
+      "id": "144",
+      "heading": "Transport of Gases",
+      "html": "\n    <p><b>Oxygen:</b> ~<b>97%</b> is carried as <b>oxyhaemoglobin</b> (each haemoglobin binds up to 4 O₂); ~3% dissolves in plasma. Binding is favoured by <b>high pO₂, low pCO₂, low H⁺ and low temperature</b> (in the lungs).</p>\n    <p>The <b>oxygen-dissociation curve</b> is sigmoid. In tissues (low pO₂, high pCO₂, high H⁺, higher temperature) it shifts <b>right</b> and O₂ is unloaded — the <b>Bohr effect</b>.</p>\n    <p><b>Carbon dioxide</b> is transported three ways:</p>\n    <table class=\"cmp\"><tr><th>Form</th><th>Share</th></tr>\n      <tr><td>Bicarbonate ions (HCO₃⁻)</td><td>~70%</td></tr>\n      <tr><td>Carbamino-haemoglobin</td><td>~20–25%</td></tr>\n      <tr><td>Dissolved in plasma</td><td>~7%</td></tr></table>\n    <div class=\"formula\">CO₂ + H₂O  ⇌(carbonic anhydrase)  H₂CO₃  ⇌  HCO₃⁻ + H⁺</div>\n    <p>Every 100 mL of oxygenated blood delivers ~5 mL O₂ to tissues; every 100 mL of deoxygenated blood carries ~4 mL CO₂ to the alveoli.</p>"
+    },
+    {
+      "id": "145",
+      "heading": "Regulation of Respiration",
+      "html": "\n    <p>The body precisely controls breathing through centres in the brain:</p>\n    <ul>\n      <li><b>Respiratory rhythm centre</b> (medulla oblongata) — sets the basic rhythm.</li>\n      <li><b>Pneumotaxic centre</b> (pons) — can reduce the duration of inspiration, altering the rate.</li>\n      <li><b>Chemosensitive area</b> (near the rhythm centre) — highly sensitive to <b>CO₂ and H⁺</b>; a rise signals adjustments to expel CO₂. <b>O₂ has little direct role.</b></li>\n    </ul>"
+    },
+    {
+      "id": "146",
+      "heading": "Disorders of the Respiratory System",
+      "html": "\n    <ul>\n      <li><b>Asthma:</b> difficulty in breathing with wheezing, due to inflammation and spasm of the bronchi/bronchioles (often allergic).</li>\n      <li><b>Emphysema:</b> alveolar walls are damaged, lowering the respiratory surface area; <b>cigarette smoking</b> is a major cause.</li>\n      <li><b>Occupational respiratory disorders:</b> long dust exposure (stone-grinding, mining) inflames and scars the lungs — e.g. <b>silicosis</b> and <b>asbestosis</b>.</li>\n    </ul>"
+    }
+  ],
+  "mnemonics": [
+    {
+      "title": "ECG waves",
+      "device": "<b>P</b>-pushes Atria, <b>QRS</b>-Quivers Ventricles, <b>T</b>-Takes a rest",
+      "expand": [
+        {
+          "L": "P",
+          "t": "Atrial depolarisation (contraction)"
+        },
+        {
+          "L": "QRS",
+          "t": "Ventricular depolarisation"
+        },
+        {
+          "L": "T",
+          "t": "Ventricular repolarisation (relaxation)"
+        }
+      ]
+    }
+  ],
   "flashcards": [
     {
       "front": "Define breathing (respiration in this chapter)",
@@ -657,6 +707,118 @@ DATA.chapters['brain_bodyworks3chpsbioclas11html_bre'] = {
       "e": "Chronic cigarette smoking damages alveolar walls and reduces the respiratory surface area."
     }
   ],
-  "match": [],
-  "pathways": []
+  "match": [
+    {
+      "term": "Larynx",
+      "def": "Sound box; guarded by the epiglottis"
+    },
+    {
+      "term": "Trachea",
+      "def": "Windpipe with cartilage rings"
+    },
+    {
+      "term": "Alveoli",
+      "def": "Site of gas exchange"
+    },
+    {
+      "term": "Pleura",
+      "def": "Double membrane around the lungs"
+    },
+    {
+      "term": "Bronchioles",
+      "def": "Fine branches of the bronchi"
+    },
+    {
+      "term": "Diaphragm",
+      "def": "Dome muscle that flattens on inspiration"
+    },
+    {
+      "term": "Tidal volume",
+      "def": "~500 mL in a normal breath"
+    },
+    {
+      "term": "Residual volume",
+      "def": "~1100–1200 mL left after forced expiration"
+    },
+    {
+      "term": "Vital capacity",
+      "def": "ERV + TV + IRV"
+    },
+    {
+      "term": "Total lung capacity",
+      "def": "VC + RV (~6000 mL)"
+    },
+    {
+      "term": "IRV",
+      "def": "Extra air on a forced inspiration"
+    },
+    {
+      "term": "Spirometer",
+      "def": "Instrument that measures lung volumes"
+    },
+    {
+      "term": "Oxyhaemoglobin",
+      "def": "~97% of O₂ transport"
+    },
+    {
+      "term": "Bicarbonate ions",
+      "def": "~70% of CO₂ transport"
+    },
+    {
+      "term": "Carbonic anhydrase",
+      "def": "RBC enzyme for HCO₃⁻ formation"
+    },
+    {
+      "term": "Medulla oblongata",
+      "def": "Respiratory rhythm centre"
+    },
+    {
+      "term": "Pneumotaxic centre (pons)",
+      "def": "Reduces inspiration duration"
+    },
+    {
+      "term": "Bohr effect",
+      "def": "Right shift releases O₂ in tissues"
+    }
+  ],
+  "pathways": [
+    {
+      "title": "The air passage",
+      "prompt": "Order the route of air to the exchange surface",
+      "steps": [
+        "External nostrils",
+        "Nasal chamber",
+        "Pharynx",
+        "Larynx",
+        "Trachea",
+        "Primary bronchi",
+        "Bronchioles",
+        "Alveoli"
+      ]
+    },
+    {
+      "title": "Mechanism of inspiration",
+      "prompt": "Order the events that draw air in",
+      "steps": [
+        "Diaphragm contracts and flattens",
+        "External intercostals lift ribs & sternum",
+        "Thoracic volume increases",
+        "Pulmonary (lung) volume increases",
+        "Intra-pulmonary pressure falls below atmospheric",
+        "Air rushes into the lungs"
+      ]
+    },
+    {
+      "title": "Oxygen's journey to the tissues",
+      "prompt": "Order O₂ transport from air to cells",
+      "steps": [
+        "O₂ in alveolar air (pO₂ ≈ 104)",
+        "Diffuses across the alveolar membrane",
+        "Binds haemoglobin → oxyhaemoglobin",
+        "Carried by RBCs in arterial blood",
+        "Reaches tissues (low pO₂ ≈ 40)",
+        "O₂ released and diffuses into cells"
+      ]
+    }
+  ]
 };

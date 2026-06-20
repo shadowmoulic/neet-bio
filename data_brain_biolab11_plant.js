@@ -68,151 +68,131 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
   ],
   "flashcards": [
     {
-      "q": "Define growth in plants.",
-      "a": "An irreversible permanent increase in size of a cell, organ or whole organism, accompanied by an increase in dry weight.",
-      "hint": "Irreversible"
+      "front": "Define growth in plants.",
+      "back": "An irreversible permanent increase in size of a cell, organ or whole organism, accompanied by an increase in dry weight."
     },
     {
-      "q": "Name the three phases of growth.",
-      "a": "Meristematic (division), Elongation, and Maturation.",
-      "hint": "Division → enlarge → mature"
+      "front": "Name the three phases of growth.",
+      "back": "Meristematic (division), Elongation, and Maturation."
     },
     {
-      "q": "Arithmetic growth equation?",
-      "a": "Lt = L0 + rt  (constant linear rate; one cell divides, other matures).",
-      "hint": "Linear"
+      "front": "Arithmetic growth equation?",
+      "back": "Lt = L0 + rt  (constant linear rate; one cell divides, other matures)."
     },
     {
-      "q": "Exponential growth equation?",
-      "a": "W1 = W0·e^(rt); gives the sigmoid (S-shaped) curve with lag, log and stationary phases.",
-      "hint": "e^rt"
+      "front": "Exponential growth equation?",
+      "back": "W1 = W0·e^(rt); gives the sigmoid (S-shaped) curve with lag, log and stationary phases."
     },
     {
-      "q": "Define dedifferentiation with an example.",
-      "a": "Mature differentiated cells regaining the ability to divide — e.g. interfascicular cambium & cork cambium from parenchyma.",
-      "hint": "Cambium"
+      "front": "Define dedifferentiation with an example.",
+      "back": "Mature differentiated cells regaining the ability to divide — e.g. interfascicular cambium & cork cambium from parenchyma."
     },
     {
-      "q": "What is plasticity? Give example.",
-      "a": "Ability of plants to follow different growth pathways in different environments/phases — e.g. heterophylly in cotton, coriander, buttercup.",
-      "hint": "Heterophylly"
+      "front": "What is plasticity? Give example.",
+      "back": "Ability of plants to follow different growth pathways in different environments/phases — e.g. heterophylly in cotton, coriander, buttercup."
     },
     {
-      "q": "Which PGR causes apical dominance?",
-      "a": "Auxin (IAA) — suppresses growth of lateral/axillary buds.",
-      "hint": "Tip hormone"
+      "front": "Which PGR causes apical dominance?",
+      "back": "Auxin (IAA) — suppresses growth of lateral/axillary buds."
     },
     {
-      "q": "Source of gibberellin?",
-      "a": "The fungus Gibberella fujikuroi (causes bakanae / foolish seedling disease of rice).",
-      "hint": "Fungus, rice disease"
+      "front": "Source of gibberellin?",
+      "back": "The fungus Gibberella fujikuroi (causes bakanae / foolish seedling disease of rice)."
     },
     {
-      "q": "What is bolting?",
-      "a": "Sudden internode elongation just before flowering in rosette plants; induced by gibberellins.",
-      "hint": "GA, rosette"
+      "front": "What is bolting?",
+      "back": "Sudden internode elongation just before flowering in rosette plants; induced by gibberellins."
     },
     {
-      "q": "Richmond–Lang effect?",
-      "a": "Cytokinins delay leaf senescence (ageing).",
-      "hint": "Cytokinin, ageing"
+      "front": "Richmond–Lang effect?",
+      "back": "Cytokinins delay leaf senescence (ageing)."
     },
     {
-      "q": "Which is the \"stress hormone\"?",
-      "a": "Abscisic acid (ABA) — closes stomata in water stress, induces dormancy.",
-      "hint": "Closes stomata"
+      "front": "Which is the \"stress hormone\"?",
+      "back": "Abscisic acid (ABA) — closes stomata in water stress, induces dormancy."
     },
     {
-      "q": "Which PGR ripens fruits?",
-      "a": "Ethylene (gaseous); ethephon is its commercial source.",
-      "hint": "Gaseous"
+      "front": "Which PGR ripens fruits?",
+      "back": "Ethylene (gaseous); ethephon is its commercial source."
     },
     {
-      "q": "2,4-D is used as?",
-      "a": "A herbicide (auxin) to kill dicot weeds; also used to prepare weed-free lawns.",
-      "hint": "Weed killer"
+      "front": "2,4-D is used as?",
+      "back": "A herbicide (auxin) to kill dicot weeds; also used to prepare weed-free lawns."
     },
     {
-      "q": "What is photoperiodism?",
-      "a": "Response of plants to the relative lengths of day and night, controlling flowering. The dark period length is the actual factor.",
-      "hint": "Day/night length"
+      "front": "What is photoperiodism?",
+      "back": "Response of plants to the relative lengths of day and night, controlling flowering. The dark period length is the actual factor."
     },
     {
-      "q": "Example of a short-day plant?",
-      "a": "Tobacco, soybean, chrysanthemum, Xanthium (flower when night > critical length).",
-      "hint": "Long nights"
+      "front": "Example of a short-day plant?",
+      "back": "Tobacco, soybean, chrysanthemum, Xanthium (flower when night > critical length)."
     },
     {
-      "q": "What is florigen?",
-      "a": "The hypothetical flowering hormone produced in leaves that moves to the shoot apex to induce flowering.",
-      "hint": "Flowering signal from leaf"
+      "front": "What is florigen?",
+      "back": "The hypothetical flowering hormone produced in leaves that moves to the shoot apex to induce flowering."
     },
     {
-      "q": "Define vernalisation.",
-      "a": "Promotion of flowering by exposure to a period of low temperature (cold treatment).",
-      "hint": "Cold treatment"
+      "front": "Define vernalisation.",
+      "back": "Promotion of flowering by exposure to a period of low temperature (cold treatment)."
     },
     {
-      "q": "Which PGR breaks seed dormancy & which maintains it?",
-      "a": "Gibberellins break dormancy; abscisic acid (ABA) maintains it.",
-      "hint": "GA vs ABA"
+      "front": "Which PGR breaks seed dormancy & which maintains it?",
+      "back": "Gibberellins break dormancy; abscisic acid (ABA) maintains it."
     },
     {
-      "q": "Who discovered auxin via the coleoptile experiment?",
-      "a": "Charles & Francis Darwin (phototropism); F.W. Went isolated auxin from oat coleoptile tips.",
-      "hint": "Darwins / Went"
+      "front": "Who discovered auxin via the coleoptile experiment?",
+      "back": "Charles & Francis Darwin (phototropism); F.W. Went isolated auxin from oat coleoptile tips."
     },
     {
-      "q": "Cytokinin natural sources?",
-      "a": "Zeatin from maize kernels & coconut milk; kinetin from herring sperm DNA.",
-      "hint": "Coconut milk"
+      "front": "Cytokinin natural sources?",
+      "back": "Zeatin from maize kernels & coconut milk; kinetin from herring sperm DNA."
     }
   ],
   "recall": [
     {
       "q": "Describe the three phases of growth at the cellular level.",
-      "a": "(1) Meristematic — actively dividing cells with dense protoplasm, large nuclei, thin walls. (2) Elongation — vacuolation, cell enlargement and new wall material. (3) Maturation — cells reach maximum size with wall thickening and protoplasmic differentiation.",
-      "hint": "Division, elongation, maturation"
+      "hint": "Division, elongation, maturation",
+      "a": "(1) Meristematic — actively dividing cells with dense protoplasm, large nuclei, thin walls. (2) Elongation — vacuolation, cell enlargement and new wall material. (3) Maturation — cells reach maximum size with wall thickening and protoplasmic differentiation."
     },
     {
       "q": "Distinguish arithmetic and geometric growth.",
-      "a": "Arithmetic: only one daughter cell continues to divide, the other matures → constant linear rate (Lt = L0 + rt). Geometric: both daughter cells divide → exponential rise (W1 = W0·e^rt); with limited resources this gives a sigmoid curve (lag, log, stationary).",
-      "hint": "Linear vs exponential / sigmoid"
+      "hint": "Linear vs exponential / sigmoid",
+      "a": "Arithmetic: only one daughter cell continues to divide, the other matures → constant linear rate (Lt = L0 + rt). Geometric: both daughter cells divide → exponential rise (W1 = W0·e^rt); with limited resources this gives a sigmoid curve (lag, log, stationary)."
     },
     {
       "q": "Explain differentiation, dedifferentiation and redifferentiation.",
-      "a": "Differentiation: meristematic cells mature into specialised cells. Dedifferentiation: mature cells regain ability to divide (interfascicular & cork cambium). Redifferentiation: those dedifferentiated cells mature again, losing the dividing capacity.",
-      "hint": "Three D process"
+      "hint": "Three D process",
+      "a": "Differentiation: meristematic cells mature into specialised cells. Dedifferentiation: mature cells regain ability to divide (interfascicular & cork cambium). Redifferentiation: those dedifferentiated cells mature again, losing the dividing capacity."
     },
     {
       "q": "List the physiological effects of auxins.",
-      "a": "Cell elongation, apical dominance, rooting of cuttings, prevention of early fruit/leaf drop (and promotion of abscission of older parts), parthenocarpy, and herbicidal action (2,4-D on dicot weeds).",
-      "hint": "Elongation, dominance, rooting, weedicide"
+      "hint": "Elongation, dominance, rooting, weedicide",
+      "a": "Cell elongation, apical dominance, rooting of cuttings, prevention of early fruit/leaf drop (and promotion of abscission of older parts), parthenocarpy, and herbicidal action (2,4-D on dicot weeds)."
     },
     {
       "q": "Give four roles of gibberellins.",
-      "a": "Stem/internode elongation (bolting), increase fruit & stalk length (grapes), delay senescence, break seed and bud dormancy, speed up malting in brewing.",
-      "hint": "Bolting, fruit, dormancy, malting"
+      "hint": "Bolting, fruit, dormancy, malting",
+      "a": "Stem/internode elongation (bolting), increase fruit & stalk length (grapes), delay senescence, break seed and bud dormancy, speed up malting in brewing."
     },
     {
       "q": "Compare ABA and gibberellin functions.",
-      "a": "ABA is a growth inhibitor — closes stomata under stress, induces seed/bud dormancy, promotes abscission. Gibberellin is a promoter — breaks dormancy, induces bolting, promotes elongation. They act antagonistically.",
-      "hint": "Antagonists"
+      "hint": "Antagonists",
+      "a": "ABA is a growth inhibitor — closes stomata under stress, induces seed/bud dormancy, promotes abscission. Gibberellin is a promoter — breaks dormancy, induces bolting, promotes elongation. They act antagonistically."
     },
     {
       "q": "What is photoperiodism and where is the stimulus perceived?",
-      "a": "Flowering response to relative day/night length; the duration of the continuous dark period is critical. The stimulus is perceived by the leaves, which produce a transmissible hormone (florigen) that travels to the shoot apex to induce flowering.",
-      "hint": "Dark period; leaf perceives"
+      "hint": "Dark period; leaf perceives",
+      "a": "Flowering response to relative day/night length; the duration of the continuous dark period is critical. The stimulus is perceived by the leaves, which produce a transmissible hormone (florigen) that travels to the shoot apex to induce flowering."
     },
     {
       "q": "Define vernalisation and give its significance.",
-      "a": "Promotion of flowering by exposure to low temperature. It prevents premature flowering and ensures the plant flowers in the appropriate season (e.g. winter wheat, biennials like sugar beet and cabbage).",
-      "hint": "Cold; right season"
+      "hint": "Cold; right season",
+      "a": "Promotion of flowering by exposure to low temperature. It prevents premature flowering and ensures the plant flowers in the appropriate season (e.g. winter wheat, biennials like sugar beet and cabbage)."
     },
     {
       "q": "How is seed dormancy caused and overcome?",
-      "a": "Caused by impermeable hard seed coats, chemical inhibitors (ABA, phenolics) or immature embryos. Overcome by scarification, chilling/stratification, light exposure or gibberellin treatment.",
-      "hint": "Coat/chemical/embryo; GA breaks"
+      "hint": "Coat/chemical/embryo; GA breaks",
+      "a": "Caused by impermeable hard seed coats, chemical inhibitors (ABA, phenolics) or immature embryos. Overcome by scarification, chilling/stratification, light exposure or gibberellin treatment."
     }
   ],
   "mcqs": [
@@ -224,7 +204,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Irreversible & indeterminate",
         "Without dry-weight change"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Plant growth is an irreversible permanent increase, and is indeterminate due to meristems."
     },
     {
@@ -235,7 +215,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Stationary, log, lag",
         "Lag, stationary, log"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Order is lag → log (exponential) → stationary."
     },
     {
@@ -246,7 +226,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Ethylene",
         "ABA"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Auxin from the shoot tip suppresses growth of lateral buds."
     },
     {
@@ -257,7 +237,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Coconut milk",
         "Oat tips"
       ],
-      "a": 1,
+      "c": 1,
       "e": "GA₃ was isolated from the fungus Gibberella fujikuroi (bakanae disease)."
     },
     {
@@ -268,7 +248,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "ABA",
         "Zeatin"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Abscisic acid closes stomata under water stress and induces dormancy."
     },
     {
@@ -279,7 +259,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Ethylene",
         "Gibberellin"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Ethylene (gaseous) promotes fruit ripening and senescence."
     },
     {
@@ -290,7 +270,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "ABA",
         "Ethylene"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Gibberellins cause sudden internode elongation (bolting) in rosette plants."
     },
     {
@@ -301,7 +281,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Ripening agent",
         "Fertiliser"
       ],
-      "a": 1,
+      "c": 1,
       "e": "2,4-D is a synthetic auxin used to kill dicot weeds."
     },
     {
@@ -312,7 +292,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Cytokinin",
         "Auxin"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Cytokinins delay ageing of leaves."
     },
     {
@@ -323,7 +303,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Day temperature",
         "Night temperature"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The duration of the continuous dark (night) period determines flowering."
     },
     {
@@ -334,7 +314,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Day = night",
         "It never flowers"
       ],
-      "a": 1,
+      "c": 1,
       "e": "SDPs need a dark period longer than a critical length (long nights)."
     },
     {
@@ -345,7 +325,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Leaves",
         "Shoot apex"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Florigen is produced in leaves and transmitted to the shoot apex."
     },
     {
@@ -356,7 +336,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Phototropism",
         "Dormancy"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Vernalisation = low-temperature promotion of flowering."
     },
     {
@@ -367,7 +347,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Auxin & cytokinin",
         "ABA & ethylene"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Auxin, gibberellin and cytokinin are promoters; ABA & ethylene are inhibitors/senescence-related."
     },
     {
@@ -378,7 +358,7 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Rice fungus",
         "Herring fat"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Zeatin is a natural cytokinin from corn kernels and coconut milk."
     },
     {
@@ -389,87 +369,87 @@ DATA.chapters['brain_biolab11bio02html_plant'] = {
         "Auxin; ethylene",
         "Cytokinin; ABA"
       ],
-      "a": 1,
+      "c": 1,
       "e": "ABA maintains dormancy; gibberellin breaks it."
     }
   ],
   "match": [
     {
-      "t": "Auxin",
-      "d": "Apical dominance & rooting"
+      "term": "Auxin",
+      "def": "Apical dominance & rooting"
     },
     {
-      "t": "Gibberellin",
-      "d": "Bolting / breaks dormancy"
+      "term": "Gibberellin",
+      "def": "Bolting / breaks dormancy"
     },
     {
-      "t": "Cytokinin",
-      "d": "Cell division, delays senescence"
+      "term": "Cytokinin",
+      "def": "Cell division, delays senescence"
     },
     {
-      "t": "Abscisic acid",
-      "d": "Stress hormone, closes stomata"
+      "term": "Abscisic acid",
+      "def": "Stress hormone, closes stomata"
     },
     {
-      "t": "Ethylene",
-      "d": "Fruit ripening"
+      "term": "Ethylene",
+      "def": "Fruit ripening"
     },
     {
-      "t": "2,4-D",
-      "d": "Herbicide for dicot weeds"
+      "term": "2,4-D",
+      "def": "Herbicide for dicot weeds"
     },
     {
-      "t": "Florigen",
-      "d": "Flowering signal from leaf"
+      "term": "Florigen",
+      "def": "Flowering signal from leaf"
     },
     {
-      "t": "Vernalisation",
-      "d": "Cold-induced flowering"
+      "term": "Vernalisation",
+      "def": "Cold-induced flowering"
     },
     {
-      "t": "Short-day plant",
-      "d": "Needs long night to flower"
+      "term": "Short-day plant",
+      "def": "Needs long night to flower"
     },
     {
-      "t": "Sigmoid curve",
-      "d": "Lag–log–stationary growth"
+      "term": "Sigmoid curve",
+      "def": "Lag–log–stationary growth"
     },
     {
-      "t": "Plasticity",
-      "d": "Heterophylly (different leaf forms)"
+      "term": "Plasticity",
+      "def": "Heterophylly (different leaf forms)"
     },
     {
-      "t": "Gibberella fujikuroi",
-      "d": "Source of gibberellin"
+      "term": "Gibberella fujikuroi",
+      "def": "Source of gibberellin"
     }
   ],
   "pathways": [
     {
       "title": "Phases of cell growth",
+      "prompt": "Cells move from the dividing zone, enlarge, then mature into specialised tissues.",
       "steps": [
         "Meristematic (cell division)",
         "Cell enlargement / elongation",
         "Cell maturation / differentiation"
-      ],
-      "e": "Cells move from the dividing zone, enlarge, then mature into specialised tissues."
+      ]
     },
     {
       "title": "Sigmoid growth curve",
+      "prompt": "Typical S-shaped growth of an organism in a limited natural environment.",
       "steps": [
         "Lag phase (slow start)",
         "Log / exponential phase (rapid)",
         "Stationary phase (plateau)"
-      ],
-      "e": "Typical S-shaped growth of an organism in a limited natural environment."
+      ]
     },
     {
       "title": "Differentiation cycle of cambium",
+      "prompt": "Mature parenchyma → divides as cambium → matures again.",
       "steps": [
         "Differentiation (cell matures)",
         "Dedifferentiation (regains division)",
         "Redifferentiation (matures again)"
-      ],
-      "e": "Mature parenchyma → divides as cambium → matures again."
+      ]
     }
   ]
 };

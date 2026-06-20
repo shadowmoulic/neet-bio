@@ -73,151 +73,131 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
   ],
   "flashcards": [
     {
-      "q": "What is a hormone?",
-      "a": "A non-nutrient chemical messenger secreted in trace amounts by ductless (endocrine) glands, acting on distant target tissues via blood.",
-      "hint": "Chemical messenger"
+      "front": "What is a hormone?",
+      "back": "A non-nutrient chemical messenger secreted in trace amounts by ductless (endocrine) glands, acting on distant target tissues via blood."
     },
     {
-      "q": "Which gland is the \"master gland\"?",
-      "a": "The pituitary (hypophysis); but it is itself controlled by the hypothalamus.",
-      "hint": "Pituitary"
+      "front": "Which gland is the \"master gland\"?",
+      "back": "The pituitary (hypophysis); but it is itself controlled by the hypothalamus."
     },
     {
-      "q": "Hormones of the posterior pituitary?",
-      "a": "Oxytocin and vasopressin (ADH) — actually made by the hypothalamus and stored/released here.",
-      "hint": "Oxytocin & ADH"
+      "front": "Hormones of the posterior pituitary?",
+      "back": "Oxytocin and vasopressin (ADH) — actually made by the hypothalamus and stored/released here."
     },
     {
-      "q": "Effect of excess growth hormone in a child vs adult?",
-      "a": "Child → gigantism; adult → acromegaly. Deficiency in a child → dwarfism.",
-      "hint": "Gigantism/acromegaly"
+      "front": "Effect of excess growth hormone in a child vs adult?",
+      "back": "Child → gigantism; adult → acromegaly. Deficiency in a child → dwarfism."
     },
     {
-      "q": "What does ADH do? Deficiency causes?",
-      "a": "Promotes water reabsorption in the kidney; deficiency causes diabetes insipidus (excess dilute urine).",
-      "hint": "Water; insipidus"
+      "front": "What does ADH do? Deficiency causes?",
+      "back": "Promotes water reabsorption in the kidney; deficiency causes diabetes insipidus (excess dilute urine)."
     },
     {
-      "q": "Thyroid hormone and the mineral it needs?",
-      "a": "Thyroxine (T₄/T₃) needs iodine; regulates BMR, growth and development.",
-      "hint": "Iodine"
+      "front": "Thyroid hormone and the mineral it needs?",
+      "back": "Thyroxine (T₄/T₃) needs iodine; regulates BMR, growth and development."
     },
     {
-      "q": "Goitre and cretinism are due to?",
-      "a": "Hypothyroidism from iodine deficiency — goitre = enlarged thyroid; cretinism = stunted growth & mental retardation in a child.",
-      "hint": "Iodine lack"
+      "front": "Goitre and cretinism are due to?",
+      "back": "Hypothyroidism from iodine deficiency — goitre = enlarged thyroid; cretinism = stunted growth & mental retardation in a child."
     },
     {
-      "q": "Hormone that raises blood calcium?",
-      "a": "Parathyroid hormone (PTH) — hypercalcemic; calcitonin (from thyroid) lowers it.",
-      "hint": "PTH up"
+      "front": "Hormone that raises blood calcium?",
+      "back": "Parathyroid hormone (PTH) — hypercalcemic; calcitonin (from thyroid) lowers it."
     },
     {
-      "q": "Endocrine part of the pancreas?",
-      "a": "The Islets of Langerhans — α cells (glucagon) and β cells (insulin).",
-      "hint": "Islets"
+      "front": "Endocrine part of the pancreas?",
+      "back": "The Islets of Langerhans — α cells (glucagon) and β cells (insulin)."
     },
     {
-      "q": "Insulin vs glucagon action?",
-      "a": "Insulin (β cells) lowers blood glucose; glucagon (α cells) raises it.",
-      "hint": "Lower vs raise"
+      "front": "Insulin vs glucagon action?",
+      "back": "Insulin (β cells) lowers blood glucose; glucagon (α cells) raises it."
     },
     {
-      "q": "Cause of diabetes mellitus?",
-      "a": "Deficiency of insulin → high blood glucose, glucose in urine, ketone body formation.",
-      "hint": "Low insulin"
+      "front": "Cause of diabetes mellitus?",
+      "back": "Deficiency of insulin → high blood glucose, glucose in urine, ketone body formation."
     },
     {
-      "q": "Hormones of the adrenal medulla?",
-      "a": "Adrenaline (epinephrine) and noradrenaline — emergency/\"fight-or-flight\" catecholamines.",
-      "hint": "Emergency hormones"
+      "front": "Hormones of the adrenal medulla?",
+      "back": "Adrenaline (epinephrine) and noradrenaline — emergency/\"fight-or-flight\" catecholamines."
     },
     {
-      "q": "Two main groups of adrenal cortex hormones?",
-      "a": "Glucocorticoids (cortisol — glucose metabolism, anti-inflammatory) and mineralocorticoids (aldosterone — Na⁺/water balance).",
-      "hint": "Gluco & mineralo"
+      "front": "Two main groups of adrenal cortex hormones?",
+      "back": "Glucocorticoids (cortisol — glucose metabolism, anti-inflammatory) and mineralocorticoids (aldosterone — Na⁺/water balance)."
     },
     {
-      "q": "Hormone from Leydig cells of the testis?",
-      "a": "Testosterone (androgen) — male secondary sexual characters and spermatogenesis.",
-      "hint": "Testosterone"
+      "front": "Hormone from Leydig cells of the testis?",
+      "back": "Testosterone (androgen) — male secondary sexual characters and spermatogenesis."
     },
     {
-      "q": "Ovarian hormones and roles?",
-      "a": "Estrogen (female secondary characters) and progesterone (maintains pregnancy/endometrium).",
-      "hint": "Estrogen & progesterone"
+      "front": "Ovarian hormones and roles?",
+      "back": "Estrogen (female secondary characters) and progesterone (maintains pregnancy/endometrium)."
     },
     {
-      "q": "Pineal gland hormone and function?",
-      "a": "Melatonin — regulates the diurnal/circadian rhythm (sleep–wake cycle).",
-      "hint": "Sleep hormone"
+      "front": "Pineal gland hormone and function?",
+      "back": "Melatonin — regulates the diurnal/circadian rhythm (sleep–wake cycle)."
     },
     {
-      "q": "Function of thymosins from the thymus?",
-      "a": "Promote differentiation of T-lymphocytes for cell-mediated immunity.",
-      "hint": "T-cells"
+      "front": "Function of thymosins from the thymus?",
+      "back": "Promote differentiation of T-lymphocytes for cell-mediated immunity."
     },
     {
-      "q": "What does ANF (from the heart) do?",
-      "a": "Atrial Natriuretic Factor decreases blood pressure (causes vasodilation).",
-      "hint": "Lowers BP"
+      "front": "What does ANF (from the heart) do?",
+      "back": "Atrial Natriuretic Factor decreases blood pressure (causes vasodilation)."
     },
     {
-      "q": "Kidney hormones erythropoietin & renin do?",
-      "a": "Erythropoietin stimulates RBC production; renin regulates blood pressure.",
-      "hint": "RBC & BP"
+      "front": "Kidney hormones erythropoietin & renin do?",
+      "back": "Erythropoietin stimulates RBC production; renin regulates blood pressure."
     },
     {
-      "q": "How do steroid hormones act compared to protein hormones?",
-      "a": "Steroids enter the cell and bind intracellular receptors acting on DNA/gene expression; protein hormones bind membrane receptors and use a second messenger (e.g. cAMP).",
-      "hint": "Inside vs surface"
+      "front": "How do steroid hormones act compared to protein hormones?",
+      "back": "Steroids enter the cell and bind intracellular receptors acting on DNA/gene expression; protein hormones bind membrane receptors and use a second messenger (e.g. cAMP)."
     }
   ],
   "recall": [
     {
       "q": "Define hormone and list the chemical classes of hormones.",
-      "a": "A hormone is a non-nutrient chemical messenger secreted in trace amounts by ductless glands that acts on distant target tissues. Classes: amino-acid derivatives (thyroxine, adrenaline), peptides/proteins (insulin, glucagon) and steroids (cortisol, sex hormones).",
-      "hint": "Messenger; 3 chemical types"
+      "hint": "Messenger; 3 chemical types",
+      "a": "A hormone is a non-nutrient chemical messenger secreted in trace amounts by ductless glands that acts on distant target tissues. Classes: amino-acid derivatives (thyroxine, adrenaline), peptides/proteins (insulin, glucagon) and steroids (cortisol, sex hormones)."
     },
     {
       "q": "Describe the hormones of the pituitary gland.",
-      "a": "Anterior pituitary: GH, TSH, ACTH, FSH, LH, prolactin, MSH. Posterior pituitary stores & releases oxytocin (uterine contraction, milk ejection) and ADH/vasopressin (water reabsorption). The pituitary is controlled by the hypothalamus.",
-      "hint": "Anterior + posterior"
+      "hint": "Anterior + posterior",
+      "a": "Anterior pituitary: GH, TSH, ACTH, FSH, LH, prolactin, MSH. Posterior pituitary stores & releases oxytocin (uterine contraction, milk ejection) and ADH/vasopressin (water reabsorption). The pituitary is controlled by the hypothalamus."
     },
     {
       "q": "Explain the role of thyroid hormones and disorders of the thyroid.",
-      "a": "Thyroxine (needs iodine) regulates BMR, growth and development; calcitonin lowers blood Ca²⁺. Hypothyroidism (iodine lack) → goitre and cretinism; hyperthyroidism → Graves’ disease (exophthalmic goitre).",
-      "hint": "BMR; goitre/Graves"
+      "hint": "BMR; goitre/Graves",
+      "a": "Thyroxine (needs iodine) regulates BMR, growth and development; calcitonin lowers blood Ca²⁺. Hypothyroidism (iodine lack) → goitre and cretinism; hyperthyroidism → Graves’ disease (exophthalmic goitre)."
     },
     {
       "q": "How is blood calcium regulated hormonally?",
-      "a": "Parathyroid hormone (PTH) raises blood Ca²⁺ by bone resorption, increased kidney reabsorption and gut absorption. Thyrocalcitonin (TCT) from the thyroid lowers blood Ca²⁺. They act antagonistically.",
-      "hint": "PTH up, calcitonin down"
+      "hint": "PTH up, calcitonin down",
+      "a": "Parathyroid hormone (PTH) raises blood Ca²⁺ by bone resorption, increased kidney reabsorption and gut absorption. Thyrocalcitonin (TCT) from the thyroid lowers blood Ca²⁺. They act antagonistically."
     },
     {
       "q": "Describe the endocrine role of the pancreas.",
-      "a": "Islets of Langerhans: α-cells secrete glucagon (hyperglycemic — glycogen→glucose) and β-cells secrete insulin (hypoglycemic — promotes glucose uptake and glycogen storage). Insulin deficiency causes diabetes mellitus.",
-      "hint": "Insulin/glucagon, diabetes"
+      "hint": "Insulin/glucagon, diabetes",
+      "a": "Islets of Langerhans: α-cells secrete glucagon (hyperglycemic — glycogen→glucose) and β-cells secrete insulin (hypoglycemic — promotes glucose uptake and glycogen storage). Insulin deficiency causes diabetes mellitus."
     },
     {
       "q": "Compare the adrenal medulla and cortex secretions.",
-      "a": "Medulla secretes adrenaline & noradrenaline (emergency hormones — raise heart rate, BP, glucose). Cortex secretes glucocorticoids (cortisol — glucose metabolism, anti-inflammatory) and mineralocorticoids (aldosterone — Na⁺/water and BP balance).",
-      "hint": "Medulla emergency, cortex corticoids"
+      "hint": "Medulla emergency, cortex corticoids",
+      "a": "Medulla secretes adrenaline & noradrenaline (emergency hormones — raise heart rate, BP, glucose). Cortex secretes glucocorticoids (cortisol — glucose metabolism, anti-inflammatory) and mineralocorticoids (aldosterone — Na⁺/water and BP balance)."
     },
     {
       "q": "List hormones from the gonads and pineal gland.",
-      "a": "Testis (Leydig cells): testosterone — male characters & sperm. Ovary: estrogen (female characters) and progesterone (maintains pregnancy). Pineal: melatonin — circadian rhythm.",
-      "hint": "Testosterone, estrogen/progesterone, melatonin"
+      "hint": "Testosterone, estrogen/progesterone, melatonin",
+      "a": "Testis (Leydig cells): testosterone — male characters & sperm. Ovary: estrogen (female characters) and progesterone (maintains pregnancy). Pineal: melatonin — circadian rhythm."
     },
     {
       "q": "Name hormones secreted by non-endocrine organs.",
-      "a": "Heart: atrial natriuretic factor (ANF, lowers BP). Kidney: erythropoietin (RBC formation) and renin (BP). GI tract: gastrin, secretin, cholecystokinin (CCK), GIP — regulate digestion.",
-      "hint": "Heart, kidney, gut"
+      "hint": "Heart, kidney, gut",
+      "a": "Heart: atrial natriuretic factor (ANF, lowers BP). Kidney: erythropoietin (RBC formation) and renin (BP). GI tract: gastrin, secretin, cholecystokinin (CCK), GIP — regulate digestion."
     },
     {
       "q": "Explain the two mechanisms of hormone action.",
-      "a": "Water-soluble protein/peptide hormones bind cell-surface receptors and use a second messenger (e.g. cyclic AMP) to trigger intracellular changes. Lipid-soluble steroid/thyroid hormones enter the cell, bind intracellular receptors and regulate gene expression (DNA → protein).",
-      "hint": "Second messenger vs gene action"
+      "hint": "Second messenger vs gene action",
+      "a": "Water-soluble protein/peptide hormones bind cell-surface receptors and use a second messenger (e.g. cyclic AMP) to trigger intracellular changes. Lipid-soluble steroid/thyroid hormones enter the cell, bind intracellular receptors and regulate gene expression (DNA → protein)."
     }
   ],
   "mcqs": [
@@ -229,7 +209,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Adrenal",
         "Pancreas"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The pituitary controls many other glands (and is itself controlled by the hypothalamus)."
     },
     {
@@ -240,7 +220,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Adrenal cortex",
         "Thyroid"
       ],
-      "a": 1,
+      "c": 1,
       "e": "They are made by the hypothalamus and stored/released by the posterior pituitary."
     },
     {
@@ -251,7 +231,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Acromegaly",
         "Cretinism"
       ],
-      "a": 2,
+      "c": 2,
       "e": "In adults excess GH causes acromegaly; in children it causes gigantism."
     },
     {
@@ -262,7 +242,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Tetany",
         "Gigantism"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Lack of iodine reduces thyroxine, enlarging the thyroid → goitre."
     },
     {
@@ -273,7 +253,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "δ-cells",
         "Acinar cells"
       ],
-      "a": 1,
+      "c": 1,
       "e": "β-cells of the Islets of Langerhans secrete insulin (lowers blood glucose)."
     },
     {
@@ -284,7 +264,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Calcitonin",
         "Aldosterone"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Glucagon (α-cells) is hyperglycemic — it raises blood glucose."
     },
     {
@@ -295,7 +275,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Pancreas",
         "Pituitary"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The adrenal medulla secretes adrenaline & noradrenaline (emergency hormones)."
     },
     {
@@ -306,7 +286,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Thyroxine",
         "PTH"
       ],
-      "a": 1,
+      "c": 1,
       "e": "ADH deficiency reduces water reabsorption → excess dilute urine."
     },
     {
@@ -317,7 +297,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Lowers blood glucose",
         "Raises blood K⁺"
       ],
-      "a": 1,
+      "c": 1,
       "e": "PTH is hypercalcemic — it increases blood calcium levels."
     },
     {
@@ -328,7 +308,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Thyroid",
         "Pancreas"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The pineal gland secretes melatonin, regulating the circadian rhythm."
     },
     {
@@ -339,7 +319,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Testosterone",
         "Prolactin"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Progesterone maintains the endometrium and supports pregnancy."
     },
     {
@@ -350,7 +330,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Digestion",
         "Water balance"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Thymosins promote differentiation of T-lymphocytes (immunity)."
     },
     {
@@ -361,7 +341,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Clotting",
         "Bone growth"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Erythropoietin stimulates red blood cell (RBC) production."
     },
     {
@@ -372,7 +352,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Forming a clot",
         "Releasing histamine"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Lipid-soluble steroids enter the cell and regulate gene expression."
     },
     {
@@ -383,7 +363,7 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Spleen",
         "Kidney"
       ],
-      "a": 1,
+      "c": 1,
       "e": "They are the endocrine portion of the pancreas."
     },
     {
@@ -394,93 +374,93 @@ DATA.chapters['brain_biolab11bio02html_horm'] = {
         "Calcium",
         "Growth"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Aldosterone regulates sodium and water balance and blood pressure."
     }
   ],
   "match": [
     {
-      "t": "Pituitary",
-      "d": "Master gland"
+      "term": "Pituitary",
+      "def": "Master gland"
     },
     {
-      "t": "ADH deficiency",
-      "d": "Diabetes insipidus"
+      "term": "ADH deficiency",
+      "def": "Diabetes insipidus"
     },
     {
-      "t": "Insulin",
-      "d": "Lowers blood glucose (β-cells)"
+      "term": "Insulin",
+      "def": "Lowers blood glucose (β-cells)"
     },
     {
-      "t": "Glucagon",
-      "d": "Raises blood glucose (α-cells)"
+      "term": "Glucagon",
+      "def": "Raises blood glucose (α-cells)"
     },
     {
-      "t": "Iodine deficiency",
-      "d": "Goitre"
+      "term": "Iodine deficiency",
+      "def": "Goitre"
     },
     {
-      "t": "PTH",
-      "d": "Raises blood calcium"
+      "term": "PTH",
+      "def": "Raises blood calcium"
     },
     {
-      "t": "Adrenaline",
-      "d": "Fight-or-flight (medulla)"
+      "term": "Adrenaline",
+      "def": "Fight-or-flight (medulla)"
     },
     {
-      "t": "Cortisol",
-      "d": "Glucocorticoid"
+      "term": "Cortisol",
+      "def": "Glucocorticoid"
     },
     {
-      "t": "Melatonin",
-      "d": "Circadian rhythm (pineal)"
+      "term": "Melatonin",
+      "def": "Circadian rhythm (pineal)"
     },
     {
-      "t": "Progesterone",
-      "d": "Maintains pregnancy"
+      "term": "Progesterone",
+      "def": "Maintains pregnancy"
     },
     {
-      "t": "Thymosins",
-      "d": "T-lymphocyte differentiation"
+      "term": "Thymosins",
+      "def": "T-lymphocyte differentiation"
     },
     {
-      "t": "Erythropoietin",
-      "d": "Stimulates RBC formation"
+      "term": "Erythropoietin",
+      "def": "Stimulates RBC formation"
     }
   ],
   "pathways": [
     {
       "title": "Blood glucose regulation (after a meal)",
+      "prompt": "Insulin is the hypoglycemic hormone; glucagon reverses this when sugar is low.",
       "steps": [
         "Blood glucose rises",
         "β-cells release insulin",
         "Cells take up glucose",
         "Glucose → glycogen (liver/muscle)",
         "Blood glucose returns to normal"
-      ],
-      "e": "Insulin is the hypoglycemic hormone; glucagon reverses this when sugar is low."
+      ]
     },
     {
       "title": "Hypothalamus → target control",
+      "prompt": "Classic hypothalamus–pituitary–target axis with negative feedback.",
       "steps": [
         "Hypothalamus releases releasing hormone",
         "Anterior pituitary releases trophic hormone (e.g. TSH)",
         "Target gland (thyroid) secretes hormone",
         "Hormone acts on body tissues",
         "Feedback inhibits hypothalamus/pituitary"
-      ],
-      "e": "Classic hypothalamus–pituitary–target axis with negative feedback."
+      ]
     },
     {
       "title": "Calcium balance",
+      "prompt": "PTH and calcitonin act antagonistically to keep calcium balanced.",
       "steps": [
         "Blood Ca²⁺ falls",
         "Parathyroid releases PTH",
         "Bone resorption + kidney/gut reabsorption",
         "Blood Ca²⁺ rises",
         "Calcitonin lowers it if too high"
-      ],
-      "e": "PTH and calcitonin act antagonistically to keep calcium balanced."
+      ]
     }
   ]
 };

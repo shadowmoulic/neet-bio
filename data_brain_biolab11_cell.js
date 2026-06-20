@@ -78,166 +78,144 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
   ],
   "flashcards": [
     {
-      "q": "Who coined the term \"cell\" and what did he observe?",
-      "a": "Robert Hooke (1665); he observed dead cork cells (empty boxes).",
-      "hint": "1665, cork"
+      "front": "Who coined the term \"cell\" and what did he observe?",
+      "back": "Robert Hooke (1665); he observed dead cork cells (empty boxes)."
     },
     {
-      "q": "Who first observed living cells?",
-      "a": "Anton von Leeuwenhoek.",
-      "hint": "Dutch microscopist"
+      "front": "Who first observed living cells?",
+      "back": "Anton von Leeuwenhoek."
     },
     {
-      "q": "State Virchow’s contribution to cell theory.",
-      "a": "Omnis cellula-e cellula — all cells arise from pre-existing cells.",
-      "hint": "Latin phrase"
+      "front": "State Virchow’s contribution to cell theory.",
+      "back": "Omnis cellula-e cellula — all cells arise from pre-existing cells."
     },
     {
-      "q": "Ribosome size in prokaryotes vs eukaryotes?",
-      "a": "Prokaryotes 70S; eukaryotes 80S (cytoplasm). S = Svedberg unit, non-additive.",
-      "hint": "Svedberg"
+      "front": "Ribosome size in prokaryotes vs eukaryotes?",
+      "back": "Prokaryotes 70S; eukaryotes 80S (cytoplasm). S = Svedberg unit, non-additive."
     },
     {
-      "q": "Who proposed the Fluid Mosaic Model?",
-      "a": "Singer and Nicolson (1972).",
-      "hint": "1972"
+      "front": "Who proposed the Fluid Mosaic Model?",
+      "back": "Singer and Nicolson (1972)."
     },
     {
-      "q": "What is a mesosome?",
-      "a": "Infolding of the plasma membrane in prokaryotes; helps in respiration, secretion, DNA replication.",
-      "hint": "Bacterial membrane fold"
+      "front": "What is a mesosome?",
+      "back": "Infolding of the plasma membrane in prokaryotes; helps in respiration, secretion, DNA replication."
     },
     {
-      "q": "Cell wall middle lamella is made of?",
-      "a": "Calcium pectate — cements adjacent cells together.",
-      "hint": "Calcium salt"
+      "front": "Cell wall middle lamella is made of?",
+      "back": "Calcium pectate — cements adjacent cells together."
     },
     {
-      "q": "Function of RER vs SER?",
-      "a": "RER: protein synthesis & secretion (ribosomes attached). SER: lipid/steroid synthesis & detoxification.",
-      "hint": "Rough vs smooth"
+      "front": "Function of RER vs SER?",
+      "back": "RER: protein synthesis & secretion (ribosomes attached). SER: lipid/steroid synthesis & detoxification."
     },
     {
-      "q": "Why is the lysosome called the \"suicidal bag\"?",
-      "a": "It contains hydrolytic enzymes active at acidic pH that can digest the cell’s own contents.",
-      "hint": "Hydrolytic enzymes"
+      "front": "Why is the lysosome called the \"suicidal bag\"?",
+      "back": "It contains hydrolytic enzymes active at acidic pH that can digest the cell’s own contents."
     },
     {
-      "q": "Powerhouse of the cell?",
-      "a": "Mitochondria — site of aerobic respiration & ATP production; inner membrane folds = cristae.",
-      "hint": "ATP"
+      "front": "Powerhouse of the cell?",
+      "back": "Mitochondria — site of aerobic respiration & ATP production; inner membrane folds = cristae."
     },
     {
-      "q": "Name the three plastid types and their roles.",
-      "a": "Chloroplast (photosynthesis), Chromoplast (coloured pigments), Leucoplast (colourless storage).",
-      "hint": "Colour-based"
+      "front": "Name the three plastid types and their roles.",
+      "back": "Chloroplast (photosynthesis), Chromoplast (coloured pigments), Leucoplast (colourless storage)."
     },
     {
-      "q": "9+2 arrangement is found in?",
-      "a": "Axoneme of cilia and flagella — 9 peripheral doublets + 2 central singlet microtubules.",
-      "hint": "Axoneme"
+      "front": "9+2 arrangement is found in?",
+      "back": "Axoneme of cilia and flagella — 9 peripheral doublets + 2 central singlet microtubules."
     },
     {
-      "q": "Microtubule arrangement in a centriole?",
-      "a": "9 + 0 — nine peripheral triplets, no central microtubule (cartwheel).",
-      "hint": "Triplets"
+      "front": "Microtubule arrangement in a centriole?",
+      "back": "9 + 0 — nine peripheral triplets, no central microtubule (cartwheel)."
     },
     {
-      "q": "Who discovered the nucleus?",
-      "a": "Robert Brown (1831).",
-      "hint": "1831"
+      "front": "Who discovered the nucleus?",
+      "back": "Robert Brown (1831)."
     },
     {
-      "q": "What is chromatin made of?",
-      "a": "DNA + histone proteins + non-histone proteins + RNA.",
-      "hint": "DNA + protein"
+      "front": "What is chromatin made of?",
+      "back": "DNA + histone proteins + non-histone proteins + RNA."
     },
     {
-      "q": "Metacentric chromosome — centromere position?",
-      "a": "Middle, giving two equal arms (V-shaped at anaphase).",
-      "hint": "Middle"
+      "front": "Metacentric chromosome — centromere position?",
+      "back": "Middle, giving two equal arms (V-shaped at anaphase)."
     },
     {
-      "q": "Storage leucoplasts: amyloplast, elaioplast, aleuroplast store?",
-      "a": "Starch, oils/fats, proteins respectively.",
-      "hint": "Starch/oil/protein"
+      "front": "Storage leucoplasts: amyloplast, elaioplast, aleuroplast store?",
+      "back": "Starch, oils/fats, proteins respectively."
     },
     {
-      "q": "Endomembrane system includes?",
-      "a": "ER, Golgi apparatus, lysosomes and vacuoles (coordinated functions).",
-      "hint": "4 organelles"
+      "front": "Endomembrane system includes?",
+      "back": "ER, Golgi apparatus, lysosomes and vacuoles (coordinated functions)."
     },
     {
-      "q": "cis vs trans face of Golgi?",
-      "a": "cis (forming) face near ER receives vesicles; trans (maturing) face buds off vesicles toward membrane.",
-      "hint": "Forming vs maturing"
+      "front": "cis vs trans face of Golgi?",
+      "back": "cis (forming) face near ER receives vesicles; trans (maturing) face buds off vesicles toward membrane."
     },
     {
-      "q": "Plasmodesmata are?",
-      "a": "Cytoplasmic bridges through cell walls connecting adjacent plant cells.",
-      "hint": "Cytoplasmic channels"
+      "front": "Plasmodesmata are?",
+      "back": "Cytoplasmic bridges through cell walls connecting adjacent plant cells."
     },
     {
-      "q": "Which organelles are semi-autonomous and why?",
-      "a": "Mitochondria & chloroplasts — they have their own circular DNA + 70S ribosomes and divide by fission.",
-      "hint": "Own DNA"
+      "front": "Which organelles are semi-autonomous and why?",
+      "back": "Mitochondria & chloroplasts — they have their own circular DNA + 70S ribosomes and divide by fission."
     },
     {
-      "q": "Function of peroxisome?",
-      "a": "Microbody containing catalase; breaks down hydrogen peroxide (H₂O₂).",
-      "hint": "Catalase"
+      "front": "Function of peroxisome?",
+      "back": "Microbody containing catalase; breaks down hydrogen peroxide (H₂O₂)."
     }
   ],
   "recall": [
     {
       "q": "State the three postulates of the modern cell theory.",
-      "a": "(1) All living organisms are made of cells and their products. (2) The cell is the basic structural & functional unit of life. (3) All cells arise from pre-existing cells (Virchow).",
-      "hint": "Three points; one added by Virchow"
+      "hint": "Three points; one added by Virchow",
+      "a": "(1) All living organisms are made of cells and their products. (2) The cell is the basic structural & functional unit of life. (3) All cells arise from pre-existing cells (Virchow)."
     },
     {
       "q": "Differentiate prokaryotic and eukaryotic cells on any four features.",
-      "a": "Nucleus: prok absent (nucleoid) / euk true membrane-bound. Organelles: prok absent / euk present. Ribosomes: 70S / 80S. Size: 1–10 µm / 5–100 µm. DNA: circular naked / linear with histones.",
-      "hint": "Nucleus, organelles, ribosomes, DNA"
+      "hint": "Nucleus, organelles, ribosomes, DNA",
+      "a": "Nucleus: prok absent (nucleoid) / euk true membrane-bound. Organelles: prok absent / euk present. Ribosomes: 70S / 80S. Size: 1–10 µm / 5–100 µm. DNA: circular naked / linear with histones."
     },
     {
       "q": "Explain the Fluid Mosaic Model of the plasma membrane.",
-      "a": "Singer & Nicolson (1972): a phospholipid bilayer (hydrophilic heads out, hydrophobic tails in) in which proteins (integral & peripheral) float like a mosaic. Lipids show lateral fluidity; the membrane is selectively permeable.",
-      "hint": "Singer & Nicolson, lipid sea + protein mosaic"
+      "hint": "Singer & Nicolson, lipid sea + protein mosaic",
+      "a": "Singer & Nicolson (1972): a phospholipid bilayer (hydrophilic heads out, hydrophobic tails in) in which proteins (integral & peripheral) float like a mosaic. Lipids show lateral fluidity; the membrane is selectively permeable."
     },
     {
       "q": "Describe the structure of a mitochondrion and link it to function.",
-      "a": "Double membrane; inner membrane folds into cristae increasing surface area for ATP-synthesising enzymes (oxysomes). Matrix holds circular DNA, 70S ribosomes & respiratory enzymes — site of aerobic respiration/ATP synthesis. Semi-autonomous, divides by fission.",
-      "hint": "Cristae, matrix, ATP"
+      "hint": "Cristae, matrix, ATP",
+      "a": "Double membrane; inner membrane folds into cristae increasing surface area for ATP-synthesising enzymes (oxysomes). Matrix holds circular DNA, 70S ribosomes & respiratory enzymes — site of aerobic respiration/ATP synthesis. Semi-autonomous, divides by fission."
     },
     {
       "q": "Compare cilia and flagella.",
-      "a": "Both covered by membrane with a 9+2 axoneme. Cilia: numerous, short, move fluid/particles over surface. Flagella: few, longer, move the whole cell. Basal body shows 9+0.",
-      "hint": "Number, length, function; 9+2 core"
+      "hint": "Number, length, function; 9+2 core",
+      "a": "Both covered by membrane with a 9+2 axoneme. Cilia: numerous, short, move fluid/particles over surface. Flagella: few, longer, move the whole cell. Basal body shows 9+0."
     },
     {
       "q": "Describe the endomembrane system and its sequence of protein processing.",
-      "a": "ER, Golgi, lysosomes, vacuoles. Proteins made on RER → transported in vesicles to cis face of Golgi → modified/glycosylated → packaged at trans face → secreted or sent to lysosomes.",
-      "hint": "RER → Golgi → vesicle"
+      "hint": "RER → Golgi → vesicle",
+      "a": "ER, Golgi, lysosomes, vacuoles. Proteins made on RER → transported in vesicles to cis face of Golgi → modified/glycosylated → packaged at trans face → secreted or sent to lysosomes."
     },
     {
       "q": "Classify chromosomes based on centromere position.",
-      "a": "Metacentric (middle, equal arms), sub-metacentric (slightly off, unequal arms), acrocentric (near end, very unequal), telocentric (terminal centromere).",
-      "hint": "4 types by centromere"
+      "hint": "4 types by centromere",
+      "a": "Metacentric (middle, equal arms), sub-metacentric (slightly off, unequal arms), acrocentric (near end, very unequal), telocentric (terminal centromere)."
     },
     {
       "q": "What is the function of the cell wall and name its layers?",
-      "a": "Gives shape, mechanical support, protection, prevents bursting in hypotonic media, allows cell-to-cell interaction. Layers: middle lamella (Ca-pectate), primary wall (growing), secondary wall (mature).",
-      "hint": "Support + 3 layers"
+      "hint": "Support + 3 layers",
+      "a": "Gives shape, mechanical support, protection, prevents bursting in hypotonic media, allows cell-to-cell interaction. Layers: middle lamella (Ca-pectate), primary wall (growing), secondary wall (mature)."
     },
     {
       "q": "Distinguish active and passive transport across the membrane.",
-      "a": "Passive: down concentration gradient, no ATP (simple/facilitated diffusion, osmosis). Active: against the gradient, requires ATP (e.g. Na⁺/K⁺ pump).",
-      "hint": "Gradient & ATP"
+      "hint": "Gradient & ATP",
+      "a": "Passive: down concentration gradient, no ATP (simple/facilitated diffusion, osmosis). Active: against the gradient, requires ATP (e.g. Na⁺/K⁺ pump)."
     },
     {
       "q": "Why are mitochondria and chloroplasts called semi-autonomous organelles?",
-      "a": "They possess their own circular DNA and 70S ribosomes, can synthesise some of their own proteins and divide by fission independently of nuclear control.",
-      "hint": "Own DNA + ribosomes + fission"
+      "hint": "Own DNA + ribosomes + fission",
+      "a": "They possess their own circular DNA and 70S ribosomes, can synthesise some of their own proteins and divide by fission independently of nuclear control."
     }
   ],
   "mcqs": [
@@ -249,7 +227,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Leeuwenhoek",
         "Virchow"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Robert Hooke (1665) observed dead cork cells and named the compartments \"cells\"."
     },
     {
@@ -260,7 +238,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Virchow",
         "Brown"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Rudolf Virchow (1855) stated all cells arise from pre-existing cells."
     },
     {
@@ -271,7 +249,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "60S",
         "50S"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Prokaryotic ribosomes are 70S (50S + 30S subunits)."
     },
     {
@@ -282,7 +260,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Robert Brown",
         "Camillo Golgi"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Singer & Nicolson (1972) — proteins float in a fluid lipid bilayer."
     },
     {
@@ -293,7 +271,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Mitochondrion",
         "Vacuole"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Mitochondria are excluded — their function is not coordinated with the ER–Golgi–lysosome system."
     },
     {
@@ -304,7 +282,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Mitochondria",
         "Nucleus"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Cristae are infoldings of the inner mitochondrial membrane."
     },
     {
@@ -315,7 +293,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Basal body",
         "Nucleolus"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The axoneme of cilia and flagella has 9 peripheral doublets + 2 central singlets."
     },
     {
@@ -326,7 +304,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Lignin",
         "Chitin"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Calcium pectate in the middle lamella cements adjacent cells."
     },
     {
@@ -337,7 +315,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Amyloplasts",
         "Elaioplasts"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Amyloplasts (a type of leucoplast) store starch."
     },
     {
@@ -348,7 +326,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "rRNA",
         "Lipids"
       ],
-      "a": 2,
+      "c": 2,
       "e": "The nucleolus is the site of ribosomal RNA (rRNA) synthesis; it is not membrane-bound."
     },
     {
@@ -359,7 +337,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Peroxisomes",
         "Vacuoles"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Lysosomes contain hydrolytic enzymes that can digest the cell’s own components."
     },
     {
@@ -370,7 +348,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Lysosome",
         "Mitochondrion"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Ribosomes are non-membranous (RNA + protein), the site of protein synthesis."
     },
     {
@@ -381,7 +359,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "In the middle",
         "Absent"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Metacentric = centromere in the middle giving two equal arms."
     },
     {
@@ -392,7 +370,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "11+2",
         "9+3"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Centrioles have 9 peripheral triplets and no central microtubule (9+0)."
     },
     {
@@ -403,7 +381,7 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Mitochondrion",
         "Lysosome"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The vacuole is bounded by a single membrane called the tonoplast."
     },
     {
@@ -414,63 +392,64 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Prokaryotic cells",
         "Fungal cells"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Mesosomes are infoldings of the plasma membrane found in prokaryotes."
     }
   ],
   "match": [
     {
-      "t": "Robert Hooke",
-      "d": "Coined the word \"cell\""
+      "term": "Robert Hooke",
+      "def": "Coined the word \"cell\""
     },
     {
-      "t": "Singer & Nicolson",
-      "d": "Fluid Mosaic Model"
+      "term": "Singer & Nicolson",
+      "def": "Fluid Mosaic Model"
     },
     {
-      "t": "Cristae",
-      "d": "Inner mitochondrial folds"
+      "term": "Cristae",
+      "def": "Inner mitochondrial folds"
     },
     {
-      "t": "Tonoplast",
-      "d": "Vacuole membrane"
+      "term": "Tonoplast",
+      "def": "Vacuole membrane"
     },
     {
-      "t": "Calcium pectate",
-      "d": "Middle lamella"
+      "term": "Calcium pectate",
+      "def": "Middle lamella"
     },
     {
-      "t": "70S ribosome",
-      "d": "Prokaryotes & organelles"
+      "term": "70S ribosome",
+      "def": "Prokaryotes & organelles"
     },
     {
-      "t": "Nucleolus",
-      "d": "rRNA synthesis"
+      "term": "Nucleolus",
+      "def": "rRNA synthesis"
     },
     {
-      "t": "9+2",
-      "d": "Cilia & flagella axoneme"
+      "term": "9+2",
+      "def": "Cilia & flagella axoneme"
     },
     {
-      "t": "Amyloplast",
-      "d": "Stores starch"
+      "term": "Amyloplast",
+      "def": "Stores starch"
     },
     {
-      "t": "Lysosome",
-      "d": "Hydrolytic enzymes / suicidal bag"
+      "term": "Lysosome",
+      "def": "Hydrolytic enzymes / suicidal bag"
     },
     {
-      "t": "Plasmodesmata",
-      "d": "Cytoplasmic bridges between cells"
+      "term": "Plasmodesmata",
+      "def": "Cytoplasmic bridges between cells"
     },
     {
-      "t": "Robert Brown",
-      "d": "Discovered the nucleus"
+      "term": "Robert Brown",
+      "def": "Discovered the nucleus"
     }
   ],
   "pathways": [
     {
       "title": "Secretory protein pathway",
+      "prompt": "This is the classic ER → Golgi → secretion route of the endomembrane system.",
       "steps": [
         "Gene transcribed in nucleus",
         "mRNA translated on RER ribosomes",
@@ -479,19 +458,18 @@ DATA.chapters['brain_biolab11bio02html_cell'] = {
         "Modification & glycosylation in Golgi",
         "Packaged at trans-Golgi face",
         "Secretory vesicle fuses with plasma membrane"
-      ],
-      "e": "This is the classic ER → Golgi → secretion route of the endomembrane system."
+      ]
     },
     {
       "title": "Size order (small → large)",
+      "prompt": "Mycoplasma is the smallest cell (~0.3 µm); the largest isolated single cell is an ostrich egg.",
       "steps": [
         "Mycoplasma (PPLO)",
         "Bacterium",
         "Animal cell",
         "Plant cell",
         "Ostrich egg"
-      ],
-      "e": "Mycoplasma is the smallest cell (~0.3 µm); the largest isolated single cell is an ostrich egg."
+      ]
     }
   ]
 };

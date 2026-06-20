@@ -7,8 +7,116 @@ DATA.chapters['brain_bodyworks3chpsbioclas11html_loc'] = {
   "color": "#3498db",
   "colorD": "#2980b9",
   "glyph": "🦠",
-  "notes": [],
-  "mnemonics": [],
+  "notes": [
+    {
+      "id": "170",
+      "heading": "Movement & Locomotion",
+      "html": "\n    <p>Movement is a defining feature of all living things — even rooted plants and microbes move parts of themselves. When movement results in an animal changing its <b>place</b> (walking, running, climbing, flying, swimming), it is called <span class=\"term\">locomotion</span>.</p>\n    <p>The structures used for movement and locomotion are often the same: a fish's fins help it swim, our limbs help us walk. Locomotion is needed to find food, shelter, a mate, suitable breeding grounds, or to escape danger.</p>"
+    },
+    {
+      "id": "171",
+      "heading": "Types of Movement",
+      "html": "\n    <p>Human cells show three main kinds of movement:</p>\n    <table class=\"cmp\"><tr><th>Type</th><th>How</th><th>Where</th></tr>\n      <tr><td>Amoeboid</td><td>Pseudopodia formed by streaming protoplasm (cytoskeleton / microfilaments)</td><td>Macrophages & leucocytes (WBCs)</td></tr>\n      <tr><td>Ciliary</td><td>Beating of cilia of ciliated epithelium</td><td>Trachea (removes dust), female reproductive tract (moves the ovum)</td></tr>\n      <tr><td>Muscular</td><td>Contraction of muscle cells</td><td>Limbs, jaws, tongue — the basis of locomotion</td></tr></table>"
+    },
+    {
+      "id": "172",
+      "heading": "Muscle — Properties, Types & Structure",
+      "html": "\n    <p>Muscle is a specialised tissue of <b>mesodermal origin</b> that makes up about <b>40–50% of adult body weight</b>. It shows four properties: <span class=\"term\">excitability, contractility, extensibility and elasticity</span>.</p>\n    <table class=\"cmp\"><tr><th>Muscle</th><th>Striations</th><th>Control</th><th>Location</th></tr>\n      <tr><td>Skeletal</td><td>Striated</td><td>Voluntary</td><td>Attached to bones; posture & locomotion</td></tr>\n      <tr><td>Visceral (smooth)</td><td>Non-striated</td><td>Involuntary</td><td>Walls of hollow organs (gut, reproductive tract)</td></tr>\n      <tr><td>Cardiac</td><td>Striated</td><td>Involuntary</td><td>Heart; branched fibres</td></tr></table>\n    <p><b>Organisation of skeletal muscle:</b></p>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">Muscle</span><span class=\"farrow\">→</span><span class=\"fnode\">Fascicle (bundle)</span><span class=\"farrow\">→</span><span class=\"fnode\">Muscle fibre (cell)</span><span class=\"farrow\">→</span><span class=\"fnode\">Myofibril</span><span class=\"farrow\">→</span><span class=\"fnode hl\">Sarcomere</span></div>\n      <div class=\"cap\">Each fibre is lined by the sarcolemma, filled with sarcoplasm, is multinucleate (a syncytium), and its sarcoplasmic reticulum stores Ca²⁺.</div></div>\n    <p>Each myofibril shows alternating dark <b>A bands</b> (anisotropic, thick myosin) and light <b>I bands</b> (isotropic, thin actin). A <span class=\"term\">Z line</span> bisects each I band; the region between two Z lines is the <span class=\"term\">sarcomere</span> — the functional unit of contraction. The central thin-filament-free part of the A band is the <b>H zone</b>, crossed by the <b>M line</b>.</p>"
+    },
+    {
+      "id": "1721",
+      "heading": "Contractile Proteins",
+      "html": "\n    <p><b>Thin filament (Actin):</b> two helical <b>F-actin</b> strands (each a polymer of globular <b>G-actin</b>), with two <b>tropomyosin</b> filaments alongside and <b>troponin</b> at intervals. At rest, a troponin subunit <b>masks the actin binding sites</b> for myosin.</p>\n    <p><b>Thick filament (Myosin):</b> polymerised <b>meromyosin</b>. Each meromyosin has a globular <b>head + short arm</b> (heavy meromyosin, HMM) that projects out as the <b>cross-bridge</b>, plus a <b>tail</b> (light meromyosin, LMM). The head carries <b>ATPase</b> and binding sites for ATP and actin.</p>\n    <div class=\"callout\"><div class=\"ct\">Key idea</div>The myosin head is the molecular motor — it binds actin, uses ATP, and pulls.</div>"
+    },
+    {
+      "id": "1722",
+      "heading": "Mechanism of Muscle Contraction",
+      "html": "\n    <p>Contraction is explained by the <b>sliding filament theory</b>: thin filaments slide over thick filaments, so the sarcomere shortens while the <b>A band stays the same length</b>.</p>\n    <div class=\"diagram\"><div class=\"flow\"><span class=\"fnode hl\">Motor neuron signal</span><span class=\"farrow\">→</span><span class=\"fnode\">Acetylcholine (NMJ)</span><span class=\"farrow\">→</span><span class=\"fnode\">Action potential</span><span class=\"farrow\">→</span><span class=\"fnode\">Ca²⁺ released</span><span class=\"farrow\">→</span><span class=\"fnode\">Ca²⁺ + troponin</span><span class=\"farrow\">→</span><span class=\"fnode\">Cross bridge</span><span class=\"farrow\">→</span><span class=\"fnode hl\">Power stroke</span></div>\n      <div class=\"cap\">During the power stroke, actin is pulled toward the A-band centre; Z lines are drawn in and the sarcomere shortens.</div></div>\n    <ul>\n      <li>A new <b>ATP</b> binding to the myosin head breaks the cross bridge; the head re-cocks for another cycle.</li>\n      <li><b>I bands and the H zone shorten</b>; the A band is constant.</li>\n      <li><b>Relaxation:</b> Ca²⁺ is pumped back into the sarcoplasmic reticulum, troponin re-masks the sites and the muscle lengthens.</li>\n      <li>Repeated stimulation → <b>fatigue</b> from lactic acid (anaerobic glycolysis).</li>\n    </ul>\n    <table class=\"cmp\"><tr><th></th><th>Red fibres</th><th>White fibres</th></tr>\n      <tr><td>Myoglobin</td><td>High (red)</td><td>Low (pale)</td></tr>\n      <tr><td>Mitochondria</td><td>Many</td><td>Few</td></tr>\n      <tr><td>Metabolism</td><td>Aerobic, fatigue-resistant</td><td>Anaerobic, fatigues fast</td></tr></table>"
+    },
+    {
+      "id": "173",
+      "heading": "Skeletal System",
+      "html": "\n    <p>The skeleton is a framework of bones and cartilages — <b>206 bones</b> in an adult, split into the <b>axial (80)</b> and <b>appendicular (126)</b> skeleton.</p>\n    <table class=\"cmp\"><tr><th>Axial (80)</th><th>Count</th></tr>\n      <tr><td>Skull (8 cranial + 14 facial)</td><td>22</td></tr>\n      <tr><td>Ear ossicles</td><td>6</td></tr>\n      <tr><td>Hyoid</td><td>1</td></tr>\n      <tr><td>Vertebral column</td><td>26</td></tr>\n      <tr><td>Sternum</td><td>1</td></tr>\n      <tr><td>Ribs (12 pairs)</td><td>24</td></tr></table>\n    <ul>\n      <li><b>Skull:</b> only the lower jaw (mandible) is movable; the skull rests on the first vertebra, the <b>atlas</b>.</li>\n      <li><b>Vertebral column (26):</b> cervical 7, thoracic 12, lumbar 5, sacrum 1 (fused), coccyx 1 (fused). It protects the spinal cord and anchors the ribs.</li>\n      <li><b>Ribs:</b> 1–7 <b>true</b> (joined to sternum by cartilage), 8–10 <b>false</b> (joined to the 7th rib's cartilage), 11–12 <b>floating</b> (no ventral attachment). Ribs + thoracic vertebrae + sternum = the <b>rib cage</b>.</li>\n    </ul>\n    <table class=\"cmp\"><tr><th>Appendicular (126)</th><th>Bones</th></tr>\n      <tr><td>Each forelimb</td><td>Humerus; radius & ulna; 8 carpals; 5 metacarpals; 14 phalanges</td></tr>\n      <tr><td>Each hindlimb</td><td>Femur (longest); tibia & fibula; patella; 7 tarsals; 5 metatarsals; 14 phalanges</td></tr>\n      <tr><td>Pectoral girdle</td><td>Clavicle + scapula (glenoid cavity, acromion)</td></tr>\n      <tr><td>Pelvic girdle</td><td>Ilium + ischium + pubis fused; acetabulum receives femur</td></tr></table>"
+    },
+    {
+      "id": "174",
+      "heading": "Joints",
+      "html": "\n    <p>Joints are points of contact between bones (or bone and cartilage). They are essential for movement, since bones act as <b>levers</b> moved by muscles.</p>\n    <table class=\"cmp\"><tr><th>Joint</th><th>Movement</th><th>Example</th></tr>\n      <tr><td>Fibrous</td><td>Immovable</td><td>Sutures of the skull</td></tr>\n      <tr><td>Cartilaginous</td><td>Limited</td><td>Between adjacent vertebrae</td></tr>\n      <tr><td>Synovial</td><td>Free (fluid-filled cavity)</td><td>Ball-and-socket (shoulder, hip), hinge (knee, elbow), pivot (atlas–axis), gliding (carpals), saddle (thumb)</td></tr></table>"
+    },
+    {
+      "id": "175",
+      "heading": "Disorders of the Muscular & Skeletal System",
+      "html": "\n    <ul>\n      <li><b>Myasthenia gravis:</b> autoimmune disorder of the neuromuscular junction → fatigue, weakening and paralysis of skeletal muscle.</li>\n      <li><b>Muscular dystrophy:</b> genetic; progressive degeneration of skeletal muscle.</li>\n      <li><b>Tetany:</b> rapid, wild muscle spasms from a fall in calcium ions in body fluid.</li>\n      <li><b>Arthritis:</b> inflammation of joints.</li>\n      <li><b>Osteoporosis:</b> age-related fall in bone mass and higher fracture risk; often from decreased oestrogen.</li>\n      <li><b>Gout:</b> joint inflammation from accumulation of uric acid crystals.</li>\n    </ul>"
+    }
+  ],
+  "mnemonics": [
+    {
+      "title": "Muscle properties",
+      "device": "<b>E</b>-<b>C</b>-<b>E</b>-<b>E</b>",
+      "expand": [
+        {
+          "L": "E",
+          "t": "Excitability"
+        },
+        {
+          "L": "C",
+          "t": "Contractility"
+        },
+        {
+          "L": "E",
+          "t": "Extensibility"
+        },
+        {
+          "L": "E",
+          "t": "Elasticity"
+        }
+      ]
+    },
+    {
+      "title": "Vertebrae regions & count",
+      "device": "<b>C</b>ereal at 7, <b>T</b>urkey at 12, <b>L</b>unch at 5",
+      "expand": [
+        {
+          "L": "C",
+          "t": "Cervical (7)"
+        },
+        {
+          "L": "T",
+          "t": "Thoracic (12)"
+        },
+        {
+          "L": "L",
+          "t": "Lumbar (5)"
+        },
+        {
+          "L": "S",
+          "t": "Sacrum (1, fused)"
+        },
+        {
+          "L": "C",
+          "t": "Coccyx (1, fused)"
+        }
+      ]
+    },
+    {
+      "title": "Rib types",
+      "device": "<b>T</b>rue 7, <b>F</b>lose 3, <b>F</b>loat 2",
+      "expand": [
+        {
+          "L": "T",
+          "t": "True ribs (1–7)"
+        },
+        {
+          "L": "F",
+          "t": "False ribs (8–10)"
+        },
+        {
+          "L": "F",
+          "t": "Floating ribs (11–12)"
+        }
+      ]
+    }
+  ],
   "flashcards": [
     {
       "front": "Difference between movement and locomotion",
@@ -675,6 +783,117 @@ DATA.chapters['brain_bodyworks3chpsbioclas11html_loc'] = {
       "e": "Uric acid crystals deposited in joints cause the inflammation of gout."
     }
   ],
-  "match": [],
-  "pathways": []
+  "match": [
+    {
+      "term": "Sarcomere",
+      "def": "Functional unit between two Z lines"
+    },
+    {
+      "term": "Actin",
+      "def": "Thin filament (with troponin & tropomyosin)"
+    },
+    {
+      "term": "Myosin",
+      "def": "Thick filament with cross-bridge head"
+    },
+    {
+      "term": "Troponin",
+      "def": "Masks actin binding sites at rest"
+    },
+    {
+      "term": "Sarcoplasmic reticulum",
+      "def": "Stores and releases calcium ions"
+    },
+    {
+      "term": "A band",
+      "def": "Region of the thick (myosin) filaments"
+    },
+    {
+      "term": "Femur",
+      "def": "Longest bone (hindlimb)"
+    },
+    {
+      "term": "Scapula",
+      "def": "Flat triangular bone with glenoid cavity"
+    },
+    {
+      "term": "Acetabulum",
+      "def": "Cavity of pelvic girdle for the femur"
+    },
+    {
+      "term": "Atlas",
+      "def": "First cervical vertebra"
+    },
+    {
+      "term": "Floating ribs",
+      "def": "11th & 12th pairs, no ventral attachment"
+    },
+    {
+      "term": "Mandible",
+      "def": "Only movable bone of the skull"
+    },
+    {
+      "term": "Ball-and-socket joint",
+      "def": "Shoulder and hip"
+    },
+    {
+      "term": "Hinge joint",
+      "def": "Knee and elbow"
+    },
+    {
+      "term": "Pivot joint",
+      "def": "Between atlas and axis"
+    },
+    {
+      "term": "Tetany",
+      "def": "Spasms from low calcium ions"
+    },
+    {
+      "term": "Gout",
+      "def": "Uric acid crystals in joints"
+    },
+    {
+      "term": "Osteoporosis",
+      "def": "Low bone mass, often from low oestrogen"
+    }
+  ],
+  "pathways": [
+    {
+      "title": "Muscle contraction (sliding-filament)",
+      "prompt": "Order the events from nerve signal to shortening",
+      "steps": [
+        "Motor neuron carries an impulse to the muscle",
+        "Acetylcholine released at the neuromuscular junction",
+        "Action potential spreads along the sarcolemma",
+        "Ca²⁺ released from the sarcoplasmic reticulum",
+        "Ca²⁺ binds troponin, exposing actin sites",
+        "Myosin heads bind actin → cross bridges",
+        "Power stroke: thin filaments slide inward",
+        "Sarcomere shortens — the muscle contracts"
+      ]
+    },
+    {
+      "title": "From whole muscle to filament",
+      "prompt": "Order the structures from largest to smallest",
+      "steps": [
+        "Muscle",
+        "Fascicle (bundle of fibres)",
+        "Muscle fibre (cell)",
+        "Myofibril",
+        "Sarcomere",
+        "Thick (myosin) & thin (actin) filaments"
+      ]
+    },
+    {
+      "title": "The vertebral column, top to bottom",
+      "prompt": "Order the regions of the 26 vertebrae",
+      "steps": [
+        "Cervical (7)",
+        "Thoracic (12)",
+        "Lumbar (5)",
+        "Sacrum (1, fused)",
+        "Coccyx (1, fused)"
+      ]
+    }
+  ]
 };

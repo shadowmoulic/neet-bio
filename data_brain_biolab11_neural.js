@@ -73,151 +73,131 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
   ],
   "flashcards": [
     {
-      "q": "Structural & functional unit of the neural system?",
-      "a": "The neuron — cyton (cell body), dendrites (toward) and axon (away).",
-      "hint": "Nerve cell"
+      "front": "Structural & functional unit of the neural system?",
+      "back": "The neuron — cyton (cell body), dendrites (toward) and axon (away)."
     },
     {
-      "q": "What are Nissl’s granules?",
-      "a": "Granular bodies (rough ER) in the cyton/cell body of a neuron involved in protein synthesis.",
-      "hint": "In cyton"
+      "front": "What are Nissl’s granules?",
+      "back": "Granular bodies (rough ER) in the cyton/cell body of a neuron involved in protein synthesis."
     },
     {
-      "q": "Resting membrane potential value?",
-      "a": "About −70 mV; outside positive, inside negative (polarised membrane).",
-      "hint": "−70 mV"
+      "front": "Resting membrane potential value?",
+      "back": "About −70 mV; outside positive, inside negative (polarised membrane)."
     },
     {
-      "q": "What maintains the resting potential?",
-      "a": "The Na⁺/K⁺ pump (3 Na⁺ out, 2 K⁺ in) plus selective membrane permeability (more permeable to K⁺ at rest).",
-      "hint": "3 out, 2 in"
+      "front": "What maintains the resting potential?",
+      "back": "The Na⁺/K⁺ pump (3 Na⁺ out, 2 K⁺ in) plus selective membrane permeability (more permeable to K⁺ at rest)."
     },
     {
-      "q": "What happens during depolarisation?",
-      "a": "Na⁺ channels open, Na⁺ rushes in, the inside becomes positive — an action potential (~+30 mV) is generated.",
-      "hint": "Na⁺ influx"
+      "front": "What happens during depolarisation?",
+      "back": "Na⁺ channels open, Na⁺ rushes in, the inside becomes positive — an action potential (~+30 mV) is generated."
     },
     {
-      "q": "What is repolarisation?",
-      "a": "K⁺ moves out of the axon, restoring the negative interior; the pump re-establishes the resting state.",
-      "hint": "K⁺ efflux"
+      "front": "What is repolarisation?",
+      "back": "K⁺ moves out of the axon, restoring the negative interior; the pump re-establishes the resting state."
     },
     {
-      "q": "What is saltatory conduction?",
-      "a": "In myelinated axons the impulse jumps from one node of Ranvier to the next, making conduction faster.",
-      "hint": "Node to node"
+      "front": "What is saltatory conduction?",
+      "back": "In myelinated axons the impulse jumps from one node of Ranvier to the next, making conduction faster."
     },
     {
-      "q": "Name the chief neurotransmitter at synapses.",
-      "a": "Acetylcholine (released into the synaptic cleft to relay the impulse chemically).",
-      "hint": "ACh"
+      "front": "Name the chief neurotransmitter at synapses.",
+      "back": "Acetylcholine (released into the synaptic cleft to relay the impulse chemically)."
     },
     {
-      "q": "Difference between electrical and chemical synapse?",
-      "a": "Electrical: membranes very close, faster, direct ion flow. Chemical: synaptic cleft, neurotransmitter required, slight delay.",
-      "hint": "Cleft vs none"
+      "front": "Difference between electrical and chemical synapse?",
+      "back": "Electrical: membranes very close, faster, direct ion flow. Chemical: synaptic cleft, neurotransmitter required, slight delay."
     },
     {
-      "q": "Largest part of the human brain and its function?",
-      "a": "Cerebrum — seat of intelligence, memory, will; hemispheres joined by corpus callosum.",
-      "hint": "Corpus callosum"
+      "front": "Largest part of the human brain and its function?",
+      "back": "Cerebrum — seat of intelligence, memory, will; hemispheres joined by corpus callosum."
     },
     {
-      "q": "Function of the hypothalamus?",
-      "a": "Controls body temperature, hunger, thirst, emotions; secretes hormones (regulates the pituitary).",
-      "hint": "Temperature/hunger"
+      "front": "Function of the hypothalamus?",
+      "back": "Controls body temperature, hunger, thirst, emotions; secretes hormones (regulates the pituitary)."
     },
     {
-      "q": "What does the cerebellum do?",
-      "a": "Coordinates body movements, posture and balance.",
-      "hint": "Balance"
+      "front": "What does the cerebellum do?",
+      "back": "Coordinates body movements, posture and balance."
     },
     {
-      "q": "Which part controls respiration and heartbeat?",
-      "a": "The medulla oblongata (in the hindbrain) — respiratory & cardiovascular reflex centre.",
-      "hint": "Medulla"
+      "front": "Which part controls respiration and heartbeat?",
+      "back": "The medulla oblongata (in the hindbrain) — respiratory & cardiovascular reflex centre."
     },
     {
-      "q": "Name the three meninges.",
-      "a": "Dura mater (outer), arachnoid (middle), pia mater (inner).",
-      "hint": "Outer→inner"
+      "front": "Name the three meninges.",
+      "back": "Dura mater (outer), arachnoid (middle), pia mater (inner)."
     },
     {
-      "q": "Components of the reflex arc in order?",
-      "a": "Receptor → sensory (afferent) neuron → spinal cord (CNS) → motor (efferent) neuron → effector.",
-      "hint": "5 parts"
+      "front": "Components of the reflex arc in order?",
+      "back": "Receptor → sensory (afferent) neuron → spinal cord (CNS) → motor (efferent) neuron → effector."
     },
     {
-      "q": "Fight-or-flight responses are due to which system?",
-      "a": "The sympathetic nervous system (↑ heart rate, pupil dilation, inhibits digestion).",
-      "hint": "Sympathetic"
+      "front": "Fight-or-flight responses are due to which system?",
+      "back": "The sympathetic nervous system (↑ heart rate, pupil dilation, inhibits digestion)."
     },
     {
-      "q": "Photoreceptors of the eye?",
-      "a": "Rods (dim light, black-white, contain rhodopsin) and cones (bright light & colour vision).",
-      "hint": "Rods & cones"
+      "front": "Photoreceptors of the eye?",
+      "back": "Rods (dim light, black-white, contain rhodopsin) and cones (bright light & colour vision)."
     },
     {
-      "q": "Three middle-ear ossicles?",
-      "a": "Malleus, incus and stapes (hammer, anvil, stirrup).",
-      "hint": "MICe"
+      "front": "Three middle-ear ossicles?",
+      "back": "Malleus, incus and stapes (hammer, anvil, stirrup)."
     },
     {
-      "q": "Corpora quadrigemina is part of which brain region & function?",
-      "a": "The midbrain; controls visual and auditory reflexes.",
-      "hint": "Midbrain reflexes"
+      "front": "Corpora quadrigemina is part of which brain region & function?",
+      "back": "The midbrain; controls visual and auditory reflexes."
     },
     {
-      "q": "Afferent vs efferent nerve fibres?",
-      "a": "Afferent (sensory) carry impulses to the CNS; efferent (motor) carry impulses from the CNS to effectors.",
-      "hint": "To vs from CNS"
+      "front": "Afferent vs efferent nerve fibres?",
+      "back": "Afferent (sensory) carry impulses to the CNS; efferent (motor) carry impulses from the CNS to effectors."
     }
   ],
   "recall": [
     {
       "q": "Describe the structure of a neuron.",
-      "a": "A neuron has a cell body (cyton) containing the nucleus and Nissl’s granules, several short branched dendrites that carry impulses toward the cyton, and a single long axon that carries impulses away to the synaptic knobs (which contain neurotransmitter vesicles).",
-      "hint": "Cyton, dendrites, axon"
+      "hint": "Cyton, dendrites, axon",
+      "a": "A neuron has a cell body (cyton) containing the nucleus and Nissl’s granules, several short branched dendrites that carry impulses toward the cyton, and a single long axon that carries impulses away to the synaptic knobs (which contain neurotransmitter vesicles)."
     },
     {
       "q": "Explain the resting potential and how it is maintained.",
-      "a": "At rest the axon membrane is polarised — outside positive, inside negative (~−70 mV). The Na⁺/K⁺ pump actively transports 3 Na⁺ out and 2 K⁺ in; the membrane is more permeable to K⁺, keeping the inside negative.",
-      "hint": "−70 mV, Na/K pump"
+      "hint": "−70 mV, Na/K pump",
+      "a": "At rest the axon membrane is polarised — outside positive, inside negative (~−70 mV). The Na⁺/K⁺ pump actively transports 3 Na⁺ out and 2 K⁺ in; the membrane is more permeable to K⁺, keeping the inside negative."
     },
     {
       "q": "Explain the generation and conduction of a nerve impulse.",
-      "a": "A stimulus opens Na⁺ channels → Na⁺ rushes in → membrane depolarises and reverses polarity (action potential). This then triggers K⁺ efflux (repolarisation). The reversal travels along the axon as a self-propagating wave; in myelinated fibres it jumps between nodes of Ranvier (saltatory conduction).",
-      "hint": "Na⁺ in, K⁺ out, saltatory"
+      "hint": "Na⁺ in, K⁺ out, saltatory",
+      "a": "A stimulus opens Na⁺ channels → Na⁺ rushes in → membrane depolarises and reverses polarity (action potential). This then triggers K⁺ efflux (repolarisation). The reversal travels along the axon as a self-propagating wave; in myelinated fibres it jumps between nodes of Ranvier (saltatory conduction)."
     },
     {
       "q": "Describe chemical transmission across a synapse.",
-      "a": "The impulse reaches the axon terminal → Ca²⁺ enters → synaptic vesicles fuse and release neurotransmitter (e.g. acetylcholine) into the cleft → it binds receptors on the post-synaptic membrane, opening ion channels and generating a new potential.",
-      "hint": "Ca²⁺, vesicles, receptors"
+      "hint": "Ca²⁺, vesicles, receptors",
+      "a": "The impulse reaches the axon terminal → Ca²⁺ enters → synaptic vesicles fuse and release neurotransmitter (e.g. acetylcholine) into the cleft → it binds receptors on the post-synaptic membrane, opening ion channels and generating a new potential."
     },
     {
       "q": "Name the parts of the forebrain and their functions.",
-      "a": "Cerebrum (intelligence, memory, voluntary action; hemispheres joined by corpus callosum), thalamus (sensory/motor relay), and hypothalamus (temperature, hunger, thirst, emotions, hormone secretion).",
-      "hint": "Cerebrum, thalamus, hypothalamus"
+      "hint": "Cerebrum, thalamus, hypothalamus",
+      "a": "Cerebrum (intelligence, memory, voluntary action; hemispheres joined by corpus callosum), thalamus (sensory/motor relay), and hypothalamus (temperature, hunger, thirst, emotions, hormone secretion)."
     },
     {
       "q": "List the parts of the hindbrain with functions.",
-      "a": "Cerebellum (coordination, posture, balance), pons (connects parts, regulates breathing), and medulla oblongata (respiration, cardiovascular reflexes, gastric secretions).",
-      "hint": "Cerebellum, pons, medulla"
+      "hint": "Cerebellum, pons, medulla",
+      "a": "Cerebellum (coordination, posture, balance), pons (connects parts, regulates breathing), and medulla oblongata (respiration, cardiovascular reflexes, gastric secretions)."
     },
     {
       "q": "Compare sympathetic and parasympathetic systems.",
-      "a": "Sympathetic = \"fight or flight\": increases heart rate, dilates pupils, inhibits digestion. Parasympathetic = \"rest and digest\": decreases heart rate, constricts pupils, stimulates digestion. They act antagonistically.",
-      "hint": "Fight vs rest"
+      "hint": "Fight vs rest",
+      "a": "Sympathetic = \"fight or flight\": increases heart rate, dilates pupils, inhibits digestion. Parasympathetic = \"rest and digest\": decreases heart rate, constricts pupils, stimulates digestion. They act antagonistically."
     },
     {
       "q": "Describe a reflex action with its arc.",
-      "a": "A reflex action is an involuntary, rapid response to a stimulus, controlled by the spinal cord. The reflex arc: receptor → afferent (sensory) neuron → spinal cord → efferent (motor) neuron → effector (muscle/gland). Example: knee-jerk, withdrawal from a hot object.",
-      "hint": "Receptor→...→effector"
+      "hint": "Receptor→...→effector",
+      "a": "A reflex action is an involuntary, rapid response to a stimulus, controlled by the spinal cord. The reflex arc: receptor → afferent (sensory) neuron → spinal cord → efferent (motor) neuron → effector (muscle/gland). Example: knee-jerk, withdrawal from a hot object."
     },
     {
       "q": "Differentiate neural and chemical (hormonal) coordination.",
-      "a": "Neural: rapid, point-to-point, short-lived, via electrochemical impulses along neurons. Hormonal: slow, widespread, longer-lasting, via hormones carried in the blood to target organs.",
-      "hint": "Fast/local vs slow/wide"
+      "hint": "Fast/local vs slow/wide",
+      "a": "Neural: rapid, point-to-point, short-lived, via electrochemical impulses along neurons. Hormonal: slow, widespread, longer-lasting, via hormones carried in the blood to target organs."
     }
   ],
   "mcqs": [
@@ -229,7 +209,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Cell body (cyton)",
         "Synaptic knob"
       ],
-      "a": 2,
+      "c": 2,
       "e": "Nissl’s granules (rough ER) lie in the cyton/cell body."
     },
     {
@@ -240,7 +220,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "0 mV",
         "−30 mV"
       ],
-      "a": 1,
+      "c": 1,
       "e": "About −70 mV with the inside negative (polarised)."
     },
     {
@@ -251,7 +231,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Ca²⁺ efflux",
         "Cl⁻ influx"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Na⁺ rushing into the axon reverses the polarity (action potential)."
     },
     {
@@ -262,7 +242,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "3 Na⁺ in, 2 K⁺ out",
         "Equal Na⁺ and K⁺"
       ],
-      "a": 1,
+      "c": 1,
       "e": "It pumps 3 Na⁺ out and 2 K⁺ in by active transport."
     },
     {
@@ -273,7 +253,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Dendrites",
         "Cell bodies"
       ],
-      "a": 1,
+      "c": 1,
       "e": "In myelinated axons the impulse jumps between nodes of Ranvier."
     },
     {
@@ -284,7 +264,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Adrenaline only",
         "Thyroxine"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Acetylcholine is released into the synaptic cleft to relay the impulse."
     },
     {
@@ -295,7 +275,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Pons",
         "Thalamus"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The corpus callosum is the band of fibres joining the hemispheres."
     },
     {
@@ -306,7 +286,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Medulla",
         "Pons"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The hypothalamus regulates hunger, thirst and temperature."
     },
     {
@@ -317,7 +297,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Medulla",
         "Thalamus"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The cerebellum coordinates posture, balance and movement."
     },
     {
@@ -328,7 +308,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Medulla oblongata",
         "Midbrain"
       ],
-      "a": 2,
+      "c": 2,
       "e": "The medulla oblongata controls respiration and cardiovascular reflexes."
     },
     {
@@ -339,7 +319,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Cerebellum",
         "Thalamus"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Reflexes are mediated by the spinal cord through the reflex arc."
     },
     {
@@ -350,7 +330,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Receptor→Motor→CNS→Sensory→Effector",
         "Sensory→Receptor→CNS→Effector→Motor"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Receptor → sensory neuron → CNS (spinal cord) → motor neuron → effector."
     },
     {
@@ -361,7 +341,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Somatic system",
         "Sensory system"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The sympathetic system prepares the body for stress/emergency."
     },
     {
@@ -372,7 +352,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Both equally",
         "Neither"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Cones detect colour and function in bright light; rods are for dim light."
     },
     {
@@ -383,7 +363,7 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Pinna, tympanum, cochlea",
         "Rod, cone, fovea"
       ],
-      "a": 1,
+      "c": 1,
       "e": "Malleus, incus and stapes transmit vibrations across the middle ear."
     },
     {
@@ -394,93 +374,93 @@ DATA.chapters['brain_biolab11bio02html_neural'] = {
         "Medulla",
         "Pons"
       ],
-      "a": 1,
+      "c": 1,
       "e": "The corpora quadrigemina of the midbrain control these reflexes."
     }
   ],
   "match": [
     {
-      "t": "Cyton",
-      "d": "Contains Nissl’s granules"
+      "term": "Cyton",
+      "def": "Contains Nissl’s granules"
     },
     {
-      "t": "Dendrite",
-      "d": "Carries impulse toward cyton"
+      "term": "Dendrite",
+      "def": "Carries impulse toward cyton"
     },
     {
-      "t": "Axon",
-      "d": "Carries impulse away"
+      "term": "Axon",
+      "def": "Carries impulse away"
     },
     {
-      "t": "−70 mV",
-      "d": "Resting membrane potential"
+      "term": "−70 mV",
+      "def": "Resting membrane potential"
     },
     {
-      "t": "Na⁺ influx",
-      "d": "Depolarisation"
+      "term": "Na⁺ influx",
+      "def": "Depolarisation"
     },
     {
-      "t": "Saltatory conduction",
-      "d": "Node-to-node in myelinated axons"
+      "term": "Saltatory conduction",
+      "def": "Node-to-node in myelinated axons"
     },
     {
-      "t": "Corpus callosum",
-      "d": "Joins cerebral hemispheres"
+      "term": "Corpus callosum",
+      "def": "Joins cerebral hemispheres"
     },
     {
-      "t": "Cerebellum",
-      "d": "Balance & coordination"
+      "term": "Cerebellum",
+      "def": "Balance & coordination"
     },
     {
-      "t": "Medulla oblongata",
-      "d": "Respiratory/cardiac centre"
+      "term": "Medulla oblongata",
+      "def": "Respiratory/cardiac centre"
     },
     {
-      "t": "Hypothalamus",
-      "d": "Hunger, thirst, temperature"
+      "term": "Hypothalamus",
+      "def": "Hunger, thirst, temperature"
     },
     {
-      "t": "Acetylcholine",
-      "d": "Synaptic neurotransmitter"
+      "term": "Acetylcholine",
+      "def": "Synaptic neurotransmitter"
     },
     {
-      "t": "Cones",
-      "d": "Colour & bright-light vision"
+      "term": "Cones",
+      "def": "Colour & bright-light vision"
     }
   ],
   "pathways": [
     {
       "title": "Nerve impulse across one point",
+      "prompt": "The wave of depolarisation/repolarisation is the action potential.",
       "steps": [
         "Resting potential (−70 mV, polarised)",
         "Stimulus opens Na⁺ channels",
         "Na⁺ influx → depolarisation (+30 mV)",
         "K⁺ efflux → repolarisation",
         "Na⁺/K⁺ pump restores resting state"
-      ],
-      "e": "The wave of depolarisation/repolarisation is the action potential."
+      ]
     },
     {
       "title": "Reflex arc",
+      "prompt": "A quick involuntary response routed through the spinal cord.",
       "steps": [
         "Receptor detects stimulus",
         "Sensory (afferent) neuron",
         "Spinal cord (CNS)",
         "Motor (efferent) neuron",
         "Effector responds"
-      ],
-      "e": "A quick involuntary response routed through the spinal cord."
+      ]
     },
     {
       "title": "Synaptic transmission",
+      "prompt": "Chemical relay of the signal across the synaptic cleft.",
       "steps": [
         "Impulse reaches axon terminal",
         "Ca²⁺ enters the knob",
         "Vesicles release neurotransmitter",
         "Transmitter binds post-synaptic receptors",
         "New impulse generated"
-      ],
-      "e": "Chemical relay of the signal across the synaptic cleft."
+      ]
     }
   ]
 };

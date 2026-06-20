@@ -56,11 +56,11 @@ if (sandbox.DATA) {
       glyph: meta.icon || '🦠',
       notes: chData.notes ? chData.notes.map(n => ({ id: n.h.replace(/\W/g, ''), heading: n.h, html: n.html })) : [],
       mnemonics: chData.mnemonics ? chData.mnemonics.map(m => ({ title: m.expands || 'Mnemonic', device: m.hook, expand: [{L:'', t: m.note||''}] })) : [],
-      flashcards: chData.flashcards || [],
-      recall: chData.recall || [],
-      mcqs: chData.mcqs || [],
-      match: chData.match || [],
-      pathways: chData.pathways || []
+      flashcards: chData.flashcards ? chData.flashcards.map(f => ({ front: f.q, back: f.a })) : [],
+      recall: chData.recall ? chData.recall.map(r => ({ q: r.q, hint: r.hint || 'Think...', a: r.a })) : [],
+      mcqs: chData.mcqs ? chData.mcqs.map(m => ({ q: m.q, o: m.o, c: m.a, e: m.e || '' })) : [],
+      match: chData.match ? chData.match.map(m => ({ term: m.t, def: m.d })) : [],
+      pathways: chData.pathways ? chData.pathways.map(p => ({ title: p.title || 'Sequence', prompt: p.prompt || p.e || 'Order the steps.', steps: p.steps || [] })) : []
     };
 
     const filename = `data_brain_biolab11_${key}.js`;
