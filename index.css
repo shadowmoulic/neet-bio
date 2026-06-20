@@ -182,10 +182,7 @@
         gap: 6px;
       }
       .brand .mark {
-        width: 30px;
-        height: 30px;
-        font-size: 17px;
-        border-radius: 8px;
+        display: none;
       }
       .brand h1 {
         font-size: 15px; /* slight bump for readability */
@@ -214,6 +211,11 @@
     /* Show level badge back on slightly wider phones */
     @media (min-width: 380px) and (max-width: 600px) {
       .lvl-badge { display: inline; }
+    }
+    
+    /* Extreme small screens (prevent horizontal overflow) */
+    @media (max-width: 400px) {
+      .icon-btn[title="Reset all progress"] { display: none; }
     }
 
     main {

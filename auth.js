@@ -21,8 +21,9 @@ const Auth = (function() {
 
   // Inject Modals into DOM
   document.addEventListener("DOMContentLoaded", () => {
-    document.body.insertAdjacentHTML('beforeend', `
-      <style>
+    // Inject styles in head to prevent any rendering/bleeding issues
+    const styleEl = document.createElement('style');
+    styleEl.textContent = `
         .modal-overlay {
           position: fixed; top: 0; left: 0; right: 0; bottom: 0;
           background: rgba(14,28,23,0.9); backdrop-filter: blur(8px);
@@ -67,8 +68,10 @@ const Auth = (function() {
           #authContainer .btn { padding: 6px 10px; font-size: 11.5px; white-space: nowrap; }
           .auth-role-text { display: none; }
         }
-      </style>
+    `;
+    document.head.appendChild(styleEl);
 
+    document.body.insertAdjacentHTML('beforeend', `
       <!-- Auth Modal -->
       <div class="modal-overlay" id="authModal">
         <div class="modal-box" id="authModalBox">
