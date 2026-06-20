@@ -307,8 +307,13 @@
               (c.subtitle || '').toLowerCase().includes(sq);
             return subjectMatch && searchMatch;
           })
-          /* Sort by flashcard count descending so richest chapters show first */
-          .sort((a, b) => (b.flashcards||[]).length - (a.flashcards||[]).length);
+          /* Sort by priority weight descending, then by flashcard count descending */
+          .sort((a, b) => {
+            const wA = WEIGHTS[a.title] || 0;
+            const wB = WEIGHTS[b.title] || 0;
+            if (wB !== wA) return wB - wA;
+            return (b.flashcards||[]).length - (a.flashcards||[]).length;
+          });
       }
 
       /* ---- Soft update: only replace the chapter grid, don't touch the rest of the page ---- */
