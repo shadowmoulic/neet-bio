@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>The Naturalist's Codex — NEET Bio Class 11 Active Recall</title>
-  <meta name="description" content="Master NEET Biology Class 11 with flashcards, active recall, MCQ battles and mnemonics. Covers Living World, Biological Classification, Plant Kingdom, Animal Kingdom, Morphology, Anatomy, Structural Organisation & Biomolecules.">
-  <meta name="keywords" content="NEET Biology, Class 11 Biology, NCERT Biology, flashcards, active recall, MCQ, Plant Kingdom, Animal Kingdom, Biomolecules, NEET 2026">
+  <title>The Naturalist's Codex — NEET 2026 Complete Active Recall</title>
+  <meta name="description" content="Master NEET 2026 with flashcards, active recall, MCQ battles and mnemonics. Covers full NCERT Biology Class 11 &amp; 12, Physics and Chemistry. All chapters, all game modes.">
+  <meta name="keywords" content="NEET Biology, NEET Physics, NEET Chemistry, Class 11 Biology, Class 12 Biology, NCERT, flashcards, active recall, MCQ, NEET 2026">
   <meta name="author" content="Sayak Moulic">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://neet-bio-ten.vercel.app/">
@@ -16,17 +16,21 @@
   <!-- Open Graph (WhatsApp, Facebook previews) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://neet-bio-ten.vercel.app/">
-  <meta property="og:title" content="The Naturalist's Codex — NEET Bio Class 11">
-  <meta property="og:description" content="Flashcards, MCQ battles, mnemonics & active recall for NEET Biology Class 11. Study smarter, not harder.">
+  <meta property="og:title" content="The Naturalist's Codex — NEET 2026 Complete Study System">
+  <meta property="og:description" content="Full NEET 2026 preparation: Biology (Class 11 &amp; 12), Physics &amp; Chemistry. Flashcards, MCQ battles, mnemonics &amp; active recall. Study smarter, not harder.">
   <meta property="og:site_name" content="The Naturalist's Codex">
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Naturalist's Codex — NEET Bio Class 11">
-  <meta name="twitter:description" content="Flashcards, MCQ battles, mnemonics & active recall for NEET Biology Class 11.">
+  <meta name="twitter:title" content="The Naturalist's Codex — NEET 2026">
+  <meta name="twitter:description" content="Full NEET 2026 prep: Bio Class 11 &amp; 12, Physics &amp; Chemistry. Flashcards, MCQs, mnemonics &amp; active recall.">
 
   <!-- Theme -->
   <meta name="theme-color" content="#0e1c17">
+
+  <!-- Favicon: DNA emoji SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,13 +68,78 @@
   <script src="data_anat.js"></script>
   <script src="data_struct_anim.js"></script>
   <script src="data_biomol.js"></script>
+  <script src="phy.js"></script>
+  <script src="chem.js"></script>
+  <script src="data_brain_biolabphotosynthesisandresphtml_c13.js"></script>
+  <script src="data_brain_biolabphotosynthesisandresphtml_c14.js"></script>
+  <script src="data_brain_bodyworks3chpsbioclas11html_loc.js"></script>
+  <script src="data_brain_bodyworks3chpsbioclas11html_exc.js"></script>
+  <script src="data_brain_bodyworks3chpsbioclas11html_bre.js"></script>
+  <script src="data_brain_divisionlab01cellcyclehtml.js"></script>
+  <script src="data_brain_biolab11_cell.js"></script>
+  <script src="data_brain_biolab11_plant.js"></script>
+  <script src="data_brain_biolab11_blood.js"></script>
+  <script src="data_brain_biolab11_neural.js"></script>
+  <script src="data_brain_biolab11_horm.js"></script>
+  <script src="data_repro_health.js"></script>
+  <script src="data_biotech.js"></script>
+  <script src="data_biotech_app.js"></script>
+  <script src="data_human_health.js"></script>
   <script src="components.js"></script>
   <script src="auth.js"></script>
   <script>
     /* ============ ENGINE ============ */
     /* ============================================================
-       NEET Bio — app engine
+       NEET — app engine
        ============================================================ */
+
+    /* Subject / class mapping — determines which filter tab each chapter appears in */
+    const SUBJECT_MAP = {
+      /* Class 11 Biology */
+      living:       'bio11', bioclassif:    'bio11', plant:     'bio11', animal:   'bio11',
+      morph:        'bio11', anat:          'bio11', struct_anim: 'bio11', biomol:  'bio11',
+      brain_biolab11_cell:   'bio11',
+      brain_biolabphotosynthesisandresphtml_c13: 'bio11',
+      brain_biolabphotosynthesisandresphtml_c14: 'bio11',
+      brain_bodyworks3chpsbioclas11html_loc: 'bio11',
+      brain_bodyworks3chpsbioclas11html_bre: 'bio11',
+      brain_divisionlab01cellcyclehtml: 'bio11',
+      brain_biolab11_plant: 'bio11',
+      /* Class 12 Biology */
+      brain_biolab11_blood:  'bio12', brain_biolab11_neural: 'bio12',
+      brain_biolab11_horm:   'bio12', brain_bodyworks3chpsbioclas11html_exc: 'bio12',
+      repro_health:  'bio12', human_health:  'bio12',
+      biotech:       'bio12', biotech_app:   'bio12',
+      /* Physics */
+      phy_mechanics: 'phy', phy_thermo: 'phy', phy_waves: 'phy', phy_optics: 'phy',
+      phy_em: 'phy', phy_electrostatics: 'phy', phy_current: 'phy', phy_modern: 'phy',
+      phy_semicond: 'phy', phy_units: 'phy',
+      /* Chemistry */
+      phy:           'phy',
+      chem:          'chem',
+      chem_atomic: 'chem', chem_periodic: 'chem', chem_bonding: 'chem', chem_equil: 'chem',
+      chem_thermo: 'chem', chem_electro: 'chem', chem_kinetics: 'chem',
+      chem_organic: 'chem', chem_carbonyl: 'chem', chem_biomol: 'chem',
+    };
+
+    /* Helper: resolve subject for any chapter id */
+    function getSubject(id) {
+      if (SUBJECT_MAP[id]) return SUBJECT_MAP[id];
+      /* Fallback heuristics */
+      if (id.startsWith('phy')) return 'phy';
+      if (id.startsWith('chem')) return 'chem';
+      if (id.startsWith('brain_biolab11')) return 'bio12';
+      return 'bio11';
+    }
+
+    const SUBJECT_TABS = [
+      { k: 'all',   label: '🌐 All' },
+      { k: 'bio11', label: '🌿 Biology XI' },
+      { k: 'bio12', label: '🧬 Biology XII' },
+      { k: 'phy',   label: '⚡ Physics' },
+      { k: 'chem',  label: '🧪 Chemistry' },
+    ];
+
     const MODES = [
       { k: "notes", mi: "📖", t: "Study Notes", d: "Every section with flow diagrams, comparison tables & formulas — your reference." },
       { k: "mnemonics", mi: "🧠", t: "Mnemonics", d: "Memory hooks for examples, names and tricky concepts." },
@@ -140,39 +209,174 @@
       }
 
       /* ============================ HOME ============================ */
-      function home() {
-        setAccent(null);
-        const chaps = Object.values(DATA.chapters);
-        let totCards = 0, totMcq = 0, totMnem = 0;
-        chaps.forEach(c => { totCards += c.flashcards.length; totMcq += c.mcqs.length; totMnem += c.mnemonics.length; });
-        const cards = chaps.map(c => {
-          const p = chapProgress(c.id);
-          return `<button class="chap-card" style="--cc:${c.color}" onclick="App.chapter('${c.id}')">
-        <span class="tag">Chapter ${c.num}</span>
+      let _homeFilter = 'all', _homeSearch = '', _homeShowAll = false;
+      const HOME_PAGE_SIZE = 8;
+
+      /* ---- Subject badge (pure helper, used by both full render + soft update) ---- */
+      function subjectBadge(id) {
+        const s = getSubject(id);
+        const map = { bio11: '🌿 XI Bio', bio12: '🧬 XII Bio', phy: '⚡ Physics', chem: '🧪 Chemistry' };
+        const cls = { bio11: 'badge-bio11', bio12: 'badge-bio12', phy: 'badge-phy', chem: 'badge-chem' };
+        return `<span class="subject-badge ${cls[s] || ''}">${map[s] || s}</span>`;
+      }
+
+      /* ---- Build a single chapter card HTML ---- */
+      function chapCardHTML(c) {
+        const p = chapProgress(c.id);
+        return `<button class="chap-card" style="--cc:${c.color}" onclick="App.chapter('${c.id}')">
+        ${subjectBadge(c.id)}
         <div class="glyph">${c.glyph}</div>
         <h4>${c.title}</h4>
         <div class="sub">${c.subtitle}</div>
         <div class="meter"><i style="width:${p}%"></i></div>
-        <div class="pct"><span>${p}% memorised</span><span>${c.flashcards.length} cards</span></div>
+        <div class="pct"><span>${p}% memorised</span><span>${(c.flashcards||[]).length} cards</span></div>
       </button>`;
-        }).join("");
+      }
+
+      /* ---- Filter + sort chapters ---- */
+      function getFiltered() {
+        const sq = _homeSearch.toLowerCase().trim();
+        return Object.values(DATA.chapters)
+          .filter(c => {
+            const subjectMatch = _homeFilter === 'all' || getSubject(c.id) === _homeFilter;
+            const searchMatch  = !sq ||
+              c.title.toLowerCase().includes(sq) ||
+              (c.subtitle || '').toLowerCase().includes(sq);
+            return subjectMatch && searchMatch;
+          })
+          /* Sort by flashcard count descending so richest chapters show first */
+          .sort((a, b) => (b.flashcards||[]).length - (a.flashcards||[]).length);
+      }
+
+      /* ---- Soft update: only replace the chapter grid, don't touch the rest of the page ---- */
+      function softUpdateGrid() {
+        const grid   = document.getElementById('chap-grid');
+        const label  = document.getElementById('chap-section-label');
+        const countEl= document.getElementById('chap-count');
+        if (!grid) { home(); return; } /* fallback if not on home screen */
+
+        /* update active tab */
+        document.querySelectorAll('.subject-tab').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.key === _homeFilter);
+        });
+
+        const filtered    = getFiltered();
+        const allChaps    = Object.values(DATA.chapters);
+        const visible     = _homeShowAll ? filtered : filtered.slice(0, HOME_PAGE_SIZE);
+        const hasMore     = !_homeShowAll && filtered.length > HOME_PAGE_SIZE;
+
+        const cards = visible.map(chapCardHTML).join('');
+        const emptyMsg = filtered.length === 0
+          ? `<div class="empty-state">😶 No chapters found — try a different search or filter.</div>` : '';
+        const loadMore = hasMore
+          ? `<div class="load-more-wrap"><button class="btn btn-ghost load-more-btn" onclick="App.loadMore()">Load ${filtered.length - HOME_PAGE_SIZE} more chapters ↓</button></div>` : '';
+
+        grid.innerHTML = cards + emptyMsg + loadMore;
+
+        /* update label text + count */
+        if (label) label.textContent = _homeFilter === 'all' ? 'All Chapters' :
+          (SUBJECT_TABS.find(t => t.k === _homeFilter)?.label || 'Chapters');
+        if (countEl) countEl.textContent = `${filtered.length} of ${allChaps.length}`;
+      }
+
+      /* ---- Full render: called once on first load / when navigating back to home ---- */
+      function home(filter, search) {
+        setAccent(null);
+        if (filter !== undefined) { _homeFilter = filter; _homeShowAll = false; }
+        if (search !== undefined) _homeSearch = search;
+
+        /* If already on home page, just soft-update the grid */
+        if (filter === undefined && search === undefined && document.getElementById('chap-grid')) {
+          softUpdateGrid(); return;
+        }
+        /* If filter/search changed but grid exists, soft-update */
+        if (document.getElementById('chap-grid')) {
+          softUpdateGrid(); return;
+        }
+
+        const allChaps = Object.values(DATA.chapters);
+        let totChaps = allChaps.length, totCards = 0, totMcq = 0, totMnem = 0;
+        allChaps.forEach(c => {
+          totCards += (c.flashcards || []).length;
+          totMcq   += (c.mcqs      || []).length;
+          totMnem  += (c.mnemonics || []).length;
+        });
+
+        const filtered = getFiltered();
+        const visible  = _homeShowAll ? filtered : filtered.slice(0, HOME_PAGE_SIZE);
+        const hasMore  = !_homeShowAll && filtered.length > HOME_PAGE_SIZE;
+
+        const cards = visible.map(chapCardHTML).join('');
+        const emptyMsg = filtered.length === 0
+          ? `<div class="empty-state">😶 No chapters found.</div>` : '';
+        const loadMore = hasMore
+          ? `<div class="load-more-wrap"><button class="btn btn-ghost load-more-btn" onclick="App.loadMore()">Load ${filtered.length - HOME_PAGE_SIZE} more chapters ↓</button></div>` : '';
+
+        const tabs = SUBJECT_TABS.map(t =>
+          `<button class="subject-tab${_homeFilter === t.k ? ' active' : ''}" data-key="${t.k}" onclick="App.switchFilter('${t.k}')">${t.label}</button>`
+        ).join('');
+
         render(`
       <section class="hero">
         <div class="eyebrow">Active-Recall Study System</div>
-        <h2>The Naturalist's <em>Codex</em></h2>
-        <p>A field journal for NCERT Class 11 Biology, Chapters 3–6. Learn every concept, then lock it into memory through eight interactive game modes.</p>
+        <h1>The Naturalist's <em>Codex</em></h1>
+        <p>Complete NEET 2026 prep — Biology (Class 11 &amp; 12), Physics &amp; Chemistry. Learn every concept through eight interactive game modes.</p>
         <div class="hero-stats">
-          <div class="hero-stat"><b>4</b><span>Chapters</span></div>
+          <div class="hero-stat"><b>${totChaps}</b><span>Chapters</span></div>
           <div class="hero-stat"><b>${totCards}</b><span>Flashcards</span></div>
           <div class="hero-stat"><b>${totMcq}</b><span>Quiz Qs</span></div>
           <div class="hero-stat"><b>${totMnem}</b><span>Mnemonics</span></div>
         </div>
       </section>
-      <div class="section-label"><h3>Choose a chapter</h3><div class="rule"></div></div>
-      <div class="chapters">${cards}</div>
+
+      <div class="filter-bar">
+        <div class="subject-tabs" id="subject-tabs">${tabs}</div>
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            id="chap-search"
+            class="search-input"
+            type="search"
+            placeholder="Search chapters…"
+            value="${_homeSearch.replace(/"/g,'&quot;')}"
+            oninput="App.onSearch(this.value)"
+          />
+        </div>
+      </div>
+
+      <div class="section-label">
+        <h3 id="chap-section-label">${_homeFilter === 'all' ? 'All Chapters' : SUBJECT_TABS.find(t=>t.k===_homeFilter)?.label || 'Chapters'}</h3>
+        <div class="rule"></div>
+        <span class="chap-count" id="chap-count">${filtered.length} of ${totChaps}</span>
+      </div>
+      <div class="chapters" id="chap-grid">${cards}${emptyMsg}${loadMore}</div>
       <div class="section-label"><h3>How to use it</h3><div class="rule"></div></div>
-      <div class="modes">${MODES.map(m => `<div class="mode-card"><div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p></div>`).join("")}</div>
+      <div class="modes">${MODES.map(m => `<div class="mode-card"><div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p></div>`).join('')}</div>
     `);
+      }
+
+      /* ---- Search: update state then soft-update grid (no full re-render) ---- */
+      function onSearch(val) {
+        _homeSearch = val;
+        softUpdateGrid();
+      }
+
+      /* ---- Tab switch: update state then soft-update grid ---- */
+      function switchFilter(key) {
+        _homeFilter = key;
+        _homeShowAll = false;
+        softUpdateGrid();
+      }
+
+      /* ---- Load more ---- */
+      function loadMore() {
+        _homeShowAll = true;
+        softUpdateGrid();
+      }
+
+      function getSearch() {
+        const el = document.getElementById('chap-search');
+        return el ? el.value : _homeSearch;
       }
 
       /* ========================= CHAPTER HUB ========================= */
@@ -533,7 +737,8 @@
       });
 
       return {
-        home, chapter, mode, resetAll, scrollNote,
+        home, chapter, mode, resetAll, scrollNote, getSearch,
+        onSearch, switchFilter, loadMore,
         fcFlip, fcJudge, arHint, arReveal, arGrade, qzPick, qzNext,
         mtPick, pwPlace, pwUnslot, pwReset, pwCheck
       };

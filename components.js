@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML('afterbegin', `<div class="topbar">
   <div class="brand" onclick="App.home()">
-    <div class="mark">N</div>
-    <h1>NEET Bio<span>Class 11 Bio · Ch 3–6</span></h1>
+    <div class="mark">🧬</div>
+    <h1>The Codex<span>NEET 2026 · Full Syllabus</span></h1>
   </div>
   <div class="spacer"></div>
   <div class="xp-pill"><span class="lvl-badge" id="lvlBadge">Lv 1</span> <b id="xpVal">0</b> XP</div>
@@ -11,16 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML('beforeend', `<footer class="site-footer">
   <div class="footer-content">
     <div class="footer-brand">
-      <div class="mark">N</div>
+      <div class="mark">🧬</div>
       <div class="brand-text">
-        <h3>NEET Bio</h3>
-        <p>The Naturalist's Codex</p>
+        <h3>The Naturalist's Codex</h3>
+        <p>NEET 2026 · Bio XI &amp; XII · Physics · Chemistry</p>
       </div>
     </div>
     <div class="footer-links">
       <div class="link-col">
         <h4>Explore</h4>
         <a href="#" onclick="App.home()">All Chapters</a>
+        <a href="#" onclick="App.switchFilter('bio11')">Biology XI</a>
+        <a href="#" onclick="App.switchFilter('bio12')">Biology XII</a>
+        <a href="#" onclick="App.switchFilter('phy')">Physics</a>
+        <a href="#" onclick="App.switchFilter('chem')">Chemistry</a>
         <a href="#" onclick="window.scrollTo(0,0)">Back to Top</a>
       </div>
       <div class="link-col">
@@ -31,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; ${new Date().getFullYear()} NEET Bio. All rights reserved.</p>
-    <p>Built for deep understanding & memory.</p>
+    <p>&copy; ${new Date().getFullYear()} The Naturalist's Codex. All rights reserved.</p>
+    <p>Built for deep understanding &amp; memory.</p>
   </div>
 </footer>`);
 });

@@ -104,12 +104,10 @@
       flex: none;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
-      color: #1a130a;
-      font-family: var(--serif);
-      font-weight: 900;
-      font-size: 20px;
-      box-shadow: 0 6px 18px -6px var(--gold-deep);
+      background: linear-gradient(135deg, #1f3a2c, #0e1c17);
+      border: 1px solid var(--gold);
+      font-size: 22px;
+      box-shadow: 0 6px 18px -6px rgba(226,179,95,.35);
     }
 
     .brand h1 {
@@ -177,33 +175,44 @@
       color: var(--gold)
     }
 
+    /* === TOPBAR MOBILE === */
     @media (max-width: 600px) {
       .topbar {
-        padding: 10px 14px;
-        gap: 8px;
+        padding: 8px 12px;
+        gap: 6px;
       }
       .brand .mark {
-        width: 32px;
-        height: 32px;
-        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        font-size: 17px;
         border-radius: 8px;
       }
       .brand h1 {
-        font-size: 16px;
+        font-size: 14px;
+        letter-spacing: 0;
       }
       .brand h1 span {
         display: none;
       }
+      /* Collapse XP pill to just the number, no level badge text */
       .xp-pill {
-        padding: 6px 10px;
-        font-size: 12px;
-        gap: 6px;
+        padding: 5px 9px;
+        font-size: 11.5px;
+        gap: 5px;
+      }
+      .lvl-badge {
+        display: none;   /* hide on very small screens, show on ≥380px */
       }
       .icon-btn {
-        width: 34px;
-        height: 34px;
-        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+        border-radius: 8px;
       }
+    }
+    /* Show level badge back on slightly wider phones */
+    @media (min-width: 380px) and (max-width: 600px) {
+      .lvl-badge { display: inline; }
     }
 
     main {
@@ -534,7 +543,13 @@
       grid-template-columns: 200px 1fr;
       gap: 26px;
       margin-top: 26px;
-      align-items: start
+      align-items: start;
+      /* Prevent any child from blowing out the grid column */
+      min-width: 0;
+    }
+    .notes-wrap > div {
+      min-width: 0;   /* critical — allows children to shrink below intrinsic size */
+      overflow: hidden;
     }
 
     .notes-toc {
@@ -646,6 +661,34 @@
       padding: 0 3px;
       border-radius: 3px;
       font-weight: 600
+    }
+
+    /* Tables: always scrollable horizontally on any screen size */
+    .note-sec {
+      background: var(--paper);
+      color: var(--paper-ink);
+      border-radius: var(--r);
+      padding: 26px 28px;
+      margin-bottom: 18px;
+      scroll-margin-top: 80px;
+      box-shadow: var(--shadow);
+      /* Let the note section itself shrink on mobile */
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    /* Wrap tables in a scrollable container */
+    .note-sec table.cmp {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap; /* prevent cell text wrapping that causes layout explosion */
+    }
+    /* But let cells wrap once inside the scrollable block */
+    .note-sec table.cmp th,
+    .note-sec table.cmp td {
+      white-space: normal;
+      min-width: 100px;
     }
 
     table.cmp {
@@ -804,6 +847,32 @@
       width: 18px
     }
 
+
+    /* ---- Light-theme override: .mnem inside .note-sec (paper bg) ---- */
+    .note-sec .mnem {
+      background: #fff;
+      border: 1.5px solid var(--paper-line);
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    }
+    .note-sec .mnem::before {
+      opacity: .04;
+    }
+    .note-sec .mnem h4 {
+      color: #7f4ea0;
+    }
+    .note-sec .mnem .device {
+      color: #1c241a;
+      font-size: 17px;
+    }
+    .note-sec .mnem .device b {
+      color: #7f4ea0;
+    }
+    .note-sec .mnem .expand {
+      color: #3a402f;
+    }
+    .note-sec .mnem .expand .row .L {
+      color: #7f4ea0;
+    }
     /* ---------- Flashcards ---------- */
     .fc-stage {
       max-width: 560px;
@@ -1561,41 +1630,109 @@
       color: var(--ink-dim)
     }
 
-    @media(max-width:760px) {
+    @media (max-width: 760px) {
+      /* Notes: stack TOC above content */
       .notes-wrap {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
-
+      .notes-wrap > div {
+        overflow: visible; /* allow normal flow when stacked */
+      }
       .notes-toc {
         position: static;
         display: flex;
         flex-wrap: wrap;
-        gap: 4px
+        gap: 4px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
       }
-
       .notes-toc b {
-        width: 100%
+        width: 100%;
       }
-
       .notes-toc a {
-        flex: 1;
-        min-width: 120px;
+        flex: none;
+        min-width: auto;
         text-align: center;
         border-left: none;
-        border-bottom: 2px solid transparent
+        border-bottom: 2px solid transparent;
+        font-size: 12px;
+        padding: 5px 10px;
+        white-space: nowrap;
       }
-
+      /* Note sections: tighter padding on mobile */
+      .note-sec {
+        padding: 18px 16px;
+        border-radius: 12px;
+      }
+      .note-sec h3 {
+        font-size: 18px;
+      }
+      .note-sec h4 {
+        font-size: 15px;
+      }
+      .note-sec p,
+      .note-sec li {
+        font-size: 13.5px;
+      }
+      /* Flow diagrams wrap nicely */
+      .flow {
+        padding: 10px;
+        gap: 6px;
+      }
+      .flow .step, .flow .node {
+        font-size: 11.5px;
+        padding: 5px 9px;
+      }
+      /* Callouts */
+      .callout {
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+      /* Brand font size in the 760px range */
       .brand h1 {
-        font-size: 15px
+        font-size: 15px;
       }
-
+      /* Match game grid */
       .match-grid {
-        gap: 9px
+        gap: 9px;
       }
-
       .tile {
         font-size: 12.5px;
-        padding: 11px
+        padding: 11px;
+      }
+      /* Mnemonic grid */
+      .mnem-grid {
+        grid-template-columns: 1fr;
+      }
+      /* View head on mobile */
+      .view-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      /* Flashcard stage */
+      .fc-stage {
+        padding: 0;
+      }
+      .flashcard {
+        min-height: 200px;
+      }
+      /* Quiz */
+      .mcq-opts {
+        gap: 8px;
+      }
+      .opt {
+        font-size: 13px;
+        padding: 11px 13px;
+      }
+      /* Pathway */
+      .path-stage {
+        padding: 0;
+      }
+      .pchip {
+        font-size: 12px;
+        padding: 7px 11px;
       }
     }
 
@@ -1719,4 +1856,179 @@
       .footer-links {
         gap: 30px;
       }
+    }
+
+    /* ---------- Hero h1 (updated to h1 for SEO) ---------- */
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: clamp(34px, 7vw, 62px);
+      line-height: .98;
+      letter-spacing: -.02em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--gold);
+    }
+
+    /* ---------- Subject Filter Bar ---------- */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 28px 0 0;
+      flex-wrap: wrap;
+    }
+
+    .subject-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .subject-tab {
+      padding: 8px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--line2);
+      background: var(--panel);
+      color: var(--ink-dim);
+      font-size: 13px;
+      font-weight: 600;
+      transition: .16s;
+      white-space: nowrap;
+    }
+    .subject-tab:hover {
+      border-color: var(--gold);
+      color: var(--ink);
+    }
+    .subject-tab.active {
+      background: var(--gold);
+      color: #15110a;
+      border-color: var(--gold);
+      box-shadow: 0 4px 16px -6px var(--gold);
+    }
+
+    /* ---------- Search ---------- */
+    .search-wrap {
+      position: relative;
+      min-width: 200px;
+      flex: 0 0 220px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      pointer-events: none;
+      opacity: .5;
+    }
+    .search-input {
+      width: 100%;
+      padding: 9px 14px 9px 36px;
+      border-radius: 999px;
+      border: 1px solid var(--line2);
+      background: var(--panel);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 13.5px;
+      outline: none;
+      transition: .15s;
+    }
+    .search-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(226, 179, 95, .12);
+    }
+    .search-input::placeholder {
+      color: var(--ink-faint);
+    }
+    /* Remove native search clear button styling issues */
+    .search-input::-webkit-search-cancel-button { opacity: .4; cursor: pointer; }
+
+    /* ---------- Chapter count in section label ---------- */
+    .chap-count {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-faint);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 2px 9px;
+      white-space: nowrap;
+    }
+
+    /* ---------- Subject badges on chapter cards ---------- */
+    .subject-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 0 0 8px 8px;
+      position: absolute;
+      top: 0;
+      left: 18px;
+    }
+    .badge-bio11 {
+      background: #34d399;
+      color: #052e16;
+    }
+    .badge-bio12 {
+      background: #818cf8;
+      color: #1e1b4b;
+    }
+    .badge-phy {
+      background: #fbbf24;
+      color: #451a03;
+    }
+    .badge-chem {
+      background: #f472b6;
+      color: #500724;
+    }
+
+    /* Make sure glyph clears the badge */
+    .chap-card .glyph {
+      margin-top: 22px;
+    }
+
+    /* ---------- Empty state ---------- */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 50px 20px;
+      color: var(--ink-faint);
+      font-size: 15px;
+      border: 1px dashed var(--line2);
+      border-radius: var(--r);
+    }
+
+    @media (max-width: 640px) {
+      .filter-bar { flex-direction: column; align-items: stretch; }
+      .search-wrap { flex: none; width: 100%; }
+      .subject-tabs { gap: 6px; }
+      .subject-tab { padding: 7px 12px; font-size: 12px; }
+    }
+
+    /* ---------- Load More button ---------- */
+    .load-more-wrap {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0 4px;
+    }
+    .load-more-btn {
+      min-width: 240px;
+      justify-content: center;
+      gap: 10px;
+      border-style: dashed;
+      font-size: 13.5px;
+      letter-spacing: .02em;
+      transition: .18s;
+    }
+    .load-more-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(226,179,95,.06);
     }
