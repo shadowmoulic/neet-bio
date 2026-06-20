@@ -64,7 +64,7 @@ const Auth = (function() {
         
         /* Responsive Topbar Auth */
         @media(max-width: 600px) {
-          #authContainer .btn { padding: 6px 10px; font-size: 11.5px; }
+          #authContainer .btn { padding: 6px 10px; font-size: 11.5px; white-space: nowrap; }
           .auth-role-text { display: none; }
         }
       </style>
@@ -328,6 +328,10 @@ const Auth = (function() {
         <button class="btn btn-ghost btn-sm" onclick="Auth.switchTab('login'); Auth.showAuthModal()">Login</button>
         <button class="btn btn-primary btn-sm" onclick="Auth.switchTab('signup'); Auth.showAuthModal()">Sign Up</button>
       `;
+    }
+    // Re-render priority pills or other auth-dependent UI
+    if (window.App && typeof window.App.softUpdateGrid === 'function') {
+      window.App.softUpdateGrid();
     }
   }
 

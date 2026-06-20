@@ -221,13 +221,76 @@
       }
 
       /* ---- Build a single chapter card HTML ---- */
+      const WEIGHTS = {
+        "Molecular Basis of Inheritance": 14,
+        "Animal Kingdom": 13,
+        "Biotechnology – Principles and Processes": 12,
+        "Biotechnology - Principles and Processes": 12,
+        "Biomolecules": 10,
+        "Principles of Inheritance and Variation": 10,
+        "Cell Cycle and Cell Division": 9,
+        "Cell Cycle & Cell Division": 9,
+        "Structural Organisation in Animals": 8,
+        "Reproductive Health": 8,
+        "Plant Kingdom": 7,
+        "Anatomy of Flowering Plants": 7,
+        "Biotechnology and its Applications": 7,
+        "Biotechnology & its Applications": 7,
+        "Morphology of Flowering Plants": 6,
+        "Plant Growth and Development": 6,
+        "Plant Growth & Development": 6,
+        "Locomotion and Movement": 6,
+        "Locomotion & Movement": 6,
+        "Human Health and Disease": 6,
+        "Human Health & Disease": 6,
+        "Evolution": 6,
+        "Human Reproduction": 6,
+        "Sexual Reproduction in Flowering Plants": 6,
+        "Cell: The Unit of Life": 5,
+        "Body Fluids and Circulation": 5,
+        "Body Fluids & Circulation": 5,
+        "Excretory Products and their Elimination": 5,
+        "Excretory Products & their Elimination": 5,
+        "Photosynthesis in Higher Plants": 4,
+        "Respiration in Plants": 4,
+        "Breathing and Exchange of Gases": 4,
+        "Breathing & Exchange of Gases": 4,
+        "Chemical Coordination and Integration": 4,
+        "Chemical Coordination & Integration": 4,
+        "Biodiversity and Conservation": 4,
+        "Microbes in Human Welfare": 4,
+        "Ecosystem": 4,
+        "Organisms and Populations": 4,
+        "Biological Classification": 3,
+        "Neural Control and Coordination": 2,
+        "Neural Control & Coordination": 2,
+        "The Living World": 1
+      };
+
+      function getPriorityHTML(title) {
+        // If auth exists but no user is logged in, show locked pill
+        if (window.Auth && !window.Auth.getCurrentUser()) {
+          return `<span class="priority-pill" style="color:#e65100; background:#ffe0b2; border-radius:10px; padding:3px 8px; font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-left:6px; box-shadow:0 1px 3px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05); cursor:pointer;" onclick="event.stopPropagation(); Auth.showSignupPromptModal();">🔒 Signup to Unlock Priority Score</span>`;
+        }
+        
+        const w = WEIGHTS[title];
+        if (!w) return '';
+        let label = 'Low Priority', color = 'var(--faint)', bg = 'transparent';
+        if (w >= 10) { label = 'High Priority'; color = '#c62828'; bg = '#ffcdd2'; }
+        else if (w >= 6) { label = 'Med Priority'; color = '#e65100'; bg = '#ffe0b2'; }
+        else { label = 'Low Priority'; color = '#1565c0'; bg = '#bbdefb'; }
+        return `<span class="priority-pill" style="color:${color}; background:${bg}; border-radius:10px; padding:2px 7px; font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-left:6px; box-shadow:0 1px 3px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05);">${label} · ${w}%</span>`;
+      }
+
       function chapCardHTML(c) {
         const p = chapProgress(c.id);
+        const prio = getPriorityHTML(c.title);
         return `<button class="chap-card" style="--cc:${c.color}" onclick="App.chapter('${c.id}')">
         ${subjectBadge(c.id)}
         <div class="glyph">${c.glyph}</div>
         <h4>${c.title}</h4>
         <div class="sub">${c.subtitle}</div>
+        <div style="display:flex; justify-content:flex-start; margin-top:8px;">${prio}</div>
         <div class="meter"><i style="width:${p}%"></i></div>
         <div class="pct"><span>${p}% memorised</span><span>${(c.flashcards||[]).length} cards</span></div>
       </button>`;

@@ -188,8 +188,9 @@
         border-radius: 8px;
       }
       .brand h1 {
-        font-size: 14px;
+        font-size: 15px; /* slight bump for readability */
         letter-spacing: 0;
+        white-space: nowrap; /* prevent 'The Codex' from wrapping to two lines */
       }
       .brand h1 span {
         display: none;
@@ -259,11 +260,18 @@
     }
 
     .hero-stats {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 26px;
       justify-content: center;
       margin-top: 26px;
-      flex-wrap: wrap
+    }
+    @media (max-width: 600px) {
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 10px;
+      }
     }
 
     .hero-stat {
