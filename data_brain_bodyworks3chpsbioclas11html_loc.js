@@ -1,7 +1,7 @@
 /* Extracted from bodyworks 3 chps bio clas 11.html */
 DATA.chapters['brain_bodyworks3chpsbioclas11html_loc'] = {
   "id": "brain_bodyworks3chpsbioclas11html_loc",
-  "num": "3",
+  "num": "4",
   "title": "Locomotion & Movement",
   "subtitle": "From amoeboid creeping to a sprinter's stride — the muscles, contractile proteins, bones and joints that turn chemical energy into movement, and the disorders that disrupt them.",
   "color": "#3498db",

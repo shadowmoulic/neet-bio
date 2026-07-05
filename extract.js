@@ -3,7 +3,7 @@ const vm = require('vm');
 const path = require('path');
 
 const brainDir = path.join(__dirname, 'brain');
-const files = fs.readdirSync(brainDir).filter(f => f.endsWith('.html') && !f.includes('diagram-pack'));
+const files = fs.readdirSync(brainDir).filter(f => f.endsWith('.html') && !f.includes('diagram-pack') && f !== 'biolab 11 bio 0,2.html');
 
 let scriptNames = [];
 
@@ -121,15 +121,39 @@ files.forEach((file, index) => {
     code += match[1] + '\n';
   }
 
-  // Convert const to var for top-level variables so they appear in sandbox
-  code = code.replace(/\bconst (CH|FLASH|MCQ|NOTES|MATCH|SEQ)\b/g, 'var $1');
+  // Convert const/let to var for top-level variables so they appear in sandbox
+  code = code.replace(/\bconst (CH|FLASH|MCQ|NOTES|MATCH|SEQ|DATA)\b/g, 'var $1');
+  code = code.replace(/\blet (CH|FLASH|MCQ|NOTES|MATCH|SEQ|DATA)\b/g, 'var $1');
 
-  // We can just execute the code inside a try-catch for every statement, or simpler:
-  // Catch the DOM errors but keep the variables.
-  // We'll stub out document completely.
+  // Robust recursive DOM Proxy to stub browser APIs
   let preCode = `
-    var document = new Proxy({}, { get: () => function() { return new Proxy({}, { get: () => function(){} }); } });
-    var window = new Proxy({}, { get: () => function() {} });
+    const createRecursiveProxy = () => {
+      const handler = {
+        get: (target, prop) => {
+          if (prop === 'classList') {
+            return {
+              add: () => {},
+              remove: () => {},
+              toggle: () => true,
+              contains: () => false
+            };
+          }
+          if (prop === 'style') {
+            return {
+              setProperty: () => {},
+              removeProperty: () => {}
+            };
+          }
+          return new Proxy(() => {}, handler);
+        },
+        apply: (target, thisArg, argumentsList) => {
+          return new Proxy(() => {}, handler);
+        }
+      };
+      return new Proxy(() => {}, handler);
+    };
+    var document = createRecursiveProxy();
+    var window = createRecursiveProxy();
     var localStorage = { getItem: () => null, setItem: () => {} };
     function setTimeout() {}
     function clearTimeout() {}
@@ -153,9 +177,152 @@ files.forEach((file, index) => {
   }
 
   // Map
-  let chapters = [];
+  let chapters = []; // Array of { filename, chapter }
 
-  if (sandbox.CH) {
+  if (sandbox.DATA) {
+    for (const key in sandbox.DATA) {
+      const chData = sandbox.DATA[key];
+      const meta = chData.meta || {};
+
+      let targetId = '';
+      let targetFilename = '';
+
+      if (file === 'BioLab final 1.html') {
+        targetId = `brain_biolab11_${key}`;
+        targetFilename = `data_brain_biolab11_${key}.js`;
+      } else if (file === 'bio-field-lab Final 2.html') {
+        const keyMap = {
+          ch1: 'living',
+          ch2: 'bioclassif',
+          ch7: 'struct_anim',
+          ch9: 'biomol'
+        };
+        targetId = keyMap[key] || key;
+        targetFilename = `data_${targetId}.js`;
+      } else {
+        targetId = `brain_${file.replace(/[^a-zA-Z0-9]/g, '')}_${key}`;
+        targetFilename = `data_${targetId}.js`;
+      }
+
+      let num = meta.num || chData.num || key.replace(/[^0-9]/g, '').toUpperCase() || '';
+      let title = meta.title || chData.title || 'Unknown Title';
+      let subtitle = meta.blurb || chData.subtitle || chData.tag || '';
+
+      let color = meta.color || chData.color;
+      let colorD = chData.colorD || '#3E32A0';
+      if (file === 'bio-field-lab Final 2.html') {
+        const accent = chData.accent || '';
+        if (accent === 'cyan') { color = '#5fb6c4'; colorD = '#2c7e8c'; }
+        else if (accent === 'teal') { color = '#4ca6a4'; colorD = '#1a6e6c'; }
+        else if (accent === 'orange') { color = '#e58a5d'; colorD = '#a8512a'; }
+        else if (accent === 'purple') { color = '#8e62d9'; colorD = '#5a32a3'; }
+      }
+      if (!color) color = '#7C6CFF';
+
+      let glyph = meta.icon || chData.glyph || chData.icon || '🦠';
+
+      // 1. Notes
+      let notes = [];
+      if (chData.notes) {
+        notes = chData.notes.map(n => {
+          const id = n.id || (n.h || n.t || '').replace(/\W/g, '');
+          const heading = n.h || n.t || '';
+          return { id, heading, html: n.html };
+        });
+      }
+
+      // 2. Mnemonics
+      let mnemonics = [];
+      if (chData.mnemonics) {
+        mnemonics = chData.mnemonics.map(m => ({
+          title: m.title || m.expands || 'Mnemonic',
+          device: m.device || m.hook || '',
+          expand: m.expand || [{ L: '', t: m.note || '' }]
+        }));
+      }
+
+      // 3. Flashcards
+      let flashcards = [];
+      if (chData.flashcards) {
+        flashcards = chData.flashcards.map(f => {
+          const front = f.front || f.q || f.f || '';
+          const back = f.back || f.a || f.b || '';
+          return { front, back };
+        });
+      }
+
+      // 4. Recall
+      let recall = [];
+      if (chData.recall) {
+        recall = chData.recall.map(r => ({
+          q: r.q || '',
+          hint: r.hint || 'Think...',
+          a: r.a || ''
+        }));
+      }
+
+      // 5. MCQs (Merge mcq and boss for Final 2)
+      let rawMcqs = chData.mcqs || chData.mcq || [];
+      if (chData.boss && Array.isArray(chData.boss)) {
+        rawMcqs = [...rawMcqs, ...chData.boss];
+      }
+      let mcqs = rawMcqs.map(m => {
+        const correct = typeof m.c === 'number' ? m.c : (typeof m.a === 'number' ? m.a : 0);
+        return {
+          q: m.q || '',
+          o: m.o || [],
+          c: correct,
+          e: m.e || ''
+        };
+      });
+
+      // 6. Match-Up
+      let match = [];
+      if (chData.match) {
+        chData.match.forEach(m => {
+          if (Array.isArray(m)) {
+            m.forEach(pair => {
+              if (Array.isArray(pair) && pair.length >= 2) {
+                match.push({ term: pair[0], def: pair[1] });
+              }
+            });
+          } else {
+            match.push({
+              term: m.t || m.term || '',
+              def: m.d || m.def || ''
+            });
+          }
+        });
+      }
+
+      // 7. Pathways
+      let rawPathways = chData.pathways || chData.pathway || [];
+      let pathways = rawPathways.map(p => ({
+        title: p.title || 'Sequence',
+        prompt: p.prompt || p.desc || p.e || 'Order the steps.',
+        steps: p.steps || []
+      }));
+
+      let chapter = {
+        id: targetId,
+        num: num.toString(),
+        title,
+        subtitle,
+        color,
+        colorD,
+        glyph,
+        notes,
+        mnemonics,
+        flashcards,
+        recall,
+        mcqs,
+        match,
+        pathways
+      };
+
+      chapters.push({ filename: targetFilename, chapter });
+    }
+  } else if (sandbox.CH) {
     for (const key in sandbox.CH) {
       const chData = sandbox.CH[key];
       let chapter = {
@@ -229,7 +396,7 @@ files.forEach((file, index) => {
         });
       }
 
-      chapters.push(chapter);
+      chapters.push({ filename: `data_${chapter.id}.js`, chapter });
     }
   } else if (sandbox.CARDS) {
     let chapter = {
@@ -269,11 +436,12 @@ files.forEach((file, index) => {
         });
       });
     }
-    chapters.push(chapter);
+    chapters.push({ filename: `data_${chapter.id}.js`, chapter });
   }
 
-  chapters.forEach((ch) => {
-    const filename = `data_${ch.id}.js`;
+  chapters.forEach((item) => {
+    const filename = item.filename;
+    const ch = item.chapter;
     scriptNames.push(filename);
     const content = `/* Extracted from ${file} */\nDATA.chapters['${ch.id}'] = ${JSON.stringify(ch, null, 2)};\n`;
     fs.writeFileSync(path.join(__dirname, filename), content);

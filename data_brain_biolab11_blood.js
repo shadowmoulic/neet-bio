@@ -1,262 +1,848 @@
-/* Extracted from biolab 11 bio 0,2.html */
-DATA.chapters['brain_biolab11bio02html_blood'] = {
-  "id": "brain_biolab11bio02html_blood",
+/* Extracted from BioLab final 1.html */
+DATA.chapters['brain_biolab11_blood'] = {
+  "id": "brain_biolab11_blood",
   "num": "15",
   "title": "Body Fluids & Circulation",
-  "subtitle": "Blood, lymph, the human heart, cardiac cycle, ECG, double circulation and disorders.",
+  "subtitle": "Blood and lymph as the body’s transport fluids — from formed elements and clotting to the human heart, double circulation and the ECG.",
   "color": "#FF5470",
   "colorD": "#3E32A0",
   "glyph": "🫀",
   "notes": [
     {
-      "id": "BloodComposition",
-      "heading": "Blood — Composition",
-      "html": "\n   <p><span class=\"term\">Blood</span> is a fluid connective tissue = <b>plasma</b> (55%) + <b>formed elements</b> (45%).</p>\n   <h4>Plasma</h4>\n   <p>Straw-coloured, ~90–92% water + 6–8% proteins. Proteins: <b>fibrinogen</b> (clotting), <b>globulins</b> (defence/immunity), <b>albumins</b> (osmotic balance). Also has minerals (Na⁺, Ca²⁺, etc.), glucose, amino acids, lipids. <b>Serum</b> = plasma without clotting factors.</p>\n   <h4>Formed elements</h4>\n   <table class=\"t\"><tr><th>Cell</th><th>Count</th><th>Function</th></tr>\n   <tr><td>RBC (erythrocyte)</td><td>5–5.5 million/mm³</td><td>Carry O₂/CO₂; no nucleus (mammals); biconcave; haemoglobin; lifespan ~120 days</td></tr>\n   <tr><td>WBC (leucocyte)</td><td>6000–8000/mm³</td><td>Immunity; nucleated; colourless</td></tr>\n   <tr><td>Platelets (thrombocytes)</td><td>1.5–3.5 lakh/mm³</td><td>Blood clotting (from megakaryocytes)</td></tr></table>\n   <h4>Types of WBC</h4>\n   <ul><li><b>Granulocytes:</b> Neutrophils (60–65%, phagocytic, most abundant), Eosinophils (2–3%, allergy/infection), Basophils (0.5–1%, rarest, release histamine/heparin).</li><li><b>Agranulocytes:</b> Lymphocytes (20–25%, B & T cells, immune response), Monocytes (6–8%, largest WBC, phagocytic).</li></ul>\n   <div class=\"mnem\"><div class=\"lab\">🧠 WBC abundance</div><div class=\"hook\">\"Never Let Monkeys Eat Bananas\"</div><div class=\"ex\">Neutrophils > Lymphocytes > Monocytes > Eosinophils > Basophils (high→low).</div></div>"
+      "id": "BloodASpecialConnectiveTissue",
+      "heading": "Blood — A Special Connective Tissue",
+      "html": "\n   <p><span class=\"term\">Blood</span> is a fluid connective tissue with a liquid matrix called <b>plasma</b> in which <b>formed elements</b> are suspended.</p>\n   <table class=\"t\"><tr><th>Component</th><th>Approx. share</th><th>Role</th></tr>\n   <tr><td>Plasma</td><td>~55%</td><td>Liquid matrix, transport</td></tr>\n   <tr><td>Formed elements</td><td>~45% (PCV)</td><td>RBC, WBC, platelets</td></tr></table>\n   <h4>Plasma (90–92% water; 6–8% proteins)</h4>\n   <ul><li><b>Fibrinogen</b> — needed for blood clotting.</li><li><b>Globulins</b> — defence (antibodies).</li><li><b>Albumins</b> — maintain osmotic balance.</li><li>Ions (Na⁺, Ca²⁺, Mg²⁺, HCO₃⁻, Cl⁻), glucose, amino acids, lipids and hormones are also transported.</li></ul>\n   <div class=\"callout\"><b>Serum</b> = plasma <b>minus</b> the clotting factors (fibrinogen).</div>"
     },
     {
-      "id": "BloodGroups",
-      "heading": "Blood Groups",
-      "html": "\n   <h4>ABO system</h4>\n   <table class=\"t\"><tr><th>Group</th><th>Antigen (RBC)</th><th>Antibody (plasma)</th><th>Donor to</th></tr>\n   <tr><td>A</td><td>A</td><td>anti-B</td><td>A, AB</td></tr>\n   <tr><td>B</td><td>B</td><td>anti-A</td><td>B, AB</td></tr>\n   <tr><td>AB</td><td>A & B</td><td>none</td><td>AB (universal recipient)</td></tr>\n   <tr><td>O</td><td>none</td><td>anti-A & anti-B</td><td>all (universal donor)</td></tr></table>\n   <h4>Rh factor</h4>\n   <p>Rh antigen (like rhesus monkey) — Rh⁺ has it, Rh⁻ lacks it. If an Rh⁻ mother carries an Rh⁺ foetus, leakage during delivery sensitises her; in a later Rh⁺ pregnancy her anti-Rh antibodies attack foetal RBCs → <span class=\"term\">erythroblastosis foetalis</span>. Prevented by giving anti-Rh antibodies to the mother.</p>\n   <div class=\"mnem\"><div class=\"lab\">🧠 Donor/Recipient</div><div class=\"hook\">\"O Outflows to all (donor); AB Absorbs all (recipient)\"</div></div>"
+      "id": "FormedElementsRBCWBCPlatelets",
+      "heading": "Formed Elements — RBC, WBC & Platelets",
+      "html": "\n   <p>Formed elements constitute about 45% of blood.</p>\n   <table class=\"t\"><tr><th>Element</th><th>Count</th><th>Key facts</th></tr>\n   <tr><td>RBC (erythrocyte)</td><td>5–5.5 million/mm³</td><td>Biconcave, no nucleus (mammals), haemoglobin, life 120 days</td></tr>\n   <tr><td>WBC (leucocyte)</td><td>6000–8000/mm³</td><td>Nucleated, colourless, immunity, life 1–2 weeks</td></tr>\n   <tr><td>Platelet (thrombocyte)</td><td>1.5–3.5 lakh/mm³</td><td>Cell fragments, blood clotting</td></tr></table>\n   <h4>RBC (Erythrocytes)</h4>\n   <ul><li>Formed in the <b>red bone marrow</b>; destroyed in the <b>spleen</b> (\"graveyard of RBCs\").</li><li>Carry <b>haemoglobin</b> (12–16 g per 100 mL blood) which transports O₂ and CO₂.</li></ul>\n   <h4>WBC (Leucocytes)</h4>\n   <table class=\"t\"><tr><th>Type</th><th>Group</th><th>%</th><th>Function</th></tr>\n   <tr><td>Neutrophil</td><td>Granulocyte</td><td>60–65%</td><td>Phagocytosis (most abundant)</td></tr>\n   <tr><td>Eosinophil</td><td>Granulocyte</td><td>2–3%</td><td>Allergy, resist infection</td></tr>\n   <tr><td>Basophil</td><td>Granulocyte</td><td>0.5–1%</td><td>Release histamine, heparin (rarest)</td></tr>\n   <tr><td>Lymphocyte</td><td>Agranulocyte</td><td>20–25%</td><td>Immunity (B & T cells)</td></tr>\n   <tr><td>Monocyte</td><td>Agranulocyte</td><td>6–8%</td><td>Phagocytosis (largest WBC)</td></tr></table>\n   <div class=\"mnem\"><div class=\"lab\">🧠 Memory Hook</div><div class=\"hook\">\"Never Let Monkeys Eat Bananas\"</div><div class=\"ex\">WBC abundance, high → low: <b>N</b>eutrophil > <b>L</b>ymphocyte > <b>M</b>onocyte > <b>E</b>osinophil > <b>B</b>asophil.</div></div>"
     },
     {
-      "id": "CoagulationClottingofBlood",
-      "heading": "Coagulation (Clotting) of Blood",
-      "html": "\n   <p>A clot/coagulum is a network of <b>fibrin</b> threads trapping blood cells.</p>\n   <div class=\"flow\"><span class=\"step\">Injury → platelets release factors</span><span class=\"arr\">→</span><span class=\"step\">Thrombokinase (thromboplastin)</span><span class=\"arr\">→</span><span class=\"step\">Prothrombin → Thrombin</span><span class=\"arr\">→</span><span class=\"step\">Fibrinogen → Fibrin (clot)</span></div>\n   <p>Needs <b>Ca²⁺</b> ions and clotting factors. Prothrombin & fibrinogen are made in the liver (need vitamin K).</p>\n   <div class=\"mnem\"><div class=\"lab\">🧠 Clotting chain</div><div class=\"hook\">\"Platelets → Thrombokinase → Thrombin → Fibrin\"</div><div class=\"ex\">Prothrombin becomes Thrombin; Fibrinogen becomes Fibrin (the actual mesh). Calcium is essential.</div></div>"
+      "id": "BloodGroupsABORh",
+      "heading": "Blood Groups — ABO & Rh",
+      "html": "\n   <p>The <span class=\"term\">ABO system</span> depends on surface antigens (A, B) on RBCs and natural antibodies in plasma.</p>\n   <table class=\"t\"><tr><th>Group</th><th>Antigen (RBC)</th><th>Antibody (plasma)</th><th>Can donate to</th></tr>\n   <tr><td>A</td><td>A</td><td>anti-B</td><td>A, AB</td></tr>\n   <tr><td>B</td><td>B</td><td>anti-A</td><td>B, AB</td></tr>\n   <tr><td>AB</td><td>A and B</td><td>none</td><td>AB only</td></tr>\n   <tr><td>O</td><td>none</td><td>anti-A & anti-B</td><td>All (universal donor)</td></tr></table>\n   <div class=\"callout\"><b>O</b> = universal donor; <b>AB</b> = universal recipient.</div>\n   <h4>Rh Factor</h4>\n   <ul><li>Rh antigen (like the rhesus monkey): <b>Rh⁺</b> have it, <b>Rh⁻</b> lack it.</li><li><b>Erythroblastosis fetalis</b>: an Rh⁻ mother carrying an Rh⁺ foetus may make anti-Rh antibodies that attack the foetal RBCs in a later Rh⁺ pregnancy.</li></ul>\n   <div class=\"mnem\"><div class=\"lab\">🧠 Memory Hook</div><div class=\"hook\">\"O gives to all, AB takes from all\"</div><div class=\"ex\">O = no antigens → universal donor. AB = no antibodies → universal recipient.</div></div>"
+    },
+    {
+      "id": "BloodClottingCoagulation",
+      "heading": "Blood Clotting (Coagulation)",
+      "html": "\n   <p>A clot or coagulum is a network of <b>fibrin</b> threads trapping blood cells. It seals injured vessels.</p>\n   <div class=\"flow\"><span class=\"step\">Injury → platelets release factors + thromboplastin</span><span class=\"arr\">→</span><span class=\"step\">Prothrombin → Thrombin (needs Ca²⁺)</span><span class=\"arr\">→</span><span class=\"step\">Fibrinogen → Fibrin</span><span class=\"arr\">→</span><span class=\"step\">Fibrin mesh traps cells = clot</span></div>\n   <ul><li>Requires <b>Ca²⁺</b> ions and clotting factors (numbered I–XIII).</li><li><b>Heparin</b> is a natural anticoagulant; <b>vitamin K</b> is needed for prothrombin synthesis.</li></ul>\n   <div class=\"formula\">Prothrombin --(thrombokinase + Ca²⁺)--> Thrombin\nFibrinogen --(thrombin)--> Fibrin (insoluble threads)</div>"
     },
     {
       "id": "LymphTissueFluid",
       "heading": "Lymph (Tissue Fluid)",
-      "html": "\n   <p>As blood passes through capillaries, plasma + WBCs + small solutes filter out (minus most proteins & RBCs) into spaces = <span class=\"term\">interstitial / tissue fluid</span>. This is drained by lymphatic vessels as <span class=\"term\">lymph</span>.</p>\n   <ul><li>Colourless fluid containing lymphocytes (no RBC, few proteins).</li><li>Functions: returns interstitial fluid/proteins to blood, absorbs & transports fats (via lacteals in intestinal villi), immunity.</li></ul>"
+      "html": "\n   <p><span class=\"term\">Lymph</span> is a colourless fluid formed when plasma (without large proteins and RBCs) filters out of capillaries into tissue spaces.</p>\n   <ul><li>Contains WBCs — mainly <b>lymphocytes</b>; <b>no RBCs</b>.</li><li>Returns tissue fluid, proteins and absorbed <b>fats</b> (via lacteals) back to the blood.</li><li>Part of the immune system; nodes filter pathogens.</li></ul>\n   <table class=\"t\"><tr><th>Feature</th><th>Blood</th><th>Lymph</th></tr>\n   <tr><td>RBC</td><td>Present</td><td>Absent</td></tr>\n   <tr><td>Proteins</td><td>High</td><td>Low</td></tr>\n   <tr><td>Direction</td><td>Circulates in vessels/heart</td><td>Tissue → back to blood</td></tr></table>"
     },
     {
-      "id": "HumanHeartStructure",
-      "heading": "Human Heart — Structure",
-      "html": "\n   <p>Mesodermally derived, four-chambered, in the thoracic cavity, enclosed by a double-walled <b>pericardium</b> (pericardial fluid reduces friction).</p>\n   <ul><li><b>2 atria</b> (thin-walled, receive blood) + <b>2 ventricles</b> (thick-walled, pump out). Inter-atrial & inter-ventricular septa keep oxygenated/deoxygenated blood separate.</li><li><b>Right AV (tricuspid) valve</b> between right atrium & ventricle; <b>left AV (bicuspid/mitral) valve</b> on the left.</li><li><b>Semilunar valves</b> guard the openings into the pulmonary artery & aorta. Valves allow one-way flow.</li></ul>\n   <h4>Conducting system (myogenic heart)</h4>\n   <ul><li><b>SA node (pacemaker)</b> in right atrium upper wall — initiates each beat (~70–75/min).</li><li><b>AV node</b> in lower right inter-atrial septum.</li><li><b>Bundle of His</b> → right & left bundle branches → <b>Purkinje fibres</b> spread the impulse through ventricles.</li></ul>\n   <div class=\"mnem\"><div class=\"lab\">🧠 Valves</div><div class=\"hook\">\"LAB RAT — Left Atrium Bicuspid, Right Atrium Tricuspid\"</div></div>"
+      "id": "CirculatoryPatterns",
+      "heading": "Circulatory Patterns",
+      "html": "\n   <p>Animals show <span class=\"term\">open</span> or <span class=\"term\">closed</span> circulation.</p>\n   <table class=\"t\"><tr><th>Open</th><th>Closed</th></tr>\n   <tr><td>Blood flows through open spaces (haemocoel)</td><td>Blood confined to vessels</td></tr>\n   <tr><td>Low pressure, less efficient</td><td>High pressure, precise control</td></tr>\n   <tr><td>Arthropods, molluscs</td><td>Annelids, vertebrates</td></tr></table>\n   <h4>Heart-based circulation</h4>\n   <ul><li><b>Single circulation</b> — fishes; blood passes through the heart once per cycle (2-chambered heart).</li><li><b>Incomplete double</b> — amphibians & most reptiles (3-chambered; mixing).</li><li><b>Complete double</b> — birds & mammals (4-chambered; no mixing).</li></ul>"
     },
     {
-      "id": "CardiacCycleHeartSounds",
-      "heading": "Cardiac Cycle & Heart Sounds",
-      "html": "\n   <p>One <span class=\"term\">cardiac cycle</span> = the sequential events in one heartbeat (~0.8 s at 72 beats/min): atrial systole → ventricular systole → joint diastole.</p>\n   <ul><li><b>Cardiac output</b> = Stroke volume × Heart rate ≈ 70 mL × 72 ≈ 5 L/min.</li><li><b>Stroke volume:</b> blood pumped per beat (~70 mL).</li></ul>\n   <span class=\"formula\">Cardiac Output (CO) = Stroke Volume (SV) × Heart Rate (HR)</span>\n   <h4>Heart sounds</h4>\n   <ul><li><b>First \"lubb\" (S1):</b> closure of AV valves (start of ventricular systole).</li><li><b>Second \"dup\" (S2):</b> closure of semilunar valves (end of ventricular systole).</li></ul>"
+      "id": "TheHumanHeartStructure",
+      "heading": "The Human Heart — Structure",
+      "html": "\n   <p>The <span class=\"term\">heart</span> is mesodermal, lies in the thoracic cavity between the lungs, protected by a double-walled <b>pericardium</b> with pericardial fluid.</p>\n   <ul><li>Four chambers: two thin-walled <b>atria</b> (upper) and two thick-walled <b>ventricles</b> (lower); the <b>left ventricle</b> is thickest (pumps to the whole body).</li><li>Septa: inter-atrial, inter-ventricular and atrioventricular.</li></ul>\n   <h4>Valves (prevent backflow)</h4>\n   <table class=\"t\"><tr><th>Valve</th><th>Location</th><th>Cusps</th></tr>\n   <tr><td>Tricuspid</td><td>Right atrium → right ventricle</td><td>3</td></tr>\n   <tr><td>Bicuspid (mitral)</td><td>Left atrium → left ventricle</td><td>2</td></tr>\n   <tr><td>Pulmonary semilunar</td><td>Right ventricle → pulmonary artery</td><td>3</td></tr>\n   <tr><td>Aortic semilunar</td><td>Left ventricle → aorta</td><td>3</td></tr></table>\n   <div class=\"mnem\"><div class=\"lab\">🧠 Memory Hook</div><div class=\"hook\">\"LAB RAT\"</div><div class=\"ex\"><b>L</b>eft <b>A</b>trium → <b>B</b>icuspid; <b>R</b>ight <b>A</b>trium → <b>T</b>ricuspid.</div></div>"
     },
     {
-      "id": "ECGElectrocardiogram",
-      "heading": "ECG (Electrocardiogram)",
-      "html": "\n   <p>A graphic record of the electrical activity of the heart during a cardiac cycle (W. Einthoven).</p>\n   <ul><li><b>P wave:</b> atrial depolarisation (atrial contraction).</li><li><b>QRS complex:</b> ventricular depolarisation (ventricular contraction begins).</li><li><b>T wave:</b> ventricular repolarisation (recovery).</li></ul>\n   <p>Counting QRS complexes over a time period gives the heart rate. The number/shape of waves indicates heart abnormalities.</p>\n   <div class=\"mnem\"><div class=\"lab\">🧠 ECG waves</div><div class=\"hook\">\"P-pushes Atria, QRS-Quivers Ventricles, T-Takes a rest\"</div></div>"
+      "id": "ConductingSystemCardiacCycle",
+      "heading": "Conducting System & Cardiac Cycle",
+      "html": "\n   <p>The heart is <b>myogenic</b> — it generates its own beat through specialised tissue.</p>\n   <div class=\"flow\"><span class=\"step\">SA node (pacemaker)</span><span class=\"arr\">→</span><span class=\"step\">AV node</span><span class=\"arr\">→</span><span class=\"step\">Bundle of His</span><span class=\"arr\">→</span><span class=\"step\">Bundle branches</span><span class=\"arr\">→</span><span class=\"step\">Purkinje fibres</span></div>\n   <ul><li>The <b>SA node</b> in the right atrium wall is the <b>pacemaker</b>, setting the rhythm (~70–75/min).</li></ul>\n   <h4>Cardiac cycle (~0.8 s at 72 bpm)</h4>\n   <table class=\"t\"><tr><th>Phase</th><th>Duration</th></tr>\n   <tr><td>Atrial systole</td><td>0.1 s</td></tr>\n   <tr><td>Ventricular systole</td><td>0.3 s</td></tr>\n   <tr><td>Joint diastole</td><td>0.4 s</td></tr></table>\n   <ul><li><b>Heart sounds</b>: \"<b>lub</b>\" (S1 — AV valves close) and \"<b>dub</b>\" (S2 — semilunar valves close).</li></ul>\n   <div class=\"formula\">Stroke Volume ≈ 70 mL\nCardiac Output = Stroke Volume × Heart Rate ≈ 70 × 72 ≈ 5000 mL/min (5 L)</div>"
     },
     {
-      "id": "DoubleCirculationRegulation",
-      "heading": "Double Circulation & Regulation",
-      "html": "\n   <p>Blood passes through the heart <b>twice</b> per cycle = <span class=\"term\">double circulation</span>.</p>\n   <ul><li><b>Pulmonary circulation:</b> right ventricle → pulmonary artery → lungs (oxygenation) → pulmonary veins → left atrium.</li><li><b>Systemic circulation:</b> left ventricle → aorta → body tissues → vena cava → right atrium.</li><li><b>Hepatic portal system:</b> carries blood from intestine to liver before reaching the heart.</li><li><b>Coronary circulation:</b> supplies the heart muscle itself.</li></ul>\n   <p>Heart action is regulated by the <b>autonomic nervous system</b>: sympathetic ↑ rate & output; parasympathetic (vagus) ↓ rate. Adrenal medullary hormones (adrenaline) also ↑ cardiac output.</p>\n   <div class=\"mnem\"><div class=\"lab\">🧠 Two loops</div><div class=\"hook\">\"Pulmonary = to Lungs; Systemic = to System (body)\"</div></div>"
+      "id": "ECGDoubleCirculation",
+      "heading": "ECG & Double Circulation",
+      "html": "\n   <p>An <span class=\"term\">electrocardiogram (ECG)</span> records the heart’s electrical activity as standard waves.</p>\n   <table class=\"t\"><tr><th>Wave</th><th>Represents</th></tr>\n   <tr><td>P wave</td><td>Atrial depolarisation (atria contract)</td></tr>\n   <tr><td>QRS complex</td><td>Ventricular depolarisation (ventricles contract)</td></tr>\n   <tr><td>T wave</td><td>Ventricular repolarisation (relaxation)</td></tr></table>\n   <div class=\"callout\">Counting QRS complexes over a known time gives the heart rate.</div>\n   <h4>Double circulation</h4>\n   <div class=\"flow\"><span class=\"step\">Pulmonary: RA → RV → lungs → LA</span><span class=\"arr\">||</span><span class=\"step\">Systemic: LA → LV → body → RA</span></div>\n   <ul><li><b>Pulmonary circuit</b> carries deoxygenated blood to the lungs and oxygenated blood back.</li><li><b>Systemic circuit</b> delivers oxygenated blood to body tissues and returns deoxygenated blood.</li></ul>"
     },
     {
-      "id": "DisordersoftheCirculatorySystem",
-      "heading": "Disorders of the Circulatory System",
-      "html": "\n   <ul><li><b>Hypertension:</b> high blood pressure (>140/90 mmHg; normal ~120/80). Leads to heart & kidney damage.</li><li><b>Coronary Artery Disease (CAD) / atherosclerosis:</b> deposits of Ca, fat, cholesterol & fibrous tissue narrow coronary arteries.</li><li><b>Angina (angina pectoris):</b> chest pain when heart muscle gets too little O₂.</li><li><b>Heart failure:</b> heart cannot pump enough blood (congestive when fluid accumulates in lungs).</li><li><b>Cardiac arrest:</b> heart stops beating. <b>Heart attack (myocardial infarction):</b> heart muscle damaged from sudden loss of blood supply.</li></ul>"
+      "id": "BloodVesselsRegulationDisorders",
+      "heading": "Blood Vessels, Regulation & Disorders",
+      "html": "\n   <p>Three vessel types form the closed circuit.</p>\n   <table class=\"t\"><tr><th>Vessel</th><th>Carries</th><th>Wall</th><th>Valves</th></tr>\n   <tr><td>Artery</td><td>Blood away from heart</td><td>Thick, muscular, elastic</td><td>Absent</td></tr>\n   <tr><td>Vein</td><td>Blood toward heart</td><td>Thinner</td><td>Present</td></tr>\n   <tr><td>Capillary</td><td>Exchange site</td><td>One cell thick</td><td>—</td></tr></table>\n   <div class=\"callout\">The <b>pulmonary artery</b> is the only artery carrying deoxygenated blood; the <b>pulmonary vein</b> is the only vein carrying oxygenated blood.</div>\n   <h4>Regulation</h4>\n   <ul><li>The <b>cardiac centre</b> in the medulla oblongata regulates heart activity via the autonomic nervous system.</li><li><b>Sympathetic</b> nerves & adrenaline increase the rate/force; <b>parasympathetic (vagus)</b> decreases it.</li></ul>\n   <h4>Disorders</h4>\n   <ul><li><b>Hypertension</b> — persistent high blood pressure (above ~140/90 mmHg).</li><li><b>Coronary Artery Disease (atherosclerosis)</b> — narrowing of coronary arteries by plaque.</li><li><b>Angina pectoris</b> — chest pain from insufficient O₂ to the heart muscle.</li><li><b>Heart failure</b> — the heart cannot pump enough blood for body needs.</li></ul>"
     }
   ],
   "mnemonics": [
     {
-      "title": "WBC % high→low",
-      "device": "Never Let Monkeys Eat Bananas",
+      "title": "WBC abundance high→low: Neutrophil > Lymphocyte > Monocyte > Eosinophil > Basophil.",
+      "device": "\"Never Let Monkeys Eat Bananas\"",
       "expand": [
         {
           "L": "",
-          "t": "Neutrophil > Lymphocyte > Monocyte > Eosinophil > Basophil."
+          "t": "WBC counts"
         }
       ]
     },
     {
-      "title": "Heart valves",
-      "device": "LAB RAT",
+      "title": "Left Atrium → Bicuspid valve; Right Atrium → Tricuspid valve.",
+      "device": "\"LAB RAT\"",
       "expand": [
         {
           "L": "",
-          "t": "Left Atrium Bicuspid, Right Atrium Tricuspid."
+          "t": "Heart valves"
+        }
+      ]
+    },
+    {
+      "title": "Group O = universal donor (no antigens); Group AB = universal recipient (no antibodies).",
+      "device": "\"O gives to all, AB takes from all\"",
+      "expand": [
+        {
+          "L": "",
+          "t": "Blood groups"
+        }
+      ]
+    },
+    {
+      "title": "The SinoAtrial Node is the pacemaker that initiates each heartbeat.",
+      "device": "\"SAN Sets the rhythm\"",
+      "expand": [
+        {
+          "L": "",
+          "t": "Conduction"
+        }
+      ]
+    },
+    {
+      "title": "ECG waves in order — P (atrial contraction), QRS (ventricular contraction), T (ventricular relaxation).",
+      "device": "\"P-QRS-T: Atria depol, Ventricle depol, Ventricle repol\"",
+      "expand": [
+        {
+          "L": "",
+          "t": "ECG"
+        }
+      ]
+    },
+    {
+      "title": "It is the only artery carrying deoxygenated blood; the pulmonary vein is the only vein carrying oxygenated blood.",
+      "device": "\"Pulmonary Artery is the ODD one\"",
+      "expand": [
+        {
+          "L": "",
+          "t": "Vessels"
         }
       ]
     }
   ],
   "flashcards": [
     {
-      "front": "Plasma vs serum?",
-      "back": "Plasma = fluid part of blood with clotting factors (~55%). Serum = plasma minus clotting factors (fibrinogen)."
+      "front": "What type of tissue is blood?",
+      "back": "A fluid connective tissue with plasma as its matrix."
     },
     {
-      "front": "Normal RBC count and lifespan?",
-      "back": "~5–5.5 million/mm³; lifespan ~120 days; biconcave, no nucleus in mammals."
+      "front": "What percentage of blood is plasma?",
+      "back": "About 55%."
     },
     {
-      "front": "Most abundant WBC?",
-      "back": "Neutrophils (60–65%) — phagocytic granulocytes."
+      "front": "Water content of plasma?",
+      "back": "90–92% water."
     },
     {
-      "front": "Rarest WBC?",
-      "back": "Basophils (0.5–1%) — release histamine & heparin."
+      "front": "Three major plasma proteins and roles?",
+      "back": "Fibrinogen (clotting), globulins (defence/antibodies), albumins (osmotic balance)."
     },
     {
-      "front": "Which protein is needed for clotting?",
-      "back": "Fibrinogen (and prothrombin) — made in the liver; fibrin forms the clot mesh."
+      "front": "What is serum?",
+      "back": "Plasma without the clotting factors (fibrinogen)."
     },
     {
-      "front": "Universal donor and universal recipient blood groups?",
-      "back": "O is the universal donor (no antigens); AB is the universal recipient (no antibodies)."
+      "front": "Normal RBC count?",
+      "back": "5–5.5 million per mm³."
     },
     {
-      "front": "What antibodies are present in blood group A?",
-      "back": "Anti-B antibodies (antigen A on RBC)."
+      "front": "Lifespan of an RBC?",
+      "back": "About 120 days."
     },
     {
-      "front": "What is erythroblastosis foetalis?",
-      "back": "Destruction of an Rh⁺ foetus’s RBCs by anti-Rh antibodies from a sensitised Rh⁻ mother during a later pregnancy."
+      "front": "Where are RBCs formed and destroyed?",
+      "back": "Formed in red bone marrow; destroyed in the spleen."
     },
     {
-      "front": "Role of calcium in clotting?",
-      "back": "Ca²⁺ ions are essential cofactors at several steps of the clotting cascade."
+      "front": "Why is the spleen called the \"graveyard of RBCs\"?",
+      "back": "Old/worn RBCs are broken down there."
     },
     {
-      "front": "What is lymph and a key function?",
-      "back": "Colourless tissue fluid (lymphocytes, no RBC, few proteins); absorbs/transports fats via lacteals and returns fluid to blood."
+      "front": "Haemoglobin concentration in blood?",
+      "back": "12–16 g per 100 mL of blood."
     },
     {
-      "front": "Which valve lies between the left atrium and left ventricle?",
-      "back": "The bicuspid (mitral) valve."
+      "front": "Shape and nucleus of a mammalian RBC?",
+      "back": "Biconcave disc; lacks a nucleus."
     },
     {
-      "front": "Pacemaker of the heart?",
-      "back": "The SA (sino-atrial) node in the right atrium — sets the heart rhythm (~70–75/min)."
+      "front": "Normal WBC count?",
+      "back": "6000–8000 per mm³."
     },
     {
-      "front": "Sequence of the heart’s conducting system?",
-      "back": "SA node → AV node → Bundle of His → bundle branches → Purkinje fibres."
+      "front": "Two groups of WBCs?",
+      "back": "Granulocytes and agranulocytes."
     },
     {
-      "front": "Cardiac output formula and normal value?",
-      "back": "CO = Stroke Volume × Heart Rate ≈ 70 mL × 72 ≈ 5 L/min."
+      "front": "Name the granulocytes.",
+      "back": "Neutrophils, eosinophils and basophils."
     },
     {
-      "front": "What causes the \"lubb\" and \"dup\" heart sounds?",
-      "back": "Lubb (S1): AV valves close (start of ventricular systole). Dup (S2): semilunar valves close (end of ventricular systole)."
+      "front": "Name the agranulocytes.",
+      "back": "Lymphocytes and monocytes."
     },
     {
-      "front": "What do the P, QRS and T waves of an ECG represent?",
-      "back": "P = atrial depolarisation; QRS = ventricular depolarisation; T = ventricular repolarisation."
+      "front": "Most abundant WBC and its function?",
+      "back": "Neutrophil (60–65%); phagocytosis."
     },
     {
-      "front": "What is double circulation?",
-      "back": "Blood flows through the heart twice — pulmonary (heart↔lungs) and systemic (heart↔body) circuits."
+      "front": "Rarest WBC and its function?",
+      "back": "Basophil (0.5–1%); releases histamine and heparin."
     },
     {
-      "front": "Hepatic portal system carries blood from ___ to ___?",
-      "back": "From the intestine to the liver before it returns to the heart."
+      "front": "Largest WBC?",
+      "back": "Monocyte (phagocytic)."
     },
     {
-      "front": "Define angina pectoris.",
-      "back": "Chest pain due to insufficient oxygen reaching the heart muscle."
+      "front": "Which WBCs provide immunity?",
+      "back": "Lymphocytes (B and T cells)."
     },
     {
-      "front": "Normal vs hypertensive blood pressure?",
-      "back": "Normal ~120/80 mmHg; hypertension is repeatedly above 140/90 mmHg."
+      "front": "Normal platelet count?",
+      "back": "1.5–3.5 lakh per mm³."
+    },
+    {
+      "front": "Function of platelets?",
+      "back": "Help in blood clotting (coagulation)."
+    },
+    {
+      "front": "Antigen and antibody of blood group A?",
+      "back": "Antigen A on RBC; anti-B antibody in plasma."
+    },
+    {
+      "front": "Which group is the universal donor?",
+      "back": "O (no A or B antigens)."
+    },
+    {
+      "front": "Which group is the universal recipient?",
+      "back": "AB (no antibodies)."
+    },
+    {
+      "front": "Antibodies present in group O?",
+      "back": "Both anti-A and anti-B."
+    },
+    {
+      "front": "What is the Rh factor?",
+      "back": "An antigen on RBCs; Rh⁺ have it, Rh⁻ lack it."
+    },
+    {
+      "front": "What is erythroblastosis fetalis?",
+      "back": "Destruction of an Rh⁺ foetus’s RBCs by an Rh⁻ mother’s antibodies."
+    },
+    {
+      "front": "End product of blood clotting?",
+      "back": "A mesh of insoluble fibrin threads trapping blood cells."
+    },
+    {
+      "front": "Which ion is essential for clotting?",
+      "back": "Calcium (Ca²⁺)."
+    },
+    {
+      "front": "Inactive form of thrombin?",
+      "back": "Prothrombin."
+    },
+    {
+      "front": "Fibrinogen is converted to fibrin by?",
+      "back": "Thrombin."
+    },
+    {
+      "front": "A natural anticoagulant in blood?",
+      "back": "Heparin."
+    },
+    {
+      "front": "Vitamin needed for clotting?",
+      "back": "Vitamin K (for prothrombin synthesis)."
+    },
+    {
+      "front": "What is lymph?",
+      "back": "Colourless tissue fluid containing WBCs (mostly lymphocytes) but no RBCs."
+    },
+    {
+      "front": "How does lymph differ from blood?",
+      "back": "Lymph has no RBCs and little protein; it returns tissue fluid to blood."
+    },
+    {
+      "front": "Lymph absorbs which nutrients from the intestine?",
+      "back": "Fats, via lacteals."
+    },
+    {
+      "front": "Open vs closed circulation?",
+      "back": "Open — blood bathes tissues in open spaces; closed — blood stays within vessels."
+    },
+    {
+      "front": "Type of circulation in fishes?",
+      "back": "Single circulation (2-chambered heart)."
+    },
+    {
+      "front": "Which animals show complete double circulation?",
+      "back": "Birds and mammals (4-chambered heart)."
+    },
+    {
+      "front": "How many chambers in the human heart?",
+      "back": "Four — two atria and two ventricles."
+    },
+    {
+      "front": "Which chamber has the thickest wall and why?",
+      "back": "The left ventricle — it pumps blood to the whole body."
+    },
+    {
+      "front": "What protects the heart externally?",
+      "back": "A double-walled pericardium with pericardial fluid."
+    },
+    {
+      "front": "Valve between right atrium and ventricle?",
+      "back": "Tricuspid valve (3 cusps)."
+    },
+    {
+      "front": "Valve between left atrium and ventricle?",
+      "back": "Bicuspid (mitral) valve (2 cusps)."
+    },
+    {
+      "front": "Which node is the pacemaker?",
+      "back": "The sino-atrial node (SA node)."
+    },
+    {
+      "front": "Correct order of impulse conduction?",
+      "back": "SA node → AV node → bundle of His → bundle branches → Purkinje fibres."
+    },
+    {
+      "front": "Duration of one cardiac cycle at 72 bpm?",
+      "back": "About 0.8 seconds."
+    },
+    {
+      "front": "What causes the first heart sound \"lub\"?",
+      "back": "Closure of the atrioventricular (tricuspid & bicuspid) valves."
+    },
+    {
+      "front": "What causes the second heart sound \"dub\"?",
+      "back": "Closure of the semilunar valves."
+    },
+    {
+      "front": "Define cardiac output.",
+      "back": "Volume of blood pumped by each ventricle per minute (≈ 5 L); = stroke volume × heart rate."
+    },
+    {
+      "front": "What does the QRS complex of an ECG represent?",
+      "back": "Ventricular depolarisation (ventricular contraction)."
+    },
+    {
+      "front": "What does the T wave represent?",
+      "back": "Ventricular repolarisation (relaxation)."
+    },
+    {
+      "front": "The only artery carrying deoxygenated blood?",
+      "back": "The pulmonary artery."
+    },
+    {
+      "front": "The only vein carrying oxygenated blood?",
+      "back": "The pulmonary vein."
+    },
+    {
+      "front": "Where is the cardiac centre located?",
+      "back": "In the medulla oblongata."
+    },
+    {
+      "front": "What is hypertension?",
+      "back": "Persistently high blood pressure, above about 140/90 mmHg."
     }
   ],
   "recall": [
     {
-      "q": "Name the formed elements of blood and one function of each.",
-      "hint": "RBC, WBC, platelet",
-      "a": "RBCs (erythrocytes) — transport O₂/CO₂ via haemoglobin; WBCs (leucocytes) — immunity/defence; Platelets (thrombocytes) — blood clotting."
+      "q": "Describe the composition of blood.",
+      "hint": "Plasma + formed elements",
+      "a": "Blood is a fluid connective tissue: ~55% plasma (90–92% water; 6–8% proteins — fibrinogen, globulins, albumins; plus ions, glucose, hormones) and ~45% formed elements (RBCs, WBCs, platelets)."
     },
     {
-      "q": "Describe the ABO blood grouping with antigens and antibodies.",
-      "hint": "Antigen on RBC, antibody in plasma",
-      "a": "Group A: antigen A, anti-B antibody. Group B: antigen B, anti-A. Group AB: both antigens, no antibody (universal recipient). Group O: no antigen, both antibodies (universal donor)."
+      "q": "List the plasma proteins and their functions.",
+      "hint": "Fib, glob, alb",
+      "a": "Fibrinogen — blood clotting; globulins — immune defence (antibodies); albumins — maintain colloidal osmotic pressure/water balance."
     },
     {
-      "q": "Explain the mechanism of blood clotting.",
-      "hint": "Thromboplastin → thrombin → fibrin",
-      "a": "Injury exposes tissue/platelet factors → thrombokinase (thromboplastin) forms → with Ca²⁺ it converts prothrombin to thrombin → thrombin converts soluble fibrinogen to insoluble fibrin threads, which trap cells forming the clot."
+      "q": "Describe RBCs and their function.",
+      "hint": "Biconcave, Hb, 120 days",
+      "a": "Biconcave, enucleate (in mammals) cells, 5–5.5 million/mm³, formed in red bone marrow and destroyed in the spleen after ~120 days; carry haemoglobin (12–16 g/100 mL) for O₂ and CO₂ transport."
     },
     {
-      "q": "Describe the structure of the human heart.",
-      "hint": "4 chambers, valves, pericardium",
-      "a": "Four-chambered (2 atria, 2 ventricles) in a double-walled pericardium. AV valves (tricuspid right, bicuspid left) prevent backflow into atria; semilunar valves guard the aorta and pulmonary artery. Septa keep oxygenated and deoxygenated blood separate."
+      "q": "Classify WBCs with their percentages and functions.",
+      "hint": "Granulo vs agranulo",
+      "a": "Granulocytes: neutrophils (60–65%, phagocytosis), eosinophils (2–3%, allergy), basophils (0.5–1%, histamine/heparin). Agranulocytes: lymphocytes (20–25%, immunity), monocytes (6–8%, phagocytosis)."
+    },
+    {
+      "q": "Explain the ABO blood group system.",
+      "hint": "Antigen/antibody table",
+      "a": "RBCs may carry antigen A and/or B; plasma carries the corresponding natural antibodies. A (anti-B), B (anti-A), AB (no antibody — universal recipient), O (both antibodies, no antigen — universal donor)."
+    },
+    {
+      "q": "What is the Rh factor and erythroblastosis fetalis?",
+      "hint": "Rh⁻ mother, Rh⁺ foetus",
+      "a": "The Rh antigen on RBCs defines Rh⁺ (present) and Rh⁻ (absent). If an Rh⁻ mother carries an Rh⁺ foetus, she may form anti-Rh antibodies; in a later Rh⁺ pregnancy these cross the placenta and destroy foetal RBCs — erythroblastosis fetalis."
+    },
+    {
+      "q": "Describe the mechanism of blood clotting.",
+      "hint": "Thromboplastin→thrombin→fibrin",
+      "a": "Injury makes platelets release factors and thromboplastin; with Ca²⁺ this converts prothrombin to thrombin; thrombin converts soluble fibrinogen into insoluble fibrin threads that mesh and trap cells, forming the clot."
+    },
+    {
+      "q": "Differentiate blood and lymph.",
+      "hint": "RBC, protein, direction",
+      "a": "Blood is red, has RBCs and high protein, circulates in vessels/heart. Lymph is colourless, lacks RBCs, has low protein and mostly lymphocytes, flows from tissues back to blood and absorbs fats via lacteals."
+    },
+    {
+      "q": "Distinguish open and closed circulatory systems.",
+      "hint": "Haemocoel vs vessels",
+      "a": "Open: blood pumped into open spaces (haemocoel) bathing tissues, low pressure, in arthropods/molluscs. Closed: blood confined to vessels, high pressure, precisely regulated, in annelids and vertebrates."
+    },
+    {
+      "q": "Compare single, incomplete double and complete double circulation.",
+      "hint": "Fish / amphibian / mammal",
+      "a": "Single (fishes): blood passes once through a 2-chambered heart per cycle. Incomplete double (amphibians/reptiles): 3-chambered heart, some mixing. Complete double (birds/mammals): 4-chambered heart, fully separate oxygenated and deoxygenated streams."
+    },
+    {
+      "q": "Describe the external structure of the human heart.",
+      "hint": "Pericardium, 4 chambers",
+      "a": "A mesodermal organ in the thoracic cavity between the lungs, enclosed by a double-walled pericardium with pericardial fluid. It has four chambers: two thin atria above and two thick ventricles below, the left ventricle being thickest."
+    },
+    {
+      "q": "Name the heart valves and their positions.",
+      "hint": "Tri, bi, 2 semilunar",
+      "a": "Tricuspid (right atrium→right ventricle, 3 cusps), bicuspid/mitral (left atrium→left ventricle, 2 cusps), and semilunar valves at the pulmonary artery and aorta. All prevent backflow."
     },
     {
       "q": "Trace the conducting system of the heart.",
-      "hint": "SA → AV → His → Purkinje",
-      "a": "SA node (pacemaker) in the right atrium initiates the impulse → AV node → Bundle of His → right & left bundle branches → Purkinje fibres, contracting the ventricles. The heart is myogenic."
+      "hint": "SAN→AVN→His→Purkinje",
+      "a": "The SA node (pacemaker, right atrium) fires → impulse spreads through the atria to the AV node → bundle of His → right and left bundle branches → Purkinje fibres → ventricles contract."
     },
     {
-      "q": "Define cardiac cycle, cardiac output and stroke volume.",
-      "hint": "Cycle, SV, CO = SV×HR",
-      "a": "Cardiac cycle = events of one heartbeat (~0.8 s): atrial systole, ventricular systole, joint diastole. Stroke volume = blood pumped per beat (~70 mL). Cardiac output = SV × heart rate ≈ 5 L/min."
+      "q": "Describe the phases of the cardiac cycle.",
+      "hint": "0.1 / 0.3 / 0.4 s",
+      "a": "At 72 bpm one cycle lasts ~0.8 s: atrial systole (0.1 s), ventricular systole (0.3 s) and joint diastole (0.4 s) during which all chambers relax and fill."
     },
     {
-      "q": "Draw/explain the segments of a normal ECG.",
-      "hint": "P, QRS, T",
-      "a": "P wave = atrial depolarisation; QRS complex = ventricular depolarisation; T wave = ventricular repolarisation. The number of QRS complexes per minute gives heart rate; abnormal waves indicate disease."
+      "q": "What produces the two heart sounds?",
+      "hint": "AV close / SL close",
+      "a": "\"Lub\" (S1) is the closure of the atrioventricular valves at the start of ventricular systole; \"dub\" (S2) is the closure of the semilunar valves at the end of ventricular systole."
     },
     {
-      "q": "What is double circulation? Name its components.",
+      "q": "Define stroke volume and cardiac output with values.",
+      "hint": "70 mL × 72",
+      "a": "Stroke volume is the blood ejected per beat (~70 mL). Cardiac output = stroke volume × heart rate ≈ 70 mL × 72 ≈ 5000 mL (5 L) per minute."
+    },
+    {
+      "q": "Explain the P, QRS and T waves of an ECG.",
+      "hint": "Atria / ventricle / relax",
+      "a": "P wave = atrial depolarisation (atria contract); QRS complex = ventricular depolarisation (ventricles contract); T wave = ventricular repolarisation (ventricles relax). Heart rate can be read from QRS spacing."
+    },
+    {
+      "q": "Describe double circulation in humans.",
       "hint": "Pulmonary + systemic",
-      "a": "Blood passes through the heart twice per circuit. Pulmonary circulation: right ventricle → lungs → left atrium. Systemic circulation: left ventricle → body → right atrium. Also hepatic portal and coronary circulation."
+      "a": "Pulmonary circuit: deoxygenated blood goes right atrium → right ventricle → pulmonary artery → lungs → pulmonary vein → left atrium. Systemic circuit: oxygenated blood goes left atrium → left ventricle → aorta → body → vena cava → right atrium."
     },
     {
-      "q": "How is the heart’s activity regulated?",
-      "hint": "Autonomic + adrenaline",
-      "a": "The SA node is self-exciting (myogenic) but is modulated by the autonomic nervous system — sympathetic nerves increase rate & force, parasympathetic (vagus) decreases rate; adrenal medulla hormones (adrenaline) also raise cardiac output."
+      "q": "Differentiate arteries, veins and capillaries.",
+      "hint": "Wall, direction, valves",
+      "a": "Arteries: thick, muscular, elastic walls, carry blood away from the heart, no valves, high pressure. Veins: thinner walls, carry blood to the heart, have valves. Capillaries: one-cell-thick walls, site of exchange."
     },
     {
-      "q": "List four disorders of the circulatory system.",
-      "hint": "BP, CAD, angina, heart failure",
-      "a": "Hypertension (high BP), coronary artery disease/atherosclerosis, angina pectoris (chest pain from low O₂), and heart failure / myocardial infarction (heart attack)."
+      "q": "How is heart activity regulated?",
+      "hint": "Medulla, ANS, adrenaline",
+      "a": "The cardiac centre in the medulla oblongata acts through the autonomic system: sympathetic nerves and adrenal adrenaline raise rate and force; the parasympathetic vagus nerve lowers heart rate."
+    },
+    {
+      "q": "Why is the left ventricle wall thicker than the right?",
+      "hint": "Systemic vs pulmonary",
+      "a": "The left ventricle pumps oxygenated blood through the high-resistance systemic circuit to the whole body, needing greater force; the right ventricle only pumps to the nearby low-pressure lungs."
+    },
+    {
+      "q": "Why is the pulmonary artery unusual among arteries?",
+      "hint": "Carries deoxygenated",
+      "a": "It is the only artery that carries deoxygenated blood (from the right ventricle to the lungs); conversely the pulmonary vein is the only vein carrying oxygenated blood."
+    },
+    {
+      "q": "What is the role of haemoglobin?",
+      "hint": "O₂ carrier",
+      "a": "Haemoglobin is the iron-containing red pigment of RBCs that binds and transports oxygen (as oxyhaemoglobin) and helps carry carbon dioxide and buffer the blood."
+    },
+    {
+      "q": "List functions of blood.",
+      "hint": "Transport, defence, clot, regulate",
+      "a": "Transport of O₂, CO₂, nutrients, hormones and wastes; defence (WBCs, antibodies); clotting (platelets); regulation of pH and body temperature."
+    },
+    {
+      "q": "Why must blood groups be matched before transfusion?",
+      "hint": "Agglutination",
+      "a": "If donor RBC antigens meet matching recipient antibodies, the RBCs agglutinate (clump) and haemolyse, which can be fatal; matching prevents this incompatibility reaction."
+    },
+    {
+      "q": "What is the function of the SA node and why is the heart myogenic?",
+      "hint": "Self-generating beat",
+      "a": "The SA node spontaneously generates electrical impulses that set the heartbeat rhythm; because the beat originates within the heart muscle itself (not from nerves), the heart is described as myogenic."
+    },
+    {
+      "q": "Differentiate systole and diastole.",
+      "hint": "Contract vs relax",
+      "a": "Systole is contraction of heart muscle (atrial or ventricular) that ejects blood; diastole is relaxation during which the chambers fill with blood."
+    },
+    {
+      "q": "Explain coronary artery disease (atherosclerosis).",
+      "hint": "Plaque in coronary arteries",
+      "a": "Deposits of cholesterol, fats and calcium (plaque) narrow and harden the coronary arteries, reducing blood flow to the heart muscle and causing chest pain (angina) or heart attack."
+    },
+    {
+      "q": "What is the function of lymph nodes?",
+      "hint": "Filter + immunity",
+      "a": "Lymph nodes filter the lymph, trapping bacteria and other antigens, and house lymphocytes that mount immune responses."
+    },
+    {
+      "q": "Why does an Rh-incompatibility problem usually not affect the first pregnancy?",
+      "hint": "Sensitised at first birth",
+      "a": "The mother is first exposed to Rh⁺ foetal blood mainly during delivery, so antibodies form afterward; these endanger only a subsequent Rh⁺ foetus."
     }
   ],
   "mcqs": [
     {
-      "q": "The fluid part of blood without clotting factors is:",
+      "q": "Blood is a type of:",
       "o": [
-        "Plasma",
-        "Serum",
-        "Lymph",
-        "Tissue fluid"
+        "Epithelial tissue",
+        "Connective tissue",
+        "Muscular tissue",
+        "Nervous tissue"
       ],
       "c": 1,
-      "e": "Serum = plasma minus clotting factors (chiefly fibrinogen)."
+      "e": "Blood is a fluid connective tissue with plasma as matrix."
     },
     {
-      "q": "Universal blood donor group is:",
+      "q": "Percentage of plasma in blood is about:",
       "o": [
-        "AB",
-        "A",
-        "O",
-        "B"
+        "25%",
+        "45%",
+        "55%",
+        "75%"
       ],
       "c": 2,
-      "e": "O has no A/B antigens, so it can be given to any group."
+      "e": "Plasma forms roughly 55% of blood; formed elements ~45%."
     },
     {
-      "q": "Most numerous WBCs are:",
+      "q": "The plasma protein responsible for clotting is:",
       "o": [
-        "Lymphocytes",
+        "Albumin",
+        "Globulin",
+        "Fibrinogen",
+        "Haemoglobin"
+      ],
+      "c": 2,
+      "e": "Fibrinogen is converted to fibrin during clotting."
+    },
+    {
+      "q": "Serum is plasma without:",
+      "o": [
+        "Water",
+        "Clotting factors",
+        "Glucose",
+        "Ions"
+      ],
+      "c": 1,
+      "e": "Serum = plasma minus clotting factors (fibrinogen)."
+    },
+    {
+      "q": "Normal RBC count per mm³ is about:",
+      "o": [
+        "5000–8000",
+        "1.5–3.5 lakh",
+        "5–5.5 million",
+        "120"
+      ],
+      "c": 2,
+      "e": "RBCs number 5–5.5 million/mm³."
+    },
+    {
+      "q": "Lifespan of a human RBC is:",
+      "o": [
+        "10 days",
+        "120 days",
+        "1 year",
+        "24 hours"
+      ],
+      "c": 1,
+      "e": "RBCs live about 120 days."
+    },
+    {
+      "q": "RBCs are destroyed in the:",
+      "o": [
+        "Liver",
+        "Spleen",
+        "Kidney",
+        "Heart"
+      ],
+      "c": 1,
+      "e": "The spleen is the graveyard of RBCs."
+    },
+    {
+      "q": "Mammalian RBCs are unique in lacking a:",
+      "o": [
+        "Membrane",
+        "Nucleus",
+        "Cytoplasm",
+        "Haemoglobin"
+      ],
+      "c": 1,
+      "e": "Mature mammalian RBCs are enucleate and biconcave."
+    },
+    {
+      "q": "The most abundant WBC is the:",
+      "o": [
+        "Lymphocyte",
+        "Monocyte",
+        "Neutrophil",
+        "Basophil"
+      ],
+      "c": 2,
+      "e": "Neutrophils form 60–65% of WBCs."
+    },
+    {
+      "q": "The rarest WBC is the:",
+      "o": [
+        "Eosinophil",
+        "Basophil",
+        "Neutrophil",
+        "Monocyte"
+      ],
+      "c": 1,
+      "e": "Basophils are only 0.5–1% of WBCs."
+    },
+    {
+      "q": "The largest WBC is the:",
+      "o": [
+        "Lymphocyte",
+        "Monocyte",
+        "Neutrophil",
+        "Eosinophil"
+      ],
+      "c": 1,
+      "e": "Monocytes are the largest leucocytes."
+    },
+    {
+      "q": "Which WBCs are agranulocytes?",
+      "o": [
+        "Neutrophil & eosinophil",
+        "Lymphocyte & monocyte",
+        "Basophil & eosinophil",
+        "Neutrophil & basophil"
+      ],
+      "c": 1,
+      "e": "Lymphocytes and monocytes lack cytoplasmic granules."
+    },
+    {
+      "q": "Normal platelet count per mm³ is:",
+      "o": [
+        "5 million",
+        "6000–8000",
+        "1.5–3.5 lakh",
+        "120"
+      ],
+      "c": 2,
+      "e": "Platelets number 1.5–3.5 lakh/mm³."
+    },
+    {
+      "q": "Histamine and heparin are released by:",
+      "o": [
         "Neutrophils",
-        "Eosinophils",
-        "Monocytes"
+        "Basophils",
+        "Monocytes",
+        "RBCs"
       ],
       "c": 1,
-      "e": "Neutrophils make up 60–65% of WBCs and are phagocytic."
+      "e": "Basophils release histamine and heparin."
     },
     {
-      "q": "Pacemaker of the heart is the:",
+      "q": "Blood group AB has antibodies:",
       "o": [
-        "AV node",
-        "SA node",
-        "Bundle of His",
-        "Purkinje fibres"
+        "Anti-A only",
+        "Anti-B only",
+        "Both anti-A & anti-B",
+        "None"
       ],
-      "c": 1,
-      "e": "The SA node in the right atrium initiates each heartbeat."
+      "c": 3,
+      "e": "AB has both antigens and no antibodies — universal recipient."
     },
     {
-      "q": "The bicuspid (mitral) valve is located between:",
+      "q": "The universal donor blood group is:",
+      "o": [
+        "A",
+        "B",
+        "AB",
+        "O"
+      ],
+      "c": 3,
+      "e": "O lacks A and B antigens, so it can donate to all."
+    },
+    {
+      "q": "Antigen present on RBCs of group A is:",
+      "o": [
+        "A",
+        "B",
+        "Both",
+        "None"
+      ],
+      "c": 0,
+      "e": "Group A carries antigen A and anti-B antibody."
+    },
+    {
+      "q": "Erythroblastosis fetalis arises from incompatibility of:",
+      "o": [
+        "ABO",
+        "Rh factor",
+        "MN groups",
+        "HLA"
+      ],
+      "c": 1,
+      "e": "It is due to Rh incompatibility between mother and foetus."
+    },
+    {
+      "q": "The ion essential for blood clotting is:",
+      "o": [
+        "Na⁺",
+        "K⁺",
+        "Ca²⁺",
+        "Cl⁻"
+      ],
+      "c": 2,
+      "e": "Calcium ions are required at several clotting steps."
+    },
+    {
+      "q": "Fibrinogen is converted into fibrin by:",
+      "o": [
+        "Prothrombin",
+        "Thrombin",
+        "Heparin",
+        "Thromboplastin"
+      ],
+      "c": 1,
+      "e": "Thrombin acts on fibrinogen to form fibrin."
+    },
+    {
+      "q": "A natural anticoagulant present in blood is:",
+      "o": [
+        "Fibrin",
+        "Thrombin",
+        "Heparin",
+        "Prothrombin"
+      ],
+      "c": 2,
+      "e": "Heparin prevents intravascular clotting."
+    },
+    {
+      "q": "Vitamin required for prothrombin synthesis is:",
+      "o": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin K"
+      ],
+      "c": 3,
+      "e": "Vitamin K is needed for clotting factor synthesis."
+    },
+    {
+      "q": "Lymph differs from blood in lacking:",
+      "o": [
+        "WBCs",
+        "RBCs",
+        "Plasma",
+        "Proteins"
+      ],
+      "c": 1,
+      "e": "Lymph has no RBCs."
+    },
+    {
+      "q": "Fats absorbed from the intestine are carried by:",
+      "o": [
+        "Blood plasma",
+        "Lymph (lacteals)",
+        "RBCs",
+        "Platelets"
+      ],
+      "c": 1,
+      "e": "Lacteals of the lymphatic system absorb fats."
+    },
+    {
+      "q": "Open circulation is found in:",
+      "o": [
+        "Annelids",
+        "Vertebrates",
+        "Arthropods",
+        "Fishes"
+      ],
+      "c": 2,
+      "e": "Arthropods and molluscs have open circulation."
+    },
+    {
+      "q": "Single circulation occurs in:",
+      "o": [
+        "Fishes",
+        "Birds",
+        "Mammals",
+        "Reptiles"
+      ],
+      "c": 0,
+      "e": "Fishes have single circulation with a 2-chambered heart."
+    },
+    {
+      "q": "A complete double circulation is seen in:",
+      "o": [
+        "Amphibians",
+        "Reptiles",
+        "Birds and mammals",
+        "Fishes"
+      ],
+      "c": 2,
+      "e": "Birds and mammals have 4-chambered hearts and complete double circulation."
+    },
+    {
+      "q": "The human heart has how many chambers?",
+      "o": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "c": 2,
+      "e": "Two atria and two ventricles."
+    },
+    {
+      "q": "The thickest chamber wall belongs to the:",
+      "o": [
+        "Right atrium",
+        "Left atrium",
+        "Right ventricle",
+        "Left ventricle"
+      ],
+      "c": 3,
+      "e": "The left ventricle pumps blood to the whole body."
+    },
+    {
+      "q": "The heart is covered by the:",
+      "o": [
+        "Peritoneum",
+        "Pericardium",
+        "Pleura",
+        "Meninges"
+      ],
+      "c": 1,
+      "e": "A double-walled pericardium with fluid surrounds the heart."
+    },
+    {
+      "q": "The valve between the right atrium and right ventricle is:",
+      "o": [
+        "Bicuspid",
+        "Tricuspid",
+        "Aortic",
+        "Pulmonary"
+      ],
+      "c": 1,
+      "e": "The tricuspid valve has three cusps."
+    },
+    {
+      "q": "The bicuspid (mitral) valve lies between the:",
       "o": [
         "Right atrium & ventricle",
         "Left atrium & ventricle",
@@ -264,18 +850,73 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Atria"
       ],
       "c": 1,
-      "e": "Bicuspid/mitral valve is the left AV valve (LAB — Left Atrium Bicuspid)."
+      "e": "The bicuspid valve guards the left atrioventricular opening."
     },
     {
-      "q": "The \"lubb\" sound is produced by closure of:",
+      "q": "The pacemaker of the heart is the:",
+      "o": [
+        "AV node",
+        "SA node",
+        "Bundle of His",
+        "Purkinje fibres"
+      ],
+      "c": 1,
+      "e": "The SA node initiates each heartbeat."
+    },
+    {
+      "q": "Correct sequence of impulse conduction is:",
+      "o": [
+        "AVN→SAN→His→Purkinje",
+        "SAN→AVN→His→Purkinje",
+        "His→SAN→AVN→Purkinje",
+        "Purkinje→His→AVN→SAN"
+      ],
+      "c": 1,
+      "e": "SA node → AV node → bundle of His → Purkinje fibres."
+    },
+    {
+      "q": "One cardiac cycle at 72 bpm lasts about:",
+      "o": [
+        "0.4 s",
+        "0.8 s",
+        "1.2 s",
+        "2 s"
+      ],
+      "c": 1,
+      "e": "At 72 beats/min each cycle is ~0.8 seconds."
+    },
+    {
+      "q": "The first heart sound \"lub\" is due to closure of:",
       "o": [
         "Semilunar valves",
         "AV valves",
-        "The aorta",
-        "SA node"
+        "Aorta",
+        "Pulmonary vein"
       ],
       "c": 1,
-      "e": "S1 (lubb) = closure of atrioventricular valves at the start of ventricular systole."
+      "e": "Lub = atrioventricular valves closing."
+    },
+    {
+      "q": "Cardiac output of a healthy human is about:",
+      "o": [
+        "1 L/min",
+        "5 L/min",
+        "15 L/min",
+        "70 mL/min"
+      ],
+      "c": 1,
+      "e": "≈ stroke volume (70 mL) × heart rate (72) ≈ 5 L/min."
+    },
+    {
+      "q": "Stroke volume is approximately:",
+      "o": [
+        "7 mL",
+        "70 mL",
+        "700 mL",
+        "7 L"
+      ],
+      "c": 1,
+      "e": "About 70 mL of blood is ejected per beat."
     },
     {
       "q": "The QRS complex of an ECG represents:",
@@ -286,116 +927,170 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
         "Atrial repolarisation"
       ],
       "c": 1,
-      "e": "QRS = depolarisation (contraction) of the ventricles."
+      "e": "QRS = ventricular depolarisation (contraction)."
     },
     {
-      "q": "Cardiac output is defined as:",
+      "q": "The T wave of an ECG represents:",
       "o": [
-        "SV ÷ HR",
-        "SV − HR",
-        "SV × HR",
-        "HR ÷ SV"
+        "Atrial contraction",
+        "Ventricular contraction",
+        "Ventricular repolarisation",
+        "SA node firing"
       ],
       "c": 2,
-      "e": "CO = Stroke Volume × Heart Rate (~70 mL × 72 ≈ 5 L/min)."
+      "e": "The T wave is ventricular repolarisation."
     },
     {
-      "q": "Final insoluble protein of a blood clot is:",
+      "q": "The P wave corresponds to:",
       "o": [
-        "Fibrinogen",
-        "Prothrombin",
-        "Fibrin",
-        "Thrombin"
+        "Atrial depolarisation",
+        "Ventricular depolarisation",
+        "Repolarisation",
+        "Heart sound"
+      ],
+      "c": 0,
+      "e": "The P wave marks atrial depolarisation."
+    },
+    {
+      "q": "The only artery carrying deoxygenated blood is the:",
+      "o": [
+        "Aorta",
+        "Pulmonary artery",
+        "Carotid artery",
+        "Renal artery"
+      ],
+      "c": 1,
+      "e": "The pulmonary artery takes deoxygenated blood to the lungs."
+    },
+    {
+      "q": "The only vein carrying oxygenated blood is the:",
+      "o": [
+        "Vena cava",
+        "Pulmonary vein",
+        "Hepatic vein",
+        "Renal vein"
+      ],
+      "c": 1,
+      "e": "The pulmonary vein returns oxygenated blood to the heart."
+    },
+    {
+      "q": "Vessels carrying blood away from the heart are:",
+      "o": [
+        "Veins",
+        "Arteries",
+        "Capillaries",
+        "Lymphatics"
+      ],
+      "c": 1,
+      "e": "Arteries carry blood away from the heart."
+    },
+    {
+      "q": "Valves are present in:",
+      "o": [
+        "Arteries",
+        "Veins",
+        "Capillaries",
+        "All vessels"
+      ],
+      "c": 1,
+      "e": "Veins have valves to prevent backflow against gravity."
+    },
+    {
+      "q": "The cardiac centre is located in the:",
+      "o": [
+        "Cerebrum",
+        "Cerebellum",
+        "Medulla oblongata",
+        "Hypothalamus"
       ],
       "c": 2,
-      "e": "Thrombin converts soluble fibrinogen into insoluble fibrin threads."
+      "e": "The medulla oblongata houses the cardiac centre."
     },
     {
-      "q": "Erythroblastosis foetalis is due to incompatibility of:",
+      "q": "Heart rate is decreased by the:",
       "o": [
-        "ABO group",
-        "Rh factor",
-        "MN group",
-        "Plasma proteins"
+        "Sympathetic nerves",
+        "Vagus (parasympathetic) nerve",
+        "Adrenaline",
+        "Thyroxine"
       ],
       "c": 1,
-      "e": "It results from Rh incompatibility between an Rh⁻ mother and Rh⁺ foetus."
+      "e": "The parasympathetic vagus nerve slows the heart."
     },
     {
-      "q": "Lymph differs from blood in lacking:",
+      "q": "Persistent blood pressure above 140/90 mmHg indicates:",
       "o": [
-        "Lymphocytes",
-        "Plasma",
-        "RBCs",
-        "Water"
-      ],
-      "c": 2,
-      "e": "Lymph has no RBCs and fewer proteins; it contains lymphocytes."
-    },
-    {
-      "q": "Pulmonary artery carries:",
-      "o": [
-        "Oxygenated blood to body",
-        "Deoxygenated blood to lungs",
-        "Oxygenated blood to heart",
-        "Deoxygenated blood to body"
-      ],
-      "c": 1,
-      "e": "It carries deoxygenated blood from the right ventricle to the lungs."
-    },
-    {
-      "q": "Normal human heart rate (resting) is about:",
-      "o": [
-        "40–50/min",
-        "72/min",
-        "120/min",
-        "150/min"
-      ],
-      "c": 1,
-      "e": "About 70–75 beats per minute at rest."
-    },
-    {
-      "q": "Chest pain due to insufficient O₂ to heart muscle is:",
-      "o": [
+        "Anaemia",
         "Hypertension",
-        "Angina pectoris",
+        "Hypotension",
+        "Leukaemia"
+      ],
+      "c": 1,
+      "e": "This defines hypertension (high blood pressure)."
+    },
+    {
+      "q": "Narrowing of coronary arteries by plaque is called:",
+      "o": [
+        "Angina",
         "Atherosclerosis",
-        "Cardiac arrest"
+        "Anaemia",
+        "Embolism"
       ],
       "c": 1,
-      "e": "Angina pectoris is chest pain from inadequate oxygen supply to the myocardium."
+      "e": "Atherosclerosis underlies coronary artery disease."
     },
     {
-      "q": "Hepatic portal vein carries blood from:",
+      "q": "The exchange of materials between blood and tissues occurs across:",
       "o": [
-        "Heart to liver",
-        "Intestine to liver",
-        "Liver to heart",
-        "Lungs to heart"
+        "Arteries",
+        "Veins",
+        "Capillaries",
+        "Aorta"
       ],
-      "c": 1,
-      "e": "It carries blood from the digestive tract to the liver before reaching the heart."
-    },
-    {
-      "q": "Largest WBC, phagocytic, is the:",
-      "o": [
-        "Neutrophil",
-        "Monocyte",
-        "Basophil",
-        "Eosinophil"
-      ],
-      "c": 1,
-      "e": "Monocytes are the largest WBCs and are phagocytic."
+      "c": 2,
+      "e": "Thin one-cell-thick capillary walls allow exchange."
     }
   ],
   "match": [
+    {
+      "term": "Plasma",
+      "def": "Liquid matrix of blood (~55%)"
+    },
+    {
+      "term": "Fibrinogen",
+      "def": "Plasma protein for clotting"
+    },
+    {
+      "term": "Albumin",
+      "def": "Maintains osmotic balance"
+    },
+    {
+      "term": "Serum",
+      "def": "Plasma minus clotting factors"
+    },
+    {
+      "term": "Erythrocyte",
+      "def": "RBC — carries haemoglobin"
+    },
+    {
+      "term": "Spleen",
+      "def": "Graveyard of RBCs"
+    },
     {
       "term": "Neutrophil",
       "def": "Most abundant WBC (phagocyte)"
     },
     {
       "term": "Basophil",
-      "def": "Releases histamine/heparin (rarest)"
+      "def": "Releases histamine & heparin"
+    },
+    {
+      "term": "Monocyte",
+      "def": "Largest WBC"
+    },
+    {
+      "term": "Thrombocyte",
+      "def": "Platelet — blood clotting"
     },
     {
       "term": "O group",
@@ -406,70 +1101,73 @@ DATA.chapters['brain_biolab11bio02html_blood'] = {
       "def": "Universal recipient"
     },
     {
+      "term": "Heparin",
+      "def": "Natural anticoagulant"
+    },
+    {
       "term": "SA node",
-      "def": "Pacemaker"
+      "def": "Pacemaker of the heart"
     },
     {
-      "term": "Bicuspid valve",
-      "def": "Left AV valve"
+      "term": "Tricuspid valve",
+      "def": "Right atrioventricular valve"
     },
     {
-      "term": "P wave",
-      "def": "Atrial depolarisation"
-    },
-    {
-      "term": "T wave",
-      "def": "Ventricular repolarisation"
-    },
-    {
-      "term": "Fibrin",
-      "def": "Forms the clot mesh"
+      "term": "QRS complex",
+      "def": "Ventricular depolarisation"
     },
     {
       "term": "Pulmonary artery",
-      "def": "Deoxygenated blood to lungs"
+      "def": "Artery with deoxygenated blood"
     },
     {
-      "term": "Lacteals",
-      "def": "Absorb fats into lymph"
-    },
-    {
-      "term": "Angina pectoris",
-      "def": "Chest pain from low O₂"
+      "term": "Medulla oblongata",
+      "def": "Site of cardiac centre"
     }
   ],
   "pathways": [
     {
       "title": "Blood clotting cascade",
-      "prompt": "The enzyme cascade ends in a fibrin mesh forming the clot.",
+      "prompt": "Clotting is an enzyme cascade ending in an insoluble fibrin mesh that seals the wound.",
       "steps": [
-        "Injury & platelet aggregation",
-        "Thrombokinase (thromboplastin) released",
-        "Prothrombin → Thrombin (needs Ca²⁺)",
-        "Fibrinogen → Fibrin threads",
-        "Clot/coagulum traps blood cells"
+        "Injury exposes tissue; platelets adhere",
+        "Platelets release factors + thromboplastin",
+        "Prothrombin converted to thrombin (Ca²⁺)",
+        "Thrombin converts fibrinogen to fibrin",
+        "Fibrin mesh traps cells forming the clot"
       ]
     },
     {
-      "title": "Cardiac impulse conduction",
-      "prompt": "The myogenic impulse spreads from pacemaker to ventricular muscle.",
+      "title": "Conduction of the heartbeat",
+      "prompt": "The myogenic impulse travels SAN → AVN → His → Purkinje, coordinating atrial then ventricular contraction.",
       "steps": [
-        "SA node fires",
-        "AV node",
-        "Bundle of His",
-        "Bundle branches",
-        "Purkinje fibres → ventricles contract"
+        "SA node generates the impulse",
+        "Atria depolarise and contract",
+        "Impulse reaches the AV node",
+        "Passes through the bundle of His & branches",
+        "Purkinje fibres make ventricles contract"
       ]
     },
     {
-      "title": "Pulmonary circulation path",
-      "prompt": "Deoxygenated blood is sent to the lungs and returns oxygenated.",
+      "title": "Pulmonary circulation (deoxygenated → oxygenated)",
+      "prompt": "The pulmonary circuit sends blood to the lungs to pick up oxygen and release CO₂.",
       "steps": [
+        "Right atrium receives deoxygenated blood",
         "Right ventricle",
-        "Pulmonary artery",
-        "Lungs (oxygenation)",
-        "Pulmonary veins",
-        "Left atrium"
+        "Pulmonary artery to the lungs",
+        "Gas exchange — blood is oxygenated",
+        "Pulmonary vein to the left atrium"
+      ]
+    },
+    {
+      "title": "Systemic circulation (oxygenated → body)",
+      "prompt": "The systemic circuit delivers oxygenated blood to the body and returns deoxygenated blood to the heart.",
+      "steps": [
+        "Left atrium receives oxygenated blood",
+        "Left ventricle",
+        "Aorta",
+        "Body tissues (exchange)",
+        "Vena cava returns blood to the right atrium"
       ]
     }
   ]

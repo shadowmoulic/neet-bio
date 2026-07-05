@@ -1,7 +1,7 @@
 /* Extracted from bodyworks 3 chps bio clas 11.html */
 DATA.chapters['brain_bodyworks3chpsbioclas11html_exc'] = {
   "id": "brain_bodyworks3chpsbioclas11html_exc",
-  "num": "3",
+  "num": "4",
   "title": "Excretory Products & Their Elimination",
   "subtitle": "Getting rid of nitrogenous wastes — the modes of excretion, the nephron, how urine is formed and concentrated, the hormones that fine-tune it, and what goes wrong in kidney disease.",
   "color": "#3498db",

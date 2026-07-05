@@ -1,7 +1,7 @@
 /* Extracted from bodyworks 3 chps bio clas 11.html */
 DATA.chapters['brain_bodyworks3chpsbioclas11html_bre'] = {
   "id": "brain_bodyworks3chpsbioclas11html_bre",
-  "num": "3",
+  "num": "4",
   "title": "Breathing & Exchange of Gases",
   "subtitle": "Taking in O₂ and expelling CO₂ — respiratory organs, the mechanism of breathing, lung volumes & capacities, how gases are exchanged and transported, and respiratory disorders.",
   "color": "#3498db",
