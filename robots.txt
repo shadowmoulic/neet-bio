@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neet-bio-ten.vercel.app/sitemap.xml

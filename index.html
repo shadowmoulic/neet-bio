@@ -311,7 +311,7 @@
         return `<button class="chap-card" style="--cc:${c.color}" onclick="App.chapter('${c.id}')">
         ${subjectBadge(c.id)}
         <div class="glyph">${c.glyph}</div>
-        <h4>${c.title}</h4>
+        <h3>${c.title}</h3>
         <div class="sub">${c.subtitle}</div>
         <div style="display:flex; justify-content:flex-start; margin-top:8px;">${prio}</div>
         <div class="meter"><i style="width:${p}%"></i></div>
@@ -436,13 +436,13 @@
       </div>
 
       <div class="section-label">
-        <h3 id="chap-section-label">${_homeFilter === 'all' ? 'All Chapters' : SUBJECT_TABS.find(t=>t.k===_homeFilter)?.label || 'Chapters'}</h3>
+        <h2 id="chap-section-label">${_homeFilter === 'all' ? 'All Chapters' : SUBJECT_TABS.find(t=>t.k===_homeFilter)?.label || 'Chapters'}</h2>
         <div class="rule"></div>
         <span class="chap-count" id="chap-count">${filtered.length} of ${totChaps}</span>
       </div>
       <div class="chapters" id="chap-grid">${cards}${emptyMsg}${loadMore}</div>
-      <div class="section-label"><h3>How to use it</h3><div class="rule"></div></div>
-      <div class="modes">${MODES.map(m => `<div class="mode-card"><div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p></div>`).join('')}</div>
+      <div class="section-label"><h2>How to use it</h2><div class="rule"></div></div>
+      <div class="modes">${MODES.map(m => `<div class="mode-card"><div class="mi">${m.mi}</div><h3>${m.t}</h3><p>${m.d}</p></div>`).join('')}</div>
     `);
       }
 

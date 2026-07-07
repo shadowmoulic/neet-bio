@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML('afterbegin', `<div class="topbar">
   <div class="brand" onclick="App.home()">
     <div class="mark">🧬</div>
-    <h1>The Codex<span>NEET 2026 · Full Syllabus</span></h1>
+    <div class="site-title">The Codex<span>NEET 2026 · Full Syllabus</span></div>
   </div>
   <div class="spacer"></div>
   <div class="xp-pill"><span class="lvl-badge" id="lvlBadge">Lv 1</span> <b id="xpVal">0</b> XP</div>
@@ -13,23 +13,26 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="footer-brand" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
       <div class="mark" style="font-size: 28px; background: rgba(255,215,0,0.15); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(255,215,0,0.1);">🧬</div>
       <div class="brand-text" style="text-align: left;">
-        <h3 style="margin: 0 0 4px 0; font-family: var(--serif); color: var(--ink); font-size: 20px;">The Naturalist's Codex</h3>
+        <div style="margin: 0 0 4px 0; font-family: var(--serif); color: var(--ink); font-size: 20px; font-weight: bold;">The Naturalist's Codex</div>
         <p style="margin: 0; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.9;">NEET 2026 · Bio XI &amp; XII · Physics · Chemistry</p>
       </div>
     </div>
     <div class="footer-links">
       <div class="link-col">
-        <h4>Explore</h4>
+        <div class="footer-heading" style="font-size: 14px; font-weight: bold; margin-bottom: 12px; color: var(--ink);">Explore</div>
         <a href="/" onclick="App.home()">All Chapters</a>
         <a href="/" onclick="App.switchFilter('bio11')">Biology XI</a>
         <a href="/" onclick="App.switchFilter('bio12')">Biology XII</a>
+      </div>
+      <div class="link-col">
+        <div class="footer-heading" style="font-size: 14px; font-weight: bold; margin-bottom: 12px; color: var(--ink);">Resources</div>
         <a href="/" onclick="App.switchFilter('phy')">Physics</a>
         <a href="/" onclick="App.switchFilter('chem')">Chemistry</a>
         <a href="/guide/">How to use (Guide)</a>
         <a href="#" onclick="window.scrollTo(0,0)">Back to Top</a>
       </div>
       <div class="link-col">
-        <h4>Legal</h4>
+        <div class="footer-heading" style="font-size: 14px; font-weight: bold; margin-bottom: 12px; color: var(--ink);">Legal</div>
         <a href="/terms/">Terms of Service</a>
         <a href="/privacy/">Privacy Policy</a>
       </div>

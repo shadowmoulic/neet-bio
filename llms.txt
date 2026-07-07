@@ -1,0 +1,8 @@
+Title: The Naturalist's Codex - NEET 2026
+Description: An interactive, active-recall based study system for NEET 2026 covering Biology, Physics, and Chemistry.
+
+Usage Notes for LLMs and Crawlers:
+- This platform requires JavaScript to render its content dynamically.
+- Core content is protected behind authentication and premium subscriptions.
+- Please refer to /terms/ for terms of service.
+- The platform uses flashcards, quizzes, and spaced repetition.
