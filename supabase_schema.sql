@@ -78,3 +78,34 @@ begin
   update public.neet_users set role = new_role where public.neet_users.id = target_user_id;
 end;
 $$;
+
+-- ==============================================================================
+-- PURCHASES LOGGING
+-- ==============================================================================
+
+-- 8. Create the neet_purchases table to store payment transaction details
+create table if not exists public.neet_purchases (
+  id uuid default gen_random_uuid() primary key,
+  user_id uuid references public.neet_users(id) on delete cascade not null,
+  razorpay_order_id text not null,
+  razorpay_payment_id text not null,
+  razorpay_signature text not null,
+  amount numeric,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Enable Row Level Security (RLS) on neet_purchases
+alter table public.neet_purchases enable row level security;
+
+-- Create policy to allow users to view only their own purchase history
+drop policy if exists "Users can view their own purchases" on public.neet_purchases;
+create policy "Users can view their own purchases"
+  on public.neet_purchases for select
+  using ( auth.uid() = user_id );
+
+-- Create policy to allow users to insert their own purchases
+drop policy if exists "Users can insert their own purchases" on public.neet_purchases;
+create policy "Users can insert their own purchases"
+  on public.neet_purchases for insert
+  with check ( auth.uid() = user_id );
+

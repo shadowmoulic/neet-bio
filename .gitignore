@@ -5,3 +5,4 @@ config.js
 # Other
 brain/
 .DS_Store
+node_modules/

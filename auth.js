@@ -1,5 +1,5 @@
-const SUPA_URL = 'https://yjocgelojlzrnnsotvgj.supabase.co';
-const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlqb2NnZWxvamx6cm5uc290dmdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxNTQ1NjYsImV4cCI6MjA5MTczMDU2Nn0.OkJpTyweZAqWwGF3mNGqAHgiPgP0K77udiccPvzKVGw';
+const SUPA_URL = 'https://qbgubcicjqkgowxgrmmp.supabase.co';
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFiZ3ViY2ljanFrZ293eGdybW1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMzNDQzMTksImV4cCI6MjA5ODkyMDMxOX0.U8ILE_4Y89k9K3AQkOgNqDpYunwzDm4jBMWv1yPlE24';
 
 let supabaseClient = null;
 try {
@@ -15,7 +15,7 @@ try {
   console.error("Failed to initialize Supabase:", e);
 }
 
-const Auth = (function() {
+const Auth = (function () {
   let currentUser = null;
   let currentRole = null; // 'free' or 'paid'
 
@@ -120,8 +120,9 @@ const Auth = (function() {
           <div class="premium-icon">👑</div>
           <h2 class="modal-title" style="margin-bottom: 10px">Unlock Premium</h2>
           <p class="premium-desc">Upgrade to premium to access all chapters, flashcards, and boss battles.</p>
-          <a href="https://topmate.io/sayak_moulic/2149801" target="_blank" class="btn btn-primary auth-btn" style="text-decoration:none">Get Premium Subscription</a>
-          <p style="font-size:12px; color:var(--ink-faint); margin-top:16px">Once paid, your account will be manually upgraded.</p>
+          <button class="btn btn-primary auth-btn" id="payBtn" onclick="Auth.payWithRazorpay()">Unlock Now (Razorpay)</button>
+          <div class="auth-error" id="premiumError" style="margin-top:10px;"></div>
+          <p style="font-size:12px; color:var(--ink-faint); margin-top:16px">Instant activation via secure checkout.</p>
         </div>
       </div>
 
@@ -147,7 +148,7 @@ const Auth = (function() {
     document.getElementById('tabLogin').classList.toggle('active', mode === 'login');
     document.getElementById('tabSignup').classList.toggle('active', mode === 'signup');
     document.getElementById('authModalBox').classList.toggle('signup-mode', mode === 'signup');
-    
+
     // Toggle required fields
     document.getElementById('authName').required = (mode === 'signup');
     document.getElementById('authPhone').required = false; // Optional
@@ -207,7 +208,7 @@ const Auth = (function() {
     const name = document.getElementById('authName').value;
     const phone = document.getElementById('authPhone').value;
     const btn = document.getElementById('authSubmitBtn');
-    
+
     btn.disabled = true;
     btn.textContent = 'Loading...';
     document.getElementById('authError').style.display = 'none';
@@ -216,10 +217,10 @@ const Auth = (function() {
       if (!supabaseClient) {
         throw new Error("Cannot connect to Supabase. Check your internet connection or ad-blocker.");
       }
-      
+
       if (authMode === 'signup') {
-        const { data, error } = await supabaseClient.auth.signUp({ 
-          email, 
+        const { data, error } = await supabaseClient.auth.signUp({
+          email,
           password,
           options: {
             data: {
@@ -231,11 +232,11 @@ const Auth = (function() {
         if (error) throw error;
         // Check if email confirmation is required
         if (data.user && data.user.identities && data.user.identities.length === 0) {
-           showError("Email already in use.");
+          showError("Email already in use.");
         } else {
-           // Successfully signed up and logged in (if email confirm is off)
-           await refreshSession();
-           hideAuthModal();
+          // Successfully signed up and logged in (if email confirm is off)
+          await refreshSession();
+          hideAuthModal();
         }
       } else {
         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
@@ -257,7 +258,7 @@ const Auth = (function() {
     currentRole = null;
     updateTopBarUI();
     // If they were inside a chapter, take them back home
-    if(window.App && typeof window.App.home === 'function') {
+    if (window.App && typeof window.App.home === 'function') {
       window.App.home();
     }
   }
@@ -271,7 +272,7 @@ const Auth = (function() {
         .select('role')
         .eq('id', userId)
         .single();
-        
+
       if (error) throw error;
       return data ? data.role : 'free';
     } catch (e) {
@@ -310,7 +311,7 @@ const Auth = (function() {
       setTimeout(updateTopBarUI, 50);
       return;
     }
-    
+
     let authContainer = document.getElementById('authContainer');
     if (!authContainer) {
       authContainer = document.createElement('div');
@@ -341,7 +342,7 @@ const Auth = (function() {
   async function forgotPassword() {
     const email = document.getElementById('authEmail').value.trim();
     const errEl = document.getElementById('authError');
-    
+
     if (!email) {
       errEl.textContent = 'Enter your email above first, then click Forgot password.';
       errEl.style.display = 'block';
@@ -369,6 +370,120 @@ const Auth = (function() {
     }
   }
 
+  function showPremiumError(msg) {
+    const el = document.getElementById('premiumError');
+    if (el) {
+      el.textContent = msg;
+      el.style.display = msg ? 'block' : 'none';
+    }
+  }
+
+  async function payWithRazorpay() {
+    showPremiumError('');
+    if (!currentUser) {
+      showPremiumError('Please login/signup first.');
+      Auth.switchTab('signup');
+      Auth.showAuthModal();
+      return;
+    }
+
+    const payBtn = document.getElementById('payBtn');
+    if (payBtn) {
+      payBtn.disabled = true;
+      payBtn.textContent = 'Processing...';
+    }
+
+    try {
+      const orderRes = await fetch('/api/create-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: 29900, // 299 INR in paise
+          currency: 'INR',
+          receipt: 'receipt_premium_' + currentUser.id
+        })
+      });
+
+      const orderData = await orderRes.json();
+      if (!orderRes.ok) {
+        throw new Error(orderData.error || 'Failed to initiate order.');
+      }
+
+      const options = {
+        key: window.ENV?.RAZORPAY_KEY_ID || 'rzp_test_TAEk2Opb03WZks',
+        amount: orderData.amount,
+        currency: orderData.currency,
+        name: "The Naturalist's Codex",
+        description: "Premium Lifetime Access",
+        order_id: orderData.order_id,
+        handler: async function (response) {
+          try {
+            showPremiumError('Verifying payment...');
+            const verifyRes = await fetch('/api/verify-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature,
+                userId: currentUser.id
+              })
+            });
+
+            const verifyData = await verifyRes.json();
+            if (!verifyRes.ok) {
+              throw new Error(verifyData.error || 'Signature verification failed.');
+            }
+
+            alert('🎉 Payment Successful! Welcome to Premium.');
+            hidePremiumModal();
+            await refreshSession();
+          } catch (verifyErr) {
+            showPremiumError('Verification failed: ' + verifyErr.message);
+          } finally {
+            if (payBtn) {
+              payBtn.disabled = false;
+              payBtn.textContent = 'Unlock Now (Razorpay)';
+            }
+          }
+        },
+        prefill: {
+          name: currentUser.user_metadata?.full_name || '',
+          email: currentUser.email || '',
+          contact: currentUser.user_metadata?.phone || ''
+        },
+        theme: {
+          color: "#0e1c17"
+        },
+        modal: {
+          ondismiss: function () {
+            showPremiumError('Payment cancelled.');
+            if (payBtn) {
+              payBtn.disabled = false;
+              payBtn.textContent = 'Unlock Now (Razorpay)';
+            }
+          }
+        }
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.on('payment.failed', function (response) {
+        showPremiumError('Payment failed: ' + (response.error.description || 'Unknown error'));
+        if (payBtn) {
+          payBtn.disabled = false;
+          payBtn.textContent = 'Unlock Now (Razorpay)';
+        }
+      });
+      rzp.open();
+    } catch (err) {
+      showPremiumError(err.message);
+      if (payBtn) {
+        payBtn.disabled = false;
+        payBtn.textContent = 'Unlock Now (Razorpay)';
+      }
+    }
+  }
+
   // Initial check
   if (supabaseClient) {
     supabaseClient.auth.onAuthStateChange((event, session) => {
@@ -384,6 +499,7 @@ const Auth = (function() {
     handleAuthSubmit, logout, showPremiumModal, hidePremiumModal,
     showSignupPromptModal, hideSignupPromptModal, forgotPassword,
     getCurrentUser: () => currentUser,
-    getCurrentRole: () => currentRole
+    getCurrentRole: () => currentRole,
+    payWithRazorpay
   };
 })();
