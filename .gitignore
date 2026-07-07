@@ -6,3 +6,5 @@ config.js
 brain/
 .DS_Store
 node_modules/
+razorpay_plans.txt
+.vercel

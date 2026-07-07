@@ -475,6 +475,18 @@
             Auth.showPremiumModal();
             return;
           }
+          const plan = Auth.getCurrentPlan();
+          const subject = getSubject(id);
+          if (plan === 'class11' && subject === 'bio12') {
+             Auth.showPremiumError('This chapter requires the Class 12 or Both Classes plan.');
+             Auth.showPremiumModal();
+             return;
+          }
+          if (plan === 'class12' && subject === 'bio11') {
+             Auth.showPremiumError('This chapter requires the Class 11 or Both Classes plan.');
+             Auth.showPremiumModal();
+             return;
+          }
         }
 
         const ch = DATA.chapters[id]; setAccent(ch);

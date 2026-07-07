@@ -18,6 +18,7 @@ try {
 const Auth = (function () {
   let currentUser = null;
   let currentRole = null; // 'free' or 'paid'
+  let currentPlan = null; // 'class11', 'class12', 'both'
 
   // Inject Modals into DOM
   document.addEventListener("DOMContentLoaded", () => {
@@ -115,14 +116,37 @@ const Auth = (function () {
 
       <!-- Premium Modal -->
       <div class="modal-overlay" id="premiumModal">
-        <div class="modal-box premium-box">
+        <div class="modal-box premium-box" style="max-width: 450px;">
           <button class="modal-close" onclick="Auth.hidePremiumModal()">&times;</button>
           <div class="premium-icon">👑</div>
           <h2 class="modal-title" style="margin-bottom: 10px">Unlock Premium</h2>
-          <p class="premium-desc">Upgrade to premium to access all chapters, flashcards, and boss battles.</p>
-          <button class="btn btn-primary auth-btn" id="payBtn" onclick="Auth.payWithRazorpay()">Unlock Now (Razorpay)</button>
+          <p class="premium-desc">Select your plan to unlock chapters and features.</p>
+          
+          <div style="margin: 15px 0; text-align: left;">
+            <label style="display:block; margin-bottom: 5px; font-weight: bold; color: var(--ink-dim); font-size: 12px; text-transform: uppercase;">Select Plan</label>
+            <select id="planType" class="auth-input" style="margin-bottom: 15px;" onchange="Auth.updatePricingText()">
+              <option value="class11">Class 11 Only</option>
+              <option value="class12">Class 12 Only</option>
+              <option value="both" selected>Both Classes</option>
+            </select>
+            
+            <label style="display:block; margin-bottom: 5px; font-weight: bold; color: var(--ink-dim); font-size: 12px; text-transform: uppercase;">Billing Cycle</label>
+            <select id="billingCycle" class="auth-input" style="margin-bottom: 15px;" onchange="Auth.updatePricingText()">
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+
+            <label style="display:block; margin-bottom: 5px; font-weight: bold; color: var(--ink-dim); font-size: 12px; text-transform: uppercase;">Coupon Code</label>
+            <input type="text" id="couponCode" class="auth-input" placeholder="Enter coupon (optional)" oninput="Auth.updatePricingText()">
+          </div>
+
+          <div id="pricingText" style="margin-bottom: 15px; padding: 12px; background: rgba(255,215,0,0.1); color: var(--gold); border-radius: 8px; font-size: 13px; text-align: center; line-height: 1.4;">
+            Loading pricing...
+          </div>
+
+          <button class="btn btn-primary auth-btn" id="payBtn" onclick="Auth.payWithRazorpay()">Unlock Now</button>
           <div class="auth-error" id="premiumError" style="margin-top:10px;"></div>
-          <p style="font-size:12px; color:var(--ink-faint); margin-top:16px">Instant activation via secure checkout.</p>
+          <p style="font-size:12px; color:var(--ink-faint); margin-top:16px">Secure recurring billing via Razorpay.</p>
         </div>
       </div>
 
@@ -181,6 +205,7 @@ const Auth = (function () {
 
   function showPremiumModal() {
     document.getElementById('premiumModal').classList.add('active');
+    updatePricingText();
   }
 
   function hidePremiumModal() {
@@ -256,6 +281,7 @@ const Auth = (function () {
     if (supabaseClient) await supabaseClient.auth.signOut();
     currentUser = null;
     currentRole = null;
+    currentPlan = null;
     updateTopBarUI();
     // If they were inside a chapter, take them back home
     if (window.App && typeof window.App.home === 'function') {
@@ -264,20 +290,20 @@ const Auth = (function () {
   }
 
   async function fetchRole(userId) {
-    // Fetch role from neet_users
+    // Fetch role and plan_type from neet_users
     try {
-      if (!supabaseClient) return 'free';
+      if (!supabaseClient) return { role: 'free', plan: null };
       const { data, error } = await supabaseClient
         .from('neet_users')
-        .select('role')
+        .select('role, plan_type')
         .eq('id', userId)
         .single();
 
       if (error) throw error;
-      return data ? data.role : 'free';
+      return data ? { role: data.role, plan: data.plan_type } : { role: 'free', plan: null };
     } catch (e) {
       console.error("Failed to fetch role", e);
-      return 'free'; // default to free on failure
+      return { role: 'free', plan: null }; // default to free on failure
     }
   }
 
@@ -290,15 +316,37 @@ const Auth = (function () {
       }
       if (session && session.user) {
         currentUser = session.user;
-        currentRole = await fetchRole(currentUser.id);
+        const details = await fetchRole(currentUser.id);
+        currentRole = details.role;
+        currentPlan = details.plan;
+
+        // Perform IP Verification
+        try {
+          const ipRes = await fetch('/api/verify-ip', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: session.access_token, userId: currentUser.id })
+          });
+          const ipData = await ipRes.json();
+          if (!ipRes.ok || !ipData.allowed) {
+            alert(ipData.message || 'Device limit reached. Logging out.');
+            await logout();
+            return;
+          }
+        } catch(ipErr) {
+          console.error("Failed to verify IP:", ipErr);
+        }
+
       } else {
         currentUser = null;
         currentRole = null;
+        currentPlan = null;
       }
     } catch (err) {
       console.error("Refresh session failed", err);
       currentUser = null;
       currentRole = null;
+      currentPlan = null;
     }
     updateTopBarUI();
   }
@@ -378,6 +426,52 @@ const Auth = (function () {
     }
   }
 
+  function updatePricingText() {
+    const planEl = document.getElementById('planType');
+    const cycleEl = document.getElementById('billingCycle');
+    const couponEl = document.getElementById('couponCode');
+    const textEl = document.getElementById('pricingText');
+
+    if (!planEl || !cycleEl || !couponEl || !textEl) return;
+
+    const plan = planEl.value; // 'class11', 'class12', 'both'
+    const cycle = cycleEl.value; // 'monthly', 'yearly'
+    const coupon = couponEl.value.trim();
+
+    let firstMonth = 0;
+    let recurring = 0;
+
+    if (plan === 'both') {
+      if (cycle === 'monthly') {
+        firstMonth = 1239;
+        recurring = 689;
+      } else {
+        firstMonth = 12390;
+        recurring = 12390;
+      }
+    } else {
+      if (cycle === 'monthly') {
+        firstMonth = 789;
+        recurring = 459;
+      } else {
+        firstMonth = 7890;
+        recurring = 7890;
+      }
+    }
+
+    if (coupon === 'NEET@100#') {
+      textEl.innerHTML = `🎁 <b>100% FREE for the first month!</b><br>You will be charged ₹${recurring} starting from month 2.`;
+    } else if (coupon === 'NEET@1#') {
+      textEl.innerHTML = `🧪 <b>Test Mode:</b> First month is exactly ₹1!<br>You will be charged ₹${recurring} starting from month 2.`;
+    } else {
+      if (cycle === 'monthly') {
+        textEl.innerHTML = `You will pay <b>₹${firstMonth}</b> today for the first month.<br>Then <b>₹${recurring}/month</b> onwards.`;
+      } else {
+        textEl.innerHTML = `You will be billed <b>₹${recurring}</b> every year.`;
+      }
+    }
+  }
+
   async function payWithRazorpay() {
     showPremiumError('');
     if (!currentUser) {
@@ -394,13 +488,17 @@ const Auth = (function () {
     }
 
     try {
+      const planType = document.getElementById('planType').value;
+      const billingCycle = document.getElementById('billingCycle').value;
+      const coupon = document.getElementById('couponCode').value.trim();
+
       const orderRes = await fetch('/api/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          amount: 29900, // 299 INR in paise
-          currency: 'INR',
-          receipt: 'receipt_premium_' + currentUser.id
+          planType,
+          billingCycle,
+          coupon
         })
       });
 
@@ -410,12 +508,10 @@ const Auth = (function () {
       }
 
       const options = {
-        key: window.ENV?.RAZORPAY_KEY_ID || 'rzp_test_TAEk2Opb03WZks',
-        amount: orderData.amount,
-        currency: orderData.currency,
+        key: orderData.key,
+        subscription_id: orderData.subscription_id,
         name: "The Naturalist's Codex",
-        description: "Premium Lifetime Access",
-        order_id: orderData.order_id,
+        description: "Premium Subscription",
         handler: async function (response) {
           try {
             showPremiumError('Verifying payment...');
@@ -424,9 +520,10 @@ const Auth = (function () {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 razorpay_payment_id: response.razorpay_payment_id,
-                razorpay_order_id: response.razorpay_order_id,
+                razorpay_subscription_id: response.razorpay_subscription_id,
                 razorpay_signature: response.razorpay_signature,
-                userId: currentUser.id
+                userId: currentUser.id,
+                planType
               })
             });
 
@@ -435,7 +532,7 @@ const Auth = (function () {
               throw new Error(verifyData.error || 'Signature verification failed.');
             }
 
-            alert('🎉 Payment Successful! Welcome to Premium.');
+            alert('🎉 Subscription Successful! Welcome to Premium.');
             hidePremiumModal();
             await refreshSession();
           } catch (verifyErr) {
@@ -443,7 +540,7 @@ const Auth = (function () {
           } finally {
             if (payBtn) {
               payBtn.disabled = false;
-              payBtn.textContent = 'Unlock Now (Razorpay)';
+              payBtn.textContent = 'Unlock Now';
             }
           }
         },
@@ -460,7 +557,7 @@ const Auth = (function () {
             showPremiumError('Payment cancelled.');
             if (payBtn) {
               payBtn.disabled = false;
-              payBtn.textContent = 'Unlock Now (Razorpay)';
+              payBtn.textContent = 'Unlock Now';
             }
           }
         }
@@ -471,7 +568,7 @@ const Auth = (function () {
         showPremiumError('Payment failed: ' + (response.error.description || 'Unknown error'));
         if (payBtn) {
           payBtn.disabled = false;
-          payBtn.textContent = 'Unlock Now (Razorpay)';
+          payBtn.textContent = 'Unlock Now';
         }
       });
       rzp.open();
@@ -479,10 +576,11 @@ const Auth = (function () {
       showPremiumError(err.message);
       if (payBtn) {
         payBtn.disabled = false;
-        payBtn.textContent = 'Unlock Now (Razorpay)';
+        payBtn.textContent = 'Unlock Now';
       }
     }
   }
+
 
   // Initial check
   if (supabaseClient) {
@@ -498,8 +596,10 @@ const Auth = (function () {
     switchTab, togglePassword, showAuthModal, hideAuthModal,
     handleAuthSubmit, logout, showPremiumModal, hidePremiumModal,
     showSignupPromptModal, hideSignupPromptModal, forgotPassword,
+    showPremiumError,
     getCurrentUser: () => currentUser,
     getCurrentRole: () => currentRole,
-    payWithRazorpay
+    getCurrentPlan: () => currentPlan,
+    payWithRazorpay, updatePricingText
   };
 })();

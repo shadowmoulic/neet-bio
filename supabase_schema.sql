@@ -9,6 +9,9 @@ create table if not exists public.neet_users (
   email text,
   phone text,
   role text not null default 'free' check (role in ('free', 'paid')),
+  plan_type text check (plan_type in ('class11', 'class12', 'both')),
+  subscription_id text,
+  allowed_ips text[] default array[]::text[],
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 
@@ -65,8 +68,8 @@ begin
 end;
 $$;
 
--- 7. Secure function to update a user's role (requires gatephrase)
-create or replace function public.update_user_role(gatephrase text, target_user_id uuid, new_role text)
+-- 7. Secure function to update a user's subscription (requires gatephrase)
+create or replace function public.update_user_subscription(gatephrase text, target_user_id uuid, new_role text, new_plan_type text, new_sub_id text)
 returns void
 language plpgsql
 security definer
@@ -75,7 +78,25 @@ begin
   if gatephrase != 'NEET@2026#123' then
     raise exception 'Unauthorized';
   end if;
-  update public.neet_users set role = new_role where public.neet_users.id = target_user_id;
+  update public.neet_users 
+  set role = new_role, plan_type = new_plan_type, subscription_id = new_sub_id
+  where public.neet_users.id = target_user_id;
+end;
+$$;
+
+-- 8. Secure function to add an allowed IP
+create or replace function public.add_user_ip(gatephrase text, target_user_id uuid, new_ip text)
+returns void
+language plpgsql
+security definer
+as $$
+begin
+  if gatephrase != 'NEET@2026#123' then
+    raise exception 'Unauthorized';
+  end if;
+  update public.neet_users 
+  set allowed_ips = array_append(allowed_ips, new_ip)
+  where public.neet_users.id = target_user_id;
 end;
 $$;
 
@@ -83,14 +104,15 @@ $$;
 -- PURCHASES LOGGING
 -- ==============================================================================
 
--- 8. Create the neet_purchases table to store payment transaction details
+-- 9. Create the neet_purchases table to store payment transaction details
 create table if not exists public.neet_purchases (
   id uuid default gen_random_uuid() primary key,
   user_id uuid references public.neet_users(id) on delete cascade not null,
-  razorpay_order_id text not null,
+  razorpay_subscription_id text,
   razorpay_payment_id text not null,
   razorpay_signature text not null,
   amount numeric,
+  plan text,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 
