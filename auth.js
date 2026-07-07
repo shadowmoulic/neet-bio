@@ -60,9 +60,26 @@ const Auth = (function () {
         .signup-mode .signup-only { display: block; }
 
         /* Premium Modal Specifics */
-        .premium-box { text-align: center; }
-        .premium-icon { font-size: 48px; margin-bottom: 16px; }
-        .premium-desc { color: var(--ink-dim); font-size: 14px; margin-bottom: 24px; }
+        .premium-box { text-align: center; border: 1px solid rgba(255, 215, 0, 0.3); box-shadow: 0 0 40px rgba(255, 215, 0, 0.1), 0 20px 40px rgba(0,0,0,0.6); position: relative; overflow: hidden; }
+        .premium-box::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 60%); pointer-events: none; }
+        .premium-icon { font-size: 54px; margin-bottom: 12px; filter: drop-shadow(0 0 15px rgba(255,215,0,0.5)); }
+        .premium-desc { color: var(--ink-dim); font-size: 14px; margin-bottom: 24px; line-height: 1.5; }
+        .premium-title { font-family: var(--serif); font-size: 28px; font-weight: 700; margin-bottom: 10px; background: linear-gradient(to right, #ffd700, #ffb800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        @keyframes popIn {
+          0% { transform: scale(0.95); opacity: 0; }
+          100% { transform: scale(1); opacity: 1; }
+        }
+        .pricing-highlight { 
+          animation: popIn 0.3s ease-out;
+          margin-bottom: 15px; padding: 14px; 
+          background: linear-gradient(145deg, rgba(255,215,0,0.15), rgba(255,215,0,0.05)); 
+          border: 1px solid rgba(255,215,0,0.4); 
+          color: #fff; border-radius: 10px; 
+          font-size: 14px; text-align: center; line-height: 1.5;
+          box-shadow: inset 0 0 20px rgba(255,215,0,0.05);
+        }
+        .pricing-highlight b { color: var(--gold); font-size: 16px; }
         
         /* Responsive Topbar Auth */
         @media(max-width: 600px) {
@@ -119,28 +136,28 @@ const Auth = (function () {
         <div class="modal-box premium-box" style="max-width: 450px;">
           <button class="modal-close" onclick="Auth.hidePremiumModal()">&times;</button>
           <div class="premium-icon">👑</div>
-          <h2 class="modal-title" style="margin-bottom: 10px">Unlock Premium</h2>
-          <p class="premium-desc">Select your plan to unlock chapters and features.</p>
+          <h2 class="premium-title">Unlock Premium</h2>
+          <p class="premium-desc">Select your plan to unlock chapters, flashcards, and boss battles.</p>
           
-          <div style="margin: 15px 0; text-align: left;">
-            <label style="display:block; margin-bottom: 5px; font-weight: bold; color: var(--ink-dim); font-size: 12px; text-transform: uppercase;">Select Plan</label>
-            <select id="planType" class="auth-input" style="margin-bottom: 15px;" onchange="Auth.updatePricingText()">
+          <div style="margin: 20px 0; text-align: left; position: relative; z-index: 2;">
+            <label style="display:block; margin-bottom: 6px; font-weight: bold; color: var(--ink-dim); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">Select Plan</label>
+            <select id="planType" class="auth-input" style="margin-bottom: 16px; background: rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.1);" onchange="Auth.updatePricingText()">
               <option value="class11">Class 11 Only</option>
               <option value="class12">Class 12 Only</option>
               <option value="both" selected>Both Classes</option>
             </select>
             
-            <label style="display:block; margin-bottom: 5px; font-weight: bold; color: var(--ink-dim); font-size: 12px; text-transform: uppercase;">Billing Cycle</label>
-            <select id="billingCycle" class="auth-input" style="margin-bottom: 15px;" onchange="Auth.updatePricingText()">
+            <label style="display:block; margin-bottom: 6px; font-weight: bold; color: var(--ink-dim); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">Billing Cycle</label>
+            <select id="billingCycle" class="auth-input" style="margin-bottom: 16px; background: rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.1);" onchange="Auth.updatePricingText()">
               <option value="monthly">Monthly</option>
               <option value="yearly">Yearly</option>
             </select>
 
-            <label style="display:block; margin-bottom: 5px; font-weight: bold; color: var(--ink-dim); font-size: 12px; text-transform: uppercase;">Coupon Code</label>
-            <input type="text" id="couponCode" class="auth-input" placeholder="Enter coupon (optional)" oninput="Auth.updatePricingText()">
+            <label style="display:block; margin-bottom: 6px; font-weight: bold; color: var(--ink-dim); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">Coupon Code</label>
+            <input type="text" id="couponCode" class="auth-input" style="background: rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.1);" placeholder="Enter coupon (optional)" oninput="Auth.updatePricingText()">
           </div>
 
-          <div id="pricingText" style="margin-bottom: 15px; padding: 12px; background: rgba(255,215,0,0.1); color: var(--gold); border-radius: 8px; font-size: 13px; text-align: center; line-height: 1.4;">
+          <div id="pricingText" class="pricing-highlight">
             Loading pricing...
           </div>
 
