@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="/" onclick="App.switchFilter('bio12')">Biology XII</a>
         <a href="/" onclick="App.switchFilter('phy')">Physics</a>
         <a href="/" onclick="App.switchFilter('chem')">Chemistry</a>
+        <a href="/guide/">How to use (Guide)</a>
         <a href="#" onclick="window.scrollTo(0,0)">Back to Top</a>
       </div>
       <div class="link-col">
