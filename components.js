@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="/" onclick="App.switchFilter('phy')">Physics</a>
         <a href="/" onclick="App.switchFilter('chem')">Chemistry</a>
         <a href="/guide/">How to use (Guide)</a>
-        <a href="#" onclick="window.scrollTo(0,0)">Back to Top</a>
       </div>
       <div class="link-col">
         <div class="footer-heading" style="font-size: 14px; font-weight: bold; margin-bottom: 12px; color: var(--ink);">Legal</div>
         <a href="/terms/">Terms of Service</a>
         <a href="/privacy/">Privacy Policy</a>
+        <a href="#" onclick="window.scrollTo(0,0)">Back to Top</a>
       </div>
     </div>
   </div>
