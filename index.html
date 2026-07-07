@@ -435,6 +435,13 @@
       <div class="chapters" id="chap-grid">${cards}${emptyMsg}${loadMore}</div>
       <div class="section-label"><h3>How to use it</h3><div class="rule"></div></div>
       <div class="modes">${MODES.map(m => `<div class="mode-card"><div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p></div>`).join('')}</div>
+      <footer style="text-align: center; margin-top: 60px; padding: 30px 10px; border-top: 1px solid var(--border); font-size: 13px; color: var(--ink-faint);">
+        <p style="margin-bottom: 10px;">&copy; 2026 The Naturalist's Codex. All rights reserved.</p>
+        <div>
+          <a href="/terms.html" style="color: var(--ink-dim); text-decoration: none; margin: 0 15px; transition: color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--ink-dim)'">Terms of Service</a>
+          <a href="/privacy.html" style="color: var(--ink-dim); text-decoration: none; margin: 0 15px; transition: color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--ink-dim)'">Privacy Policy</a>
+        </div>
+      </footer>
     `);
       }
 
