@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML('afterbegin', `<div class="topbar">
   <div class="brand" onclick="App.home()">
     <div class="mark">🧬</div>
-    <div class="site-title">The Codex<span>NEET 2026 · Full Syllabus</span></div>
+    <div class="site-title">The Codex<span>NEET 2027 · Full Syllabus</span></div>
   </div>
   <div class="spacer"></div>
   <div class="xp-pill"><span class="lvl-badge" id="lvlBadge">Lv 1</span> <b id="xpVal">0</b> XP</div>
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="mark" style="font-size: 28px; background: rgba(255,215,0,0.15); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(255,215,0,0.1);">🧬</div>
       <div class="brand-text" style="text-align: left;">
         <div style="margin: 0 0 4px 0; font-family: var(--serif); color: var(--ink); font-size: 20px; font-weight: bold;">The Naturalist's Codex</div>
-        <p style="margin: 0; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.9;">NEET 2026 · Bio XI &amp; XII · Physics · Chemistry</p>
+        <p style="margin: 0; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.9;">NEET 2027 · Bio XI &amp; XII · Physics · Chemistry</p>
       </div>
     </div>
     <div class="footer-links">
