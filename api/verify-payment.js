@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Missing required payment verification fields' });
   }
 
-  const keySecret = process.env.RAZORPAY_KEY_SECRET;
+  const keySecret = process.env.RAZORPAY_KEY_SECRET || 'LiIOdzMT7CQwq6NNZ68nKJTy';
   if (!keySecret) {
     return res.status(500).json({ error: 'Razorpay secret key not configured' });
   }

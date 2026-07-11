@@ -463,16 +463,16 @@ const Auth = (function () {
         firstMonth = 1239;
         recurring = 689;
       } else {
-        firstMonth = 12390;
-        recurring = 12390;
+        firstMonth = 6890;
+        recurring = 6890;
       }
     } else {
       if (cycle === 'monthly') {
         firstMonth = 789;
         recurring = 459;
       } else {
-        firstMonth = 7890;
-        recurring = 7890;
+        firstMonth = 4890;
+        recurring = 4890;
       }
     }
 

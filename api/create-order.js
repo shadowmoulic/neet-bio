@@ -1,12 +1,12 @@
 const Razorpay = require('razorpay');
 
 const PLAN_MAP = {
-  'class11_monthly': 'plan_TAg5Se3JfdsdzS',
-  'class12_monthly': 'plan_TAg5Se3JfdsdzS',
-  'class11_yearly': 'plan_TAg5lkQznCnGjd',
-  'class12_yearly': 'plan_TAg5lkQznCnGjd',
-  'both_monthly': 'plan_TAg63Hi63FlotE',
-  'both_yearly': 'plan_TAg6zyMzRMxZvi'
+  'class11_monthly': 'plan_TCElNINz3RWOP8',
+  'class12_monthly': 'plan_TCElNINz3RWOP8',
+  'class11_yearly': 'plan_TCEmNDngMsz3SQ',
+  'class12_yearly': 'plan_TCEmNDngMsz3SQ',
+  'both_monthly': 'plan_TCEmbnoKxPkIBV',
+  'both_yearly': 'plan_TCEmvI14LeKtOI'
 };
 
 const UPFRONT_MAP = {
@@ -36,8 +36,8 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Invalid plan configuration' });
   }
 
-  const keyId = process.env.RAZORPAY_KEY_ID;
-  const keySecret = process.env.RAZORPAY_KEY_SECRET;
+  const keyId = process.env.RAZORPAY_KEY_ID || 'rzp_live_TCEIWtRQoDv4LB';
+  const keySecret = process.env.RAZORPAY_KEY_SECRET || 'LiIOdzMT7CQwq6NNZ68nKJTy';
 
   if (!keyId || !keySecret) {
     return res.status(500).json({ error: 'Razorpay keys not configured' });
