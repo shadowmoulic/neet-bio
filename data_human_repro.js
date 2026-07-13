@@ -181,6 +181,22 @@ DATA.chapters.human_repro = {
   ],
 
   flashcards: [
+{front:"Where are the testes situated?", back:"Outside the abdominal cavity within a pouch called the scrotum."},
+{front:"What is the function of the scrotum?", back:"Maintains the low temperature of the testes (2-2.5°C lower than internal body temperature) necessary for spermatogenesis."},
+{front:"What cells synthesize and secrete testicular hormones (androgens)?", back:"Leydig cells (interstitial cells)."},
+{front:"What is the function of Sertoli cells?", back:"Provide nutrition to the germ cells."},
+{front:"What is spermatogenesis?", back:"The process of formation of sperms in the seminiferous tubules."},
+{front:"Which hormone initiates spermatogenesis at puberty?", back:"Gonadotropin releasing hormone (GnRH)."},
+{front:"What is the acrosome?", back:"A cap-like structure on the sperm head filled with enzymes that help in fertilization of the ovum."},
+{front:"Where does fertilization take place in humans?", back:"The ampullary region of the fallopian tube."},
+{front:"What is oogenesis?", back:"The process of formation of a mature female gamete."},
+{front:"What is the Graafian follicle?", back:"The mature ovarian follicle that ruptures to release the secondary oocyte."},
+{front:"Which hormone surge induces ovulation?", back:"Luteinizing Hormone (LH surge)."},
+{front:"What is the corpus luteum and what does it secrete?", back:"The remnant of the Graafian follicle after ovulation; it secretes large amounts of progesterone."},
+{front:"What is implantation?", back:"The embedding of the blastocyst in the endometrium of the uterus."},
+{front:"What is the role of hCG (Human Chorionic Gonadotropin)?", back:"Maintains the corpus luteum during early pregnancy."},
+{front:"What is parturition?", back:"The process of delivery of the fully developed fetus (childbirth)."},
+
     { front: "What is the function of the scrotum in the male reproductive system?", back: "It holds the testes outside the abdominal cavity to maintain their temperature 2–2.5°C lower than normal body temperature, which is essential for spermatogenesis." },
     { front: "How many testicular lobules are present in a testis, and what do they contain?", back: "About 250 testicular lobules per testis, each containing 1 to 3 highly coiled seminiferous tubules." },
     { front: "Which cells in the testes secrete testosterone?", back: "Leydig cells (interstitial cells), located in the spaces outside the seminiferous tubules." },

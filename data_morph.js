@@ -156,6 +156,22 @@ mnemonics:[
 ],
 
 flashcards:[
+{front:"What is a tap root system and in which plants is it found?", back:"Primary root grows directly from the radicle; found in dicotyledonous plants."},
+{front:"What are adventitious roots?", back:"Roots that arise from parts of the plant other than the radicle."},
+{front:"Give an example of a modified root for food storage.", back:"Carrot, turnip, sweet potato."},
+{front:"What is a pneumatophore?", back:"A modified root for respiration found in mangrove plants like Rhizophora."},
+{front:"What are the nodes and internodes on a stem?", back:"Nodes are where leaves attach; internodes are the spaces between nodes."},
+{front:"Give examples of underground stem modifications.", back:"Potato, ginger, turmeric, zaminkand."},
+{front:"What is phyllotaxy?", back:"The pattern of arrangement of leaves on the stem or branch."},
+{front:"What is a compound leaf?", back:"A leaf where the lamina is completely broken into distinct leaflets."},
+{front:"Define inflorescence.", back:"The arrangement of flowers on the floral axis."},
+{front:"What is the difference between racemose and cymose inflorescence?", back:"Racemose: main axis continues to grow; Cymose: main axis terminates in a flower."},
+{front:"What is actinomorphic symmetry?", back:"Radial symmetry in flowers (e.g., mustard, datura)."},
+{front:"What is aestivation?", back:"The mode of arrangement of sepals or petals in the floral bud."},
+{front:"What is a drupe fruit?", back:"A fleshy fruit developing from a monocarpellary superior ovary with a stony endocarp (e.g., mango, coconut)."},
+{front:"What is parthenocarpic fruit?", back:"A fruit formed without fertilization of the ovary."},
+{front:"Which family is commonly known as the potato family?", back:"Solanaceae."},
+
 {front:"Tap vs fibrous vs adventitious root — origin", back:"Tap: from radicle (dicots). Fibrous: cluster from stem base (monocots). Adventitious: from any part other than the radicle (banyan)."},
 {front:"Name the four regions of a root, tip to base", back:"Root cap → meristematic region → region of elongation → region of maturation (bears root hairs)."},
 {front:"Pneumatophores — what & where?", back:"Roots that grow upward out of the soil for gas exchange in waterlogged mangroves (e.g. Rhizophora)."},

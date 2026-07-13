@@ -130,6 +130,22 @@ mnemonics:[
 ],
 
 flashcards:[
+{front:"What is the primary characteristic of Porifera's level of organisation?", back:"Cellular level with loose cell aggregates."},
+{front:"What are the specialized stinging cells in Coelenterates called?", back:"Cnidoblasts or cnidocytes."},
+{front:"Which phylum is known as the 'comb jellies'?", back:"Ctenophora."},
+{front:"What is the function of flame cells in Platyhelminthes?", back:"Osmoregulation and excretion."},
+{front:"What type of body cavity is present in Aschelminthes?", back:"Pseudocoelom (pseudocoelomate)."},
+{front:"What is metameric segmentation and which phylum exhibits it first?", back:"Body divided into segments; Annelida."},
+{front:"What is the unique water vascular system found in?", back:"Echinodermata."},
+{front:"What is the function of the radula in Mollusca?", back:"It is a file-like rasping organ used for feeding."},
+{front:"Which class of vertebrates lacks jaws?", back:"Cyclostomata (Agnatha)."},
+{front:"What is the defining skeletal feature of Chondrichthyes?", back:"Cartilaginous endoskeleton."},
+{front:"Which structure regulates buoyancy in Osteichthyes?", back:"Air bladder (swim bladder)."},
+{front:"What is a pneumatic bone and where is it found?", back:"Hollow bones with air cavities, found in Aves (birds)."},
+{front:"What is the unique mammalian characteristic for nourishing young?", back:"Mammary glands."},
+{front:"Define poikilotherm.", back:"Cold-blooded animals that cannot regulate their internal body temperature."},
+{front:"Name the unique feature of Hemichordata's body division.", back:"Proboscis, collar, and long trunk."},
+
 {front:"The four fundamental chordate features", back:"(1) Notochord, (2) dorsal hollow nerve cord, (3) pharyngeal gill slits, (4) post-anal tail — present at least at some life stage."},
 {front:"Signature cell of Porifera", back:"Choanocytes (collar cells) that line the canal system and drive the water current."},
 {front:"Signature cell of Coelenterata", back:"Cnidoblasts (stinging cells) used for defence and capturing prey."},

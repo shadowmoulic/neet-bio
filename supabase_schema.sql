@@ -131,3 +131,183 @@ create policy "Users can insert their own purchases"
   on public.neet_purchases for insert
   with check ( auth.uid() = user_id );
 
+
+-- ==============================================================================
+-- CHAPTERS & LEARNING CONTENT
+-- ==============================================================================
+
+-- 10. Create the neet_chapters table to store dynamically loaded learning data
+create table if not exists public.neet_chapters (
+  id text primary key,
+  num text not null,
+  title text not null,
+  subtitle text,
+  color text,
+  color_d text,
+  glyph text,
+  notes jsonb default '[]'::jsonb,
+  mnemonics jsonb default '[]'::jsonb,
+  flashcards jsonb default '[]'::jsonb,
+  recall jsonb default '[]'::jsonb,
+  mcqs jsonb default '[]'::jsonb,
+  match jsonb default '[]'::jsonb,
+  pathways jsonb default '[]'::jsonb,
+  boss jsonb default '[]'::jsonb,
+  count_flashcards integer default 0,
+  count_mcqs integer default 0,
+  count_mnemonics integer default 0,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Enable Row Level Security (RLS) on neet_chapters
+alter table public.neet_chapters enable row level security;
+
+-- Create policy allowing anyone to read preview chapters (e.g. biotech, plant, animal, division) 
+-- and allow paid users to view all chapters.
+drop policy if exists "Chapters are viewable by paid users or free previews" on public.neet_chapters;
+create policy "Chapters are viewable by paid users or free previews"
+  on public.neet_chapters for select
+  using (
+    id in ('biotech_principles', 'ch9', 'animal', 'brain_divisionlab01cellcyclehtml')
+    or exists (
+      select 1 from public.neet_users
+      where public.neet_users.id = auth.uid()
+      and public.neet_users.role = 'paid'
+    )
+  );
+
+-- ==============================================================================
+-- PROGRAMMATIC SEO ARTICLES & BLOGS
+-- ==============================================================================
+
+-- 11. Create the neet_posts table to store article details for programmatic SEO
+create table if not exists public.neet_posts (
+  id uuid default gen_random_uuid() primary key,
+  slug text not null unique,
+  title text not null,
+  content text not null,
+  seo_title text,
+  seo_description text,
+  seo_keywords text,
+  tags text,
+  hero_image text,
+  is_published boolean default false not null,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  updated_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Enable RLS on neet_posts
+alter table public.neet_posts enable row level security;
+
+-- Policy to allow public reading of published posts
+drop policy if exists "Anyone can read published posts" on public.neet_posts;
+create policy "Anyone can read published posts"
+  on public.neet_posts for select
+  using ( is_published = true );
+
+-- Policy to allow authenticated select (for admin preview)
+drop policy if exists "Authenticated users can read all posts" on public.neet_posts;
+create policy "Authenticated users can read all posts"
+  on public.neet_posts for select
+  using ( auth.role() = 'authenticated' );
+
+-- RPC to upsert blog posts (requires gatephrase)
+create or replace function public.save_post(
+  gatephrase text,
+  post_id uuid,
+  post_slug text,
+  post_title text,
+  post_content text,
+  post_seo_title text,
+  post_seo_desc text,
+  post_seo_keywords text,
+  post_tags text,
+  post_hero_image text,
+  post_is_published boolean
+)
+returns uuid
+language plpgsql
+security definer
+as $$
+declare
+  resolved_id uuid;
+begin
+  if gatephrase != 'NEET@2026#123' then
+    raise exception 'Unauthorized';
+  end if;
+
+  resolved_id := post_id;
+  if resolved_id is null then
+    resolved_id := gen_random_uuid();
+  end if;
+
+  insert into public.neet_posts (
+    id, slug, title, content, seo_title, seo_description, seo_keywords, tags, hero_image, is_published, updated_at
+  ) values (
+    resolved_id, post_slug, post_title, post_content, post_seo_title, post_seo_desc, post_seo_keywords, post_tags, post_hero_image, post_is_published, now()
+  )
+  on conflict (id) do update set
+    slug = excluded.slug,
+    title = excluded.title,
+    content = excluded.content,
+    seo_title = excluded.seo_title,
+    seo_description = excluded.seo_description,
+    seo_keywords = excluded.seo_keywords,
+    tags = excluded.tags,
+    hero_image = excluded.hero_image,
+    is_published = excluded.is_published,
+    updated_at = now();
+
+  return resolved_id;
+end;
+$$;
+
+-- RPC to delete blog posts (requires gatephrase)
+create or replace function public.delete_post(gatephrase text, post_id uuid)
+returns void
+language plpgsql
+security definer
+as $$
+begin
+  if gatephrase != 'NEET@2026#123' then
+    raise exception 'Unauthorized';
+  end if;
+  
+  delete from public.neet_posts where id = post_id;
+end;
+$$;
+
+-- ==============================================================================
+-- PUBLIC METADATA FUNCTION
+-- ==============================================================================
+
+-- 12. Secure function to fetch chapter skeleton metadata bypassing RLS
+create or replace function public.get_chapter_metadata()
+returns table(
+  id text, 
+  num text, 
+  title text, 
+  subtitle text, 
+  color text, 
+  color_d text, 
+  glyph text, 
+  count_flashcards int, 
+  count_mcqs int, 
+  count_mnemonics int
+)
+language sql
+security definer
+as $$
+  select 
+    id, 
+    num, 
+    title, 
+    subtitle, 
+    color, 
+    color_d, 
+    glyph, 
+    count_flashcards, 
+    count_mcqs, 
+    count_mnemonics 
+  from public.neet_chapters;
+$$;

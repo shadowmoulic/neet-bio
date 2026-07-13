@@ -61,40 +61,6 @@
   <script src="config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script src="data_living.js"></script>
-  <script src="data_bioclassif.js"></script>
-  <script src="data_plant.js"></script>
-  <script src="data_animal.js"></script>
-  <script src="data_morph.js"></script>
-  <script src="data_anat.js"></script>
-  <script src="data_struct_anim.js"></script>
-  <script src="data_biomol.js"></script>
-  <script src="phy.js"></script>
-  <script src="chem.js"></script>
-  <script src="data_brain_biolabphotosynthesisandresphtml_c13.js"></script>
-  <script src="data_brain_biolabphotosynthesisandresphtml_c14.js"></script>
-  <script src="data_brain_bodyworks3chpsbioclas11html_loc.js"></script>
-  <script src="data_brain_bodyworks3chpsbioclas11html_exc.js"></script>
-  <script src="data_brain_bodyworks3chpsbioclas11html_bre.js"></script>
-  <script src="data_brain_divisionlab01cellcyclehtml.js"></script>
-  <script src="data_brain_biolab11_cell.js"></script>
-  <script src="data_brain_biolab11_plant.js"></script>
-  <script src="data_brain_biolab11_blood.js"></script>
-  <script src="data_brain_biolab11_neural.js"></script>
-  <script src="data_brain_biolab11_horm.js"></script>
-  <script src="data_repro_health.js"></script>
-  <script src="data_biotech.js"></script>
-  <script src="data_biotech_app.js"></script>
-  <script src="data_human_health.js"></script>
-  <script src="data_molecular_inhe.js"></script>
-  <script src="data_principles_inhe.js"></script>
-  <script src="data_sexual_repro.js"></script>
-  <script src="data_evolution.js"></script>
-  <script src="data_human_repro.js"></script>
-  <script src="data_biodiversity.js"></script>
-  <script src="data_microbes.js"></script>
-  <script src="data_ecosystem.js"></script>
-  <script src="data_organisms_pop.js"></script>
   <script src="components.js"></script>
   <script src="auth.js"></script>
   <script>
@@ -119,12 +85,12 @@
       brain_biolab11_blood:  'bio12', brain_biolab11_neural: 'bio12',
       brain_biolab11_horm:   'bio12', brain_bodyworks3chpsbioclas11html_exc: 'bio12',
       repro_health:  'bio12', human_health:  'bio12',
-      biotech:       'bio12', biotech_app:   'bio12',
+      ch9:           'bio12', biotech_app:   'bio12',
       molecular: 'bio12', inheritance: 'bio12',
       sexual_repro:  'bio12',
       evolution:     'bio12', human_repro:  'bio12',
-      biodiversity:  'bio12', microbes:      'bio12',
-      ecosystem:     'bio12', organisms_pop: 'bio12',
+      biodiv:        'bio12', microbes:      'bio12',
+      ecosystem:     'bio12', orgpop:        'bio12',
       /* Physics */
       phy_mechanics: 'phy', phy_thermo: 'phy', phy_waves: 'phy', phy_optics: 'phy',
       phy_em: 'phy', phy_electrostatics: 'phy', phy_current: 'phy', phy_modern: 'phy',
@@ -171,6 +137,197 @@
       const app = document.getElementById("app");
       const toastEl = document.getElementById("toast");
       let S = load();
+      
+      /* ---------- SEO Routing ---------- */
+      const CHAPTER_SLUGS = {
+        'living': 'the-living-world',
+        'bioclassif': 'biological-classification',
+        'plant': 'plant-kingdom',
+        'animal': 'animal-kingdom',
+        'morph': 'morphology-of-flowering-plants',
+        'anat': 'anatomy-of-flowering-plants',
+        'struct_anim': 'structural-organisation-in-animals',
+        'biomol': 'biomolecules',
+        'ch9': 'biotechnology-principles-and-processes',
+        'biotech_app': 'biotechnology-and-its-applications',
+        'orgpop': 'organisms-and-populations',
+        'ecosystem': 'ecosystem',
+        'biodiv': 'biodiversity-and-conservation',
+        'repro_health': 'reproductive-health',
+        'human_health': 'human-health-and-disease',
+        'molecular': 'molecular-basis-of-inheritance',
+        'inheritance': 'principles-of-inheritance-and-variation',
+        'sexual_repro': 'sexual-reproduction-in-flowering-plants',
+        'evolution': 'evolution',
+        'human_repro': 'human-reproduction',
+        'microbes': 'microbes-in-human-welfare',
+        'phy': 'physics',
+        'chem': 'chemistry'
+      };
+
+      function getSlug(id) {
+        return CHAPTER_SLUGS[id] || id.toLowerCase().replace(/_/g, '-').replace(/\./g, '-');
+      }
+
+      function getIdFromSlug(slug) {
+        for (const [id, s] of Object.entries(CHAPTER_SLUGS)) {
+          if (s === slug) return id;
+        }
+        const cleaned = slug.replace(/-/g, '_');
+        if (DATA.chapters[cleaned]) return cleaned;
+        for (const id of Object.keys(DATA.chapters)) {
+          if (id.toLowerCase().replace(/_/g, '-') === slug) return id;
+        }
+        return null;
+      }
+
+      function go(path) {
+        history.pushState(null, "", path);
+        route();
+      }
+
+      function updateMeta(title, description) {
+        document.title = title;
+        const descEl = document.querySelector('meta[name="description"]');
+        if (descEl) descEl.setAttribute('content', description);
+        const ogTitleEl = document.querySelector('meta[property="og:title"]');
+        if (ogTitleEl) ogTitleEl.setAttribute('content', title);
+        const ogDescEl = document.querySelector('meta[property="og:description"]');
+        if (ogDescEl) ogDescEl.setAttribute('content', description);
+        const canonicalEl = document.querySelector('link[rel="canonical"]');
+        if (canonicalEl) canonicalEl.setAttribute('href', window.location.origin + window.location.pathname);
+      }
+
+      async function ensureChapterLoaded(id) {
+        if (!DATA.chapters[id]) return false;
+        if (DATA.chapters[id]._loaded) return true;
+
+        if (!document.getElementById("spinner-style")) {
+          const style = document.createElement("style");
+          style.id = "spinner-style";
+          style.textContent = `@keyframes spin { to { transform: rotate(360deg); } }`;
+          document.head.appendChild(style);
+        }
+
+        // Render spinner
+        render(`<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:60vh; gap:20px;">
+          <div class="spinner" style="width:50px; height:50px; border:4px solid var(--line); border-top-color:var(--gold); border-radius:50%; animation:spin 1s linear infinite;"></div>
+          <p style="color:var(--ink-dim); font-size:14px; font-weight:500;">Loading chapter content from secure database...</p>
+        </div>`);
+
+        try {
+          const { data, error } = await supabaseClient
+            .from('neet_chapters')
+            .select('*')
+            .eq('id', id)
+            .single();
+
+          if (error) throw error;
+
+          const ch = DATA.chapters[id];
+          ch.notes = data.notes || [];
+          ch.mnemonics = data.mnemonics || [];
+          ch.flashcards = data.flashcards || [];
+          ch.recall = data.recall || [];
+          ch.mcqs = data.mcqs || [];
+          ch.match = data.match || [];
+          ch.pathways = data.pathways || [];
+          ch.boss = data.boss || [];
+          ch._loaded = true;
+          return true;
+        } catch (e) {
+          console.error(`Failed to fetch chapter ${id}:`, e);
+          
+          // Check if it's an RLS permission issue (e.g. user is free tier)
+          const isFreeUser = !window.Auth || window.Auth.getCurrentRole() === 'free';
+          if (isFreeUser) {
+            // Render premium locked screen
+            render(`
+              <a href="/" class="back-link" onclick="event.preventDefault(); App.go('/')">← All chapters</a>
+              <div class="result" style="margin-top:40px; padding: 40px 20px;">
+                <div class="big" style="font-size: 64px; filter: drop-shadow(0 0 10px rgba(255,215,0,0.3));">👑</div>
+                <h3 style="margin-top:20px; font-family:var(--serif); font-size:28px;">Unlock the Premium Codex</h3>
+                <p style="color:var(--ink-dim); max-width:480px; margin: 12px auto 24px auto; line-height:1.6; font-size:14px;">
+                  This is a premium chapter. Upgrade to a paid plan to get full access to active recall, flashcards, boss battles, and study notes.
+                </p>
+                <div class="actions" style="display:flex; gap:12px; justify-content:center;">
+                  <button class="btn btn-ghost" onclick="event.preventDefault(); App.go('/')">Show other chapters</button>
+                  <button class="btn btn-primary" onclick="Auth.showPremiumModal()">Upgrade Plan 👑</button>
+                </div>
+              </div>
+            `);
+          } else {
+            // Network or database error
+            render(`
+              <a href="/" class="back-link" onclick="event.preventDefault(); App.go('/')">← All chapters</a>
+              <div class="result" style="margin-top:40px; padding: 40px 20px;">
+                <div style="font-size:48px;">⚠️</div>
+                <h3 style="margin-top:20px;">Database Error</h3>
+                <p style="color:var(--ink-dim); max-width:400px; margin: 10px auto 20px auto; font-size:14px;">
+                  We couldn't retrieve this chapter's content: ${e.message}
+                </p>
+                <button class="btn btn-primary" onclick="App.route()">Retry loading</button>
+              </div>
+            `);
+          }
+          return false;
+        }
+      }
+
+      function route() {
+        const path = window.location.pathname;
+        const parts = path.split('/').filter(Boolean);
+        
+        if (parts.length === 0) {
+          const params = new URLSearchParams(window.location.search);
+          const filter = params.get('filter') || 'all';
+          _homeFilter = filter;
+          home(undefined, undefined, false);
+          updateMeta(
+            "The Naturalist's Codex — NEET 2027 Study System",
+            "Master NEET 2027 with active recall, flashcards, MCQs, and mnemonics for NCERT Biology, Physics, and Chemistry."
+          );
+        } else {
+          const slug = parts[0];
+          const modeKey = parts[1];
+          const id = getIdFromSlug(slug);
+          
+          if (id && DATA.chapters[id]) {
+            const ch = DATA.chapters[id];
+            if (modeKey) {
+              mode(id, modeKey, false);
+              let modeTitle = modeKey.toUpperCase();
+              let modeDesc = `Practice ${modeKey} for ${ch.title}.`;
+              
+              if (modeKey === 'notes') { modeTitle = "Study Notes"; modeDesc = `Read complete revision notes with comparison tables and diagrams for ${ch.title}.`; }
+              else if (modeKey === 'mnemonics') { modeTitle = "Mnemonics"; modeDesc = `Learn tricky NCERT examples for ${ch.title} using quick mnemonics and memory devices.`; }
+              else if (modeKey === 'flashcards') { modeTitle = "Flashcards"; modeDesc = `Flip and master key terms of ${ch.title} with flashcard decks.`; }
+              else if (modeKey === 'recall') { modeTitle = "Active Recall"; modeDesc = `Test your long-term memory retrieval on ${ch.title} with active recall prompts.`; }
+              else if (modeKey === 'quiz') { modeTitle = "Quiz Battle"; modeDesc = `Solve multiple-choice questions on ${ch.title} with instant explanations.`; }
+              else if (modeKey === 'match') { modeTitle = "Match-Up"; modeDesc = `Match terms with their definitions for ${ch.title} in a race against the clock.`; }
+              else if (modeKey === 'pathway') { modeTitle = "Pathway"; modeDesc = `Sequence biological steps in order for ${ch.title} to master NCERT flows.`; }
+              else if (modeKey === 'boss') { modeTitle = "Boss Battle"; modeDesc = `Clear every hard question in ${ch.title} without running out of lives.`; }
+
+              updateMeta(
+                `${ch.title} ${modeTitle} | The Codex`,
+                modeDesc
+              );
+            } else {
+              chapter(id, false);
+              updateMeta(
+                `${ch.title} Notes & Active Recall | NEET 2027`,
+                `Study ${ch.title} (${ch.subtitle}) with active recall, flashcards, MCQs, and mnemonics for NEET 2027.`
+              );
+            }
+          } else {
+            home(undefined, undefined, false);
+            updateMeta(
+              "The Naturalist's Codex — NEET 2027 Study System",
+              "Master NEET 2027 with active recall, flashcards, MCQs, and mnemonics for NCERT Biology, Physics, and Chemistry."
+            );
+          }
+        }
+      }
 
       /* ---------- persistence ---------- */
       function fresh() {
@@ -225,7 +382,7 @@
 
       /* ============================ HOME ============================ */
       let _homeFilter = 'all', _homeSearch = '', _homeShowAll = false;
-      const HOME_PAGE_SIZE = 8;
+      const HOME_PAGE_SIZE = 1000;
 
       /* ---- Subject badge (pure helper, used by both full render + soft update) ---- */
       function subjectBadge(id) {
@@ -241,6 +398,7 @@
         "Animal Kingdom": 13,
         "Biotechnology – Principles and Processes": 12,
         "Biotechnology - Principles and Processes": 12,
+        "Biotechnology: Principles and Processes": 12,
         "Biomolecules": 10,
         "Principles of Inheritance and Variation": 10,
         "Cell Cycle and Cell Division": 9,
@@ -308,15 +466,16 @@
       function chapCardHTML(c) {
         const p = chapProgress(c.id);
         const prio = getPriorityHTML(c.title);
-        return `<button class="chap-card" style="--cc:${c.color}" onclick="App.chapter('${c.id}')">
+        const slug = getSlug(c.id);
+        return `<a href="/${slug}" class="chap-card" style="--cc:${c.color}; text-decoration: none; display: block;" onclick="event.preventDefault(); App.go('/${slug}')">
         ${subjectBadge(c.id)}
         <div class="glyph">${c.glyph}</div>
-        <h3>${c.title}</h3>
+        <h4 style="color: #ffffff;">${c.title}</h4>
         <div class="sub">${c.subtitle}</div>
         <div style="display:flex; justify-content:flex-start; margin-top:8px;">${prio}</div>
         <div class="meter"><i style="width:${p}%"></i></div>
         <div class="pct"><span>${p}% memorised</span><span>${(c.flashcards||[]).length} cards</span></div>
-      </button>`;
+      </a>`;
       }
 
       /* ---- Filter + sort chapters ---- */
@@ -371,10 +530,19 @@
       }
 
       /* ---- Full render: called once on first load / when navigating back to home ---- */
-      function home(filter, search) {
+      function home(filter, search, shouldPush = true) {
         setAccent(null);
         if (filter !== undefined) { _homeFilter = filter; _homeShowAll = false; }
         if (search !== undefined) _homeSearch = search;
+
+        if (shouldPush) {
+          const url = new URL(window.location.origin);
+          url.pathname = '/';
+          if (_homeFilter && _homeFilter !== 'all') {
+            url.searchParams.set('filter', _homeFilter);
+          }
+          history.pushState(null, "", url);
+        }
 
         /* If already on home page, just soft-update the grid */
         if (filter === undefined && search === undefined && document.getElementById('chap-grid')) {
@@ -456,6 +624,13 @@
       function switchFilter(key) {
         _homeFilter = key;
         _homeShowAll = false;
+        const url = new URL(window.location);
+        if (key === 'all') {
+          url.searchParams.delete('filter');
+        } else {
+          url.searchParams.set('filter', key);
+        }
+        history.replaceState(null, "", url);
         softUpdateGrid();
       }
 
@@ -471,15 +646,14 @@
       }
 
       /* ========================= CHAPTER HUB ========================= */
-      function chapter(id) {
+      async function chapter(id, shouldPush = true) {
+        if (shouldPush) {
+          history.pushState(null, "", '/' + getSlug(id));
+        }
+        
         if (typeof Auth !== 'undefined') {
           const user = Auth.getCurrentUser();
-          if (!user) {
-            Auth.showSignupPromptModal();
-            return;
-          }
-          const role = Auth.getCurrentRole();
-          if (role === 'free') {
+          if (!user || Auth.getCurrentRole() === 'free') {
             Auth.showPremiumModal();
             return;
           }
@@ -497,15 +671,19 @@
           }
         }
 
+        const loaded = await ensureChapterLoaded(id);
+        if (!loaded) return;
+
         const ch = DATA.chapters[id]; setAccent(ch);
         const p = chapProgress(id);
+        const slug = getSlug(id);
         const grid = MODES.map(m => `
-      <button class="mode-card" onclick="App.mode('${id}','${m.k}')">
+      <a href="/${slug}/${m.k}" class="mode-card" style="text-decoration: none; display: block;" onclick="event.preventDefault(); App.go('/${slug}/${m.k}')">
         <div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p>
         <span class="go">Open ${m.mi === "👑" ? "boss" : "mode"} →</span>
-      </button>`).join("");
+      </a>`).join("");
         render(`
-      <a class="back-link" onclick="App.home()">← All chapters</a>
+      <a href="/" class="back-link" onclick="event.preventDefault(); App.go('/')">← All chapters</a>
       <div class="view-head"><div class="t">
         <span class="chip">Chapter ${ch.num}</span>
         <h2>${ch.glyph} ${ch.title}</h2>
@@ -516,7 +694,14 @@
     `);
       }
 
-      function mode(id, k) {
+      async function mode(id, k, shouldPush = true) {
+        if (shouldPush) {
+          history.pushState(null, "", '/' + getSlug(id) + '/' + k);
+        }
+        
+        const loaded = await ensureChapterLoaded(id);
+        if (!loaded) return;
+
         const ch = DATA.chapters[id]; setAccent(ch);
         if (k === "notes") return notes(ch);
         if (k === "mnemonics") return mnemonics(ch);
@@ -529,7 +714,8 @@
       }
 
       function head(ch, title, sub) {
-        return `<a class="back-link" onclick="App.chapter('${ch.id}')">← ${ch.title}</a>
+        const slug = getSlug(ch.id);
+        return `<a href="/${slug}" class="back-link" onclick="event.preventDefault(); App.go('/${slug}')">← ${ch.title}</a>
       <div class="view-head"><div class="t"><span class="chip">${ch.glyph} Ch ${ch.num}</span><h2>${title}</h2><p>${sub}</p></div></div>`;
       }
 
@@ -835,15 +1021,90 @@
       }
 
       /* init */
-      document.addEventListener("DOMContentLoaded", () => {
-        updateHUD(); home();
+      document.addEventListener("DOMContentLoaded", async () => {
+        updateHUD();
+        
+        const app = document.getElementById("app");
+        if (!document.getElementById("spinner-style")) {
+          const style = document.createElement("style");
+          style.id = "spinner-style";
+          style.textContent = `@keyframes spin { to { transform: rotate(360deg); } }`;
+          document.head.appendChild(style);
+        }
+
+        app.innerHTML = `<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:60vh; gap:20px;">
+          <div class="spinner" style="width:50px; height:50px; border:4px solid var(--line); border-top-color:var(--gold); border-radius:50%; animation:spin 1s linear infinite;"></div>
+          <p style="color:var(--ink-dim); font-size:14px; font-weight:500;">Connecting to secure biology database...</p>
+        </div>`;
+
+        try {
+          // Fetch skeleton metadata for all chapters via secure RPC to bypass row-level locks
+          const { data, error } = await supabaseClient.rpc('get_chapter_metadata');
+
+          if (error) throw error;
+
+          // Client-side numeric sorting of chapters
+          const sortedData = (data || []).sort((a, b) => {
+            const numA = parseInt(a.num);
+            const numB = parseInt(b.num);
+            if (isNaN(numA) && isNaN(numB)) return a.num.localeCompare(b.num);
+            if (isNaN(numA)) return 1;
+            if (isNaN(numB)) return -1;
+            return numA - numB;
+          });
+
+          // Populate DATA.chapters with skeleton metadata
+          sortedData.forEach(row => {
+            DATA.chapters[row.id] = {
+              id: row.id,
+              num: row.num,
+              title: row.title,
+              subtitle: row.subtitle,
+              color: row.color,
+              colorD: row.color_d,
+              glyph: row.glyph,
+              
+              notes: [],
+              mnemonics: new Array(row.count_mnemonics || 0),
+              flashcards: new Array(row.count_flashcards || 0),
+              recall: [],
+              mcqs: new Array(row.count_mcqs || 0),
+              match: [],
+              pathways: [],
+              boss: [],
+              
+              _loaded: false
+            };
+          });
+
+          // Re-initialize state storage for new chapters if needed
+          Object.keys(DATA.chapters).forEach(c => {
+            S.mastered[c] = S.mastered[c] || {};
+            S.recalled[c] = S.recalled[c] || {};
+            S.best[c] = S.best[c] || {};
+          });
+
+          route();
+        } catch (e) {
+          console.error("Failed to load biology content:", e);
+          app.innerHTML = `<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:60vh; gap:16px; text-align:center; padding:20px;">
+            <div style="font-size:48px;">⚠️</div>
+            <h3>Failed to load learning data</h3>
+            <p style="color:var(--ink-dim); font-size:14px; max-width:400px; margin: 10px 0 20px 0;">Are you connected to the internet? Database fetch failed: ${e.message}</p>
+            <button class="btn btn-primary" onclick="window.location.reload()">Retry connection</button>
+          </div>`;
+        }
+      });
+      window.addEventListener("popstate", () => {
+        route();
       });
 
       return {
         home, chapter, mode, resetAll, scrollNote, getSearch,
         onSearch, switchFilter, loadMore, softUpdateGrid,
         fcFlip, fcJudge, arHint, arReveal, arGrade, qzPick, qzNext,
-        mtPick, pwPlace, pwUnslot, pwReset, pwCheck
+        mtPick, pwPlace, pwUnslot, pwReset, pwCheck,
+        go, route, getSlug
       };
     })();
 

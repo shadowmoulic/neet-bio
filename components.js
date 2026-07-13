@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML('afterbegin', `<div class="topbar">
-  <div class="brand" onclick="App.home()">
+  <div class="brand" style="cursor: pointer;" onclick="event.preventDefault(); App.go('/')">
     <div class="mark">🧬</div>
-    <div class="site-title">The Codex<span>NEET 2027 · Full Syllabus</span></div>
+    <h1>The Codex<span>NEET 2027 · Full Syllabus</span></h1>
   </div>
   <div class="spacer"></div>
   <div class="xp-pill"><span class="lvl-badge" id="lvlBadge">Lv 1</span> <b id="xpVal">0</b> XP</div>
   <button class="icon-btn" title="Reset all progress" onclick="App.resetAll()">⟳</button>
-</div>`);
+ </div>`);
   document.body.insertAdjacentHTML('beforeend', `<footer class="site-footer">
   <div class="footer-content">
     <div class="footer-brand" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="footer-links">
       <div class="link-col">
         <div class="footer-heading" style="font-size: 14px; font-weight: bold; margin-bottom: 12px; color: var(--ink);">Explore</div>
-        <a href="/" onclick="App.home()">All Chapters</a>
-        <a href="/" onclick="App.switchFilter('bio11')">Biology XI</a>
-        <a href="/" onclick="App.switchFilter('bio12')">Biology XII</a>
+        <a href="/" onclick="event.preventDefault(); App.go('/')">All Chapters</a>
+        <a href="/?filter=bio11" onclick="event.preventDefault(); App.go('/?filter=bio11')">Biology XI</a>
+        <a href="/?filter=bio12" onclick="event.preventDefault(); App.go('/?filter=bio12')">Biology XII</a>
       </div>
       <div class="link-col">
         <div class="footer-heading" style="font-size: 14px; font-weight: bold; margin-bottom: 12px; color: var(--ink);">Resources</div>
-        <a href="/" onclick="App.switchFilter('phy')">Physics</a>
-        <a href="/" onclick="App.switchFilter('chem')">Chemistry</a>
+        <a href="/?filter=phy" onclick="event.preventDefault(); App.go('/?filter=phy')">Physics</a>
+        <a href="/?filter=chem" onclick="event.preventDefault(); App.go('/?filter=chem')">Chemistry</a>
         <a href="/guide/">How to use (Guide)</a>
       </div>
       <div class="link-col">
@@ -42,5 +42,5 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>&copy; ${new Date().getFullYear()} The Naturalist's Codex. All rights reserved.</p>
     <p>Built for deep understanding &amp; memory.</p>
   </div>
-</footer>`);
+ </footer>`);
 });

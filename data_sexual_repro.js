@@ -195,6 +195,22 @@ DATA.chapters.sexual_repro = {
   ],
 
   flashcards: [
+{front:"What is the male reproductive part of the flower?", back:"Androecium (whorl of stamens)."},
+{front:"What does the anther typically consist of?", back:"It is bilobed, with each lobe having two thecae (dithecous)."},
+{front:"What is microsporogenesis?", back:"The process of formation of microspores from a pollen mother cell (PMC) through meiosis."},
+{front:"What are the two layers of the pollen grain wall?", back:"Exine (outer, made of sporopollenin) and Intine (inner, made of cellulose and pectin)."},
+{front:"What are the two cells found in a mature pollen grain?", back:"Vegetative cell (larger) and Generative cell (smaller, divides to form male gametes)."},
+{front:"What is the female reproductive part of the flower?", back:"Gynoecium (pistil)."},
+{front:"What is megasporogenesis?", back:"The formation of megaspores from the megaspore mother cell (MMC)."},
+{front:"Describe the typical angiosperm embryo sac at maturity.", back:"8-nucleate but 7-celled."},
+{front:"What is pollination?", back:"The transfer of pollen grains to the stigma of a pistil."},
+{front:"Define autogamy.", back:"Pollination within the same flower."},
+{front:"What is the role of the filiform apparatus?", back:"Guides the pollen tube into the synergid."},
+{front:"What is double fertilization?", back:"Syngamy (fusion of male gamete with egg) + Triple fusion (fusion of male gamete with two polar nuclei)."},
+{front:"What does the Primary Endosperm Nucleus (PEN) develop into?", back:"Endosperm, which nourishes the developing embryo."},
+{front:"What is apomixis?", back:"A form of asexual reproduction that mimics sexual reproduction by producing seeds without fertilization."},
+{front:"What is polyembryony?", back:"The occurrence of more than one embryo in a seed."},
+
     { front: "Describe the typical lobes and thecae structure of an angiosperm anther.", back: "Typically bilobed and dithecous (each lobe has two thecae, making a total of four microsporangia)." },
     { front: "What is the function and key nuclear characteristic of the tapetum?", back: "It nourishes the developing pollen grains; its cells possess dense cytoplasm and are generally multinucleate." },
     { front: "Name the substance that makes up the exine, and state its properties.", back: "Sporopollenin — one of the most resistant organic materials known; can withstand high temperatures, strong acids or alkalis, and is not degraded by any enzyme." },

@@ -8,3 +8,16 @@ brain/
 node_modules/
 razorpay_plans.txt
 .vercel
+
+# Data Files
+data_*.js
+files/
+chem.js
+phy.js
+bio_ch9_ch10.js
+
+# Migration Utilities
+migration_data.sql
+generate_sql_migration.js
+migrate_via_api.js
+generate_sitemap.js

@@ -3,6 +3,7 @@ Description: An interactive, AI-optimized, active-recall based study system for 
 
 Usage Notes for LLMs and Crawlers:
 - This platform requires JavaScript to render its content dynamically.
+- The platform contains 35+ chapters, 1000+ flashcards, and hundreds of MCQs.
 - Core content is protected behind authentication and premium subscriptions.
 - Please refer to /terms/ for terms of service.
 - The platform uses flashcards, quizzes, and spaced repetition.

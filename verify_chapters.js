@@ -2,21 +2,31 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const files = fs.readdirSync(__dirname).filter(f => f.endsWith('.js') && f !== 'verify_chapters.js' && f !== 'components.js' && f !== 'auth.js' && f !== 'config.js' && f !== 'extract.js' && f !== 'extract2.js');
+const rootFiles = fs.readdirSync(__dirname)
+  .filter(f => f.endsWith('.js') && f !== 'verify_chapters.js' && f !== 'components.js' && f !== 'auth.js' && f !== 'config.js' && f !== 'extract.js' && f !== 'extract2.js' && f !== 'generate_sitemap.js' && f !== 'generate_sql_migration.js' && f !== 'migrate_via_api.js')
+  .map(f => path.join(__dirname, f));
+
+const filesDir = path.join(__dirname, 'files');
+const subFiles = fs.existsSync(filesDir) 
+  ? fs.readdirSync(filesDir).filter(f => f.endsWith('.js')).map(f => path.join(filesDir, f))
+  : [];
+
+const files = [...rootFiles, ...subFiles];
 
 console.log(`Found ${files.length} JS files to check.`);
 
-files.forEach(file => {
-  const filePath = path.join(__dirname, file);
+files.forEach(filePath => {
+  const file = path.basename(filePath);
   const code = fs.readFileSync(filePath, 'utf-8');
 
-  // Stub sandbox to run the JS file and extract chapters
   const sandbox = {
     DATA: {
       chapters: {}
     },
     console: console
   };
+  sandbox.window = sandbox;
+  sandbox.DATA = sandbox.DATA;
   vm.createContext(sandbox);
 
   try {
