@@ -188,23 +188,23 @@ DATA.chapters.human_health = {
   ],
 
   flashcards: [
-{front:"Who disproved the 'good humor' hypothesis of health?", back:"William Harvey."},
-{front:"What pathogen causes Typhoid fever and how is it confirmed?", back:"Salmonella typhi; confirmed by Widal test."},
-{front:"What causes Pneumonia?", back:"Streptococcus pneumoniae and Haemophilus influenzae."},
-{front:"Which species of Plasmodium causes the most fatal form of malaria?", back:"Plasmodium falciparum."},
-{front:"What is the infectious stage of Plasmodium that enters the human body?", back:"Sporozoites."},
-{front:"Which mosquito acts as the vector for Dengue and Chikungunya?", back:"Aedes mosquito."},
-{front:"What causes Ascariasis?", back:"Ascaris (an intestinal parasite)."},
-{front:"What pathogen causes ringworm?", back:"Fungi belonging to genera Microsporum, Trichophyton, and Epidermophyton."},
-{front:"Define innate immunity.", back:"Non-specific defense present at the time of birth."},
-{front:"What are interferons?", back:"Proteins secreted by virus-infected cells that protect non-infected cells."},
-{front:"What is the difference between active and passive immunity?", back:"Active: host produces antibodies; Passive: ready-made antibodies are directly given."},
-{front:"What is colostrum?", back:"Yellowish milk produced during the initial days of lactation, rich in IgA antibodies (passive immunity)."},
-{front:"What causes allergy and which antibodies are involved?", back:"Exaggerated immune response to allergens; IgE antibodies."},
-{front:"What is autoimmunity?", back:"When the immune system attacks self-cells (e.g., Rheumatoid arthritis)."},
-{front:"Which cells does the HIV virus primarily infect and destroy?", back:"Helper T-lymphocytes (TH cells)."},
-{front:"What is the difference between benign and malignant tumors?", back:"Benign remain confined; Malignant invade other tissues (metastasis)."},
-{front:"Which receptors do cannabinoids interact with?", back:"Cannabinoid receptors principally in the brain."},
+    { front: "Who disproved the 'good humor' hypothesis of health?", back: "William Harvey." },
+    { front: "What pathogen causes Typhoid fever and how is it confirmed?", back: "Salmonella typhi; confirmed by Widal test." },
+    { front: "What causes Pneumonia?", back: "Streptococcus pneumoniae and Haemophilus influenzae." },
+    { front: "Which species of Plasmodium causes the most fatal form of malaria?", back: "Plasmodium falciparum." },
+    { front: "What is the infectious stage of Plasmodium that enters the human body?", back: "Sporozoites." },
+    { front: "Which mosquito acts as the vector for Dengue and Chikungunya?", back: "Aedes mosquito." },
+    { front: "What causes Ascariasis?", back: "Ascaris (an intestinal parasite)." },
+    { front: "What pathogen causes ringworm?", back: "Fungi belonging to genera Microsporum, Trichophyton, and Epidermophyton." },
+    { front: "Define innate immunity.", back: "Non-specific defense present at the time of birth." },
+    { front: "What are interferons?", back: "Proteins secreted by virus-infected cells that protect non-infected cells." },
+    { front: "What is the difference between active and passive immunity?", back: "Active: host produces antibodies; Passive: ready-made antibodies are directly given." },
+    { front: "What is colostrum?", back: "Yellowish milk produced during the initial days of lactation, rich in IgA antibodies (passive immunity)." },
+    { front: "What causes allergy and which antibodies are involved?", back: "Exaggerated immune response to allergens; IgE antibodies." },
+    { front: "What is autoimmunity?", back: "When the immune system attacks self-cells (e.g., Rheumatoid arthritis)." },
+    { front: "Which cells does the HIV virus primarily infect and destroy?", back: "Helper T-lymphocytes (TH cells)." },
+    { front: "What is the difference between benign and malignant tumors?", back: "Benign remain confined; Malignant invade other tissues (metastasis)." },
+    { front: "Which receptors do cannabinoids interact with?", back: "Cannabinoid receptors principally in the brain." },
 
     { front: "Which test confirms typhoid fever?", back: "Widal test. Typhoid is caused by Salmonella typhi." },
     { front: "Which species of Plasmodium causes the most dangerous malaria?", back: "Plasmodium falciparum — causes malignant malaria; can be fatal." },
@@ -301,6 +301,132 @@ DATA.chapters.human_health = {
       o: ["Chemotherapy drug", "Biological response modifier in immunotherapy", "Radiotherapy agent", "Hormone therapy"],
       c: 1,
       e: "α-interferon is a biological response modifier used in immunotherapy — it activates the patient's immune system to help recognise and destroy tumor cells."
+    },
+    {
+      q: "Which of the following is NOT a property of malignant tumors?",
+      o: ["Rapid cell division", "Metastasis", "Invasion of surrounding tissue", "Confined to original location"],
+      c: 3,
+      e: "Being confined to the original location is the property of benign tumors. Malignant tumors are invasive, grow rapidly, and spread to distant sites through blood (metastasis)."
+    },
+    {
+      q: "Heroin is chemically known as:",
+      o: ["Morphine", "Diacetylmorphine", "Cocaine", "Cannabis"],
+      c: 1,
+      e: "Heroin (smack) is chemically diacetylmorphine — obtained by acetylation of morphine extracted from latex of poppy plant Papaver somniferum."
+    },
+    {
+      q: "HIV primarily attacks which cells?",
+      o: ["B-lymphocytes", "Helper T-lymphocytes (TH)", "Macrophages only", "Red blood cells"],
+      c: 1,
+      e: "HIV first replicates in macrophages, then attacks helper T-lymphocytes (TH), progressively reducing their count, causing immune deficiency."
+    },
+    {
+      q: "Filariasis (elephantiasis) is caused by:",
+      o: ["Ascaris", "Entamoeba histolytica", "Wuchereria bancrofti", "Plasmodium vivax"],
+      c: 2,
+      e: "Filariasis (elephantiasis) is caused by filarial worms Wuchereria bancrofti and W. malayi, transmitted by female mosquito bite, causing chronic inflammation of lymphatic vessels."
+    },
+    {
+      q: "α-interferon is used in cancer treatment as:",
+      o: ["Chemotherapy drug", "Biological response modifier in immunotherapy", "Radiotherapy agent", "Hormone therapy"],
+      c: 1,
+      e: "α-interferon is a biological response modifier used in immunotherapy — it activates the patient's immune system to help recognise and destroy tumor cells."
+    },
+    {
+      q: "The typhoid test that detects antibodies against Salmonella is:",
+      o: ["ELISA", "Western blot", "Widal test", "PCR"],
+      c: 2,
+      e: "The Widal test is a serological test that detects antibodies (agglutinins) against Salmonella typhi antigens in the patient's serum, confirming typhoid fever."
+    },
+    {
+      q: "Allergy involves the release of which chemicals from mast cells?",
+      o: ["Insulin and glucagon", "Histamine and serotonin", "Adrenaline and cortisol", "Thyroxine"],
+      c: 1,
+      e: "When allergens bind to IgE on mast cells, the mast cells release histamine and serotonin (from stored granules), causing typical allergy symptoms."
+    },
+    {
+      q: "Which lymphoid organ is site of maturation for T-lymphocytes?",
+      o: ["Bone marrow", "Spleen", "Thymus", "Lymph nodes"],
+      c: 2,
+      e: "The thymus is the primary lymphoid organ where T-lymphocytes (T-cells) develop and mature. It is large at birth and reduces greatly in size by puberty."
+    },
+    {
+      q: "Passive immunity is provided by:",
+      o: ["Vaccination", "Exposure to antigen", "Ready-made antibodies transferred into the body", "Memory B cells"],
+      c: 2,
+      e: "In passive immunity, ready-made antibodies are directly introduced (not made by the individual). Example: IgA from colostrum; antivenom serum against snake bites."
+    },
+    {
+      q: "Which of the following is a secondary lymphoid organ?",
+      o: ["Bone marrow", "Thymus", "Spleen", "Bursa of Fabricius"],
+      c: 2,
+      e: "The spleen is a secondary lymphoid organ where mature lymphocytes are activated and interact with antigens. Bone marrow and thymus are primary lymphoid organs."
+    },
+    {
+      q: "The common cold virus infects:",
+      o: ["Lungs and bronchi", "Nose and respiratory passage only", "Entire digestive system", "Blood and liver"],
+      c: 1,
+      e: "Rhinoviruses causing common cold infect the nose and respiratory passage but do NOT infect the lungs, which is a key distinction from pneumonia."
+    },
+    {
+      q: "Which Plasmodium species causes the most malignant form of malaria?",
+      o: ["P. vivax", "P. malariae", "P. ovale", "P. falciparum"],
+      c: 3,
+      e: "Plasmodium falciparum causes the most severe (malignant tertian) malaria, which can be fatal. P. vivax causes benign tertian malaria."
+    },
+    {
+      q: "Humoral immunity is mediated by:",
+      o: ["T-lymphocytes", "NK cells", "B-lymphocytes producing antibodies", "Macrophages"],
+      c: 2,
+      e: "Humoral immunity is B-lymphocyte mediated. B-cells produce antibodies (immunoglobulins) that circulate in the blood and attack antigens. CMI is T-cell mediated."
+    },
+    {
+      q: "Genes that when mutated lead to cancerous growth are called:",
+      o: ["Tumour suppressor genes", "Proto-oncogenes", "Antigens", "Interferons"],
+      c: 1,
+      e: "Proto-oncogenes are normal genes that regulate cell division. When mutated by carcinogens (chemical, physical, or viral), they become oncogenes, which cause uncontrolled cell division (cancer)."
+    },
+    {
+      q: "Ascariasis is caused by:",
+      o: ["Wuchereria bancrofti", "Entamoeba histolytica", "Ascaris lumbricoides", "Plasmodium falciparum"],
+      c: 2,
+      e: "Ascariasis is caused by Ascaris lumbricoides (roundworm). It is spread through contaminated soil, water, or vegetables, and causes internal bleeding, muscle pain, and intestinal blockage."
+    },
+    {
+      q: "Which virus causes AIDS?",
+      o: ["Retrovirus — HTLV", "Retrovirus — HIV (Human Immunodeficiency Virus)", "Adenovirus", "Herpesvirus"],
+      c: 1,
+      e: "AIDS (Acquired Immuno Deficiency Syndrome) is caused by HIV, a retrovirus that uses reverse transcriptase to make DNA from its RNA genome."
+    },
+    {
+      q: "ELISA test is used for diagnosing:",
+      o: ["Typhoid", "AIDS (HIV infection)", "Malaria", "Ringworm"],
+      c: 1,
+      e: "ELISA (Enzyme Linked Immunosorbent Assay) is used to confirm HIV infection by detecting anti-HIV antibodies in the patient's serum."
+    },
+    {
+      q: "Opium is derived from which plant?",
+      o: ["Cannabis sativa", "Erythroxylum coca", "Papaver somniferum", "Atropa belladonna"],
+      c: 2,
+      e: "Opium and its derivative morphine (and heroin) are obtained from the latex of the poppy plant Papaver somniferum."
+    },
+    {
+      q: "Cannabis sativa is the source of which drug?",
+      o: ["Heroin", "Cocaine", "Cannabinoids (marijuana)", "Morphine"],
+      c: 2,
+      e: "Cannabinoids (hashish, marijuana, ganja, charas) are obtained from Cannabis sativa plant and generally taken by inhalation or oral ingestion."
+    },
+    {
+      q: "Rheumatoid arthritis is an example of:",
+      o: ["Allergy", "Acquired immunity failure", "Autoimmune disease", "Innate immunity failure"],
+      c: 2,
+      e: "Rheumatoid arthritis is an autoimmune disease where the immune system attacks the body's own joint tissues (self-attack), causing inflammation and damage."
+    },
+    {
+      q: "What percentage of all human lymphoid tissue is MALT (Mucosa-Associated Lymphoid Tissue)?",
+      o: ["10%", "25%", "50%", "75%"],
+      c: 2,
+      e: "MALT (Mucosa-Associated Lymphoid Tissue) constitutes approximately 50% of the lymphoid tissue in the human body, lining the gut, respiratory, and urogenital tracts."
     }
   ],
 
@@ -345,6 +471,20 @@ DATA.chapters.human_health = {
         "Female Anopheles bites infected person — picks up gametocytes",
         "Parasites develop into sporozoites in mosquito salivary glands",
         "Cycle repeats when mosquito bites next human"
+      ]
+    },
+    {
+      title: "Oncogenesis (Cancer Development)",
+      prompt: "Order the steps in the transformation of a normal cell into a malignant cancer cell.",
+      steps: [
+        "Normal cell has functional proto-oncogenes",
+        "Exposure to carcinogens (chemical, UV, X-ray, or oncogenic virus)",
+        "Mutation in proto-oncogene → becomes oncogene",
+        "Tumour suppressor genes also inactivated",
+        "Uncontrolled cell division begins",
+        "Benign tumour forms (localised, non-invasive)",
+        "Further mutations lead to invasive malignant tumour",
+        "Metastasis: cancer cells enter bloodstream and spread to other organs"
       ]
     }
   ]

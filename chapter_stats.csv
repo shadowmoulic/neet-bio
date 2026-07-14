@@ -1,0 +1,32 @@
+Chapter Number,Chapter ID,Title,Class/Subject,Flashcards,MCQs,Mnemonics,Recall,Match,Pathways
+1,living,"The Living World",Class 11 Bio,53,68,0,30,21,4
+2,bioclassif,"Biological Classification",Class 11 Bio,61,70,0,30,21,4
+2,sexual_repro,"Sexual Reproduction in Flowering Plants",Class 12 Bio,35,30,3,5,10,3
+3,human_repro,"Human Reproduction",Class 12 Bio,34,30,3,5,10,3
+3,plant,"Plant Kingdom",Class 11 Bio,70,80,10,41,32,4
+3,repro_health,"Reproductive Health",Class 12 Bio,32,30,2,3,8,3
+4,animal,"Animal Kingdom",Class 11 Bio,35,20,9,10,12,4
+4,brain_bodyworks3chpsbioclas11html_bre,"Breathing & Exchange of Gases",Class 11 Bio,42,24,1,42,18,3
+4,brain_bodyworks3chpsbioclas11html_exc,"Excretory Products & Their Elimination",Class 12 Bio,42,24,1,42,18,3
+4,brain_bodyworks3chpsbioclas11html_loc,"Locomotion & Movement",Class 11 Bio,44,24,3,44,18,3
+4,inheritance,"Principles of Inheritance and Variation",Class 12 Bio,81,70,7,50,18,4
+5,molecular,"Molecular Basis of Inheritance",Class 12 Bio,83,71,8,50,18,4
+5,morph,"Morphology of Flowering Plants",Class 11 Bio,35,20,8,10,12,4
+6,anat,"Anatomy of Flowering Plants",Class 11 Bio,22,20,8,10,12,4
+6,evolution,"Evolution",Class 12 Bio,80,70,7,50,18,4
+7,human_health,"Human Health & Disease",Class 12 Bio,32,31,3,3,12,3
+7,struct_anim,"Structural Organisation in Animals",Class 11 Bio,74,70,0,30,21,4
+08,brain_biolab11_cell,"Cell: The Unit of Life",Class 11 Bio,54,50,6,30,18,4
+9,biomol,"Biomolecules",Class 11 Bio,56,70,0,30,21,4
+9,biotech_principles,"Biotechnology: Principles and Processes",Class 12 Bio,72,30,9,50,12,3
+10,microbes,"Microbes in Human Welfare",Class 12 Bio,33,30,3,4,10,3
+11,orgpop,"Organisms and Populations",Class 12 Bio,113,110,14,52,67,9
+12,ecosystem,"Ecosystem",Class 12 Bio,108,106,15,51,70,9
+13,brain_biolab11_plant,"Plant Growth & Development",Class 11 Bio,52,50,6,30,18,4
+13,brain_biolabphotosynthesisandresphtml_c13,"Photosynthesis in Higher Plants",Class 11 Bio,48,24,1,48,18,3
+13,biodiv,"Biodiversity and Conservation",Class 12 Bio,107,118,16,52,75,9
+14,brain_biolabphotosynthesisandresphtml_c14,"Respiration in Plants",Class 11 Bio,34,24,1,34,18,4
+15,brain_biolab11_blood,"Body Fluids & Circulation",Class 12 Bio,56,50,6,30,18,4
+18,brain_biolab11_neural,"Neural Control & Coordination",Class 12 Bio,56,50,6,30,18,4
+19,brain_biolab11_horm,"Chemical Coordination & Integration",Class 12 Bio,52,50,6,30,18,4
+CELL,brain_divisionlab01cellcyclehtml,"Cell Cycle & Division",Class 11 Bio,28,16,7,28,12,3

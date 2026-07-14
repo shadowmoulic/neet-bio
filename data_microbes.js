@@ -144,23 +144,23 @@ DATA.chapters.microbes = {
   ],
 
   flashcards: [
-{front:"Which microbe is primarily responsible for converting milk to curd?", back:"Lactobacillus (Lactic Acid Bacteria or LAB)."},
-{front:"How does LAB improve the nutritional quality of curd?", back:"By increasing Vitamin B12 content."},
-{front:"What yeast is known as baker's yeast and brewer's yeast?", back:"Saccharomyces cerevisiae."},
-{front:"Which microbe produces the antibiotic Penicillin?", back:"Penicillium notatum."},
-{front:"Who discovered Penicillin?", back:"Alexander Fleming."},
-{front:"Which microbe produces Citric Acid?", back:"Aspergillus niger (a fungus)."},
-{front:"What is the medical use of Streptokinase and which microbe produces it?", back:"Used as a 'clot buster' for heart attack patients; produced by Streptococcus."},
-{front:"Which microbe produces Cyclosporin A and what is its use?", back:"Trichoderma polysporum; used as an immunosuppressive agent in organ transplants."},
-{front:"What are statins used for and what produces them?", back:"Blood-cholesterol lowering agents; produced by Monascus purpureus (yeast)."},
-{front:"What is the primary treatment of sewage?", back:"Physical removal of particles (filtration and sedimentation)."},
-{front:"What are flocs in secondary sewage treatment?", back:"Masses of bacteria associated with fungal filaments to form mesh-like structures."},
-{front:"What is Biochemical Oxygen Demand (BOD)?", back:"The amount of oxygen consumed if all organic matter in 1L of water were oxidized by bacteria."},
-{front:"What does methanobacterium produce during anaerobic sludge digestion?", back:"Biogas (primarily methane, H2S, and CO2)."},
-{front:"Give an example of a microbial biocontrol agent used against caterpillars.", back:"Bacillus thuringiensis (Bt)."},
-{front:"What are mycorrhizae?", back:"Symbiotic associations between fungi (like Glomus) and plant roots that absorb phosphorus from soil."},
-{front:"Which group of organisms act as biofertilizers in paddy fields?", back:"Cyanobacteria (e.g., Anabaena, Nostoc, Oscillatoria)."},
-{front:"What are baculoviruses used for?", back:"Biological control of insects and other arthropods (e.g., genus Nucleopolyhedrovirus)."},
+    { front: "Which microbe is primarily responsible for converting milk to curd?", back: "Lactobacillus (Lactic Acid Bacteria or LAB)." },
+    { front: "How does LAB improve the nutritional quality of curd?", back: "By increasing Vitamin B12 content." },
+    { front: "What yeast is known as baker's yeast and brewer's yeast?", back: "Saccharomyces cerevisiae." },
+    { front: "Which microbe produces the antibiotic Penicillin?", back: "Penicillium notatum." },
+    { front: "Who discovered Penicillin?", back: "Alexander Fleming." },
+    { front: "Which microbe produces Citric Acid?", back: "Aspergillus niger (a fungus)." },
+    { front: "What is the medical use of Streptokinase and which microbe produces it?", back: "Used as a 'clot buster' for heart attack patients; produced by Streptococcus." },
+    { front: "Which microbe produces Cyclosporin A and what is its use?", back: "Trichoderma polysporum; used as an immunosuppressive agent in organ transplants." },
+    { front: "What are statins used for and what produces them?", back: "Blood-cholesterol lowering agents; produced by Monascus purpureus (yeast)." },
+    { front: "What is the primary treatment of sewage?", back: "Physical removal of particles (filtration and sedimentation)." },
+    { front: "What are flocs in secondary sewage treatment?", back: "Masses of bacteria associated with fungal filaments to form mesh-like structures." },
+    { front: "What is Biochemical Oxygen Demand (BOD)?", back: "The amount of oxygen consumed if all organic matter in 1L of water were oxidized by bacteria." },
+    { front: "What does methanobacterium produce during anaerobic sludge digestion?", back: "Biogas (primarily methane, H2S, and CO2)." },
+    { front: "Give an example of a microbial biocontrol agent used against caterpillars.", back: "Bacillus thuringiensis (Bt)." },
+    { front: "What are mycorrhizae?", back: "Symbiotic associations between fungi (like Glomus) and plant roots that absorb phosphorus from soil." },
+    { front: "Which group of organisms act as biofertilizers in paddy fields?", back: "Cyanobacteria (e.g., Anabaena, Nostoc, Oscillatoria)." },
+    { front: "What are baculoviruses used for?", back: "Biological control of insects and other arthropods (e.g., genus Nucleopolyhedrovirus)." },
 
     { front: "Which acid coagulates milk proteins to form curd, and what bacteria produces it?", back: "Lactic acid, produced by Lactic Acid Bacteria (LAB / Lactobacillus)." },
     { front: "How does curdling improve the nutritional value of milk?", back: "It increases the content of Vitamin B12." },
@@ -251,6 +251,138 @@ DATA.chapters.microbes = {
       o: ["Nitrogen", "Phosphorus", "Potassium", "Iron"],
       c: 1,
       e: "Mycorrhizal fungi of the genus Glomus absorb phosphorus from soil minerals and transfer it to the host plant."
+    },
+    {
+      q: "Which yeast is used as baker's yeast for fermenting bread dough?",
+      o: ["Saccharomyces lactis", "Saccharomyces cerevisiae", "Candida albicans", "Aspergillus oryzae"],
+      c: 1,
+      e: "Baker's yeast is Saccharomyces cerevisiae. It ferments the sugars in dough, releasing CO2 which causes the dough to rise."
+    },
+    {
+      q: "Roquefort cheese gets its distinct flavour due to ripening by:",
+      o: ["Propionibacterium sharmanii", "Lactobacillus lactis", "A specific fungus grown on it", "Aspergillus niger"],
+      c: 2,
+      e: "Roquefort cheese is ripened by growing a specific fungus on it, which gives it a characteristic flavour and bluish appearance."
+    },
+    {
+      q: "Which of the following beverages are produced WITHOUT distillation of the fermented broth?",
+      o: ["Whisky and Rum", "Brandy and Rum", "Wine and Beer", "Vodka and Gin"],
+      c: 2,
+      e: "Wine and Beer are produced by fermenting malted cereals or fruit juices without distillation. Whisky, Brandy, and Rum require distillation."
+    },
+    {
+      q: "Penicillin was discovered by Alexander Fleming from which organism?",
+      o: ["Penicillium chrysogenum", "Penicillium notatum", "Aspergillus fumigatus", "Streptomyces griseus"],
+      c: 1,
+      e: "Alexander Fleming discovered penicillin in 1928 when he noticed the mould Penicillium notatum killing Staphylococcus bacteria on his petri dish."
+    },
+    {
+      q: "Who established the full potential of penicillin as an effective antibiotic and received the Nobel Prize?",
+      o: ["Pasteur and Koch", "Chain and Florey", "Fleming and Chain", "Florey and Fleming"],
+      c: 1,
+      e: "Ernest Chain and Howard Florey established the full potential of penicillin and received the Nobel Prize in 1945 along with Alexander Fleming."
+    },
+    {
+      q: "Cyclosporin A, used as an immunosuppressant, is produced by:",
+      o: ["Monascus purpureus", "Trichoderma polysporum", "Streptococcus", "Aspergillus niger"],
+      c: 1,
+      e: "Cyclosporin A is a bioactive molecule produced by the fungus Trichoderma polysporum and is used as an immunosuppressant in organ-transplant patients."
+    },
+    {
+      q: "Statins, used to lower blood cholesterol, are produced by:",
+      o: ["Yeast Monascus purpureus", "Bacterium Streptomyces", "Fungus Aspergillus fumigatus", "Bacterium Clostridium"],
+      c: 0,
+      e: "Statins are produced by the yeast Monascus purpureus. They inhibit the enzyme responsible for cholesterol synthesis (competitive inhibitor) and are widely used to control blood cholesterol."
+    },
+    {
+      q: "Flocs in the aeration tank of a sewage treatment plant are made of:",
+      o: ["Only bacteria", "Only fungi", "Bacteria and fungal filaments", "Algae and protozoa"],
+      c: 2,
+      e: "Flocs are mesh-like structures formed by the association of aerobic bacteria and fungal filaments. They digest and absorb the organic matter in the sewage, reducing BOD."
+    },
+    {
+      q: "What is the biochemical oxygen demand (BOD) a measure of?",
+      o: ["The amount of oxygen in the air above water", "The amount of organic matter in water", "The number of bacteria per litre", "The pH of the water sample"],
+      c: 1,
+      e: "BOD refers to the amount of oxygen required by bacteria to completely oxidise the organic matter present in one litre of water. More BOD = more organic pollution."
+    },
+    {
+      q: "After primary sewage treatment, the effluent is called:",
+      o: ["Biogas", "Activated sludge", "Primary effluent", "Clarified water"],
+      c: 2,
+      e: "After primary treatment (large filtration + sedimentation to remove floating and settable solids), the resulting liquid is called primary effluent, which then undergoes secondary treatment."
+    },
+    {
+      q: "Biogas mainly contains which gas?",
+      o: ["Hydrogen", "Nitrogen", "Methane", "Carbon dioxide"],
+      c: 2,
+      e: "Biogas is predominantly composed of methane (CH4), along with H2S and CO2, produced by the anaerobic digestion of sludge by methanogens."
+    },
+    {
+      q: "Mycorrhizae are associations between plants and:",
+      o: ["Cyanobacteria", "Fungi", "Rhizobium bacteria", "Viruses"],
+      c: 1,
+      e: "Mycorrhizae are mutualistic associations between plant roots and fungi (like Glomus). The fungal hyphae enhance the plant's nutrient absorption, especially phosphorus."
+    },
+    {
+      q: "Which of the following is an example of a free-living nitrogen-fixer?",
+      o: ["Rhizobium", "Trichoderma", "Anabaena", "Glomus"],
+      c: 2,
+      e: "Anabaena (a cyanobacterium) is a free-living nitrogen fixer found in soil. Rhizobium is a symbiotic nitrogen fixer (lives in legume root nodules)."
+    },
+    {
+      q: "Which microbe is an example of a symbiotic nitrogen-fixing bacterium?",
+      o: ["Azospirillum", "Clostridium", "Rhizobium", "Nostoc"],
+      c: 2,
+      e: "Rhizobium lives symbiotically in root nodules of leguminous plants and fixes atmospheric nitrogen into a usable form for the plant."
+    },
+    {
+      q: "The biological control agent Trichoderma is used against:",
+      o: ["Nematodes", "Caterpillar pests", "Several plant pathogens", "Aphids only"],
+      c: 2,
+      e: "Trichoderma species are free-living fungi that are effective biocontrol agents against several plant pathogens (fungi)."
+    },
+    {
+      q: "Baculoviruses are used as biocontrol agents primarily because they:",
+      o: ["Attack a wide range of insects", "Are narrow-spectrum and attack only specific insects", "Are chemical pesticides", "Kill all soil fungi"],
+      c: 1,
+      e: "Baculoviruses are species-specific and are narrow-spectrum, making them excellent biocontrol agents — they kill only the target pest and do not affect other organisms."
+    },
+    {
+      q: "Which pollen of which plant is used in Integrated Pest Management?",
+      o: ["Weed that attracts aphids", "Ladybird beetles", "Dragonfly larvae", "Nucleopolyhedrovirus"],
+      c: 3,
+      e: "Nucleopolyhedrovirus (a Baculovirus) is used as a biocontrol agent in Integrated Pest Management (IPM) programmes."
+    },
+    {
+      q: "Bioactive molecule Statin works by:",
+      o: ["Blocking fat absorption in intestine", "Competitive inhibition of cholesterol-synthesizing enzyme", "Destroying LDL particles", "Increasing HDL production"],
+      c: 1,
+      e: "Statins competitively inhibit the enzyme HMG-CoA reductase, which is responsible for the synthesis of cholesterol in the liver."
+    },
+    {
+      q: "Which organism is responsible for large holes in Swiss cheese?",
+      o: ["Lactobacillus acidophilus", "Penicillium camemberti", "Propionibacterium sharmanii", "Aspergillus flavus"],
+      c: 2,
+      e: "Propionibacterium sharmanii produces large amounts of CO2 during cheese ripening, which gets trapped and forms the large holes characteristic of Swiss cheese."
+    },
+    {
+      q: "Lactic acid bacteria (LAB) improve human health by:",
+      o: ["Producing Vitamin C", "Producing Vitamin B12", "Inhibiting fat absorption", "Producing antibiotics"],
+      c: 1,
+      e: "LAB in curd improve its nutritional quality by producing Vitamin B12. They also check disease-causing microbes in the stomach."
+    },
+    {
+      q: "Which enzyme produced by bacteria is used as a clot buster in heart attack patients?",
+      o: ["Lipase from Aspergillus", "Amylase from Bacillus", "Streptokinase from Streptococcus", "Pectinase from Pseudomonas"],
+      c: 2,
+      e: "Streptokinase is produced by Streptococcus bacteria. It dissolves blood clots and is used as a 'clot buster' in treating heart attack patients."
+    },
+    {
+      q: "Which of the following correctly describes the sequence of sewage treatment stages?",
+      o: ["Secondary → Primary → Tertiary", "Tertiary → Primary → Secondary", "Primary → Secondary → Tertiary", "Primary → Tertiary → Secondary"],
+      c: 2,
+      e: "Sewage treatment follows: Primary (physical — filtration, sedimentation) → Secondary (biological — aerobic microbes reduce BOD) → Tertiary (chemical disinfection)."
     }
   ],
 
@@ -293,6 +425,18 @@ DATA.chapters.microbes = {
         "Activated toxin binds to surface of midgut epithelial cells",
         "Toxin creates pores, causing swelling and cell lysis",
         "Gut lining ruptures, leading to death of the insect"
+      ]
+    },
+    {
+      title: "Biogas Plant Operation",
+      prompt: "Order the steps in a typical biogas plant to produce usable biogas from cow dung.",
+      steps: [
+        "Mix cow dung with water to make slurry",
+        "Feed slurry into the digester tank",
+        "Anaerobic bacteria (methanogens) digest the slurry",
+        "Biogas accumulates in the gas storage tank above",
+        "Biogas piped out for cooking/lighting use",
+        "Spent slurry removed as biofertiliser for fields"
       ]
     }
   ]

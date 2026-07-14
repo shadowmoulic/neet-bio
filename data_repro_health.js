@@ -133,23 +133,23 @@ DATA.chapters.repro_health = {
   ],
 
   flashcards: [
-{front:"What was the name of the national reproductive health program launched in India in 1951?", back:"Family planning program."},
-{front:"What does RCH stand for?", back:"Reproductive and Child Health Care program."},
-{front:"What is amniocentesis?", back:"A fetal sex determination test based on the chromosomal pattern in the amniotic fluid (often misused for female foeticide)."},
-{front:"What is 'Saheli'?", back:"A non-steroidal oral contraceptive pill for females developed by CDRI, Lucknow."},
-{front:"Name two natural methods of contraception.", back:"Periodic abstinence and Lactational amenorrhea."},
-{front:"Give examples of barrier methods.", back:"Condoms, diaphragms, cervical caps, and vaults."},
-{front:"How do copper-releasing IUDs (like CuT) work?", back:"They release Cu ions which suppress sperm motility and fertilising capacity."},
-{front:"Give an example of a hormone-releasing IUD.", back:"Progestasert, LNG-20."},
-{front:"How do oral contraceptive pills work?", back:"They inhibit ovulation and implantation, and alter cervical mucus quality to prevent sperm entry."},
-{front:"What are the surgical methods of contraception?", back:"Vasectomy in males and Tubectomy in females."},
-{front:"What is MTP?", back:"Medical Termination of Pregnancy (induced abortion)."},
-{front:"What are sexually transmitted infections (STIs)?", back:"Infections transmitted through sexual intercourse (e.g., Gonorrhea, Syphilis, HIV, Hepatitis B)."},
-{front:"Which STIs are completely curable if detected early and treated properly?", back:"Most, except Hepatitis B, Genital herpes, and HIV infections."},
-{front:"What is IVF (In Vitro Fertilisation)?", back:"Fertilisation outside the body in almost similar conditions as that in the body."},
-{front:"What is ZIFT?", back:"Zygote Intra Fallopian Transfer (transfer of zygote or early embryo into fallopian tube)."},
-{front:"What is GIFT?", back:"Gamete Intra Fallopian Transfer (transfer of an ovum collected from a donor into the fallopian tube of another female)."},
-{front:"What is ICSI?", back:"Intra Cytoplasmic Sperm Injection (a sperm is directly injected into the ovum)."},
+    { front: "What was the name of the national reproductive health program launched in India in 1951?", back: "Family planning program." },
+    { front: "What does RCH stand for?", back: "Reproductive and Child Health Care program." },
+    { front: "What is amniocentesis?", back: "A fetal sex determination test based on the chromosomal pattern in the amniotic fluid (often misused for female foeticide)." },
+    { front: "What is 'Saheli'?", back: "A non-steroidal oral contraceptive pill for females developed by CDRI, Lucknow." },
+    { front: "Name two natural methods of contraception.", back: "Periodic abstinence and Lactational amenorrhea." },
+    { front: "Give examples of barrier methods.", back: "Condoms, diaphragms, cervical caps, and vaults." },
+    { front: "How do copper-releasing IUDs (like CuT) work?", back: "They release Cu ions which suppress sperm motility and fertilising capacity." },
+    { front: "Give an example of a hormone-releasing IUD.", back: "Progestasert, LNG-20." },
+    { front: "How do oral contraceptive pills work?", back: "They inhibit ovulation and implantation, and alter cervical mucus quality to prevent sperm entry." },
+    { front: "What are the surgical methods of contraception?", back: "Vasectomy in males and Tubectomy in females." },
+    { front: "What is MTP?", back: "Medical Termination of Pregnancy (induced abortion)." },
+    { front: "What are sexually transmitted infections (STIs)?", back: "Infections transmitted through sexual intercourse (e.g., Gonorrhea, Syphilis, HIV, Hepatitis B)." },
+    { front: "Which STIs are completely curable if detected early and treated properly?", back: "Most, except Hepatitis B, Genital herpes, and HIV infections." },
+    { front: "What is IVF (In Vitro Fertilisation)?", back: "Fertilisation outside the body in almost similar conditions as that in the body." },
+    { front: "What is ZIFT?", back: "Zygote Intra Fallopian Transfer (transfer of zygote or early embryo into fallopian tube)." },
+    { front: "What is GIFT?", back: "Gamete Intra Fallopian Transfer (transfer of an ovum collected from a donor into the fallopian tube of another female)." },
+    { front: "What is ICSI?", back: "Intra Cytoplasmic Sperm Injection (a sperm is directly injected into the ovum)." },
 
     { front: "WHO definition of Reproductive Health?", back: "Total well-being in all aspects of reproduction — physical, emotional, behavioural and social." },
     { front: "When did India start Family Planning programmes?", back: "1951 — India was among the first countries to do so at national level." },
@@ -234,6 +234,138 @@ DATA.chapters.repro_health = {
       o: ["Removing part of the fallopian tube", "Removing the uterus", "Removing or tying part of the vas deferens", "Hormone injections"],
       c: 2,
       e: "In vasectomy, a small part of the vas deferens is removed or tied through a small incision on the scrotum, preventing sperm transport."
+    },
+    {
+      q: "Which of the following STIs is NOT completely curable?",
+      o: ["Gonorrhoea", "Syphilis", "Genital herpes", "Trichomoniasis"],
+      c: 2,
+      e: "Genital herpes (along with HIV and hepatitis-B) cannot be completely cured. All other common STIs are curable if detected and treated early."
+    },
+    {
+      q: "MTP is considered relatively safe during:",
+      o: ["First trimester only (up to 12 weeks)", "Second trimester (12–24 weeks)", "Third trimester", "Any time during pregnancy"],
+      c: 0,
+      e: "MTPs are considered relatively safe during the first trimester (up to 12 weeks). Second-trimester abortions are much riskier."
+    },
+    {
+      q: "Embryo with more than 8 blastomeres is transferred to the uterus in:",
+      o: ["ZIFT", "GIFT", "IUT", "ICSI"],
+      c: 2,
+      e: "IUT (Intra Uterine Transfer) is used for embryos with more than 8 blastomeres. ZIFT is for embryos with ≤8 blastomeres transferred to the fallopian tube."
+    },
+    {
+      q: "Lactational amenorrhea as a contraceptive is effective for up to:",
+      o: ["3 months", "6 months", "1 year", "2 years"],
+      c: 1,
+      e: "Lactational amenorrhea (absence of menstruation during intense lactation) is effective only up to a maximum of 6 months following parturition."
+    },
+    {
+      q: "Vasectomy involves:",
+      o: ["Removing part of the fallopian tube", "Removing the uterus", "Removing or tying part of the vas deferens", "Hormone injections"],
+      c: 2,
+      e: "In vasectomy, a small part of the vas deferens is removed or tied through a small incision on the scrotum, preventing sperm transport."
+    },
+    {
+      q: "What is the statutory minimum age for marriage in females as per law?",
+      o: ["16 years", "18 years", "21 years", "17 years"],
+      c: 1,
+      e: "The statutory minimum age for marriage is 18 years for females and 21 years for males."
+    },
+    {
+      q: "Which contraceptive method also provides protection against STIs?",
+      o: ["Oral pills", "IUDs", "Condoms", "Tubectomy"],
+      c: 2,
+      e: "Condoms are the only contraceptive method that also provide protection against sexually transmitted infections (STIs) by acting as a barrier."
+    },
+    {
+      q: "The term 'amniocentesis' refers to analysing foetal cells from:",
+      o: ["Placental tissue", "Umbilical cord blood", "Amniotic fluid", "Chorionic villi"],
+      c: 2,
+      e: "Amniocentesis is a procedure where foetal cells shed in the amniotic fluid are extracted and analysed for chromosomal and genetic disorders."
+    },
+    {
+      q: "GIFT stands for:",
+      o: ["Genetic Intra Follicular Transfer", "Gamete Intra Fallopian Transfer", "Germ Intra Fetal Transfer", "Gonadal Intra Fallopian Transfer"],
+      c: 1,
+      e: "GIFT = Gamete Intra Fallopian Transfer. An ovum collected from a donor is transferred into the fallopian tube of another female who cannot produce eggs."
+    },
+    {
+      q: "The WHO definition of Reproductive Health covers which aspects?",
+      o: ["Only physical well-being", "Physical and mental well-being", "Physical, emotional, behavioural and social well-being", "Medical and physiological well-being"],
+      c: 2,
+      e: "WHO defines Reproductive Health as a state of total well-being in all aspects of reproduction — physical, emotional, behavioural, and social."
+    },
+    {
+      q: "Which hormone-based IUD secretes progesterone locally to prevent pregnancy?",
+      o: ["Lippes loop", "CuT 380A", "Progestasert", "Multiload 375"],
+      c: 2,
+      e: "Progestasert is a progesterone-releasing IUD that makes the uterus unsuitable for implantation and the cervical mucus hostile to sperm."
+    },
+    {
+      q: "MTP was legalised in India in which year?",
+      o: ["1951", "1961", "1971", "1981"],
+      c: 2,
+      e: "Medical Termination of Pregnancy (MTP) was legalised in India in 1971, mainly to control illegal abortions and for cases of rape or contraceptive failure."
+    },
+    {
+      q: "Which of the following is a non-steroidal contraceptive pill?",
+      o: ["Mala-D", "Centchroman", "Levonorgestrel", "Norethindrone"],
+      c: 1,
+      e: "Saheli (Centchroman/Ormeloxifene) is a non-steroidal contraceptive. It is a once-a-week pill with very few side effects, developed by CDRI Lucknow."
+    },
+    {
+      q: "A second-trimester MTP (12–24 weeks) requires the opinion of:",
+      o: ["Only one registered doctor", "Two registered medical practitioners", "A gynaecologist only", "No doctor, only the patient's consent"],
+      c: 1,
+      e: "For abortion between 12 and 24 weeks of pregnancy, the opinion of two registered medical practitioners is required, as it is considered riskier than first-trimester MTP."
+    },
+    {
+      q: "Which of the following is true about IVF (In Vitro Fertilisation)?",
+      o: ["Fertilisation occurs in the uterus", "Fertilisation occurs in the fallopian tube", "Fertilisation occurs outside the body in near-physiological conditions", "It uses only ICSI technique"],
+      c: 2,
+      e: "In IVF, ova and sperm are collected and fertilised outside the body under conditions similar to physiological ones, after which the embryo is transferred back."
+    },
+    {
+      q: "Natural family planning method 'periodic abstinence' involves avoiding coitus during days:",
+      o: ["1 to 7", "8 to 17", "10 to 17", "18 to 28"],
+      c: 2,
+      e: "Periodic abstinence (the calendar method) involves avoiding coitus during days 10 to 17 of the menstrual cycle, when ovulation is most likely to occur."
+    },
+    {
+      q: "Which of the following is a surgical sterilisation method in females?",
+      o: ["Vasectomy", "IUD insertion", "Tubectomy", "Hormonal injection"],
+      c: 2,
+      e: "Tubectomy (also called female sterilisation or bilateral tubal ligation) involves cutting or tying the fallopian tubes, preventing eggs from reaching the uterus."
+    },
+    {
+      q: "STIs (Sexually Transmitted Infections) include which of the following?",
+      o: ["Dengue and Malaria", "Gonorrhoea and Syphilis", "Typhoid and Cholera", "Hepatitis A and Polio"],
+      c: 1,
+      e: "Gonorrhoea and syphilis are classic STIs transmitted through sexual contact. Other STIs include HIV, genital herpes, HPV, chlamydia, and hepatitis-B."
+    },
+    {
+      q: "The amniocentesis test is banned in India for:",
+      o: ["Detecting chromosomal disorders", "Determining foetal sex for selective abortion", "Identifying sickle-cell anaemia", "Checking genetic mutations"],
+      c: 1,
+      e: "Amniocentesis for sex determination is legally banned in India under the PCPNDT Act to prevent female foeticides and sex-selective abortions."
+    },
+    {
+      q: "ICSI (Intra Cytoplasmic Sperm Injection) is used primarily in cases of:",
+      o: ["Female infertility due to blocked tubes", "Male infertility with very low sperm count", "Genetic disorders in the embryo", "Ovarian failure"],
+      c: 1,
+      e: "ICSI is used when the male partner has very low sperm count or when sperm cannot penetrate the egg naturally. A single sperm is directly injected into the egg."
+    },
+    {
+      q: "Copper ions released from CuT suppress sperm motility. They also:",
+      o: ["Increase oestrogen levels", "Increase phagocytosis of sperms in uterus", "Dissolve the egg membrane", "Block the cervix physically"],
+      c: 1,
+      e: "Cu ions released by CuT IUDs suppress sperm motility AND increase phagocytosis of sperms by uterine white blood cells, preventing fertilisation."
+    },
+    {
+      q: "Which of the following ART techniques involves transferring an ovum to another female's fallopian tube?",
+      o: ["ZIFT", "IVF-ET", "GIFT", "ICSI"],
+      c: 2,
+      e: "GIFT (Gamete Intra Fallopian Transfer) involves transferring an ovum from a donor into the fallopian tube of a female who cannot produce ova but whose uterus is functional."
     }
   ],
 
@@ -253,6 +385,30 @@ DATA.chapters.repro_health = {
       title: "IVF-ET (Test Tube Baby) Procedure",
       prompt: "Order the steps of in vitro fertilisation and embryo transfer.",
       steps: ["Collect ova from wife/donor", "Collect sperm from husband/donor", "Fertilise under simulated lab conditions", "Allow embryo to form", "Transfer embryo to fallopian tube (ZIFT) or uterus (IUT)"]
+    },
+    {
+      title: "STI Prevention and Safe Practices",
+      prompt: "Order the protective steps to follow after suspected STI exposure.",
+      steps: [
+        "Avoid unprotected sexual contact",
+        "Use barrier contraception (condoms)",
+        "Get tested at a health facility",
+        "Complete the full course of antibiotics if bacterial STI",
+        "Inform recent sexual partners",
+        "Follow up for test-of-cure"
+      ]
+    },
+    {
+      title: "Contraceptive Method Selection Hierarchy",
+      prompt: "Order the contraceptive methods from least reliable to most reliable.",
+      steps: [
+        "Natural methods (periodic abstinence, lactational amenorrhea)",
+        "Barrier methods (condoms, diaphragm)",
+        "Copper IUDs (CuT)",
+        "Hormonal pills (combined / progestogen)",
+        "Hormonal IUDs (Progestasert)",
+        "Surgical sterilisation (vasectomy / tubectomy)"
+      ]
     }
   ]
 };

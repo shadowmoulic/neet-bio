@@ -181,21 +181,21 @@ DATA.chapters.human_repro = {
   ],
 
   flashcards: [
-{front:"Where are the testes situated?", back:"Outside the abdominal cavity within a pouch called the scrotum."},
-{front:"What is the function of the scrotum?", back:"Maintains the low temperature of the testes (2-2.5°C lower than internal body temperature) necessary for spermatogenesis."},
-{front:"What cells synthesize and secrete testicular hormones (androgens)?", back:"Leydig cells (interstitial cells)."},
-{front:"What is the function of Sertoli cells?", back:"Provide nutrition to the germ cells."},
-{front:"What is spermatogenesis?", back:"The process of formation of sperms in the seminiferous tubules."},
-{front:"Which hormone initiates spermatogenesis at puberty?", back:"Gonadotropin releasing hormone (GnRH)."},
-{front:"What is the acrosome?", back:"A cap-like structure on the sperm head filled with enzymes that help in fertilization of the ovum."},
-{front:"Where does fertilization take place in humans?", back:"The ampullary region of the fallopian tube."},
-{front:"What is oogenesis?", back:"The process of formation of a mature female gamete."},
-{front:"What is the Graafian follicle?", back:"The mature ovarian follicle that ruptures to release the secondary oocyte."},
-{front:"Which hormone surge induces ovulation?", back:"Luteinizing Hormone (LH surge)."},
-{front:"What is the corpus luteum and what does it secrete?", back:"The remnant of the Graafian follicle after ovulation; it secretes large amounts of progesterone."},
-{front:"What is implantation?", back:"The embedding of the blastocyst in the endometrium of the uterus."},
-{front:"What is the role of hCG (Human Chorionic Gonadotropin)?", back:"Maintains the corpus luteum during early pregnancy."},
-{front:"What is parturition?", back:"The process of delivery of the fully developed fetus (childbirth)."},
+    { front: "Where are the testes situated?", back: "Outside the abdominal cavity within a pouch called the scrotum." },
+    { front: "What is the function of the scrotum?", back: "Maintains the low temperature of the testes (2-2.5°C lower than internal body temperature) necessary for spermatogenesis." },
+    { front: "What cells synthesize and secrete testicular hormones (androgens)?", back: "Leydig cells (interstitial cells)." },
+    { front: "What is the function of Sertoli cells?", back: "Provide nutrition to the germ cells." },
+    { front: "What is spermatogenesis?", back: "The process of formation of sperms in the seminiferous tubules." },
+    { front: "Which hormone initiates spermatogenesis at puberty?", back: "Gonadotropin releasing hormone (GnRH)." },
+    { front: "What is the acrosome?", back: "A cap-like structure on the sperm head filled with enzymes that help in fertilization of the ovum." },
+    { front: "Where does fertilization take place in humans?", back: "The ampullary region of the fallopian tube." },
+    { front: "What is oogenesis?", back: "The process of formation of a mature female gamete." },
+    { front: "What is the Graafian follicle?", back: "The mature ovarian follicle that ruptures to release the secondary oocyte." },
+    { front: "Which hormone surge induces ovulation?", back: "Luteinizing Hormone (LH surge)." },
+    { front: "What is the corpus luteum and what does it secrete?", back: "The remnant of the Graafian follicle after ovulation; it secretes large amounts of progesterone." },
+    { front: "What is implantation?", back: "The embedding of the blastocyst in the endometrium of the uterus." },
+    { front: "What is the role of hCG (Human Chorionic Gonadotropin)?", back: "Maintains the corpus luteum during early pregnancy." },
+    { front: "What is parturition?", back: "The process of delivery of the fully developed fetus (childbirth)." },
 
     { front: "What is the function of the scrotum in the male reproductive system?", back: "It holds the testes outside the abdominal cavity to maintain their temperature 2–2.5°C lower than normal body temperature, which is essential for spermatogenesis." },
     { front: "How many testicular lobules are present in a testis, and what do they contain?", back: "About 250 testicular lobules per testis, each containing 1 to 3 highly coiled seminiferous tubules." },
@@ -294,6 +294,138 @@ DATA.chapters.human_repro = {
       o: ["Inner cell mass", "Trophoblast", "Chorion", "Amnion"],
       c: 1,
       e: "The blastocyst consists of an outer layer of cells called the trophoblast (which attaches to the uterine wall) and an inner cell mass (which develops into the embryo)."
+    },
+    {
+      q: "Testicular lobules contain seminiferous tubules lined by male germ cells and which of the following?",
+      o: ["Leydig cells", "Sertoli cells", "Chromaffin cells", "Interstitial cells"],
+      c: 1,
+      e: "Seminiferous tubules are lined on the inside by spermatogonia (male germ cells) and Sertoli cells. Sertoli cells provide structural support and nutrition to the germ cells."
+    },
+    {
+      q: "The secretions of bulbourethral glands primarily aid in:",
+      o: ["Providing energy to sperms", "Lubrication of the penis", "Immunological protection", "Stimulating uterine contractions"],
+      c: 1,
+      e: "The paired bulbourethral (Cowper's) glands secrete mucus that helps in the lubrication of the penis during intercourse."
+    },
+    {
+      q: "At puberty, how many primary follicles are left in each ovary?",
+      o: ["2 million", "60,000–80,000", "10,000", "500,000"],
+      c: 1,
+      e: "Although a female is born with millions of primary follicles, a large number degenerate between birth and puberty, leaving only 60,000 to 80,000 in each ovary at puberty."
+    },
+    {
+      q: "The fluid-filled cavity called antrum is a characteristic feature of:",
+      o: ["Primary follicle", "Secondary follicle", "Tertiary follicle", "Corpus luteum"],
+      c: 2,
+      e: "As a secondary follicle matures into a tertiary follicle, it develops a fluid-filled cavity called the antrum, and its theca divides into interna and externa layers."
+    },
+    {
+      q: "Which hormone surge causes the rupture of Graafian follicle and release of ovum?",
+      o: ["FSH surge", "LH surge", "Progesterone surge", "Estrogen surge"],
+      c: 1,
+      e: "Around the middle of the menstrual cycle (day 14), LH attains its peak level (LH surge), which induces the rupture of the Graafian follicle and release of the secondary oocyte."
+    },
+    {
+      q: "Which hormone is essential for the maintenance of the endometrium?",
+      o: ["FSH", "LH", "Estrogen", "Progesterone"],
+      c: 3,
+      e: "Progesterone, secreted in large amounts by the corpus luteum during the luteal phase, is responsible for maintaining the thick glandular endometrium required for implantation."
+    },
+    {
+      q: "In human females, meiosis II is completed only when:",
+      o: ["Puberty is reached", "Ovulation occurs", "Sperm enters the ovum", "Implantation takes place"],
+      c: 2,
+      e: "The secondary oocyte is arrested in metaphase II. It completes meiosis II only when the sperm successfully penetrates the egg's plasma membrane, yielding a second polar body and zygote."
+    },
+    {
+      q: "The outer layer of the blastocyst that attaches to the endometrium is called:",
+      o: ["Inner cell mass", "Trophoblast", "Chorion", "Amnion"],
+      c: 1,
+      e: "The blastocyst consists of an outer layer of cells called the trophoblast (which attaches to the uterine wall) and an inner cell mass (which develops into the embryo)."
+    },
+    {
+      q: "How many testicular lobules does each testis contain approximately?",
+      o: ["50", "100", "250", "500"],
+      c: 2,
+      e: "Each testis has approximately 250 testicular lobules, each containing 1 to 3 highly coiled seminiferous tubules where spermatogenesis takes place."
+    },
+    {
+      q: "Which hormone from the anterior pituitary directly stimulates Leydig cells?",
+      o: ["FSH", "GnRH", "LH", "Prolactin"],
+      c: 2,
+      e: "LH (Luteinising Hormone) from the anterior pituitary stimulates Leydig cells (interstitial cells) to produce and secrete androgens (testosterone)."
+    },
+    {
+      q: "The sperm's mid-piece is rich in:",
+      o: ["Lysosomes", "Ribosomes", "Mitochondria", "Peroxisomes"],
+      c: 2,
+      e: "The mid-piece of the sperm contains a large number of mitochondria, which provide the energy (ATP) required for tail movement and motility."
+    },
+    {
+      q: "Spermiation refers to:",
+      o: ["Formation of spermatids from secondary spermatocytes", "Transformation of spermatids into sperms", "Release of mature sperms from Sertoli cells into seminiferous tubule lumen", "Packaging of sperm in the epididymis"],
+      c: 2,
+      e: "Spermiation is the release of spermatozoa from the Sertoli cells into the lumen of the seminiferous tubule, following completion of spermiogenesis."
+    },
+    {
+      q: "The first menstrual cycle at puberty is called:",
+      o: ["Menopause", "Menarche", "Luteal phase", "Ovulatory phase"],
+      c: 1,
+      e: "Menarche refers to the first menstrual cycle, which begins at puberty (typically between 11 and 14 years of age in girls)."
+    },
+    {
+      q: "The permanent cessation of menstrual cycles at around 50 years of age is called:",
+      o: ["Amenorrhea", "Menarche", "Menopause", "Oligomenorrhea"],
+      c: 2,
+      e: "Menopause refers to the permanent cessation of the menstrual cycle, typically occurring around 50 years of age, marking the end of the female reproductive period."
+    },
+    {
+      q: "Where is a zygote formed after fertilisation?",
+      o: ["Uterus", "Cervix", "Ampullary-isthmic junction of the fallopian tube", "Ovary"],
+      c: 2,
+      e: "Fertilisation in humans occurs in the ampullary region (specifically the ampullary-isthmic junction) of the fallopian tube, where the zygote is formed."
+    },
+    {
+      q: "The embryo with 8–16 blastomeres is called:",
+      o: ["Blastocyst", "Gastrula", "Morula", "Blastula"],
+      c: 2,
+      e: "As the zygote undergoes cleavage (mitotic cell divisions) and forms 8 to 16 blastomeres, the resulting stage is called a morula."
+    },
+    {
+      q: "What is the role of hCG in early pregnancy?",
+      o: ["Causes uterine contractions", "Maintains the corpus luteum and its progesterone output", "Stimulates milk production", "Induces ovulation"],
+      c: 1,
+      e: "hCG (human Chorionic Gonadotropin) secreted by the trophoblast maintains the corpus luteum so it continues secreting progesterone, which is essential to maintain the endometrium early in pregnancy."
+    },
+    {
+      q: "The colostrum secreted during the first few days of lactation is rich in:",
+      o: ["Casein proteins", "IgA antibodies", "Lipids", "Carbohydrates"],
+      c: 1,
+      e: "Colostrum is the yellowish milk secreted during the initial few days after birth. It is rich in IgA antibodies that provide passive immunity to the newborn."
+    },
+    {
+      q: "Parturition is induced by which hormone released from the maternal pituitary?",
+      o: ["Estrogen", "Progesterone", "Oxytocin", "Prolactin"],
+      c: 2,
+      e: "Parturition (childbirth) is triggered when the fully developed fetus causes the fetal ejection reflex, leading to the release of oxytocin from the maternal pituitary, which induces strong uterine contractions."
+    },
+    {
+      q: "Which uterine layer undergoes cyclical changes during the menstrual cycle?",
+      o: ["Perimetrium", "Myometrium", "Endometrium", "Parametrium"],
+      c: 2,
+      e: "The endometrium is the inner glandular layer of the uterus. It proliferates and thickens in the follicular phase and sheds during menstruation (if there is no implantation)."
+    },
+    {
+      q: "During the proliferative phase of the menstrual cycle, which hormone causes endometrial thickening?",
+      o: ["Progesterone", "FSH only", "Estrogen", "LH"],
+      c: 2,
+      e: "During the follicular/proliferative phase, estrogen secreted by growing follicles stimulates proliferation and regeneration of the endometrium."
+    },
+    {
+      q: "What is the acrosome and where is it located?",
+      o: ["Energy-providing organelle in the mid-piece", "Protective cap on sperm head containing hydrolytic enzymes", "Flagellum of the sperm", "Part of the neck region"],
+      c: 1,
+      e: "The acrosome is a cap-like structure covering the anterior portion of the sperm's head. It contains hydrolytic enzymes that help the sperm penetrate the zona pellucida of the egg during fertilisation."
     }
   ],
 
@@ -336,6 +468,20 @@ DATA.chapters.human_repro = {
         "Luteal phase (remnants become corpus luteum)",
         "Secretory phase (progesterone builds endometrium)",
         "Luteolysis (decay of corpus luteum in absence of fertilisation)"
+      ]
+    },
+    {
+      title: "Oogenesis and Follicular Development",
+      prompt: "Order the stages of oogenesis from fetal life to ovulation.",
+      steps: [
+        "Oogonia formed in fetal ovary by mitosis",
+        "Oogonia start meiosis I and get arrested as primary oocytes at prophase I",
+        "Primary oocytes enclosed in primary follicles at birth",
+        "At puberty, follicle matures through secondary and tertiary stages",
+        "Primary oocyte completes meiosis I → secondary oocyte + first polar body",
+        "Tertiary follicle becomes Graafian follicle",
+        "LH surge triggers ovulation — secondary oocyte released",
+        "Meiosis II only completed if sperm enters the egg"
       ]
     }
   ]

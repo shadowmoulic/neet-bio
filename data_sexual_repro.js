@@ -195,21 +195,21 @@ DATA.chapters.sexual_repro = {
   ],
 
   flashcards: [
-{front:"What is the male reproductive part of the flower?", back:"Androecium (whorl of stamens)."},
-{front:"What does the anther typically consist of?", back:"It is bilobed, with each lobe having two thecae (dithecous)."},
-{front:"What is microsporogenesis?", back:"The process of formation of microspores from a pollen mother cell (PMC) through meiosis."},
-{front:"What are the two layers of the pollen grain wall?", back:"Exine (outer, made of sporopollenin) and Intine (inner, made of cellulose and pectin)."},
-{front:"What are the two cells found in a mature pollen grain?", back:"Vegetative cell (larger) and Generative cell (smaller, divides to form male gametes)."},
-{front:"What is the female reproductive part of the flower?", back:"Gynoecium (pistil)."},
-{front:"What is megasporogenesis?", back:"The formation of megaspores from the megaspore mother cell (MMC)."},
-{front:"Describe the typical angiosperm embryo sac at maturity.", back:"8-nucleate but 7-celled."},
-{front:"What is pollination?", back:"The transfer of pollen grains to the stigma of a pistil."},
-{front:"Define autogamy.", back:"Pollination within the same flower."},
-{front:"What is the role of the filiform apparatus?", back:"Guides the pollen tube into the synergid."},
-{front:"What is double fertilization?", back:"Syngamy (fusion of male gamete with egg) + Triple fusion (fusion of male gamete with two polar nuclei)."},
-{front:"What does the Primary Endosperm Nucleus (PEN) develop into?", back:"Endosperm, which nourishes the developing embryo."},
-{front:"What is apomixis?", back:"A form of asexual reproduction that mimics sexual reproduction by producing seeds without fertilization."},
-{front:"What is polyembryony?", back:"The occurrence of more than one embryo in a seed."},
+    { front: "What is the male reproductive part of the flower?", back: "Androecium (whorl of stamens)." },
+    { front: "What does the anther typically consist of?", back: "It is bilobed, with each lobe having two thecae (dithecous)." },
+    { front: "What is microsporogenesis?", back: "The process of formation of microspores from a pollen mother cell (PMC) through meiosis." },
+    { front: "What are the two layers of the pollen grain wall?", back: "Exine (outer, made of sporopollenin) and Intine (inner, made of cellulose and pectin)." },
+    { front: "What are the two cells found in a mature pollen grain?", back: "Vegetative cell (larger) and Generative cell (smaller, divides to form male gametes)." },
+    { front: "What is the female reproductive part of the flower?", back: "Gynoecium (pistil)." },
+    { front: "What is megasporogenesis?", back: "The formation of megaspores from the megaspore mother cell (MMC)." },
+    { front: "Describe the typical angiosperm embryo sac at maturity.", back: "8-nucleate but 7-celled." },
+    { front: "What is pollination?", back: "The transfer of pollen grains to the stigma of a pistil." },
+    { front: "Define autogamy.", back: "Pollination within the same flower." },
+    { front: "What is the role of the filiform apparatus?", back: "Guides the pollen tube into the synergid." },
+    { front: "What is double fertilization?", back: "Syngamy (fusion of male gamete with egg) + Triple fusion (fusion of male gamete with two polar nuclei)." },
+    { front: "What does the Primary Endosperm Nucleus (PEN) develop into?", back: "Endosperm, which nourishes the developing embryo." },
+    { front: "What is apomixis?", back: "A form of asexual reproduction that mimics sexual reproduction by producing seeds without fertilization." },
+    { front: "What is polyembryony?", back: "The occurrence of more than one embryo in a seed." },
 
     { front: "Describe the typical lobes and thecae structure of an angiosperm anther.", back: "Typically bilobed and dithecous (each lobe has two thecae, making a total of four microsporangia)." },
     { front: "What is the function and key nuclear characteristic of the tapetum?", back: "It nourishes the developing pollen grains; its cells possess dense cytoplasm and are generally multinucleate." },
@@ -309,6 +309,138 @@ DATA.chapters.sexual_repro = {
       o: ["Endosperm", "Scutellum", "Perisperm", "Pericarp"],
       c: 2,
       e: "In some seeds (e.g., black pepper and beet), remnants of the nucellus persist as a thin, papery layer called the perisperm."
+    },
+    {
+      q: "Which wall layer of the microsporangium provides nutrition to developing pollen grains?",
+      o: ["Epidermis", "Endothecium", "Middle layers", "Tapetum"],
+      c: 3,
+      e: "The tapetum is the innermost layer of the microsporangial wall. Its cells have dense cytoplasm, are generally multinucleate, and nourish the developing pollen grains."
+    },
+    {
+      q: "The outer exine layer of pollen grains is highly resistant because of:",
+      o: ["Cellulose", "Pectin", "Sporopollenin", "Lignin"],
+      c: 2,
+      e: "Pollen exine is composed of sporopollenin, a highly resistant organic polymer that tolerates extreme temperatures, strong acids, and alkalis. No enzyme is known to degrade it."
+    },
+    {
+      q: "During megasporogenesis, the megaspore mother cell (MMC) undergoes meiosis to produce how many functional megaspores?",
+      o: ["One", "Two", "Three", "Four"],
+      c: 0,
+      e: "MMC undergoes meiosis to form four megaspores. In most angiosperms, three degenerate and only one remains functional to develop into the embryo sac."
+    },
+    {
+      q: "Filiform apparatus is a characteristic feature of:",
+      o: ["Antipodal cells", "Egg cell", "Synergids", "Central cell"],
+      c: 2,
+      e: "Filiform apparatus consists of finger-like projections at the micropylar end of synergids. It plays a key role in guiding the pollen tube into the synergid."
+    },
+    {
+      q: "Cleistogamous flowers ensure:",
+      o: ["Cross-pollination", "Assured seed-set without pollinators", "High genetic variability", "Insect attraction"],
+      c: 1,
+      e: "Cleistogamous flowers never open. As a result, anthers and stigmas lie close to each other, ensuring pollination and seed-set even in the absence of any pollinating agents."
+    },
+    {
+      q: "Water-pollinated flowers like Vallisneria have pollen grains protected by a:",
+      o: ["Thick exine of sporopollenin", "Mucilaginous sheath", "Cellulose covering", "Pectin layer"],
+      c: 1,
+      e: "In water-pollinated plants, pollen grains are long and ribbon-like, and they are covered by a mucilaginous sheath that prevents them from getting wet."
+    },
+    {
+      q: "Triple fusion in double fertilisation refers to the fusion of:",
+      o: ["One male gamete with egg cell", "Two male gametes with egg cell", "One male gamete with two polar nuclei", "Two polar nuclei with each other"],
+      c: 2,
+      e: "Triple fusion is the fusion of one haploid male gamete (n) with the two haploid polar nuclei (2n, or secondary nucleus) in the central cell, forming the triploid PEN (3n)."
+    },
+    {
+      q: "Persistent, residual nucellus in the seed is called:",
+      o: ["Endosperm", "Scutellum", "Perisperm", "Pericarp"],
+      c: 2,
+      e: "In some seeds (e.g., black pepper and beet), remnants of the nucellus persist as a thin, papery layer called the perisperm."
+    },
+    {
+      q: "Geitonogamy is functionally which type of pollination?",
+      o: ["Self-pollination", "Cross-pollination", "Both autogamy and cross-pollination", "Neither"],
+      c: 1,
+      e: "Geitonogamy involves pollen transfer between different flowers on the same plant. Functionally, it is cross-pollination (different flowers), but genetically it is equivalent to self-pollination (same plant's genome)."
+    },
+    {
+      q: "A typical angiosperm anther is described as:",
+      o: ["Unilobed and dithecous", "Bilobed and dithecous", "Trilobed and monothecous", "Bilobed and monothecous"],
+      c: 1,
+      e: "A typical angiosperm anther is bilobed, with each lobe having two thecae (dithecous), making it tetrasporangiate (with four microsporangia total)."
+    },
+    {
+      q: "The process of transfer of pollen from a different plant is called:",
+      o: ["Autogamy", "Geitonogamy", "Xenogamy", "Hydrophily"],
+      c: 2,
+      e: "Xenogamy is the transfer of pollen from an anther of one plant to a stigma of a genetically different plant. It is the only type of pollination that brings truly new genetic material."
+    },
+    {
+      q: "A mature embryo sac has how many cells and nuclei?",
+      o: ["7 cells and 7 nuclei", "8 cells and 8 nuclei", "7 cells and 8 nuclei", "6 cells and 8 nuclei"],
+      c: 2,
+      e: "A mature angiosperm embryo sac is 7-celled but 8-nucleate, because the large central cell contains two polar nuclei."
+    },
+    {
+      q: "Antipodal cells in the embryo sac are located at the:",
+      o: ["Micropylar end", "Chalazal end", "Central region", "Funicle"],
+      c: 1,
+      e: "The three antipodal cells are located at the chalazal end of the embryo sac, opposite the micropylar end where the egg apparatus is located."
+    },
+    {
+      q: "The coconut water represents which type of endosperm?",
+      o: ["Cellular endosperm", "Helobial endosperm", "Free-nuclear endosperm", "Perisperm"],
+      c: 2,
+      e: "Coconut water represents free-nuclear endosperm (thousands of free nuclei without cell wall formation). The white coconut kernel is cellular endosperm."
+    },
+    {
+      q: "Which of the following plants shows polyembryony?",
+      o: ["Rice", "Wheat", "Citrus", "Maize"],
+      c: 2,
+      e: "Polyembryony (multiple embryos in a seed) is commonly found in Citrus and Mango, where nucellar cells divide to form additional embryos alongside the zygotic embryo."
+    },
+    {
+      q: "Self-incompatibility prevents:",
+      o: ["Cross-pollination", "Xenogamy", "Self-pollen germination on the stigma", "Seed development"],
+      c: 2,
+      e: "Self-incompatibility is a genetic mechanism where the stigma recognises and rejects self-pollen (same genotype), preventing self-fertilisation and promoting outbreeding."
+    },
+    {
+      q: "In which plant does a moth act as the exclusive pollinator in a mutualistic relationship?",
+      o: ["Amorphophallus", "Yucca", "Vallisneria", "Commelina"],
+      c: 1,
+      e: "Yucca plant and Pronuba moth share a highly specific and obligate mutualistic relationship, where the moth pollinates the Yucca flower and uses it as an egg-laying site."
+    },
+    {
+      q: "Pollen grains can be stored in liquid nitrogen for long periods because of the resistance of:",
+      o: ["Intine", "Sporopollenin in exine", "Starch in the vegetative cell", "Cellulose of cell wall"],
+      c: 1,
+      e: "Sporopollenin in the pollen exine is extremely resistant and allows pollen grains to survive for long periods, including storage in liquid nitrogen (cryopreservation) for breeding programmes."
+    },
+    {
+      q: "What is the scutellum in a monocot seed (e.g., maize)?",
+      o: ["Two cotyledons", "The radicle", "The plumule", "The single lateral cotyledon"],
+      c: 3,
+      e: "In monocots, the embryo has a single cotyledon called the scutellum, situated laterally on the embryonal axis. It helps absorb food from the endosperm."
+    },
+    {
+      q: "What does Primary Endosperm Nucleus (PEN) develop into?",
+      o: ["Embryo", "Seed coat", "Endosperm", "Cotyledon"],
+      c: 2,
+      e: "The triploid (3n) Primary Endosperm Nucleus develops into the endosperm, which nourishes the developing embryo within the seed."
+    },
+    {
+      q: "Apomixis in plants means:",
+      o: ["Sexual reproduction with double fertilisation", "Clonal seed production without fertilisation", "Vegetative propagation through runners", "Seed dormancy mechanism"],
+      c: 1,
+      e: "Apomixis is the production of seeds without fertilisation (asexual reproduction). It allows plants to produce clonal offspring through seeds, bypassing meiosis and fertilisation."
+    },
+    {
+      q: "Which endothecium layer helps in anther dehiscence?",
+      o: ["Tapetum (innermost)", "Epidermis (outermost)", "Endothecium (fibrous layer)", "Middle layers"],
+      c: 2,
+      e: "The endothecium is the second layer of the microsporangium wall, having fibrous thickenings, which help in the dehiscence (opening) of the anther to release pollen."
     }
   ],
 
@@ -348,6 +480,19 @@ DATA.chapters.sexual_repro = {
         "Filiform apparatus guides tube entry into one synergid",
         "Two male gametes are discharged into the synergid cytoplasm",
         "One gamete fuses with egg; other fuses with polar nuclei"
+      ]
+    },
+    {
+      title: "Megasporogenesis and Embryo Sac Formation",
+      prompt: "Order the stages from MMC to mature female gametophyte.",
+      steps: [
+        "Single MMC differentiates in the nucellus",
+        "MMC undergoes meiosis to produce tetrad of 4 megaspores",
+        "Three megaspores degenerate; one functional megaspore remains",
+        "Functional megaspore undergoes first mitotic division",
+        "Two successive mitotic divisions produce 8 nuclei",
+        "Cell walls form: 3 antipodals (chalazal), 2 synergids + 1 egg (micropylar), 1 central cell with 2 polar nuclei",
+        "7-celled, 8-nucleate embryo sac is complete"
       ]
     }
   ]
