@@ -1,0 +1,738 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Molecular Basis of Inheritance Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Molecular Basis of Inheritance.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Molecular Basis of Inheritance Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Molecular Basis of Inheritance.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Molecular Basis of Inheritance"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 5</span>
+      <h1>🧪 Molecular Basis of Inheritance Study Notes</h1>
+      <p>DNA · replication · transcription · code · translation · lac operon · HGP · fingerprinting</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/molecular-basis-of-inheritance/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/molecular-basis-of-inheritance/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/molecular-basis-of-inheritance/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.1 1 · The DNA — What & How Big
+      </h3>
+      
+        <p><span class="kw">DNA (deoxyribonucleic acid)</span> is a long polymer of <b>deoxyribonucleotides</b>. Its length is usually expressed as the <b>number of nucleotides (bp)</b>.</p>
+        <table class="cmp">
+          <thead><tr><th>Organism</th><th>Genome size</th></tr></thead>
+          <tbody>
+            <tr><td>φX174 (bacteriophage)</td><td>5386 nucleotides</td></tr>
+            <tr><td>Bacteriophage lambda (λ)</td><td>48,502 bp</td></tr>
+            <tr><td>Escherichia coli</td><td>4.6 × 10⁶ bp</td></tr>
+            <tr><td>Human (haploid)</td><td>3.3 × 10⁹ bp</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Note:</b> RNA was the first genetic material; DNA evolved later as a more stable molecule.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.2 2 · Structure of a Polynucleotide Chain
+      </h3>
+      
+        <p>A <b>nucleotide</b> has three parts:</p>
+        <div class="flow">
+          <span class="node">Nitrogen base</span><span class="arr">+</span>
+          <span class="node">Pentose sugar (deoxyribose)</span><span class="arr">+</span>
+          <span class="node">Phosphate group</span>
+        </div>
+        <table class="cmp">
+          <thead><tr><th>Purines (double ring)</th><th>Pyrimidines (single ring)</th></tr></thead>
+          <tbody>
+            <tr><td>Adenine (A), Guanine (G)</td><td>Cytosine (C), Thymine (T in DNA)</td></tr>
+            <tr><td colspan="2">In RNA, <b>Uracil (U)</b> replaces Thymine.</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><b>Nucleoside</b> = base + sugar; <b>Nucleotide</b> = nucleoside + phosphate.</li>
+          <li>Nucleotides are joined by <b>3′–5′ phosphodiester bonds</b>, forming a sugar-phosphate <b>backbone</b> with bases projecting inward.</li>
+          <li>A polynucleotide has a free <b>5′-phosphate</b> end and a free <b>3′-OH</b> end.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.3 3 · The Watson–Crick Double Helix (1953)
+      </h3>
+      
+        <p>Built on <b>Chargaff's rules</b> (A=T, G=C; so purines = pyrimidines) and the <b>X-ray diffraction</b> data of <b>Maurice Wilkins & Rosalind Franklin</b>.</p>
+        <table class="cmp">
+          <thead><tr><th>Feature</th><th>Value / Description</th></tr></thead>
+          <tbody>
+            <tr><td>Strands</td><td>Two, coiled in a <b>right-handed</b> helix</td></tr>
+            <tr><td>Orientation</td><td><b>Antiparallel</b> (one 5′→3′, the other 3′→5′)</td></tr>
+            <tr><td>Base pairing</td><td>A=T (2 H-bonds), G≡C (3 H-bonds) — complementary</td></tr>
+            <tr><td>Pitch (one turn)</td><td>3.4 nm containing ~10 base pairs</td></tr>
+            <tr><td>Rise per base pair</td><td>0.34 nm (3.4 Å)</td></tr>
+            <tr><td>Diameter</td><td>Uniform 2 nm (purine always pairs a pyrimidine)</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Central Dogma (F. Crick):</b> DNA → (transcription) → RNA → (translation) → Protein. In <b>retroviruses</b> the flow reverses: RNA → DNA (reverse transcriptase).</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.4 4 · Packaging of the DNA Helix
+      </h3>
+      
+        <p>A human diploid cell's DNA is ~<b>2.2 metres</b> long, yet fits inside a tiny nucleus through tight packaging. (Distance between two consecutive base pairs = 0.34 nm.)</p>
+        <div class="flow">
+          <span class="node">DNA + Histone octamer</span><span class="arr">→</span>
+          <span class="node">Nucleosome (~200 bp)</span><span class="arr">→</span>
+          <span class="node">"Beads on string" chromatin</span><span class="arr">→</span>
+          <span class="node">Condensed chromatin</span><span class="arr">→</span>
+          <span class="node">Chromosome</span>
+        </div>
+        <ul>
+          <li>Negatively charged DNA wraps around positively charged <b>histones</b> (rich in <b>lysine & arginine</b>).</li>
+          <li>A <b>histone octamer</b> (8 molecules) forms the core of a <b>nucleosome</b>.</li>
+          <li><b>Non-histone chromosomal (NHC) proteins</b> aid higher-order packing.</li>
+        </ul>
+        <table class="cmp">
+          <thead><tr><th>Euchromatin</th><th>Heterochromatin</th></tr></thead>
+          <tbody>
+            <tr><td>Loosely packed, lightly stained</td><td>Densely packed, darkly stained</td></tr>
+            <tr><td>Transcriptionally <b>active</b></td><td>Transcriptionally <b>inactive</b></td></tr>
+          </tbody>
+        </table>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.5 5 · The Search for Genetic Material
+      </h3>
+      
+        <h4>Griffith's transforming principle (1928)</h4>
+        <p>Using <i>Streptococcus pneumoniae</i>: <b>S strain</b> (smooth, capsulated, virulent) killed mice; <b>R strain</b> (rough, no capsule, avirurent) did not. Heat-killed S alone was harmless, but <b>heat-killed S + live R killed the mice</b>, and live S bacteria were recovered — R had been <b>transformed</b> by some 'principle' from S.</p>
+        <h4>Avery, MacLeod & McCarty (1933–44)</h4>
+        <p>They purified biochemicals from heat-killed S and showed the <b>transforming principle is DNA</b>: <b>DNase</b> abolished transformation, but <b>protease</b> and <b>RNase</b> did not.</p>
+        <h4>Hershey & Chase (1952) — bacteriophage experiment</h4>
+        <div class="flow">
+          <span class="node">Label protein with ³⁵S, DNA with ³²P</span><span class="arr">→</span>
+          <span class="node">Infect E. coli</span><span class="arr">→ blend + centrifuge</span>
+          <span class="node">Radioactive ³²P enters cells → DNA is genetic material</span>
+        </div>
+        <p><b>³⁵S (protein) stayed outside</b>; <b>³²P (DNA) entered the bacteria</b>, proving DNA is the genetic material.</p>
+        <div class="callout"><b>Properties genetic material must have:</b> (1) replicate, (2) be chemically & structurally stable, (3) allow slow mutation (for evolution), (4) express itself as Mendelian characters. DNA fits best; RNA (with a reactive 2′-OH and uracil) mutates faster and is less stable — so it also acts as genetic material in some viruses (e.g. TMV, QB phage).</p>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.6 6 · RNA World
+      </h3>
+      
+        <p>Evidence suggests <b>RNA was the first genetic material</b>. RNA could act as a <b>genetic material and a catalyst (ribozyme)</b>. Being reactive, it was unstable, so evolution favoured the chemically more stable <b>DNA</b> for information storage, with RNA taking over many functional/catalytic roles (rRNA, tRNA).</p>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.7 7 · DNA Replication (Semiconservative)
+      </h3>
+      
+        <p>Watson & Crick proposed <b>semiconservative replication</b>: each old strand serves as a <b>template</b>, so each daughter DNA has one parental and one new strand.</p>
+        <h4>Experimental proof</h4>
+        <ul>
+          <li><b>Meselson & Stahl (1958)</b> — grew E. coli in ¹⁵N (heavy) then shifted to ¹⁴N; used <b>CsCl density-gradient centrifugation</b>. After one generation DNA was of <b>intermediate (hybrid)</b> density; after two generations, hybrid + light bands appeared — confirming semiconservative replication.</li>
+          <li><b>Taylor et al. (1958)</b> — used radioactive thymidine in <i>Vicia faba</i> (faba bean) to prove it in chromosomes.</li>
+        </ul>
+        <h4>Machinery</h4>
+        <ul>
+          <li>Main enzyme: <b>DNA-dependent DNA polymerase</b>; polymerises only in the <b>5′→3′</b> direction, with high speed (~2000 bp/second in E. coli) and accuracy.</li>
+          <li>Energy & substrate come from <b>deoxyribonucleoside triphosphates (dNTPs)</b>.</li>
+          <li>Replication starts at an <b>origin (ori)</b>, opening a <b>replication fork</b>.</li>
+        </ul>
+        <table class="cmp">
+          <thead><tr><th>Leading strand</th><th>Lagging strand</th></tr></thead>
+          <tbody>
+            <tr><td>Synthesised <b>continuously</b></td><td>Synthesised <b>discontinuously</b> as <b>Okazaki fragments</b></td></tr>
+            <tr><td>—</td><td>Fragments joined by <b>DNA ligase</b></td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Timing:</b> replication occurs in the <b>S-phase</b> of the cell cycle.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.8 8 · Transcription
+      </h3>
+      
+        <p><b>Transcription</b> = copying genetic information from one <b>template strand</b> of DNA into RNA. Only a <b>segment</b> of DNA and only <b>one strand</b> is copied.</p>
+        <div class="callout"><b>Why only one strand & one segment?</b> If both strands coded, they'd specify two different proteins (they are complementary), and a double-stranded RNA product could not be translated and would need separating.</div>
+        <h4>Transcription unit</h4>
+        <div class="flow">
+          <span class="node">Promoter</span><span class="arr">→</span>
+          <span class="node">Structural gene</span><span class="arr">→</span>
+          <span class="node">Terminator</span>
+        </div>
+        <ul>
+          <li><b>Template strand</b>: 3′→5′, actually copied. <b>Coding strand</b>: 5′→3′, same sequence as RNA (T instead of U); not copied.</li>
+          <li><b>Promoter</b> lies towards the 5′ end (upstream) of the coding strand and provides the RNA-polymerase binding site; <b>terminator</b> lies at the 3′ end (downstream).</li>
+        </ul>
+        <h4>In bacteria vs eukaryotes</h4>
+        <table class="cmp">
+          <thead><tr><th>Bacteria</th><th>Eukaryotes</th></tr></thead>
+          <tbody>
+            <tr><td>Single RNA polymerase</td><td>Three RNA polymerases</td></tr>
+            <tr><td><b>σ (sigma)</b> factor for initiation; <b>ρ (rho)</b> factor for termination</td><td>RNA Pol I → rRNA; Pol II → hnRNA (mRNA precursor); Pol III → tRNA, 5S rRNA, snRNA</td></tr>
+          </tbody>
+        </table>
+        <h4>hnRNA processing (eukaryotes)</h4>
+        <ul>
+          <li><b>Capping</b> — methyl guanosine triphosphate added at the 5′ end.</li>
+          <li><b>Tailing</b> — poly-A tail added at the 3′ end.</li>
+          <li><b>Splicing</b> — <b>introns</b> (non-coding, intervening) removed; <b>exons</b> (coding, expressed) joined. Genes are 'split genes'.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.9 9 · The Genetic Code
+      </h3>
+      
+        <p><span class="kw">George Gamow</span> proposed a <b>triplet code</b>. <b>Nirenberg & Khorana</b> (with Ochoa's enzyme, polynucleotide phosphorylase) deciphered it.</p>
+        <ul>
+          <li>There are <b>64 codons</b>: <b>61 code for amino acids</b>; <b>3 are stop codons</b> — <b>UAA, UAG, UGA</b>.</li>
+          <li><b>AUG</b> is the <b>start codon</b> and also codes for methionine.</li>
+        </ul>
+        <h4>Properties of the code</h4>
+        <table class="cmp">
+          <thead><tr><th>Property</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Triplet</td><td>Three bases = one codon = one amino acid</td></tr>
+            <tr><td>Degenerate</td><td>Most amino acids have more than one codon</td></tr>
+            <tr><td>Unambiguous & specific</td><td>One codon codes for only one amino acid</td></tr>
+            <tr><td>Nearly universal</td><td>Same codons across most organisms (e.g. UUU = Phe everywhere)</td></tr>
+            <tr><td>Non-overlapping & commaless</td><td>Read continuously, base by base, without gaps</td></tr>
+          </tbody>
+        </table>
+        <h4>tRNA — the adaptor molecule</h4>
+        <p>Postulated by <b>Crick</b>: tRNA has an <b>anticodon loop</b> complementary to the codon and an <b>amino-acid acceptor end</b>. It has a clover-leaf secondary structure; an <b>initiator tRNA</b> exists, but there is <b>no tRNA for stop codons</b>.</p>
+        <div class="callout"><b>Mutation link:</b> A single base change (point mutation) causes sickle-cell anaemia; insertions/deletions cause frameshift mutations.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.10 10 · Translation
+      </h3>
+      
+        <p><b>Translation</b> = polymerising amino acids in the order dictated by mRNA, joined by <b>peptide bonds</b>.</p>
+        <div class="flow">
+          <span class="node">Charging of tRNA (aminoacylation, uses ATP)</span><span class="arr">→</span>
+          <span class="node">Initiation at AUG</span><span class="arr">→</span>
+          <span class="node">Elongation</span><span class="arr">→</span>
+          <span class="node">Termination (stop codon)</span>
+        </div>
+        <ul>
+          <li>The <b>ribosome</b> is the site ('cellular factory'); its <b>rRNA acts as a ribozyme</b> (catalyst).</li>
+          <li>mRNA has <b>untranslated regions (UTRs)</b> before the start and after the stop codon, needed for efficient translation.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.11 11 · Regulation of Gene Expression — the lac operon
+      </h3>
+      
+        <p>In prokaryotes, gene expression is regulated mainly at <b>transcription initiation</b>. The classic model is the <b>lac operon</b> (Jacob & Monod).</p>
+        <div class="flow">
+          <span class="node">Regulatory gene i (repressor)</span><span class="arr">·</span>
+          <span class="node">Promoter p</span><span class="arr">·</span>
+          <span class="node">Operator o</span><span class="arr">·</span>
+          <span class="node">z</span><span class="arr">·</span><span class="node">y</span><span class="arr">·</span><span class="node">a</span>
+        </div>
+        <table class="cmp">
+          <thead><tr><th>Gene</th><th>Product / role</th></tr></thead>
+          <tbody>
+            <tr><td>i</td><td>Repressor protein</td></tr>
+            <tr><td>z</td><td>β-galactosidase (breaks lactose → galactose + glucose)</td></tr>
+            <tr><td>y</td><td>Permease (lactose entry)</td></tr>
+            <tr><td>a</td><td>Transacetylase</td></tr>
+          </tbody>
+        </table>
+        <table class="cmp">
+          <thead><tr><th>No lactose (OFF)</th><th>Lactose present (ON)</th></tr></thead>
+          <tbody>
+            <tr><td>Repressor binds the operator → RNA polymerase blocked → no transcription.</td><td>Lactose (<b>inducer</b>) binds repressor → repressor inactivated → RNA polymerase transcribes z, y, a → enzymes made.</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Type:</b> the lac operon is under <b>negative regulation</b> (the repressor switches it off).</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.12 12 · Human Genome Project (HGP)
+      </h3>
+      
+        <p>An international 'megaproject' (<b>1990–2003</b>) to sequence the ~3 × 10⁹ bp human genome, coordinated by the US DOE and NIH (with the Wellcome Trust and others). It gave rise to <b>bioinformatics</b>.</p>
+        <h4>Two approaches</h4>
+        <table class="cmp">
+          <thead><tr><th>Expressed Sequence Tags (ESTs)</th><th>Sequence Annotation</th></tr></thead>
+          <tbody>
+            <tr><td>Focus on the <b>expressed genes</b> only</td><td>Sequence the <b>whole genome</b>, then assign functions to regions</td></tr>
+          </tbody>
+        </table>
+        <h4>Salient features</h4>
+        <ul>
+          <li>Genome ≈ <b>3164.7 million bp</b>; average gene ≈ 3000 bases.</li>
+          <li>Largest known gene: <b>dystrophin</b> (~2.4 million bases).</li>
+          <li>~<b>30,000 genes</b> — far fewer than expected.</li>
+          <li><b>99.9%</b> of bases are identical in all people; &lt;2% of the genome codes for proteins.</li>
+          <li>Chromosome <b>1</b> has the most genes (2968); the <b>Y</b> chromosome the fewest (231).</li>
+          <li>~1.4 million single-base variations — <b>SNPs (single nucleotide polymorphisms)</b>.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        5.13 13 · DNA Fingerprinting
+      </h3>
+      
+        <p>Developed by <span class="kw">Alec Jeffreys</span>. It compares highly variable regions of DNA between individuals.</p>
+        <ul>
+          <li>Based on <b>VNTR (Variable Number of Tandem Repeats)</b>, a type of <b>satellite DNA</b> showing high <b>polymorphism</b>.</li>
+          <li>VNTR sizes vary widely between individuals (0.1–20 kb).</li>
+        </ul>
+        <h4>Steps</h4>
+        <div class="flow">
+          <span class="node">Isolate DNA</span><span class="arr">→</span>
+          <span class="node">Cut with restriction enzymes</span><span class="arr">→</span>
+          <span class="node">Separate by electrophoresis</span><span class="arr">→</span>
+          <span class="node">Blot to membrane (Southern blotting)</span><span class="arr">→</span>
+          <span class="node">Hybridise with labelled VNTR probe</span><span class="arr">→</span>
+          <span class="node">Autoradiography</span>
+        </div>
+        <div class="callout"><b>Uses:</b> forensic identification, paternity/maternity testing, and studies of population and genetic diversity.</div>
+      
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">What is DNA chemically?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">A long polymer of deoxyribonucleotides.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/watson-crick/" class="related-card">
+                <h5>Watson & Crick</h5>
+                <p>Double-helix model of DNA (1953)</p>
+              </a>
+            
+              <a href="../../glossary/chargaffs-rule/" class="related-card">
+                <h5>Chargaff's rule</h5>
+                <p>A=T, G=C</p>
+              </a>
+            
+              <a href="../../glossary/griffith/" class="related-card">
+                <h5>Griffith</h5>
+                <p>Transforming principle</p>
+              </a>
+            
+              <a href="../../glossary/avery-macleod-mccarty/" class="related-card">
+                <h5>Avery, MacLeod, McCarty</h5>
+                <p>Transforming principle is DNA</p>
+              </a>
+            
+              <a href="../../glossary/hershey-chase/" class="related-card">
+                <h5>Hershey & Chase</h5>
+                <p>DNA is genetic material (phage)</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+      <div class="related-links-section">
+        <h4>NCERT Comparison Sheets</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Review the key distinctions and contrast tables from this chapter:</p>
+        <div class="related-grid">
+          
+            <a href="../../compare/organism-vs-genome-size/" class="related-card">
+              <h5>Organism vs Genome size</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/purines-double-ring-vs-pyrimidines-single-ring/" class="related-card">
+              <h5>Purines (double ring) vs Pyrimidines (single ring)</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/feature-vs-value-description/" class="related-card">
+              <h5>Feature vs Value / Description</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/euchromatin-vs-heterochromatin/" class="related-card">
+              <h5>Euchromatin vs Heterochromatin</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Molecular Basis of Inheritance!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"What is DNA chemically?","back":"A long polymer of deoxyribonucleotides."},{"front":"Genome size of E. coli?","back":"4.6 × 10⁶ base pairs."},{"front":"Number of base pairs in the human haploid genome?","back":"About 3.3 × 10⁹ bp."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

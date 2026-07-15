@@ -1,0 +1,521 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Growth & Development Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Plant Growth & Development.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Plant Growth & Development Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Plant Growth & Development.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Plant Growth & Development"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 13</span>
+      <h1>🌱 Plant Growth & Development Study Notes</h1>
+      <p>How plants grow (meristems, growth curves, rates), differentiate, and are steered by five plant growth regulators, light and cold.</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/brain-biolab11-plant/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/brain-biolab11-plant/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/brain-biolab11-plant/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.1 Growth — Definition & Features
+      </h3>
+      
+   <p><span class="term">Growth</span> is an <b>irreversible, permanent increase in size</b> of an organ, its parts or an individual cell. It is accompanied by an increase in <b>dry weight, volume, cell number and protoplasm</b>.</p>
+   <ul><li>In plants growth is <b>indeterminate</b> — they grow throughout life due to <b>meristems</b>.</li><li>Growth is measurable: by increase in length, area, volume, fresh/dry weight or cell number.</li><li>Cell division (formation of new protoplasm) is the basis of growth; it is <b>open form</b> of growth in plants.</li></ul>
+   <h4>Meristems</h4>
+   <table class="t"><tr><th>Meristem</th><th>Location</th><th>Result</th></tr>
+   <tr><td><b>Apical</b></td><td>Root & shoot tips</td><td>Primary (length) growth</td></tr>
+   <tr><td><b>Intercalary</b></td><td>Base of internodes (grasses)</td><td>Length after injury/grazing</td></tr>
+   <tr><td><b>Lateral</b> (vascular & cork cambium)</td><td>Sides of stem/root</td><td>Secondary (girth) growth</td></tr></table>
+   <div class="callout"><b>Key idea:</b> Apical & intercalary meristems are <i>primary</i> meristems (length); lateral meristems are <i>secondary</i> (girth).</div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.2 Phases & Rates of Growth
+      </h3>
+      
+   <p>Growth passes through three phases in a cell/tissue:</p>
+   <div class="flow"><span class="step">Meristematic (cell division)</span><span class="arr">→</span><span class="step">Elongation (cell enlargement)</span><span class="arr">→</span><span class="step">Maturation (differentiation)</span></div>
+   <h4>Growth rate</h4>
+   <p><span class="term">Growth rate</span> = increased growth per unit time. It can be <b>arithmetic</b> or <b>geometric</b>.</p>
+   <table class="t"><tr><th>Type</th><th>What happens</th><th>Graph</th></tr>
+   <tr><td><b>Arithmetic</b></td><td>After mitosis only one daughter cell keeps dividing; the other differentiates</td><td>Straight line</td></tr>
+   <tr><td><b>Geometric (exponential)</b></td><td>Both daughter cells keep dividing</td><td>Exponential rise</td></tr></table>
+   <div class="formula">Arithmetic:  Lₜ = L₀ + rt   (L₀ = length at start, r = growth rate, t = time)
+Geometric/exponential:  W₁ = W₀ · e^(rt)   (e = base of natural log, r = relative growth rate/efficiency index)</div>
+   <h4>The sigmoid (S-shaped) growth curve</h4>
+   <p>Plotting size against time gives a typical <b>S-shaped sigmoid curve</b> with three phases:</p>
+   <div class="flow"><span class="step">Lag phase (slow)</span><span class="arr">→</span><span class="step">Log/exponential phase (fast)</span><span class="arr">→</span><span class="step">Stationary phase (slows, limited)</span></div>
+   <div class="callout"><b>Absolute vs relative growth rate:</b> absolute = total growth per unit time; <b>relative growth rate (RGR)</b> = growth per unit time expressed <i>per unit initial size</i> — lets us compare a small and a large system fairly.</div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.3 Conditions for Growth
+      </h3>
+      
+   <p>Plant growth needs both internal (hormones, genes) and external factors:</p>
+   <ul><li><b>Water:</b> provides turgidity needed for cell <b>enlargement</b>; medium for enzyme activity.</li><li><b>Oxygen:</b> for respiration → energy (ATP) for growth.</li><li><b>Nutrients:</b> macro- & micronutrients supply raw material and energy.</li><li><b>Temperature:</b> an optimum range is needed for the enzymes driving growth.</li><li><b>Light & gravity:</b> influence growth direction (tropic movements) and development.</li></ul>
+   <div class="callout"><b>Remember:</b> Cell <i>enlargement/elongation</i> depends most directly on <b>water (turgor)</b>; cell <i>division</i> depends on nutrients and hormones.</div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.4 Differentiation, Dedifferentiation & Redifferentiation
+      </h3>
+      
+   <p><span class="term">Differentiation</span> is the maturation of cells derived from meristems into specialised structures performing specific functions — e.g. forming a tracheary element: the cell loses its protoplasm and develops a strong, lignified wall.</p>
+   <table class="t"><tr><th>Process</th><th>Meaning</th><th>Example</th></tr>
+   <tr><td><b>Differentiation</b></td><td>Meristem cell → mature, specialised cell</td><td>Xylem/tracheid formation</td></tr>
+   <tr><td><b>Dedifferentiation</b></td><td>Mature cell regains the ability to divide</td><td>Formation of interfascicular & cork cambium</td></tr>
+   <tr><td><b>Redifferentiation</b></td><td>Dedifferentiated cells mature again (lose dividing ability)</td><td>Secondary xylem/phloem from cambium</td></tr></table>
+   <div class="mnem"><div class="lab">🧠 Memory Hook</div><div class="hook">"DIFFERENT → DE (back to dividing) → RE (mature again)"</div><div class="ex">Differentiation = mature; Dedifferentiation = back to meristematic; Redifferentiation = matures once more.</div></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.5 Development & Plasticity
+      </h3>
+      
+   <p><span class="term">Development</span> = the sum of <b>growth + differentiation</b> across a plant's life cycle (seed → seedling → mature plant → senescence).</p>
+   <div class="formula">Development = Growth + Differentiation</div>
+   <p><span class="term">Plasticity</span>: plants can follow different developmental pathways in response to environment or stage of life, producing different forms.</p>
+   <ul><li><b>Heterophylly</b> — different leaf shapes on the same plant. In cotton/coriander/larkspur, juvenile and adult leaves differ.</li><li>In aquatic <i>buttercup</i> (Ranunculus), submerged leaves are finely divided while aerial leaves are broad.</li></ul>
+   <div class="callout"><b>Controlled by:</b> intrinsic factors (genes, intracellular & intercellular hormones) and extrinsic factors (light, temperature, water, nutrients).</div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.6 Plant Growth Regulators — Auxins, Gibberellins, Cytokinins
+      </h3>
+      
+   <p><span class="term">Plant growth regulators (PGRs)</span> are small chemical signals. They fall into <b>promoters</b> (auxins, gibberellins, cytokinins) and <b>inhibitors</b> (abscisic acid; ethylene acts both ways).</p>
+   <h4>Auxins (e.g. IAA — indole-3-acetic acid)</h4>
+   <ul><li>Discovered through <b>Charles & Francis Darwin</b> (coleoptile bending to light) and isolated by <b>F.W. Went</b> from oat (<i>Avena</i>) coleoptile tips. The <b>Avena curvature test</b> is its bioassay.</li><li>Cause cell elongation; maintain <b>apical dominance</b> (suppress lateral buds); promote <b>rooting</b> (adventitious roots); induce <b>parthenocarpy</b>; prevent fruit & leaf drop early; herbicide <b>2,4-D</b> kills dicot weeds.</li></ul>
+   <h4>Gibberellins (e.g. GA₃)</h4>
+   <ul><li>First from the fungus <b>Gibberella fujikuroi</b> (causes "bakanae"/foolish-seedling disease of rice).</li><li>Cause <b>bolting</b> (internode elongation in rosette plants); increase fruit length (e.g. apple); speed up <b>malting</b> in brewing; break seed/bud dormancy; delay senescence.</li></ul>
+   <h4>Cytokinins (e.g. kinetin, zeatin)</h4>
+   <ul><li><b>Kinetin</b> came from herring sperm DNA (not natural in plants); <b>zeatin</b> is a natural cytokinin from maize kernels & coconut milk.</li><li>Promote <b>cytokinesis (cell division)</b>; help new leaf/chloroplast formation; <b>delay senescence</b> (Richmond–Lang effect); overcome apical dominance.</li></ul>
+   <div class="mnem"><div class="lab">🧠 Memory Hook</div><div class="hook">"Auxin = APICAL; Gibberellin = GROW TALL; Cytokinin = CYTOKINESIS"</div><div class="ex">A→apical dominance, G→bolting/elongation, C→cell division. Promoters = A, G, C.</div></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.7 Ethylene & Abscisic Acid (the brakes)
+      </h3>
+      
+   <h4>Ethylene (a gaseous PGR)</h4>
+   <ul><li>Promotes <b>fruit ripening</b> (climacteric fruits), senescence & <b>abscission</b> of leaves/flowers.</li><li>Breaks seed & bud dormancy; promotes root-hair & root growth; induces <b>female flowers</b> in cucurbits; causes the <b>"triple response"</b> in seedlings.</li><li>Source compound used in fields: <b>ethephon</b>.</li></ul>
+   <h4>Abscisic acid (ABA — the "stress hormone")</h4>
+   <ul><li>General growth <b>inhibitor</b>; promotes <b>seed & bud dormancy</b>.</li><li>Causes <b>stomatal closure</b> under water stress → reduces transpiration.</li><li>Acts as an <b>antagonist of gibberellins</b>.</li></ul>
+   <table class="t"><tr><th>Regulator</th><th>Headline role</th></tr>
+   <tr><td>Auxin</td><td>Apical dominance, rooting, parthenocarpy</td></tr>
+   <tr><td>Gibberellin</td><td>Bolting, breaks dormancy, malting</td></tr>
+   <tr><td>Cytokinin</td><td>Cell division, delays senescence</td></tr>
+   <tr><td>Ethylene</td><td>Ripening, abscission, senescence</td></tr>
+   <tr><td>ABA</td><td>Stress, dormancy, stomatal closure</td></tr></table>
+   <div class="mnem"><div class="lab">🧠 Memory Hook</div><div class="hook">"ABA = Awfully Bad Atmosphere → close stomata, sleep (dormancy)"</div><div class="ex">ABA = stress hormone; ethylene = "ripe & rot" (ripening, senescence, abscission).</div></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.8 Photoperiodism & Vernalization
+      </h3>
+      
+   <h4>Photoperiodism</h4>
+   <p>The response of flowering to the relative <b>lengths of day and night</b> (discovered by <b>Garner & Allard</b>). It is actually the <b>length of the dark (night) period</b> that is critical.</p>
+   <table class="t"><tr><th>Type</th><th>Flowers when</th><th>Examples</th></tr>
+   <tr><td><b>Short-day plants (SDP)</b></td><td>Night longer than a critical length</td><td>Rice, soybean, chrysanthemum, tobacco, Xanthium</td></tr>
+   <tr><td><b>Long-day plants (LDP)</b></td><td>Night shorter than a critical length</td><td>Wheat, spinach, henbane, radish</td></tr>
+   <tr><td><b>Day-neutral (DNP)</b></td><td>Independent of photoperiod</td><td>Tomato, cucumber, maize, sunflower</td></tr></table>
+   <p>Light/dark is perceived by the <b>leaves</b> (pigment <b>phytochrome</b>); a hypothetical flowering hormone <b>florigen</b> is thought to move to the shoot apex.</p>
+   <h4>Vernalization</h4>
+   <p>The promotion of <b>flowering by a period of low temperature (cold)</b>. It prevents premature flowering and lets plants flower in the right season.</p>
+   <ul><li>Seen in winter varieties of <b>wheat, rye, barley</b> and in <b>biennials</b> (sugar beet, cabbage, carrot).</li><li>High temperature can reverse it (<b>devernalization</b>).</li></ul>
+   <div class="mnem"><div class="lab">🧠 Memory Hook</div><div class="hook">"SDP = needs a LONG NIGHT; Vernalization = VERY cOld → flower"</div><div class="ex">Short-day = long-night plants. Vernalization = cold-induced flowering. Leaves perceive photoperiod; florigen carries the signal.</div></div>
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Define growth in plants.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">An irreversible, permanent increase in size of an organ, its parts or a cell, with an increase in dry weight, volume and cell number.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/apical-meristem/" class="related-card">
+                <h5>Apical meristem</h5>
+                <p>Primary (length) growth</p>
+              </a>
+            
+              <a href="../../glossary/lateral-meristem/" class="related-card">
+                <h5>Lateral meristem</h5>
+                <p>Secondary (girth) growth</p>
+              </a>
+            
+              <a href="../../glossary/intercalary-meristem/" class="related-card">
+                <h5>Intercalary meristem</h5>
+                <p>At internode base of grasses</p>
+              </a>
+            
+              <a href="../../glossary/sigmoid-curve/" class="related-card">
+                <h5>Sigmoid curve</h5>
+                <p>S-shaped growth plot</p>
+              </a>
+            
+              <a href="../../glossary/l-l-rt/" class="related-card">
+                <h5>Lₜ = L₀ + rt</h5>
+                <p>Arithmetic growth</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Plant Growth & Development!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Define growth in plants.","back":"An irreversible, permanent increase in size of an organ, its parts or a cell, with an increase in dry weight, volume and cell number."},{"front":"Why is plant growth called indeterminate/open?","back":"Because meristems retain the ability to divide and add new cells throughout the plant's life."},{"front":"Name the three types of meristems.","back":"Apical, intercalary and lateral meristems."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

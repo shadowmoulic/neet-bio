@@ -1,0 +1,439 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Phycobiont? Definition & Explanation | Smart Bio Notes</title>
+  <meta name="description" content="Learn the definition and meaning of Phycobiont for NEET Biology. Pulls from Biological Classification.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Phycobiont",
+  "description": "Algal partner of lichen",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "NEET Biology Glossary",
+    "url": "https://smartbionotes.vercel.app/glossary/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the definition of Phycobiont for NEET prep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Algal partner of lichen"
+      }
+    }
+  ]
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">NEET Glossary Term</span>
+      <h1>Phycobiont</h1>
+      <p style="font-size: 18px; color: #fff; margin-top: 15px; line-height: 1.6;">
+        <strong>Definition:</strong> Algal partner of lichen
+      </p>
+    </div>
+
+    <!-- Interactive Glossary Review Game -->
+    <div class="widget-box" style="margin-top: 30px;">
+      <h3>🎮 Check Your Recall</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Which concept matches the description below?</p>
+      <div style="font-size: 16px; font-weight: 500; background: var(--panel2); padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--line);">
+        "Algal partner of lichen"
+      </div>
+      
+      <div class="widget-options" id="glossary-options">
+        
+          <button class="widget-opt" onclick="checkGlossaryOption(0, false)">Hypothalamus</button>
+        
+          <button class="widget-opt" onclick="checkGlossaryOption(1, true)">Phycobiont</button>
+        
+          <button class="widget-opt" onclick="checkGlossaryOption(2, false)">Urn-shaped pyramid (narrow base)</button>
+        
+          <button class="widget-opt" onclick="checkGlossaryOption(3, false)">Spirometer</button>
+        
+      </div>
+      <div id="glossary-result" style="margin-top: 20px; padding: 15px; border-radius: 8px; font-size: 14px; display: none;"></div>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 15px;">Related Study Material</h3>
+      <p style="color: var(--ink-dim);">This term belongs to the Class 11/12 NEET curriculum chapter <strong>Biological Classification</strong>. Explore full notes, active recall flashcards, and pathway diagrams below:</p>
+      <div style="display: flex; gap: 12px; margin-top: 15px; flex-wrap: wrap;">
+        <a href="../../notes/biological-classification/" style="display: inline-block; background: var(--line); color: var(--gold); border: 1px solid var(--line2); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">View Chapter Notes</a>
+        <a href="../../mcq/biological-classification/" style="display: inline-block; background: var(--line); color: var(--gold); border: 1px solid var(--line2); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">Practice MCQs</a>
+        <a href="../../flashcards/biological-classification/" style="display: inline-block; background: var(--line); color: var(--gold); border: 1px solid var(--line2); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">Study Flashcards</a>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Other terms to learn in Biological Classification</h4>
+        <div class="related-grid">
+          
+              <a href="../../glossary/monera/" class="related-card">
+                <h5>Monera</h5>
+                <p>Glossary definition & review game.</p>
+              </a>
+            
+              <a href="../../glossary/mycoplasma/" class="related-card">
+                <h5>Mycoplasma</h5>
+                <p>Glossary definition & review game.</p>
+              </a>
+            
+              <a href="../../glossary/halophile/" class="related-card">
+                <h5>Halophile</h5>
+                <p>Glossary definition & review game.</p>
+              </a>
+            
+              <a href="../../glossary/methanogen/" class="related-card">
+                <h5>Methanogen</h5>
+                <p>Glossary definition & review game.</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+    <div class="related-links-section">
+      <h4>Popular NEET Definitions</h4>
+      <div class="related-grid">
+        
+            <a href="../../glossary/haemoglobin/" class="related-card">
+              <h5>Haemoglobin</h5>
+              <p>Learn term definition in context of Biomolecules.</p>
+            </a>
+          
+            <a href="../../glossary/bt-spore/" class="related-card">
+              <h5>Bt spore</h5>
+              <p>Learn term definition in context of Microbes in Human Welfare.</p>
+            </a>
+          
+            <a href="../../glossary/neutrophil/" class="related-card">
+              <h5>Neutrophil</h5>
+              <p>Learn term definition in context of Body Fluids & Circulation.</p>
+            </a>
+          
+            <a href="../../glossary/spleen/" class="related-card">
+              <h5>Spleen</h5>
+              <p>Learn term definition in context of Body Fluids & Circulation.</p>
+            </a>
+          
+      </div>
+    </div>
+  
+
+    <!-- CTA Banner -->
+    <div class="cta-banner" style="margin-top: 40px;">
+      <h2>Master All 500+ NEET Terms</h2>
+      <p>Level up your medical school prep. Learn terms, solve interactive match matrices, and beat the clock in Match-Up!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      let answered = false;
+      function checkGlossaryOption(optIdx, isCorrect) {
+        if (answered) return;
+        answered = true;
+        
+        const options = document.querySelectorAll('.widget-opt');
+        options.forEach((btn, idx) => {
+          if (idx === optIdx) {
+            btn.classList.add(isCorrect ? 'correct' : 'wrong');
+          } else if (btn.textContent === "Phycobiont") {
+            btn.classList.add('correct');
+          }
+        });
+        
+        const result = document.getElementById('glossary-result');
+        result.style.display = 'block';
+        if (isCorrect) {
+          result.style.background = 'rgba(95, 194, 126, 0.1)';
+          result.style.border = '1px solid var(--ok)';
+          result.style.color = 'var(--ok)';
+          result.innerHTML = "<strong>Correct!</strong> Great job reinforcing your active memory.";
+        } else {
+          result.style.background = 'rgba(233, 116, 95, 0.1)';
+          result.style.border = '1px solid var(--bad)';
+          result.style.color = 'var(--bad)';
+          result.innerHTML = "<strong>Not quite.</strong> The correct term is <strong>Phycobiont</strong>.";
+        }
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

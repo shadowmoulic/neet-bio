@@ -147,11 +147,7 @@ const Auth = (function () {
               <option value="both" selected>Both Classes</option>
             </select>
             
-            <label style="display:block; margin-bottom: 6px; font-weight: bold; color: var(--ink-dim); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">Billing Cycle</label>
-            <select id="billingCycle" class="auth-input" style="margin-bottom: 16px; background: rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.1);" onchange="Auth.updatePricingText()">
-              <option value="monthly">Monthly</option>
-              <option value="yearly">Yearly</option>
-            </select>
+            <input type="hidden" id="billingCycle" value="monthly">
 
             <label style="display:block; margin-bottom: 6px; font-weight: bold; color: var(--ink-dim); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">Coupon Code</label>
             <input type="text" id="couponCode" class="auth-input" style="background: rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.1);" placeholder="Enter coupon (optional)" oninput="Auth.updatePricingText()">
@@ -460,16 +456,16 @@ const Auth = (function () {
 
     if (plan === 'both') {
       if (cycle === 'monthly') {
-        firstMonth = 1239;
-        recurring = 689;
+        firstMonth = 289;
+        recurring = 389;
       } else {
         firstMonth = 6890;
         recurring = 6890;
       }
     } else {
       if (cycle === 'monthly') {
-        firstMonth = 789;
-        recurring = 459;
+        firstMonth = 149;
+        recurring = 349;
       } else {
         firstMonth = 4890;
         recurring = 4890;

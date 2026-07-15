@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Subscription Plans - Smart Bio Notes</title>
+  <meta name="description" content="Affordable pricing plans for Smart Bio Notes. Master NEET Biology, Chemistry, and Physics with interactive tools starting at just ₹149.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%),
+                        radial-gradient(900px 500px at -10% 110%, #16291f 0, transparent 55%);
+      background-attachment: fixed;
+    }
+    .pricing-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+    }
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .pricing-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 6vw, 48px);
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .pricing-header p {
+      color: var(--ink-dim);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    @media (min-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .pricing-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      box-shadow: var(--shadow);
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .pricing-card.popular {
+      border: 2px solid var(--gold);
+      background: linear-gradient(180deg, var(--panel), var(--bg2));
+    }
+    .badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--gold);
+      color: #1a130a;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .plan-name {
+      font-family: var(--serif);
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .plan-desc {
+      color: var(--ink-dim);
+      font-size: 14px;
+      margin-bottom: 24px;
+      min-height: 42px;
+    }
+    .price-box {
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+    }
+    .trial-price {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--gold);
+      font-family: var(--serif);
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+    .trial-price span {
+      font-size: 14px;
+      color: var(--ink-dim);
+      font-family: var(--sans);
+      font-weight: 400;
+    }
+    .renewal-price {
+      font-size: 14px;
+      color: var(--ink-dim);
+      margin-top: 8px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 35px 0;
+      flex-grow: 1;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--ink);
+      font-size: 14px;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .feature-item svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .action-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--line2);
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .pricing-card.popular .action-btn {
+      background: var(--gold);
+      color: #1a130a;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .pricing-card.popular .action-btn:hover {
+      background: var(--gold-deep);
+    }
+    .action-btn:hover {
+      background: var(--line);
+      transform: translateY(-2px);
+    }
+    .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .back-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+    .back-link:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+    <div class="back-nav">
+      <a href="../" class="back-link">← Smart Bio Notes</a>
+    </div>
+
+    <div class="pricing-header">
+      <h1>Simple, Transparent Pricing</h1>
+      <p>Invest in your medical school dreams with interactive active-recall tools designed specifically for NEET aspirants.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Single Class Card -->
+      <div class="pricing-card">
+        <h3 class="plan-name">Single Class</h3>
+        <p class="plan-desc">Access Class 11 OR Class 12 Biology, Physics, and Chemistry study sets independently.</p>
+        
+        <div class="price-box">
+          <div class="trial-price">₹149 <span>/ first month</span></div>
+          <div class="renewal-price">Then renews at <strong>₹349/month</strong> onwards. Cancel anytime.</div>
+        </div>
+        
+        <ul class="feature-list">
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            Complete Class 11 OR Class 12 Biology chapters
+          </li>
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            AI-optimized Active Recall prompts & flashcards
+          </li>
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            MCQ Quizzes & Hard-mode Boss Battles
+          </li>
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            Interactive pathway ordering & match matrices
+          </li>
+        </ul>
+        
+        <a href="../?action=unlock" class="action-btn">Choose Single Class</a>
+      </div>
+
+      <!-- Both Classes Card -->
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3 class="plan-name">Complete Package</h3>
+        <p class="plan-desc">Get complete coverage of Class 11 AND Class 12 curricula for maximum NEET weightage.</p>
+        
+        <div class="price-box">
+          <div class="trial-price">₹289 <span>/ first month</span></div>
+          <div class="renewal-price">Then renews at <strong>₹389/month</strong> onwards. Cancel anytime.</div>
+        </div>
+        
+        <ul class="feature-list">
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            <strong>All 31 NCERT chapters</strong> unlocked across Class 11 & 12
+          </li>
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            Over 1,000+ Active Recall questions
+          </li>
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            Interactive Flashcards & MCQ Battle system
+          </li>
+          <li class="feature-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            Mnemonics library & Step-by-step Pathway guides
+          </li>
+        </ul>
+        
+        <a href="../?action=unlock" class="action-btn">Get Both Classes</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

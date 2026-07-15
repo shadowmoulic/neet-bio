@@ -1,0 +1,577 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Health & Disease Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Human Health & Disease.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Human Health & Disease Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Human Health & Disease.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Human Health & Disease"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 7</span>
+      <h1>🛡️ Human Health & Disease Study Notes</h1>
+      <p>Immunity, AIDS, cancer, infectious diseases, drugs & alcohol — NCERT Ch 7</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/human-health-and-disease/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/human-health-and-disease/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/human-health-and-disease/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.1 Common Infectious Diseases in Humans
+      </h3>
+      
+        <table class="cmp">
+          <thead><tr><th>Disease</th><th>Pathogen</th><th>Transmission</th><th>Key Symptoms</th></tr></thead>
+          <tbody>
+            <tr><td><b>Typhoid</b></td><td><i>Salmonella typhi</i> (bacterium)</td><td>Contaminated food/water</td><td>Sustained high fever 39–40°C, intestinal perforation. Confirmed by <b>Widal test</b>.</td></tr>
+            <tr><td><b>Pneumonia</b></td><td><i>Streptococcus pneumoniae, Haemophilus influenzae</i></td><td>Inhaling droplets; sharing utensils</td><td>Fever, chills, cough; alveoli fill with fluid; lips/nails turn gray/bluish.</td></tr>
+            <tr><td><b>Common Cold</b></td><td>Rhino viruses</td><td>Contaminated objects, droplets</td><td>Nasal congestion, sore throat, cough; lasts 3–7 days. Infects nose/respiratory passage only, NOT lungs.</td></tr>
+            <tr><td><b>Malaria</b></td><td><i>Plasmodium</i> spp. (protozoan); <i>P. falciparum</i> = most deadly</td><td>Female Anopheles mosquito (vector)</td><td>Chill and high fever every 3–4 days due to haemozoin release.</td></tr>
+            <tr><td><b>Amoebiasis</b></td><td><i>Entamoeba histolytica</i></td><td>Contaminated food/water; houseflies as mechanical carriers</td><td>Constipation, abdominal pain, stools with mucous and blood.</td></tr>
+            <tr><td><b>Ascariasis</b></td><td><i>Ascaris</i> (roundworm)</td><td>Contaminated soil/water/plants</td><td>Internal bleeding, muscle pain, fever, anaemia, intestinal blockage.</td></tr>
+            <tr><td><b>Filariasis (Elephantiasis)</b></td><td><i>Wuchereria bancrofti / W. malayi</i></td><td>Female mosquito bite</td><td>Chronic inflammation of lymphatic vessels of lower limbs; gross deformity.</td></tr>
+            <tr><td><b>Ringworm</b></td><td>Fungi: <i>Microsporum, Trichophyton, Epidermophyton</i></td><td>Soil; shared towels/combs</td><td>Dry, scaly lesions on skin, nails, scalp; intense itching.</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Typhoid Mary</b>: Mary Mallon, a cook who was a typhoid carrier — spread typhoid for years through food without showing symptoms herself.</div>
+        <div class="callout"><b>Malaria parasite</b> needs two hosts: human and female Anopheles mosquito. Sporozoites enter via mosquito bite → multiply in liver → attack RBCs → haemozoin released.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.2 Immunity — Innate and Acquired
+      </h3>
+      
+        <h4>Innate Immunity (Non-specific, present at birth)</h4>
+        <table class="cmp">
+          <thead><tr><th>Barrier</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td><b>Physical</b></td><td>Skin; mucus coating of epithelium lining respiratory, GI, urogenital tracts</td></tr>
+            <tr><td><b>Physiological</b></td><td>Acid in stomach; saliva; tears — prevent microbial growth</td></tr>
+            <tr><td><b>Cellular</b></td><td>PMNL-neutrophils, monocytes, natural killer cells (lymphocytes), macrophages — phagocytose microbes</td></tr>
+            <tr><td><b>Cytokine</b></td><td>Interferons — secreted by virus-infected cells; protect non-infected cells from viral infection</td></tr>
+          </tbody>
+        </table>
+        <h4>Acquired Immunity (Specific, has memory)</h4>
+        <ul>
+          <li><b>Primary response</b>: first encounter with pathogen — low intensity.</li>
+          <li><b>Secondary (anamnestic) response</b>: subsequent encounter — highly intensified, due to memory B & T cells.</li>
+          <li><b>B-lymphocytes</b>: produce antibodies (humoral immune response).</li>
+          <li><b>T-lymphocytes</b>: cell-mediated immunity (CMI) — responsible for graft rejection.</li>
+          <li>Antibody structure: 4 peptide chains — 2 light + 2 heavy (H₂L₂). Types: IgA, IgM, IgE, IgG.</li>
+        </ul>
+        <h4>Active vs Passive Immunity</h4>
+        <ul>
+          <li><b>Active</b>: body produces antibodies itself (slow; via vaccination or natural infection). Memory generated.</li>
+          <li><b>Passive</b>: ready-made antibodies given (quick but no memory). Examples: colostrum (IgA for newborn), antitoxin for snake bite, tetanus antitoxin.</li>
+        </ul>
+        <div class="callout"><b>Colostrum</b> = yellowish fluid secreted by mother in early lactation → rich in IgA antibodies for the newborn.</div>
+        <h4>Allergy</h4>
+        <p>Exaggerated immune response to environmental antigens (allergens). Antibodies produced: IgE type. Mast cells release <b>histamine and serotonin</b> → symptoms: sneezing, watery eyes, running nose, breathing difficulty. Treatment: <b>anti-histamines, adrenalin, steroids</b>.</p>
+        <h4>Auto-immunity</h4>
+        <p>Body attacks its own cells. Example: <b>Rheumatoid arthritis</b>.</p>
+        <h4>Lymphoid Organs</h4>
+        <ul>
+          <li><b>Primary</b>: bone marrow (all blood cells including lymphocytes), thymus (T-lymphocyte maturation). Thymus is large at birth, reduces to very small size by puberty.</li>
+          <li><b>Secondary</b>: spleen (filter blood, reservoir of erythrocytes), lymph nodes (trap microorganisms from lymph), tonsils, Peyer's patches, appendix.</li>
+          <li><b>MALT</b> (Mucosa-Associated Lymphoid Tissue): ~50% of lymphoid tissue in body, lining respiratory/digestive/urogenital tracts.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.3 AIDS
+      </h3>
+      
+        <p><b>AIDS</b> = Acquired Immuno Deficiency Syndrome. First reported in <b>1981</b>. Killed >25 million people worldwide.</p>
+        <p>Caused by <b>HIV</b> (Human Immunodeficiency Virus) — a <b>retrovirus</b> with RNA genome enclosed in an envelope.</p>
+        <h4>Transmission routes</h4>
+        <ul>
+          <li>Sexual contact with infected person.</li>
+          <li>Transfusion of contaminated blood/blood products.</li>
+          <li>Sharing infected needles (IV drug abusers).</li>
+          <li>Infected mother to child through placenta.</li>
+        </ul>
+        <h4>Mechanism (How HIV destroys immunity)</h4>
+        <div class="flow">
+          <span class="step">HIV enters macrophages</span><span class="arr">→</span>
+          <span class="step">RNA → viral DNA (reverse transcriptase)</span><span class="arr">→</span>
+          <span class="step">Viral DNA integrates into host DNA</span><span class="arr">→</span>
+          <span class="step">Produces virus particles (HIV factory)</span><span class="arr">→</span>
+          <span class="step">HIV attacks helper T-lymphocytes (TH)</span><span class="arr">→</span>
+          <span class="step">Progressive decrease in helper T-cells</span><span class="arr">→</span>
+          <span class="step">Immune deficiency → opportunistic infections → death</span>
+        </div>
+        <ul>
+          <li>Incubation period: few months to many years (usually 5–10 years).</li>
+          <li>Opportunistic infections: Mycobacterium, viruses, fungi, Toxoplasma.</li>
+          <li>Diagnosis: <b>ELISA</b> (most widely used). Treatment: anti-retroviral drugs (partial effect only — prolongs life, cannot prevent death).</li>
+        </ul>
+        <div class="callout"><b>HIV does NOT spread</b> by touch or physical contact — only through body fluids. HIV/AIDS infected persons should NOT be isolated from family/society.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.4 Cancer
+      </h3>
+      
+        <p>Cancer arises when <b>contact inhibition</b> is lost — cells divide uncontrollably forming <b>tumors</b>.</p>
+        <h4>Types of tumors</h4>
+        <ul>
+          <li><b>Benign</b>: confined to original location, does not spread. Causes little damage.</li>
+          <li><b>Malignant</b>: proliferating neoplastic cells that invade surrounding tissue and spread via blood to new sites = <b>metastasis</b>. Most feared property.</li>
+        </ul>
+        <h4>Causes (Carcinogens)</h4>
+        <ul>
+          <li><b>Physical</b>: ionising radiation (X-rays, gamma rays), non-ionising (UV).</li>
+          <li><b>Chemical</b>: chemicals in tobacco smoke — major cause of lung cancer.</li>
+          <li><b>Biological</b>: oncogenic viruses (carry viral oncogenes). Proto-oncogenes (c-onc) in normal cells can become oncogenes under certain conditions.</li>
+        </ul>
+        <h4>Detection</h4>
+        <ul>
+          <li>Biopsy (tissue staining + microscopy).</li>
+          <li>Radiography (X-rays), CT scan, MRI (for internal cancers).</li>
+          <li>Antibodies against cancer-specific antigens.</li>
+          <li>Molecular biology for gene detection.</li>
+        </ul>
+        <h4>Treatment</h4>
+        <ul>
+          <li>Surgery, radiation therapy (radiotherapy), chemotherapy.</li>
+          <li>Immunotherapy: <b>α-interferon</b> (biological response modifier) activates immune system to destroy tumor.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.5 Drugs and Alcohol Abuse
+      </h3>
+      
+        <table class="cmp">
+          <thead><tr><th>Drug Class</th><th>Source</th><th>Example</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td><b>Opioids</b></td><td>Latex of poppy plant <i>Papaver somniferum</i></td><td>Heroin (smack / diacetylmorphine)</td><td>Binds opioid receptors in CNS & GIT; depressant — slows body functions; taken by snorting/injection.</td></tr>
+            <tr><td><b>Cannabinoids</b></td><td>Inflorescences of <i>Cannabis sativa</i></td><td>Marijuana, hashish, charas, ganja</td><td>Interact with cannabinoid receptors in brain; effects on cardiovascular system; taken by inhalation/oral.</td></tr>
+            <tr><td><b>Coca alkaloids</b></td><td><i>Erythroxylum coca</i> (South America)</td><td>Cocaine (coke/crack)</td><td>Interferes with dopamine transport; stimulates CNS; euphoria, increased energy; excessive dose → hallucinations.</td></tr>
+          </tbody>
+        </table>
+        <h4>Effects of drug/alcohol abuse</h4>
+        <ul>
+          <li>Immediate: reckless behaviour, violence, coma, death (respiratory/heart failure).</li>
+          <li>IV drug use → HIV, Hepatitis B (via shared needles).</li>
+          <li>Chronic: nervous system damage, liver cirrhosis.</li>
+          <li>Anabolic steroids (sports doping): females — masculinisation, abnormal menstrual cycles; males — testicular atrophy, decreased sperm count, breast enlargement (gynaecomastia).</li>
+        </ul>
+        <div class="callout"><b>Nicotine</b> (tobacco): stimulates adrenal gland to release adrenaline and nor-adrenaline → increased blood pressure and heart rate. Associated with lung, bladder, throat cancers.</div>
+      
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Who disproved the 'good humor' hypothesis of health?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">William Harvey.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/widal-test/" class="related-card">
+                <h5>Widal test</h5>
+                <p>Confirms typhoid fever</p>
+              </a>
+            
+              <a href="../../glossary/haemozoin/" class="related-card">
+                <h5>Haemozoin</h5>
+                <p>Toxic substance causing malaria fever/chills</p>
+              </a>
+            
+              <a href="../../glossary/rhino-virus/" class="related-card">
+                <h5>Rhino virus</h5>
+                <p>Causes common cold</p>
+              </a>
+            
+              <a href="../../glossary/entamoeba-histolytica/" class="related-card">
+                <h5>Entamoeba histolytica</h5>
+                <p>Causes amoebiasis (amoebic dysentery)</p>
+              </a>
+            
+              <a href="../../glossary/wuchereria/" class="related-card">
+                <h5>Wuchereria</h5>
+                <p>Filarial worm — causes elephantiasis</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+      <div class="related-links-section">
+        <h4>NCERT Comparison Sheets</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Review the key distinctions and contrast tables from this chapter:</p>
+        <div class="related-grid">
+          
+            <a href="../../compare/disease-vs-pathogen/" class="related-card">
+              <h5>Disease vs Pathogen</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/barrier-vs-examples/" class="related-card">
+              <h5>Barrier vs Examples</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/drug-class-vs-source/" class="related-card">
+              <h5>Drug Class vs Source</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Human Health & Disease!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Who disproved the 'good humor' hypothesis of health?","back":"William Harvey."},{"front":"What pathogen causes Typhoid fever and how is it confirmed?","back":"Salmonella typhi; confirmed by Widal test."},{"front":"What causes Pneumonia?","back":"Streptococcus pneumoniae and Haemophilus influenzae."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

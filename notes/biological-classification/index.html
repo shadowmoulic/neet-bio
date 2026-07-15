@@ -1,0 +1,550 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biological Classification Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Biological Classification.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Biological Classification Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Biological Classification.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Biological Classification"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 2</span>
+      <h1>🦠 Biological Classification Study Notes</h1>
+      <p>Five Kingdoms · Monera → Animalia · Viruses</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/biological-classification/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/biological-classification/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/biological-classification/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        2.1 From Two Kingdoms to Five
+      </h3>
+      
+<p class="lead-in">Classification began for practical use, then grew scientific. The big idea of this chapter: as our criteria improved, the number of kingdoms grew from two to five.</p>
+<h4>The road to Whittaker</h4>
+<ul>
+<li><b>Aristotle</b> — earliest scientific attempt: plants into <b>trees, shrubs, herbs</b>; animals into those <b>with red blood</b> and those <b>without</b>.</li>
+<li><b>Linnaeus</b> — <b>Two Kingdom</b> system: <b>Plantae</b> & <b>Animalia</b>. It did <b>not</b> distinguish prokaryotes/eukaryotes, unicellular/multicellular, or photosynthetic (green algae) / non-photosynthetic (fungi). Inadequate.</li>
+</ul>
+<p>So newer criteria were added — <b>cell structure, nature of cell wall, mode of nutrition, habitat, reproduction, and evolutionary (phylogenetic) relationships</b>.</p>
+<h4>R.H. Whittaker (1969) — Five Kingdom Classification</h4>
+<p>Kingdoms: <b>Monera, Protista, Fungi, Plantae, Animalia</b>. Criteria used: <b>cell structure, thallus/body organisation, mode of nutrition, reproduction, phylogenetic relationships</b>. A later <b>three-domain system</b> split Monera into two domains (→ a six-kingdom view).</p>
+<div class="mnemo"><div class="mn-tag">🧠 Five Kingdoms</div><div class="phrase">"<b>M</b>onkeys <b>P</b>lay <b>F</b>unky <b>P</b>op <b>A</b>lways"</div><div class="key"><b>M</b>onera · <b>P</b>rotista · <b>F</b>ungi · <b>P</b>lantae · <b>A</b>nimalia</div></div>
+<div class="mnemo"><div class="mn-tag">🧠 Whittaker's 5 criteria</div><div class="phrase">"<b>C</b>ute <b>B</b>abies <b>N</b>eed <b>R</b>eliable <b>P</b>hones"</div><div class="key"><b>C</b>ell structure · <b>B</b>ody organisation · <b>N</b>utrition · <b>R</b>eproduction · <b>P</b>hylogeny</div></div>
+<h4>Why old 'Plants' broke down</h4>
+<p>Earlier, 'Plants' lumped together everything with a cell wall — bacteria, BGA, fungi, mosses, ferns, gymnosperms, angiosperms. This wrongly grouped <b>prokaryotes with eukaryotes</b>, <b>unicellular with multicellular</b> (<i>Chlamydomonas</i> with <i>Spirogyra</i>), and ignored that fungi have <b>chitin</b> walls while plants have <b>cellulose</b> walls. Fixing this gave Fungi, Monera and Protista their own kingdoms.</p>
+<div class="tbl-wrap"><table class="data"><caption>Table 2.1 — Characteristics of the Five Kingdoms</caption>
+<thead><tr><th>Character</th><th>Monera</th><th>Protista</th><th>Fungi</th><th>Plantae</th><th>Animalia</th></tr></thead><tbody>
+<tr><th>Cell type</th><td>Prokaryotic</td><td>Eukaryotic</td><td>Eukaryotic</td><td>Eukaryotic</td><td>Eukaryotic</td></tr>
+<tr><th>Cell wall</th><td>Non-cellulosic (polysaccharide + amino acid)</td><td>Present in some</td><td>Present (no cellulose; chitin)</td><td>Present (cellulose)</td><td>Absent</td></tr>
+<tr><th>Nuclear membrane</th><td>Absent</td><td>Present</td><td>Present</td><td>Present</td><td>Present</td></tr>
+<tr><th>Body organisation</th><td>Cellular</td><td>Cellular</td><td>Multicellular / loose tissue</td><td>Tissue / organ</td><td>Tissue / organ / organ system</td></tr>
+<tr><th>Mode of nutrition</th><td>Auto (chemo & photo) & Hetero (sapro/para)</td><td>Auto (photo) & Hetero</td><td>Hetero (sapro/para)</td><td>Auto (photo)</td><td>Hetero (holozoic, sapro)</td></tr>
+</tbody></table></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        2.2 Kingdom Monera — Bacteria
+      </h3>
+      
+<p><b>Bacteria are the sole members of Monera</b> — the most abundant micro-organisms, found everywhere, including extreme habitats (<b>hot springs, deserts, snow, deep oceans</b>); many are parasites. Simple in structure but very complex in behaviour, with the <b>most extensive metabolic diversity</b> of any group.</p>
+<h4>Four shapes</h4>
+<div class="flow"><div class="step">Coccus<small>spherical</small></div><div class="arr">·</div><div class="step">Bacillus<small>rod</small></div><div class="arr">·</div><div class="step">Vibrium<small>comma</small></div><div class="arr">·</div><div class="step">Spirillum<small>spiral</small></div></div>
+<div class="mnemo"><div class="mn-tag">🧠 Bacterial shapes</div><div class="phrase">"<b>C</b>ome <b>B</b>ack <b>V</b>ery <b>S</b>oon"</div><div class="key"><b>C</b>occus · <b>B</b>acillus · <b>V</b>ibrium · <b>S</b>pirillum</div></div>
+<p>Nutrition: <b>autotrophic</b> (photosynthetic or chemosynthetic) or — for the vast majority — <b>heterotrophic</b>.</p>
+<h4>2.1.1 Archaebacteria — extremophiles</h4>
+<p>Live in the harshest habitats; a <b>different cell-wall structure</b> lets them survive extremes:</p>
+<ul><li><b>Halophiles</b> — extreme salty areas</li><li><b>Thermoacidophiles</b> — hot springs</li><li><b>Methanogens</b> — marshy areas; also in the gut of ruminants (cows, buffaloes), producing <b>methane (biogas)</b> from dung</li></ul>
+<div class="mnemo"><div class="mn-tag">🧠 Archaebacteria habitats</div><div class="phrase">"<b>Salt – Heat – Marsh</b>"</div><div class="key"><b>Halo</b>phile (salt) · <b>Thermo</b>acidophile (heat) · <b>Methano</b>gen (marsh/gut)</div></div>
+<h4>2.1.2 Eubacteria — 'true bacteria'</h4>
+<ul>
+<li><b>Rigid cell wall</b>; if motile, a <b>flagellum</b>.</li>
+<li><b>Cyanobacteria (BGA)</b> — have <b>chlorophyll a</b> like green plants; photosynthetic autotrophs; unicellular/colonial/filamentous; colonies in a <b>gelatinous sheath</b>; form <b>blooms</b> in polluted water; some fix atmospheric <b>N₂ in heterocysts</b> — e.g., <i>Nostoc</i>, <i>Anabaena</i>.</li>
+<li><b>Chemosynthetic autotrophs</b> — oxidise inorganic substances (nitrates, nitrites, ammonia) for ATP; recycle <b>N, P, Fe, S</b>.</li>
+<li><b>Heterotrophic bacteria</b> — most abundant; major <b>decomposers</b>; useful (curd from milk, antibiotics, N-fixing in legume roots); pathogens cause <b>cholera, typhoid, tetanus, citrus canker</b>.</li>
+</ul>
+<p>Reproduction: mainly <b>fission</b>; <b>spores</b> in unfavourable conditions; a primitive <b>DNA transfer</b> (sexual). <b>Mycoplasma</b> — completely <b>lack a cell wall</b>, are the <b>smallest living cells</b>, survive without O₂, and many are pathogenic.</p>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        2.3 Kingdom Protista
+      </h3>
+      
+<p>All <b>single-celled eukaryotes</b> (boundaries not well-defined); primarily <b>aquatic</b>; cells have a well-defined nucleus and other membrane-bound organelles; some have flagella/cilia. They reproduce <b>asexually and sexually</b> (cell fusion + zygote). A link between plants, animals and fungi.</p>
+<div class="mnemo"><div class="mn-tag">🧠 Protista groups</div><div class="phrase">"<b>C</b>razy <b>D</b>inos <b>E</b>at <b>S</b>limy <b>P</b>rotozoa"</div><div class="key"><b>C</b>hrysophytes · <b>D</b>inoflagellates · <b>E</b>uglenoids · <b>S</b>lime moulds · <b>P</b>rotozoans</div></div>
+<ul>
+<li><b>Chrysophytes</b> (diatoms + golden algae/desmids) — fresh & marine; microscopic <b>plankton</b>; mostly photosynthetic. Diatom walls = two overlapping silica shells (<b>soap-box</b>), <b>indestructible</b>; deposits = <b>'diatomaceous earth'</b> (polishing, filtration). Diatoms = <b>chief producers</b> in oceans.</li>
+<li><b>Dinoflagellates</b> — mostly marine, photosynthetic; coloured by pigments; <b>stiff cellulose plates</b>; two flagella (one longitudinal, one transverse). Red ones (<i>Gonyaulax</i>) cause <b>red tides</b>; toxins can kill fishes.</li>
+<li><b>Euglenoids</b> — fresh water, stagnant; <b>no cell wall</b> — a protein-rich <b>pellicle</b> (flexible); two flagella (short + long); photosynthetic in light, <b>heterotrophic</b> (predatory) in the dark; pigments identical to higher plants. e.g., <i>Euglena</i>.</li>
+<li><b>Slime moulds</b> — <b>saprophytic</b>; engulf organic matter; form a <b>plasmodium</b> (spreads several feet); in bad conditions form <b>fruiting bodies</b> with spores at tips; spores have true walls, resist for years, dispersed by air.</li>
+<li><b>Protozoans</b> — all <b>heterotrophs</b> (predators/parasites); primitive relatives of animals. <i>(see table below)</i></li>
+</ul>
+<div class="tbl-wrap"><table class="data"><caption>Four groups of Protozoa</caption>
+<thead><tr><th>Group</th><th>Movement / feature</th><th>Example</th></tr></thead><tbody>
+<tr><th>Amoeboid</th><td>Pseudopodia (false feet); marine forms have silica shells</td><td><i>Amoeba</i>, <i>Entamoeba</i> (parasite)</td></tr>
+<tr><th>Flagellated</th><td>Flagella; parasitic forms cause sleeping sickness</td><td><i>Trypanosoma</i></td></tr>
+<tr><th>Ciliated</th><td>Thousands of cilia; a gullet steers in food</td><td><i>Paramoecium</i></td></tr>
+<tr><th>Sporozoan</th><td>Infectious spore-like stage in life cycle</td><td><i>Plasmodium</i> (malaria)</td></tr>
+</tbody></table></div>
+<div class="mnemo"><div class="mn-tag">🧠 Protozoa types</div><div class="phrase">"<b>A</b>ll <b>F</b>ast <b>C</b>ars <b>S</b>peed"</div><div class="key"><b>A</b>moeboid · <b>F</b>lagellated · <b>C</b>iliated · <b>S</b>porozoan</div></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        2.4 Kingdom Fungi
+      </h3>
+      
+<p>A unique kingdom of <b>heterotrophic</b> eukaryotes — moulds, mushrooms, toadstools, yeasts, rusts. Cosmopolitan; prefer <b>warm, humid</b> places.</p>
+<h4>Structure</h4>
+<ul>
+<li>Filamentous (except unicellular <b>yeast</b>); thread-like <b>hyphae</b>; network = <b>mycelium</b>.</li>
+<li><b>Coenocytic</b> hyphae = continuous, multinucleate, no cross walls; others have <b>septae</b>.</li>
+<li>Cell walls of <b>chitin + polysaccharides</b>.</li>
+</ul>
+<h4>Nutrition</h4>
+<p><b>Saprophytes</b> (dead matter), <b>parasites</b> (living hosts), or <b>symbionts</b> — with algae as <b>lichens</b>, with plant roots as <b>mycorrhiza</b>.</p>
+<h4>Sexual cycle — three steps</h4>
+<div class="flow"><div class="step">Plasmogamy<small>fuse protoplasms</small></div><div class="arr">→</div><div class="step">Karyogamy<small>fuse nuclei</small></div><div class="arr">→</div><div class="step accent">Meiosis<small>haploid spores</small></div></div>
+<p>In ascomycetes & basidiomycetes an intervening <b>dikaryotic (n+n)</b> stage occurs — the <b>dikaryophase</b>.</p>
+<div class="mnemo"><div class="mn-tag">🧠 Fungal sex steps</div><div class="phrase">"<b>P</b>lease <b>K</b>iss <b>M</b>e"</div><div class="key"><b>P</b>lasmogamy → <b>K</b>aryogamy → <b>M</b>eiosis</div></div>
+<div class="mnemo"><div class="mn-tag">🧠 The four classes</div><div class="phrase">"<b>P</b>hotogenic <b>A</b>unts <b>B</b>ring <b>D</b>onuts"</div><div class="key"><b>P</b>hycomycetes · <b>A</b>scomycetes · <b>B</b>asidiomycetes · <b>D</b>euteromycetes</div></div>
+<div class="tbl-wrap"><table class="data"><caption>The four classes of Fungi</caption>
+<thead><tr><th>Class</th><th>Mycelium</th><th>Asexual spores</th><th>Sexual spores</th><th>Examples</th></tr></thead><tbody>
+<tr><th>Phycomycetes</th><td>Aseptate, coenocytic</td><td>Zoospores / aplanospores (in sporangium)</td><td>Zygospore</td><td><i>Mucor</i>, <i>Rhizopus</i> (bread mould), <i>Albugo</i> (on mustard)</td></tr>
+<tr><th>Ascomycetes<br><small>(sac-fungi)</small></th><td>Branched, septate</td><td>Conidia (exogenous, on conidiophores)</td><td>Ascospores (in asci → ascocarp)</td><td><i>Aspergillus</i>, <i>Claviceps</i>, <i>Neurospora</i>; yeast (<i>Saccharomyces</i>); morels, truffles</td></tr>
+<tr><th>Basidiomycetes</th><td>Branched, septate</td><td>Generally absent (fragmentation)</td><td>Basidiospores (exogenous, on basidia → basidiocarp)</td><td><i>Agaricus</i> (mushroom), <i>Ustilago</i> (smut), <i>Puccinia</i> (rust)</td></tr>
+<tr><th>Deuteromycetes<br><small>(imperfect fungi)</small></th><td>Septate, branched</td><td>Only conidia</td><td>Unknown (only asexual phase known)</td><td><i>Alternaria</i>, <i>Colletotrichum</i>, <i>Trichoderma</i></td></tr>
+</tbody></table></div>
+<p><b>Note:</b> Deuteromycetes are 'imperfect' because only their asexual/vegetative stage is known; once a sexual stage is discovered they are moved to Ascomycetes or Basidiomycetes. They are useful <b>decomposers</b> aiding mineral cycling.</p>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        2.5 Plantae & Animalia
+      </h3>
+      
+<h4>Kingdom Plantae</h4>
+<p>All eukaryotic, <b>chlorophyll-containing</b> organisms; prominent <b>chloroplasts</b>; cell wall mainly <b>cellulose</b>. A few are <b>partially heterotrophic</b>:</p>
+<ul><li>Insectivorous: <b>Bladderwort</b>, <b>Venus flytrap</b></li><li>Parasite: <b>Cuscuta</b></li></ul>
+<p>Includes <b>algae, bryophytes, pteridophytes, gymnosperms, angiosperms</b>. Life cycle shows <b>alternation of generations</b> — a diploid <b>sporophyte</b> alternating with a haploid <b>gametophyte</b>.</p>
+<h4>Kingdom Animalia</h4>
+<ul>
+<li>Heterotrophic, eukaryotic, <b>multicellular</b>; cells <b>lack a cell wall</b>.</li>
+<li>Depend directly/indirectly on plants; digest food in an <b>internal cavity</b>; store reserves as <b>glycogen or fat</b>; nutrition is <b>holozoic</b> (ingestion).</li>
+<li>Definite growth and shape; higher forms have <b>sensory & neuromotor</b> systems and <b>locomotion</b>.</li>
+<li>Reproduction mostly <b>sexual</b> — copulation followed by embryological development.</li>
+</ul>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        2.6 Viruses, Viroids, Prions & Lichens
+      </h3>
+      
+<p>These are <b>not</b> placed in the five kingdoms.</p>
+<h4>Viruses</h4>
+<p><b>Non-cellular</b>; an <b>inert crystalline</b> structure outside a living cell. On infecting, they hijack the host's machinery to replicate, killing the host. The name 'virus' (= venom/poisonous fluid) was given by <b>Pasteur</b>.</p>
+<div class="flow"><div class="step">Ivanowsky (1892)<small>tobacco mosaic microbe; passes filters</small></div><div class="arr">→</div><div class="step">Beijerinck (1898)<small>infectious sap = Contagium vivum fluidum</small></div><div class="arr">→</div><div class="step accent">Stanley (1935)<small>viruses crystallised; mostly protein</small></div></div>
+<ul>
+<li>Obligate parasites; a <b>nucleoprotein</b>; genetic material is <b>infectious</b>.</li>
+<li>Contain <b>RNA or DNA</b> — <b>never both</b>.</li>
+<li>Protein coat = <b>capsid</b>, made of subunits called <b>capsomeres</b> (helical or polyhedral).</li>
+<li>Plant viruses: usually <b>ssRNA</b>; animal viruses: ss/ds RNA or <b>dsDNA</b>; bacteriophages: usually <b>dsDNA</b>.</li>
+<li>Diseases: <b>mumps, smallpox, herpes, influenza, AIDS</b>. Plant symptoms: mosaic, leaf curling/rolling, yellowing, vein clearing, dwarfing, stunted growth.</li>
+</ul>
+<div class="mnemo"><div class="mn-tag">🧠 Virus pioneers (timeline)</div><div class="phrase">"<b>I</b>vanowsky → <b>B</b>eijerinck → <b>S</b>tanley"</div><div class="key">1892 (mosaic) → 1898 (Contagium vivum fluidum) → 1935 (crystallised). One genetic material only: RNA <b>or</b> DNA.</div></div>
+<h4>Viroids</h4>
+<p>Discovered by <b>T.O. Diener (1971)</b>; smaller than viruses; cause <b>potato spindle tuber disease</b>; a <b>free RNA</b> of low molecular weight with <b>no protein coat</b>.</p>
+<h4>Prions</h4>
+<p>Infectious agents made of <b>abnormally folded protein</b>, associated with diseases of the nervous system.</p>
+<h4>Lichens</h4>
+<p><b>Symbiotic (mutualistic)</b> associations of <b>algae</b> + <b>fungi</b>:</p>
+<ul><li><b>Phycobiont</b> = algal partner (autotroph) → makes food.</li><li><b>Mycobiont</b> = fungal partner (heterotroph) → gives shelter, absorbs water & minerals.</li></ul>
+<p>Lichens are excellent <b>pollution indicators</b> — they do not grow in polluted areas.</p>
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Who proposed the Five Kingdom classification, and in which year?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);"><b>R.H. Whittaker</b>, in <b>1969</b>.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/monera/" class="related-card">
+                <h5>Monera</h5>
+                <p>Prokaryotic kingdom</p>
+              </a>
+            
+              <a href="../../glossary/mycoplasma/" class="related-card">
+                <h5>Mycoplasma</h5>
+                <p>Smallest cell, no wall</p>
+              </a>
+            
+              <a href="../../glossary/halophile/" class="related-card">
+                <h5>Halophile</h5>
+                <p>Lives in salty areas</p>
+              </a>
+            
+              <a href="../../glossary/methanogen/" class="related-card">
+                <h5>Methanogen</h5>
+                <p>Produces biogas</p>
+              </a>
+            
+              <a href="../../glossary/heterocyst/" class="related-card">
+                <h5>Heterocyst</h5>
+                <p>N₂-fixing cell</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Biological Classification!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Who proposed the Five Kingdom classification, and in which year?","back":"<b>R.H. Whittaker</b>, in <b>1969</b>."},{"front":"Name the five kingdoms.","back":"<b>Monera, Protista, Fungi, Plantae, Animalia</b>."},{"front":"Five criteria used by Whittaker?","back":"<b>Cell structure, body (thallus) organisation, mode of nutrition, reproduction, phylogenetic relationships</b>."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

@@ -1,0 +1,593 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structural Organisation in Animals Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Structural Organisation in Animals.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Structural Organisation in Animals Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Structural Organisation in Animals.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Structural Organisation in Animals"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 7</span>
+      <h1>🦠 Structural Organisation in Animals Study Notes</h1>
+      <p>Tissues · Earthworm · Cockroach · Frog</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/structural-organisation-in-animals/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/structural-organisation-in-animals/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/structural-organisation-in-animals/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.1 Tissues & Epithelial Tissue
+      </h3>
+      
+<p class="lead-in">A <span class="term">tissue</span> is a group of similar cells plus intercellular substances that perform a specific function. All complex animals are built from just <b>four basic tissues</b>; these form organs, which combine into organ systems — a division of labour.</p>
+<div class="mnemo"><div class="mn-tag">🧠 The four tissues</div><div class="phrase">"<b>E</b>very <b>C</b>at <b>M</b>eows <b>N</b>icely"</div><div class="key"><b>E</b>pithelial · <b>C</b>onnective · <b>M</b>uscular · <b>N</b>eural</div></div>
+<h4>Epithelial tissue (epithelium)</h4>
+<p>Has a <b>free surface</b> facing a body fluid or the outside; provides a <b>covering or lining</b>. Cells are compact with little intercellular matrix. Two types: <b>simple</b> (single layer; lines cavities, ducts, tubes) and <b>compound</b> (two+ layers; protective, e.g., skin).</p>
+<div class="mnemo"><div class="mn-tag">🧠 Simple epithelium types</div><div class="phrase">"<b>S</b>ome <b>C</b>ute <b>C</b>ells"</div><div class="key"><b>S</b>quamous · <b>C</b>uboidal · <b>C</b>olumnar (+ ciliated)</div></div>
+<div class="tbl-wrap"><table class="data"><caption>Types of simple epithelium</caption>
+<thead><tr><th>Type</th><th>Shape</th><th>Location</th><th>Function</th></tr></thead><tbody>
+<tr><th>Squamous</th><td>Single thin layer, flattened, irregular boundaries</td><td>Walls of blood vessels; air sacs (alveoli) of lungs</td><td>Forms a diffusion boundary</td></tr>
+<tr><th>Cuboidal</th><td>Single layer, cube-like</td><td>Ducts of glands; tubular parts of nephrons (PCT has microvilli)</td><td>Secretion & absorption</td></tr>
+<tr><th>Columnar</th><td>Single layer, tall & slender; nuclei at base</td><td>Lining of stomach & intestine</td><td>Secretion & absorption</td></tr>
+<tr><th>Ciliated</th><td>Columnar/cuboidal bearing cilia</td><td>Bronchioles, fallopian tubes</td><td>Move particles/mucus in one direction</td></tr>
+</tbody></table></div>
+<h4>Glandular epithelium</h4>
+<p>Columnar/cuboidal cells specialised for secretion. <b>Unicellular</b> (goblet cells of alimentary canal) or <b>multicellular</b> (salivary gland).</p>
+<ul>
+<li><b>Exocrine</b> — secrete through <b>ducts</b>: mucus, saliva, earwax, oil, milk, digestive enzymes.</li>
+<li><b>Endocrine</b> — <b>no ducts</b>; secrete <b>hormones</b> directly into the fluid bathing the gland.</li>
+</ul>
+<h4>Compound epithelium & cell junctions</h4>
+<p>Compound epithelium is multilayered with a limited role in secretion/absorption; its main job is <b>protection</b> (dry skin, moist buccal cavity, pharynx, salivary/pancreatic ducts).</p>
+<div class="flow"><div class="step accent">Tight<small>stop leakage across tissue</small></div><div class="arr">·</div><div class="step">Adhering<small>cement neighbouring cells</small></div><div class="arr">·</div><div class="step">Gap<small>communication; ions & small molecules</small></div></div>
+<div class="mnemo"><div class="mn-tag">🧠 Cell junctions — TAG</div><div class="phrase">"<b>T</b>ight – <b>A</b>dhering – <b>G</b>ap"</div><div class="key">Tight = seal · Adhering = glue · Gap = talk</div></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.2 Connective, Muscle & Neural Tissues
+      </h3>
+      
+<h4>Connective tissue</h4>
+<p>The <b>most abundant and widely distributed</b> tissue; it links and supports other tissues/organs. Except <b>blood</b>, the cells secrete fibres of <b>collagen or elastin</b> (strength, elasticity, flexibility) and a matrix of modified polysaccharides (<b>ground substance</b>).</p>
+<div class="mnemo"><div class="mn-tag">🧠 Connective types</div><div class="phrase">"<b>L</b>azy <b>D</b>ogs <b>S</b>leep"</div><div class="key"><b>L</b>oose · <b>D</b>ense · <b>S</b>pecialised</div></div>
+<ul>
+<li><b>Loose</b> — cells & fibres loosely arranged in a semi-fluid matrix.
+  <ul><li><b>Areolar</b> — beneath skin; a support framework; contains <b>fibroblasts, macrophages, mast cells</b>.</li>
+  <li><b>Adipose</b> — beneath skin; <b>stores fat</b>.</li></ul></li>
+<li><b>Dense</b> — fibres & fibroblasts compactly packed.
+  <ul><li><b>Dense regular</b> — collagen in parallel bundles: <b>tendons</b> (muscle→bone) and <b>ligaments</b> (bone→bone).</li>
+  <li><b>Dense irregular</b> — fibroblasts + collagen oriented differently; in the <b>skin</b>.</li></ul></li>
+<li><b>Specialised</b> — cartilage, bone, blood.</li>
+</ul>
+<div class="mnemo"><div class="mn-tag">🧠 Specialised connective</div><div class="phrase">"<b>C</b>ute <b>B</b>aby <b>B</b>orn"</div><div class="key"><b>C</b>artilage · <b>B</b>one · <b>B</b>lood</div></div>
+<div class="tbl-wrap"><table class="data"><caption>Specialised connective tissues</caption>
+<thead><tr><th>Tissue</th><th>Matrix</th><th>Cells (in lacunae)</th><th>Notes</th></tr></thead><tbody>
+<tr><th>Cartilage</th><td>Solid yet pliable; resists compression</td><td><b>Chondrocytes</b></td><td>Tip of nose, outer ear, between vertebrae, limbs, hands; embryonic cartilage → bone in adults</td></tr>
+<tr><th>Bone</th><td>Hard, non-pliable; rich in <b>calcium salts + collagen</b></td><td><b>Osteocytes</b></td><td>Structural frame; <b>bone marrow</b> makes blood cells</td></tr>
+<tr><th>Blood</th><td>Fluid (plasma)</td><td>RBC, WBC, platelets</td><td>Fluid connective tissue; transport</td></tr>
+</tbody></table></div>
+<p><b>Key pair to remember:</b> <span class="term">Tendon</span> joins muscle to bone; <span class="term">ligament</span> joins bone to bone.</p>
+<h4>Muscle tissue</h4>
+<p>Long cylindrical fibres in parallel arrays, made of <b>myofibrils</b>; they contract and relax to cause movement.</p>
+<div class="mnemo"><div class="mn-tag">🧠 Muscle types</div><div class="phrase">"<b>S</b>kinny <b>S</b>nakes <b>C</b>limb"</div><div class="key"><b>S</b>keletal · <b>S</b>mooth · <b>C</b>ardiac</div></div>
+<div class="tbl-wrap"><table class="data"><caption>The three muscle types</caption>
+<thead><tr><th>Type</th><th>Striations</th><th>Control</th><th>Key feature / location</th></tr></thead><tbody>
+<tr><th>Skeletal</th><td>Striated</td><td>Voluntary</td><td>Attached to skeletal bones; bundled, with a connective-tissue sheath</td></tr>
+<tr><th>Smooth</th><td>Non-striated</td><td>Involuntary</td><td><b>Fusiform</b> (tapering ends); walls of blood vessels, stomach, intestine</td></tr>
+<tr><th>Cardiac</th><td>Striated</td><td>Involuntary</td><td>Only in heart; <b>intercalated discs</b> let cells contract as one unit</td></tr>
+</tbody></table></div>
+<h4>Neural tissue</h4>
+<p>Exerts the greatest control over the body's responsiveness. <b>Neurons</b> are the excitable units; <b>neuroglia</b> protect and support neurons and make up <b>more than half</b> the volume of neural tissue. A stimulated neuron sends an electrical disturbance along its membrane that, at the endings, stimulates or inhibits adjacent cells.</p>
+<h4>7.2 Organ & organ system</h4>
+<p>Tissues → organs → organ systems. The <b>heart contains all four tissue types</b>. Body design grows more complex up the animal kingdom. Note the two viewpoints: <span class="term">morphology</span> = external features; <span class="term">anatomy</span> = internal organ structure.</p>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.3 Earthworm — Pheretima
+      </h3>
+      
+<p class="lead-in"><i>Pheretima</i> (and <i>Lumbricus</i>) — a reddish-brown terrestrial invertebrate of upper moist soil; a 'friend of the farmer' that makes soil porous through its burrows.</p>
+<h4>Morphology</h4>
+<ul>
+<li>Long cylindrical body with <b>~100–120 segments (metameres)</b>, all similar.</li>
+<li><b>Dorsal</b> side: a dark mid-dorsal line (the dorsal blood vessel). <b>Ventral</b> side: bears the genital openings.</li>
+<li><b>Prostomium</b> — a lobe over the mouth; sensory, and a wedge to force open soil. The first body segment is the <b>peristomium</b> (buccal segment) containing the mouth.</li>
+<li><b>Clitellum</b> — a prominent dark glandular band over segments <b>14–16</b>, dividing the body into preclitellar, clitellar and postclitellar regions.</li>
+<li><b>Setae</b> — S-shaped bristles in epidermal pits in every segment (except the first, last and clitellum); aid locomotion.</li>
+</ul>
+<div class="callout numbers"><div class="co-h">📐 The Earthworm Number Ladder — memorise this!</div>
+<div class="numgrid">
+<div class="ni"><b>4–6</b><span>blood glands</span></div>
+<div class="ni"><b>5–9</b><span>spermathecal apertures (4 pairs)</span></div>
+<div class="ni"><b>10–11</b><span>2 pairs testes</span></div>
+<div class="ni"><b>12–13</b><span>1 pair ovaries</span></div>
+<div class="ni"><b>14</b><span>single female pore</span></div>
+<div class="ni"><b>14–16</b><span>clitellum</span></div>
+<div class="ni"><b>15→</b><span>intestine begins</span></div>
+<div class="ni"><b>18</b><span>pair of male pores</span></div>
+<div class="ni"><b>26</b><span>intestinal caecae</span></div>
+</div></div>
+<div class="mnemo"><div class="mn-tag">🧠 Climb the ladder</div><div class="phrase">Glands <b>4-5-6</b> → spermathecae open <b>5–9</b> → Testes <b>10-11</b> → Ovaries <b>12-13</b> → Female pore <b>14</b> → Male pore <b>18</b>.</div><div class="key">Even numbers go DOWN the body; remember "<b>T</b>en <b>T</b>estes, ovaries just below; female 14, male 18."</div></div>
+<h4>Anatomy — the gut, in order</h4>
+<div class="flow"><div class="step">Mouth</div><div class="arr">→</div><div class="step">Buccal cavity<small>1–3</small></div><div class="arr">→</div><div class="step">Pharynx</div><div class="arr">→</div><div class="step">Oesophagus<small>5–7</small></div><div class="arr">→</div><div class="step accent">Gizzard<small>8–9 · grinds soil</small></div><div class="arr">→</div><div class="step">Stomach<small>9–14</small></div><div class="arr">→</div><div class="step">Intestine<small>from 15</small></div><div class="arr">→</div><div class="step">Anus</div></div>
+<ul>
+<li><b>Calciferous glands</b> in the stomach (9–14) neutralise the humic acid of soil. <b>Typhlosole</b> = an internal median fold of the dorsal intestinal wall that increases the absorptive surface.</li>
+<li><b>Body wall:</b> cuticle → epidermis (single columnar layer with gland cells) → circular + longitudinal muscle layers → coelomic epithelium.</li>
+<li><b>Circulation — closed type:</b> blood is confined to vessels, capillaries and hearts, flowing in one direction. <b>Blood glands</b> on segments 4, 5, 6 make blood cells and haemoglobin (dissolved in plasma); blood cells are phagocytic. No special breathing organs — exchange is through the <b>moist body surface</b>.</li>
+</ul>
+<div class="mnemo"><div class="mn-tag">🧠 Nephridia types — SIP</div><div class="phrase">"<b>S</b>eptal · <b>I</b>ntegumentary · <b>P</b>haryngeal"</div><div class="key"><b>Septal</b> (open into intestine) · <b>Integumentary</b> (open on body surface) · <b>Pharyngeal</b> (tufts in segments 4,5,6). They regulate body-fluid volume & composition.</div></div>
+<p><b>Nervous system:</b> ganglia on a ventral, paired nerve cord; in segments 3–4 the cord rings the pharynx and joins the cerebral ganglia (a nerve ring). No eyes — only light- and touch-sensitive receptor cells and chemoreceptors on the anterior part.</p>
+<h4>Reproduction — hermaphrodite (bisexual)</h4>
+<ul>
+<li><b>2 pairs of testes</b> (segments 10 & 11); vasa deferentia run to segment 18 and join the prostatic duct; <b>accessory glands</b> in segments 17 & 19; common prostate + spermatic duct open at the <b>male pores (18)</b>.</li>
+<li><b>4 pairs of spermathecae</b> (segments 6–9) receive and store sperm during mating.</li>
+<li><b>1 pair of ovaries</b> (at the 12/13 septum); ovarian funnels → oviduct → single median <b>female pore (14)</b>.</li>
+<li>Mating = mutual sperm exchange. The clitellum secretes a <b>cocoon</b>; fertilisation & development happen inside it in soil. After ~3 weeks each cocoon releases <b>2–20 young</b> (avg ~4). Development is <b>direct</b> (no larva).</li>
+</ul>
+<div class="callout"><div class="co-h">🌱 Friend of the farmer</div><p style="margin:0;color:#cfdcd2;font-size:.9rem">Burrows make soil porous, easing root growth and aeration; earthworms are central to <b>vermicomposting</b> and are used as fishing bait.</p></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.4 Cockroach — Periplaneta americana
+      </h3>
+      
+<p class="lead-in"><i>Periplaneta americana</i> — a bright-brown, nocturnal, omnivorous insect (Class <b>Insecta</b>, Phylum <b>Arthropoda</b>) of damp places; a pest and disease vector.</p>
+<h4>Morphology</h4>
+<ul>
+<li>Adults <b>34–53 mm</b>; in males the wings extend beyond the abdomen. Body = <b>head, thorax, abdomen</b>, covered by a brown chitinous <b>exoskeleton</b> of plates (<b>tergites</b> dorsal, <b>sternites</b> ventral) joined by arthrodial membrane.</li>
+<li><b>Head</b> — triangular, formed by fusion of <b>6 segments</b>, very mobile on the neck. Bears a pair of <b>compound eyes</b> and a pair of thread-like <b>antennae</b>.</li>
+<li><b>Thorax</b> — prothorax, mesothorax, metathorax; each segment bears a pair of <b>walking legs</b>. Forewings (<b>tegmina</b>: opaque, leathery) arise from the <b>mesothorax</b>; hindwings (transparent, used in flight) from the <b>metathorax</b>.</li>
+<li><b>Abdomen</b> — <b>10 segments</b> in both sexes. Both sexes bear a pair of <b>anal cerci</b> on the 10th segment; males additionally have a pair of <b>anal styles</b> (absent in females). Females have a boat-shaped 7th sternum forming a <b>brood (genital) pouch</b>.</li>
+</ul>
+<div class="mnemo"><div class="mn-tag">🧠 Mouthparts (biting & chewing)</div><div class="phrase">"<b>L</b>ittle <b>M</b>onkeys <b>M</b>ake <b>L</b>unch"</div><div class="key"><b>L</b>abrum (upper lip) · <b>M</b>andibles · <b>M</b>axillae · <b>L</b>abium (lower lip) — plus a median <b>hypopharynx</b> (tongue).</div></div>
+<h4>Anatomy — the gut, in order</h4>
+<div class="flow"><div class="step">Mouth</div><div class="arr">→</div><div class="step">Pharynx</div><div class="arr">→</div><div class="step">Oesophagus</div><div class="arr">→</div><div class="step">Crop<small>storage</small></div><div class="arr">→</div><div class="step accent">Gizzard<small>6 chitinous teeth</small></div><div class="arr">→</div><div class="step">Midgut<small>+ 6–8 hepatic caecae</small></div><div class="arr">→</div><div class="step">Hindgut<small>ileum·colon·rectum</small></div><div class="arr">→</div><div class="step">Anus</div></div>
+<div class="callout numbers"><div class="co-h">📐 Cockroach numbers</div>
+<div class="numgrid">
+<div class="ni"><b>6</b><span>head segments</span></div>
+<div class="ni"><b>3</b><span>thoracic segments</span></div>
+<div class="ni"><b>10</b><span>abdominal segments</span></div>
+<div class="ni"><b>~2000</b><span>ommatidia / eye</span></div>
+<div class="ni"><b>6</b><span>teeth in gizzard</span></div>
+<div class="ni"><b>6–8</b><span>hepatic caecae</span></div>
+<div class="ni"><b>100–150</b><span>Malpighian tubules</span></div>
+<div class="ni"><b>10</b><span>pairs of spiracles</span></div>
+<div class="ni"><b>13</b><span>moults to adult</span></div>
+</div></div>
+<ul>
+<li><b>Foregut</b> is lined by cuticle. <b>Hepatic (gastric) caecae</b> (6–8) at the foregut–midgut junction secrete digestive juice. <b>Malpighian tubules</b> (100–150, yellow) at the midgut–hindgut junction remove wastes from the haemolymph.</li>
+<li><b>Circulation — open type:</b> vessels are poorly developed and open into the <b>haemocoel</b>; organs are bathed in <b>haemolymph</b> (colourless plasma + haemocytes). The tubular heart along the mid-dorsal line has funnel-shaped chambers with <b>ostia</b>.</li>
+<li><b>Respiration:</b> a network of <b>trachea</b> opening through <b>10 pairs of spiracles</b>; tracheoles deliver O₂ directly to tissues by diffusion; spiracles are valved by sphincters.</li>
+<li><b>Excretion:</b> Malpighian tubules convert nitrogenous waste to <b>uric acid</b> (excreted via the hindgut) — the cockroach is <b>uricotelic</b>. Fat body, nephrocytes and uricose glands also help.</li>
+<li><b>Nervous system:</b> fused, segmental ganglia on a ventral cord — <b>3 in the thorax, 6 in the abdomen</b>; so much is spread through the body that a cockroach can survive about <b>a week without its head</b>. The brain is the <b>supra-oesophageal ganglion</b>. Compound eyes have ~2000 <b>ommatidia</b> giving <b>mosaic vision</b> (sensitive but low-resolution — good for night).</li>
+</ul>
+<h4>Reproduction — dioecious</h4>
+<ul>
+<li><b>Male:</b> a pair of <b>testes</b> (segments 4–6); vas deferens → ejaculatory duct → male gonopore; a <b>mushroom-shaped gland</b> (segments 6–7) is accessory. Sperm are bundled into <b>spermatophores</b>.</li>
+<li><b>Female:</b> two large <b>ovaries</b> (segments 2–6), each of <b>8 ovarioles</b>; oviducts unite into a single median oviduct (vagina); a pair of <b>spermathecae</b> (6th segment) opens into the genital chamber.</li>
+<li>Fertilised eggs are encased in a dark <b>ootheca</b> (~<b>8 mm</b>); a female makes <b>9–10 oothecae</b>, each with <b>14–16 eggs</b>. Development is <b>paurometabolous</b> — nymphs resemble adults and grow by ~13 moults; the last nymphal stage bears wing pads.</li>
+</ul>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        7.5 Frog — Rana tigrina
+      </h3>
+      
+<p class="lead-in"><i>Rana tigrina</i> — Class <b>Amphibia</b>, Phylum <b>Chordata</b>; lives on land and in fresh water. A <b>poikilotherm</b> (cold-blooded) that changes colour to blend in (<b>mimicry</b>), undergoes <b>aestivation</b> (summer sleep) and <b>hibernation</b> (winter sleep) in burrows.</p>
+<h4>Morphology</h4>
+<ul>
+<li>Smooth, slippery, moist skin (mucus); dorsally olive-green with dark spots, ventrally pale yellow. It <b>never drinks</b> — water is absorbed through the skin.</li>
+<li>Body = <b>head + trunk</b> (no neck, no tail). Nostrils sit above the mouth; bulging eyes carry a protective <b>nictitating membrane</b>; a <b>tympanum</b> (eardrum) lies on each side.</li>
+<li>Forelimbs have <b>4 digits</b>; the larger, muscular, <b>webbed</b> hind limbs have <b>5 digits</b> for swimming, leaping and burrowing.</li>
+<li><b>Sexual dimorphism:</b> the male has <b>vocal sacs</b> and a <b>copulatory pad</b> on the first digit of each forelimb — both absent in the female.</li>
+</ul>
+<h4>Anatomy</h4>
+<div class="flow"><div class="step">Mouth</div><div class="arr">→</div><div class="step">Buccal cavity</div><div class="arr">→</div><div class="step">Pharynx</div><div class="arr">→</div><div class="step">Oesophagus</div><div class="arr">→</div><div class="step accent">Stomach</div><div class="arr">→</div><div class="step">Intestine</div><div class="arr">→</div><div class="step">Rectum</div><div class="arr">→</div><div class="step">Cloaca</div></div>
+<ul>
+<li><b>Digestion:</b> a short canal (carnivore). A <b>bilobed tongue</b> captures prey. The <b>liver</b> secretes bile (stored in the <b>gall bladder</b>); the <b>pancreas</b> supplies enzymes. Bile emulsifies fat; final digestion is in the intestine; villi & microvilli absorb; waste exits via rectum → cloaca.</li>
+<li><b>Respiration — three ways:</b> through the <b>skin</b> (cutaneous, in water and during aestivation/hibernation), the <b>buccal cavity</b>, and the paired pink <b>lungs</b> (pulmonary, on land).</li>
+<li><b>Circulation — closed, plus a lymphatic system.</b> The muscular <b>3-chambered heart</b> has <b>two atria + one ventricle</b> inside a pericardium. The <b>sinus venosus</b> joins the right atrium; the ventricle opens into the <b>conus arteriosus</b>. Special <b>hepatic portal</b> (liver) and <b>renal portal</b> (kidney) systems exist. <b>RBCs are nucleated</b> and carry haemoglobin; lymph lacks some proteins and RBCs.</li>
+</ul>
+<div class="mnemo"><div class="mn-tag">🧠 Frog heart</div><div class="phrase">"<b>2 + 1 = 3</b>"</div><div class="key">2 atria + 1 ventricle = 3-chambered heart. Extras: <b>sinus venosus</b> (in) and <b>conus arteriosus</b> (out).</div></div>
+<ul>
+<li><b>Excretion — ureotelic.</b> A pair of bean-like <b>kidneys</b> beside the vertebral column → <b>ureters</b> → cloaca; a thin <b>urinary bladder</b> stores urine. In males the ureter doubles as a <b>urinogenital duct</b>; in females ureter and oviduct open separately.</li>
+<li><b>Control & coordination:</b> nervous + endocrine. Endocrine glands include the <b>pituitary, thyroid, parathyroid, thymus, pineal, pancreatic islets, adrenals, gonads</b>. The nervous system has the <b>CNS</b> (brain + spinal cord), <b>PNS</b> (<b>10 pairs of cranial nerves</b> + spinal nerves) and <b>ANS</b>. The brain has a <b>forebrain</b> (olfactory lobes, cerebral hemispheres, diencephalon), <b>midbrain</b> (optic lobes) and <b>hindbrain</b> (cerebellum + medulla oblongata); the medulla passes through the <b>foramen magnum</b> into the spinal cord.</li>
+<li><b>Sense organs:</b> touch (sensory papillae), taste (taste buds), smell (nasal epithelium), sight (eyes) and hearing/balance (tympanum + internal ear). Only the eyes and internal ears are well-organised; there is <b>no external ear</b>.</li>
+</ul>
+<h4>Reproduction</h4>
+<ul>
+<li><b>Male:</b> a pair of yellow ovoid <b>testes</b> attached to the kidney by the <b>mesorchium</b>; <b>10–12 vasa efferentia</b> enter the kidney and join <b>Bidder's canal</b> → urinogenital duct → cloaca.</li>
+<li><b>Female:</b> a pair of <b>ovaries</b> near the kidneys (no functional connection to them); oviducts open separately into the cloaca. A female lays <b>2500–3000 ova</b> at a time.</li>
+<li><b>Fertilisation is external</b> (in water); development passes through a <b>tadpole</b> larva that undergoes <b>metamorphosis</b> into the adult.</li>
+</ul>
+<div class="callout"><div class="co-h">🐸 Why frogs matter</div><p style="margin:0;color:#cfdcd2;font-size:.9rem">They eat insects and protect crops, maintain the food chain/web balance, and their muscular legs are eaten as food in some countries.</p></div>
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Define a tissue.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">A group of <b>similar cells + intercellular substances</b> performing a specific function.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/tendon/" class="related-card">
+                <h5>Tendon</h5>
+                <p>Muscle to bone</p>
+              </a>
+            
+              <a href="../../glossary/ligament/" class="related-card">
+                <h5>Ligament</h5>
+                <p>Bone to bone</p>
+              </a>
+            
+              <a href="../../glossary/chondrocyte/" class="related-card">
+                <h5>Chondrocyte</h5>
+                <p>Cartilage cell</p>
+              </a>
+            
+              <a href="../../glossary/osteocyte/" class="related-card">
+                <h5>Osteocyte</h5>
+                <p>Bone cell</p>
+              </a>
+            
+              <a href="../../glossary/adipose/" class="related-card">
+                <h5>Adipose</h5>
+                <p>Stores fat</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Structural Organisation in Animals!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Define a tissue.","back":"A group of <b>similar cells + intercellular substances</b> performing a specific function."},{"front":"Name the four basic animal tissues.","back":"<b>Epithelial, Connective, Muscular, Neural</b>."},{"front":"What defines an epithelial tissue?","back":"A <b>free surface</b> (faces fluid/outside) and a covering/lining role; cells compact with little matrix."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

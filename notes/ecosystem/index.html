@@ -1,0 +1,998 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosystem Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Ecosystem.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Ecosystem Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Ecosystem.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Ecosystem"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 12</span>
+      <h1>🌍 Ecosystem Study Notes</h1>
+      <p>Structure & function · Productivity (GPP/NPP) · Decomposition · Energy flow & the 10% law · Ecological pyramids</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/ecosystem/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/ecosystem/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/ecosystem/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.1 1. Ecosystem — What It Is, Its Types & Its Structure
+      </h3>
+      
+        <p>An <span class="kw">ecosystem</span> is a <b>functional unit of nature</b> where <b>living organisms interact among themselves AND with the surrounding physical environment</b>.</p>
+
+        <div class="callout"><b>Scale:</b> An ecosystem varies greatly in size — from a <b>small pond</b> to a <b>large forest or a sea</b>. Many ecologists regard the <b>entire biosphere as a global ecosystem</b>, a composite of all local ecosystems on Earth. Because that is too big and complex to study at once, it is divided into two basic categories.</div>
+
+        <table class="cmp">
+          <thead><tr><th>Category</th><th>NCERT examples</th></tr></thead>
+          <tbody>
+            <tr><td><b>Terrestrial</b></td><td><b>Forest, Grassland, Desert</b></td></tr>
+            <tr><td><b>Aquatic</b></td><td><b>Pond, Lake, Wetland, River, Estuary</b></td></tr>
+            <tr><td><b>Man-made</b></td><td><b>Crop fields, Aquarium</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>Structural features — the two S's</h4>
+        <p>The interaction of biotic and abiotic components produces a <b>physical structure that is characteristic for each type of ecosystem</b>. Its two structural features are:</p>
+        <table class="cmp">
+          <thead><tr><th>Feature</th><th>Definition</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><b>Species composition</b></td><td><b>Identification and enumeration</b> of the plant and animal species of an ecosystem</td><td>Listing every species present in a forest</td></tr>
+            <tr><td><b>Stratification</b></td><td><b>VERTICAL distribution</b> of different species occupying different levels</td><td><b>Trees</b> = top strata; <b>Shrubs</b> = second layer; <b>Herbs and grasses</b> = bottom layers</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Components of an ecosystem</h4>
+        <table class="cmp">
+          <thead><tr><th>Type</th><th>What it includes</th></tr></thead>
+          <tbody>
+            <tr><td><b>ABIOTIC</b></td><td>Inorganic materials — <b>air, water and soil</b></td></tr>
+            <tr><td><b>BIOTIC</b></td><td><b>Producers, Consumers and Decomposers</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>The FOUR functional aspects (the whole chapter, in one list)</h4>
+        <div class="flow">
+          <span class="node">1. Productivity</span><span class="arr">→</span>
+          <span class="node">2. Decomposition</span><span class="arr">→</span>
+          <span class="node">3. Energy Flow</span><span class="arr">→</span>
+          <span class="node">4. Nutrient Cycling</span>
+        </div>
+        <div class="callout"><b>Frame it as INPUT → TRANSFER → OUTPUT:</b><br>
+          <b>Input</b> = productivity &nbsp;|&nbsp; <b>Transfer</b> = food chain/web + nutrient cycling &nbsp;|&nbsp; <b>Output</b> = degradation and energy loss.</div>
+
+        <div class="callout"><b>What the 2023-24 rationalisation DELETED from this chapter</b> (do not waste time on these unless your coaching insists):<br>
+          • Ecological Succession (hydrarch, xerarch, pioneer species, climax community)<br>
+          • The detailed <b>Carbon cycle</b> and <b>Phosphorus cycle</b> diagrams<br>
+          • Ecosystem Services with <b>Robert Constanza's</b> valuation figures<br><br>
+          <b>What SURVIVES only in the Summary + Exercises:</b> the definition of nutrient cycling, gaseous vs sedimentary cycles, and a one-line mention of ecosystem services. Section 8 below covers exactly that much — no more.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.2 2. The Pond — A Complete Model Ecosystem
+      </h3>
+      
+        <p>NCERT uses a <b>small pond</b> as the model because it is a <b>fairly self-sustainable unit</b> and a <b>rather simple example</b> that still explains even the complex interactions of an aquatic ecosystem. A pond is a <b>shallow water body</b> in which all <b>four basic functional components are well exhibited</b>.</p>
+
+        <table class="cmp">
+          <thead><tr><th>Component</th><th>In the pond</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>ABIOTIC</b></td>
+              <td>The <b>water</b> with all the <b>dissolved inorganic and organic substances</b>, and the <b>rich soil deposit at the bottom</b> of the pond</td>
+            </tr>
+            <tr>
+              <td><b>Regulating factors</b></td>
+              <td>The <b>solar input</b>, the <b>cycle of temperature</b>, <b>day-length</b> and other <b>climatic conditions</b> — these regulate the <b>rate of function of the entire pond</b></td>
+            </tr>
+            <tr>
+              <td><b>AUTOTROPHS</b></td>
+              <td><b>Phytoplankton</b>, some <b>algae</b>, and the <b>floating, submerged and marginal plants</b> found at the edges</td>
+            </tr>
+            <tr>
+              <td><b>CONSUMERS</b></td>
+              <td><b>Zooplankton</b>, the <b>free-swimming</b> forms and the <b>bottom-dwelling</b> forms</td>
+            </tr>
+            <tr>
+              <td><b>DECOMPOSERS</b></td>
+              <td><b>Fungi, bacteria and flagellates</b> — especially abundant <b>at the bottom of the pond</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>The four functions the pond performs (same as the whole biosphere)</h4>
+        <div class="flow">
+          <span class="node">Autotrophs convert INORGANIC → ORGANIC using the sun's radiant energy</span><span class="arr">→</span>
+          <span class="node">Heterotrophs CONSUME the autotrophs</span><span class="arr">→</span>
+          <span class="node">Dead matter is DECOMPOSED and MINERALISED</span><span class="arr">→</span>
+          <span class="node">Nutrients RELEASED back for reuse by autotrophs</span><span class="arr">→</span>
+          <span class="node">Repeat, over and over again</span>
+        </div>
+
+        <div class="callout"><b>The one-sentence truth of the whole chapter:</b> There is <b>UNIDIRECTIONAL movement of ENERGY</b> towards the higher trophic levels, and its <b>dissipation and loss as HEAT</b> to the environment.<br><br>
+        Compare: <b>NUTRIENTS CYCLE</b> (they are reused again and again). <b>ENERGY DOES NOT CYCLE</b> (it flows one way and is lost as heat).</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.3 3. Productivity — GPP, NPP & Secondary Productivity
+      </h3>
+      
+        <p>A <b>constant input of solar energy</b> is the basic requirement for any ecosystem to function and sustain.</p>
+
+        <h4>Production vs Productivity — the distinction NCERT tests</h4>
+        <table class="cmp">
+          <thead><tr><th>Term</th><th>Definition</th><th>Units</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>Primary PRODUCTION</b></td>
+              <td>The <b>AMOUNT</b> of biomass or organic matter produced <b>per unit area over a time period</b> by plants during photosynthesis</td>
+              <td>Weight: <b>g m<sup>&minus;2</sup></b><br>Energy: <b>kcal m<sup>&minus;2</sup></b></td>
+            </tr>
+            <tr>
+              <td><b>PRODUCTIVITY</b></td>
+              <td>The <b>RATE</b> of biomass production</td>
+              <td><b>g m<sup>&minus;2</sup> yr<sup>&minus;1</sup></b><br>or <b>kcal m<sup>&minus;2</sup> yr<sup>&minus;1</sup></b><br><i>(used to COMPARE different ecosystems)</i></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>The three productivities</h4>
+        <table class="cmp">
+          <thead><tr><th>Type</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>Gross Primary Productivity (GPP)</b></td>
+              <td>The <b>rate of production of organic matter during photosynthesis</b>. A considerable amount of GPP is <b>utilised by plants in respiration</b>.</td>
+            </tr>
+            <tr>
+              <td><b>Net Primary Productivity (NPP)</b></td>
+              <td><b>GPP minus respiration losses (R)</b>. This is the <b>biomass AVAILABLE for consumption by heterotrophs</b> — i.e., <b>herbivores AND decomposers</b>.</td>
+            </tr>
+            <tr>
+              <td><b>Secondary Productivity</b></td>
+              <td>The <b>rate of formation of new organic matter by CONSUMERS</b>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>THE FORMULA:</b> &nbsp; <b>GPP &minus; R = NPP</b><br><br>
+        <b>Think of it like income:</b> GPP = what you EARN. R = what you SPEND on staying alive. NPP = what you actually KEEP (and what everyone else in the ecosystem gets to eat).</div>
+
+        <h4>What primary productivity depends on</h4>
+        <ul>
+          <li>The <b>plant species</b> inhabiting the particular area</li>
+          <li><b>Environmental factors</b></li>
+          <li><b>Availability of nutrients</b></li>
+          <li><b>Photosynthetic capacity of plants</b></li>
+        </ul>
+        <p>Because of these, <b>productivity varies in different types of ecosystems</b>.</p>
+
+        <h4>Global numbers (learn these cold)</h4>
+        <table class="cmp">
+          <thead><tr><th>Quantity</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Annual NPP of the <b>whole biosphere</b></td><td><b>~170 billion tons</b> (dry weight) of organic matter</td></tr>
+            <tr><td>Annual NPP of the <b>oceans</b></td><td><b>only 55 billion tons</b></td></tr>
+            <tr><td>Annual NPP of <b>land</b></td><td>The rest — <b>~115 billion tons</b></td></tr>
+            <tr><td>Fraction of Earth's surface covered by oceans</td><td><b>~70 per cent</b></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>The paradox NCERT asks you to explain:</b> Oceans occupy <b>~70% of the surface</b> yet contribute <b>only ~32% of global NPP</b>. Why so low?<br><br>
+        <b>Because LIGHT is the limiting factor in aquatic ecosystems.</b> Sunlight penetrates only the thin upper (photic) layer, so photosynthesis is confined to a shallow film of water. Nutrient scarcity in open ocean surface waters compounds it.<br><br>
+        <i>(This is also NCERT Exercise 1(c): "In aquatic ecosystems, the limiting factor for the productivity is <b>LIGHT</b>.")</i></div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.4 4. Decomposition — The Five Steps
+      </h3>
+      
+        <p>The <b>earthworm</b> is called the <b>farmer's 'friend'</b> because it helps in the <b>breakdown of complex organic matter</b> and in the <b>loosening of the soil</b>.</p>
+
+        <div class="callout"><b>Decomposition:</b> the process by which <b>decomposers break down complex organic matter into inorganic substances</b> like <b>carbon dioxide, water and nutrients</b>.</div>
+
+        <h4>Detritus — the raw material</h4>
+        <p><span class="kw">Detritus</span> = <b>dead plant remains</b> (leaves, bark, flowers) + <b>dead remains of animals, INCLUDING faecal matter</b>. This is the <b>raw material for decomposition</b>.</p>
+
+        <h4>The five steps (they all operate SIMULTANEOUSLY)</h4>
+        <div class="flow">
+          <span class="node">DETRITUS</span><span class="arr">→</span>
+          <span class="node">1. Fragmentation</span><span class="arr">→</span>
+          <span class="node">2. Leaching</span><span class="arr">→</span>
+          <span class="node">3. Catabolism</span><span class="arr">→</span>
+          <span class="node">4. Humification</span><span class="arr">→</span>
+          <span class="node">5. Mineralisation</span><span class="arr">→</span>
+          <span class="node">INORGANIC NUTRIENTS</span>
+        </div>
+
+        <table class="cmp">
+          <thead><tr><th>Step</th><th>What happens</th><th>Who does it</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>1. Fragmentation</b></td>
+              <td><b>Detritus is broken down into smaller particles</b></td>
+              <td><b>Detritivores</b> — e.g., the <b>earthworm</b></td>
+            </tr>
+            <tr>
+              <td><b>2. Leaching</b></td>
+              <td><b>Water-soluble inorganic nutrients go DOWN into the soil horizon</b> and get <b>precipitated as UNAVAILABLE salts</b></td>
+              <td>Water (physical process)</td>
+            </tr>
+            <tr>
+              <td><b>3. Catabolism</b></td>
+              <td><b>Detritus is degraded into simpler inorganic substances</b></td>
+              <td><b>Bacterial and fungal ENZYMES</b></td>
+            </tr>
+            <tr>
+              <td><b>4. Humification</b></td>
+              <td>Leads to the accumulation of <b>HUMUS</b> — a <b>dark-coloured amorphous substance</b></td>
+              <td>Occurs <b>in the soil</b></td>
+            </tr>
+            <tr>
+              <td><b>5. Mineralisation</b></td>
+              <td>Humus is <b>further degraded</b> and <b>inorganic nutrients are RELEASED</b></td>
+              <td><b>Some microbes</b>; occurs <b>in the soil</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>HUMUS — three properties NCERT wants:</b><br>
+          1. <b>Dark-coloured and amorphous</b><br>
+          2. <b>Highly resistant to microbial action</b>; decomposes at an <b>extremely slow rate</b><br>
+          3. <b>Colloidal in nature</b> → serves as a <b>RESERVOIR OF NUTRIENTS</b></div>
+
+        <div class="callout"><b>Trap alert:</b> The <b>SUMMARY</b> of the NCERT chapter says decomposition involves <b>THREE</b> processes (fragmentation, leaching, catabolism), while the <b>MAIN TEXT</b> lists <b>FIVE</b> (adding humification and mineralisation). Both appear in exams. The <b>five-step version is the complete and correct one</b>; humification and mineralisation are the two that occur <b>in the soil</b>.</div>
+
+        <h4>Rate of decomposition — what controls it</h4>
+        <p>Decomposition is <b>largely an OXYGEN-REQUIRING (aerobic) process</b>. Its rate is controlled by <b>(a) the chemical composition of the detritus</b> and <b>(b) climatic factors</b>.</p>
+
+        <table class="cmp">
+          <thead><tr><th>Factor</th><th>SLOWS decomposition</th><th>SPEEDS UP decomposition</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>Chemical composition of detritus</b></td>
+              <td>Rich in <b>LIGNIN and CHITIN</b></td>
+              <td>Rich in <b>NITROGEN</b> and <b>water-soluble substances like SUGARS</b></td>
+            </tr>
+            <tr>
+              <td><b>Climate</b></td>
+              <td><b>Low temperature</b> and <b>anaerobiosis</b> → inhibit decomposition → <b>BUILD-UP of organic materials</b></td>
+              <td><b>Warm and moist</b> environment</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>The two most important climatic factors</b> regulating decomposition are <b>TEMPERATURE and SOIL MOISTURE</b> — through their effects on the <b>activities of soil microbes</b>.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.5 5. Energy Flow — Sun → PAR → Producers
+      </h3>
+      
+        <div class="callout"><b>Except for the deep-sea hydro-thermal ecosystem, the SUN is the ONLY source of energy for all ecosystems on Earth.</b> (The hydrothermal exception is the single most-tested one-liner in this section.)</div>
+
+        <h4>The energy cascade — four numbers you MUST know</h4>
+        <div class="flow">
+          <span class="node">Incident solar radiation</span><span class="arr">→</span>
+          <span class="node">&lt; 50% is PAR</span><span class="arr">→</span>
+          <span class="node">Plants capture only 2&ndash;10% of the PAR</span><span class="arr">→</span>
+          <span class="node">~1% of available sunlight ends up as NPP</span><span class="arr">→</span>
+          <span class="node">10% transferred per trophic level</span>
+        </div>
+
+        <table class="cmp">
+          <thead><tr><th>Number</th><th>What it refers to</th></tr></thead>
+          <tbody>
+            <tr><td><b>Less than 50%</b></td><td>of the <b>incident solar radiation</b> is <b>Photosynthetically Active Radiation (PAR)</b></td></tr>
+            <tr><td><b>2&ndash;10%</b></td><td>of the <b>PAR</b> is captured by plants — <b>and this small amount sustains the entire living world</b></td></tr>
+            <tr><td><b>~1%</b></td><td>In an <b>ideal pyramid of energy</b>, primary producers convert only <b>1% of the energy in the sunlight available to them</b> into NPP</td></tr>
+            <tr><td><b>10%</b></td><td>The <b>10 per cent law</b> — only 10% of energy is transferred to each trophic level from the lower trophic level</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>THE CLASSIC NEET TRAP:</b><br>
+          Q: "What is the percentage of PAR in the incident solar radiation?" → <b>50%</b> (i.e., less than 50%).<br>
+          Q: "What percentage of PAR do plants capture?" → <b>2&ndash;10%</b>.<br><br>
+          Students swap these two constantly. <b>50 is about PAR; 2&ndash;10 is about capture.</b></div>
+
+        <h4>Thermodynamics of an ecosystem</h4>
+        <table class="cmp">
+          <thead><tr><th>Law</th><th>How the ecosystem obeys it</th></tr></thead>
+          <tbody>
+            <tr><td><b>First Law</b></td><td>Energy is neither created nor destroyed — the sun's energy is <b>converted</b> (fixed by autotrophs into food), not made. Flow is <b>unidirectional: sun → producers → consumers</b>.</td></tr>
+            <tr><td><b>Second Law</b></td><td>Ecosystems are <b>not exempt</b>. They need a <b>constant supply of energy</b> to synthesise the molecules they require, in order to <b>counteract the universal tendency toward increasing disorderliness (entropy)</b>.</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Producers</h4>
+        <table class="cmp">
+          <thead><tr><th>Ecosystem</th><th>Major producers</th></tr></thead>
+          <tbody>
+            <tr><td><b>Terrestrial</b></td><td><b>Herbaceous and woody plants</b></td></tr>
+            <tr><td><b>Aquatic</b></td><td><b>Phytoplankton, algae and higher plants</b></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>Key line:</b> "No energy that is trapped into an organism remains in it forever." The energy trapped by the producer is <b>either passed on to a consumer, or the organism dies</b>. <b>Death of an organism is the BEGINNING of the detritus food chain/web.</b></div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.6 6. Food Chains, Food Webs & Trophic Levels
+      </h3>
+      
+        <h4>Consumers</h4>
+        <p>All animals depend on plants directly or indirectly for their food — they are <b>consumers</b>, also called <b>heterotrophs</b>.</p>
+        <table class="cmp">
+          <thead><tr><th>Level</th><th>Name</th><th>Also called</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Feed on producers</td><td><b>Primary consumers</b></td><td><b>Herbivores</b></td><td><b>Terrestrial:</b> insects, birds, mammals<br><b>Aquatic:</b> <b>molluscs</b></td></tr>
+            <tr><td>Feed on herbivores</td><td><b>Secondary consumers</b></td><td><b>Primary carnivores</b></td><td>Frog, small fish</td></tr>
+            <tr><td>Feed on primary carnivores</td><td><b>Tertiary consumers</b></td><td><b>Secondary carnivores</b></td><td>Snake, hawk</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Grazing Food Chain (GFC) — NCERT's exact example</h4>
+        <div class="flow">
+          <span class="node">Grass<br>(Producer)</span><span class="arr">→</span>
+          <span class="node">Goat<br>(Primary Consumer)</span><span class="arr">→</span>
+          <span class="node">Man<br>(Secondary Consumer)</span>
+        </div>
+
+        <h4>Detritus Food Chain (DFC)</h4>
+        <ul>
+          <li><b>Begins with DEAD ORGANIC MATTER.</b></li>
+          <li>Made up of <b>decomposers</b> — <b>heterotrophic organisms, mainly FUNGI and BACTERIA</b>.</li>
+          <li>They meet their energy and nutrient requirements by <b>degrading dead organic matter (detritus)</b>.</li>
+          <li>Also known as <span class="kw">SAPROTROPHS</span> (<b>sapro = to decompose</b>).</li>
+          <li>They <b>secrete digestive enzymes</b> that break down dead and waste materials into <b>simple inorganic materials, which are subsequently ABSORBED by them</b>.</li>
+        </ul>
+
+        <h4>GFC vs DFC — HIGH-YIELD comparison</h4>
+        <table class="cmp">
+          <thead><tr><th>Feature</th><th>Grazing Food Chain (GFC)</th><th>Detritus Food Chain (DFC)</th></tr></thead>
+          <tbody>
+            <tr><td>Starts with</td><td><b>Living producers</b> (plants)</td><td><b>Dead organic matter</b> (detritus)</td></tr>
+            <tr><td>Energy source</td><td><b>Sun</b> (directly)</td><td><b>Detritus</b></td></tr>
+            <tr><td>Main organisms</td><td>Herbivores → carnivores</td><td><b>Decomposers / saprotrophs</b> (fungi, bacteria)</td></tr>
+            <tr><td><b>Dominant in AQUATIC ecosystems</b></td><td><b>YES — GFC is the major conduit for energy flow</b></td><td>Minor</td></tr>
+            <tr><td><b>Dominant in TERRESTRIAL ecosystems</b></td><td>Minor</td><td><b>YES — a much larger fraction of energy flows through the DFC</b></td></tr>
+            <tr><td>Trophic levels</td><td><b>Restricted</b> (by the 10% law)</td><td>Not similarly restricted</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Memory hook: "Water grazes, Land rots."</b> Aquatic → GFC dominates. Terrestrial → DFC dominates.</div>
+
+        <h4>Food web</h4>
+        <p>The DFC <b>may be connected with the GFC at some levels</b>: some organisms of the DFC are <b>prey to GFC animals</b>, and in a natural ecosystem some animals — like <b>cockroaches and crows</b> — are <b>omnivores</b>. These <b>natural interconnections of food chains make it a FOOD WEB</b>.</p>
+        <table class="cmp">
+          <thead><tr><th>Food Chain</th><th>Food Web</th></tr></thead>
+          <tbody>
+            <tr><td>A <b>single, linear</b> sequence of who-eats-whom</td><td><b>Many interconnected</b> food chains</td></tr>
+            <tr><td>An organism occupies <b>one</b> position</td><td>An organism may occupy <b>several</b> positions</td></tr>
+            <tr><td>Almost <b>never exists</b> in nature in pure form</td><td>What <b>actually exists</b> in nature</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Trophic levels</h4>
+        <p>Based on the <b>source of their nutrition or food</b>, organisms occupy a specific place in the food chain known as their <span class="kw">trophic level</span>.</p>
+        <table class="cmp">
+          <thead><tr><th>Trophic Level</th><th>Occupant</th></tr></thead>
+          <tbody>
+            <tr><td><b>First (T1)</b></td><td><b>Producers</b></td></tr>
+            <tr><td><b>Second (T2)</b></td><td><b>Herbivores</b> (primary consumers)</td></tr>
+            <tr><td><b>Third (T3)</b></td><td><b>Carnivores</b> (secondary consumers)</td></tr>
+            <tr><td><b>Fourth (T4)</b></td><td><b>Secondary carnivores</b> (tertiary consumers)</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>CRITICAL CONCEPT:</b> A <b>trophic level represents a FUNCTIONAL LEVEL, NOT a species.</b> <b>A given species may occupy more than one trophic level in the SAME ecosystem at the SAME time.</b><br><br>
+        <b>NCERT's example:</b> A <b>sparrow</b> is a <b>primary consumer</b> when it eats <b>seeds, fruits and peas</b>, and a <b>secondary consumer</b> when it eats <b>insects and worms</b>.</div>
+
+        <h4>Standing crop</h4>
+        <p>Each trophic level has a certain <b>mass of living material at a particular time</b> — its <span class="kw">standing crop</span>.</p>
+        <ul>
+          <li>Measured as the <b>mass of living organisms (biomass)</b> or the <b>number in a unit area</b>.</li>
+          <li>Biomass of a species is expressed in <b>fresh or dry weight</b>.</li>
+          <li><b>Measurement in DRY WEIGHT is MORE ACCURATE</b> — because <b>fresh weight varies with water content</b>, which fluctuates with hydration, humidity and species, and water contributes no organic matter or energy.</li>
+        </ul>
+
+        <h4>The 10 per cent law</h4>
+        <div class="callout"><b>Only 10 per cent of the energy is transferred to each trophic level from the lower trophic level.</b><br><br>
+        Consequence: <b>the number of trophic levels in the grazing food chain is RESTRICTED</b> — there simply isn't enough energy left to support a fifth or sixth level. The <b>amount of energy DECREASES at successive trophic levels</b>, and organisms at each level <b>depend on those at the lower level</b> for their energy demands.<br><br>
+        <b>Worked example:</b> 10,000 J at producers → 1,000 J at herbivores → 100 J at primary carnivores → 10 J at secondary carnivores.</div>
+
+        <p>When any organism dies it is converted to <b>detritus or dead biomass</b>, which serves as an <b>energy source for decomposers</b>.</p>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.7 7. Ecological Pyramids — Number, Biomass & Energy
+      </h3>
+      
+        <p>An <span class="kw">ecological pyramid</span> expresses the food or energy relationship between organisms at different trophic levels, in terms of <b>number, biomass or energy</b>.</p>
+        <ul>
+          <li>The <b>BASE</b> of each pyramid represents the <b>producers (first trophic level)</b>.</li>
+          <li>The <b>APEX</b> represents the <b>tertiary or top-level consumer</b>.</li>
+        </ul>
+
+        <h4>The three types</h4>
+        <table class="cmp">
+          <thead><tr><th>Pyramid</th><th>What each bar shows</th><th>Can it be inverted?</th><th>NCERT's example</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>Pyramid of NUMBERS</b></td>
+              <td>Number of individuals at each trophic level</td>
+              <td><b>YES</b> — in a <b>TREE ecosystem</b></td>
+              <td><b>Grassland:</b> nearly <b>6 million plants</b> support only <b>3 top carnivores</b> (upright)</td>
+            </tr>
+            <tr>
+              <td><b>Pyramid of BIOMASS</b></td>
+              <td>Standing crop (mass of living material) at each level</td>
+              <td><b>YES</b> — in the <b>SEA</b></td>
+              <td><b>Inverted in the sea:</b> a <b>small standing crop of phytoplankton supports a large standing crop of zooplankton</b> / the <b>biomass of fishes far exceeds that of phytoplankton</b></td>
+            </tr>
+            <tr>
+              <td><b>Pyramid of ENERGY</b></td>
+              <td>Amount of energy present at each trophic level in a given time or annually per unit area</td>
+              <td><b>NEVER. ALWAYS UPRIGHT.</b></td>
+              <td><b>Ideal energy pyramid:</b> primary producers convert only <b>1%</b> of the sunlight available to them into NPP</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>WHY the pyramid of energy can NEVER be inverted:</b><br>
+        Because when energy flows from a particular trophic level to the next, <b>some energy is ALWAYS lost as HEAT at each step</b>. Energy at a lower trophic level is therefore <b>always more</b> than at a higher level. There is no physical way around it.</div>
+
+        <div class="callout"><b>The sea-biomass PARADOX, resolved:</b> How can a <b>small</b> phytoplankton biomass feed a <b>large</b> zooplankton/fish biomass?<br><br>
+        Because <b>biomass is a STANDING CROP — a snapshot at one instant, not a rate.</b> Phytoplankton have an <b>extremely high turnover rate</b>: they reproduce and are eaten within hours to days. Over a year they PRODUCE an enormous amount of biomass, but at any given moment very little of it is standing around. The long-lived fish accumulate their biomass and hold it. <b>Energy still flows correctly downhill</b> — which is exactly why the <b>energy</b> pyramid stays upright even when the <b>biomass</b> pyramid flips.</div>
+
+        <h4>The exceptions — memorise these three lines</h4>
+        <div class="flow">
+          <span class="node">TREE flips NUMBERS</span><span class="arr">|</span>
+          <span class="node">SEA flips BIOMASS</span><span class="arr">|</span>
+          <span class="node">NOTHING flips ENERGY</span>
+        </div>
+        <p>In <b>most</b> ecosystems all three pyramids are <b>upright</b>: producers are more in number and biomass than herbivores, and herbivores more than carnivores; and energy at a lower trophic level is always more than at a higher level.</p>
+
+        <h4>Rules for constructing pyramids</h4>
+        <ul>
+          <li>Any calculation of energy content, biomass or numbers <b>must include ALL organisms at that trophic level</b>. No generalisation is true if only a few individuals are counted.</li>
+          <li>A given organism <b>may occupy more than one trophic level simultaneously</b> — the trophic level is a <b>functional level, not a species</b>.</li>
+        </ul>
+
+        <h4>LIMITATIONS of ecological pyramids (the three S's)</h4>
+        <table class="cmp">
+          <thead><tr><th>Limitation</th><th>Why it matters</th></tr></thead>
+          <tbody>
+            <tr><td><b>Same species, two levels</b></td><td>It <b>does not take into account the same species belonging to two or more trophic levels</b> (e.g., the sparrow).</td></tr>
+            <tr><td><b>Simple chain assumed</b></td><td>It <b>assumes a simple food chain</b> — something that <b>almost never exists in nature</b>. It <b>does not accommodate a food web</b>.</td></tr>
+            <tr><td><b>Saprophytes skipped</b></td><td><b>Saprophytes are not given any place</b> in ecological pyramids, even though they play a <b>vital role</b> in the ecosystem.</td></tr>
+          </tbody>
+        </table>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.8 8. Nutrient Cycling & Ecosystem Services (Summary-level only)
+      </h3>
+      
+        <div class="callout"><b>Read this first:</b> The rationalised 2023-24 chapter <b>deleted</b> the full sections on nutrient cycling (carbon cycle, phosphorus cycle diagrams) and ecosystem services. What is written below is <b>everything that still survives</b>, in the chapter's SUMMARY and EXERCISES. Learn exactly this much — no more.</div>
+
+        <h4>Nutrient cycling</h4>
+        <p><span class="kw">Nutrient cycling</span> is the <b>storage and movement of nutrient elements through the various components of the ecosystem</b>. Through this process, <b>nutrients are used repeatedly</b>.</p>
+
+        <table class="cmp">
+          <thead><tr><th>Type of cycle</th><th>Reservoir</th><th>NCERT's example element</th></tr></thead>
+          <tbody>
+            <tr><td><b>GASEOUS</b></td><td><b>Atmosphere or Hydrosphere</b></td><td><b>Carbon</b></td></tr>
+            <tr><td><b>SEDIMENTARY</b></td><td><b>Earth's crust</b></td><td><b>Phosphorus</b></td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Mnemonic: "Carbon flies, Phosphorus lies."</b> Carbon is in the air (gaseous); phosphorus lies in the rocks (sedimentary).</div>
+
+        <div class="callout"><b>Exercise 1(e):</b> "The major reservoir of carbon on earth is ______" → <b>OCEANS</b>. (Roughly 71% of Earth's carbon is dissolved in the oceans, which act as a huge sink regulating atmospheric CO<sub>2</sub>.)</div>
+
+        <h4>The energy/nutrient contrast — the single most examined idea in this chapter</h4>
+        <table class="cmp">
+          <thead><tr><th>Feature</th><th>ENERGY</th><th>NUTRIENTS</th></tr></thead>
+          <tbody>
+            <tr><td>Path</td><td><b>UNIDIRECTIONAL (flows)</b></td><td><b>CYCLIC (cycles)</b></td></tr>
+            <tr><td>Fate</td><td><b>Lost as HEAT</b> at every step</td><td><b>Reused repeatedly</b></td></tr>
+            <tr><td>Source</td><td><b>Must be constantly resupplied by the sun</b></td><td>Drawn from a <b>reservoir</b> (atmosphere/hydrosphere or Earth's crust)</td></tr>
+            <tr><td>Can it be recycled?</td><td><b>NO</b></td><td><b>YES</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>Ecosystem services</h4>
+        <p><span class="kw">Ecosystem services</span> = the <b>products of ecosystem processes</b>.<br>
+        <b>NCERT's example:</b> the <b>purification of air and water by forests</b>.</p>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        12.9 9. Cheat Sheet — Every Number, Formula, Distinction & Exercise Answer
+      </h3>
+      
+        <h4>Formula & number bank</h4>
+        <table class="cmp">
+          <thead><tr><th>Item</th><th>Value / Formula</th></tr></thead>
+          <tbody>
+            <tr><td>Net primary productivity</td><td><b>NPP = GPP &minus; R</b></td></tr>
+            <tr><td>Units of primary PRODUCTION</td><td><b>g m<sup>&minus;2</sup></b> or <b>kcal m<sup>&minus;2</sup></b></td></tr>
+            <tr><td>Units of PRODUCTIVITY</td><td><b>g m<sup>&minus;2</sup> yr<sup>&minus;1</sup></b> or <b>kcal m<sup>&minus;2</sup> yr<sup>&minus;1</sup></b></td></tr>
+            <tr><td>PAR in incident solar radiation</td><td><b>less than 50%</b></td></tr>
+            <tr><td>PAR captured by plants</td><td><b>2&ndash;10%</b></td></tr>
+            <tr><td>Sunlight converted to NPP (ideal energy pyramid)</td><td><b>~1%</b></td></tr>
+            <tr><td>Energy transfer between trophic levels</td><td><b>10% law</b></td></tr>
+            <tr><td>Annual NPP of the biosphere</td><td><b>~170 billion tons</b> (dry weight)</td></tr>
+            <tr><td>Annual NPP of the oceans</td><td><b>55 billion tons</b></td></tr>
+            <tr><td>Ocean share of Earth's surface</td><td><b>~70%</b></td></tr>
+            <tr><td>Grassland pyramid of numbers</td><td><b>~6 million plants</b> support <b>3 top carnivores</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>The six NCERT "Distinguish between" pairs (Exercise 6)</h4>
+        <table class="cmp">
+          <thead><tr><th>Pair</th><th>The key line</th></tr></thead>
+          <tbody>
+            <tr><td><b>(a) GFC vs DFC</b></td><td>GFC starts with <b>living producers</b> and dominates <b>AQUATIC</b> ecosystems; DFC starts with <b>dead organic matter</b> and dominates <b>TERRESTRIAL</b> ecosystems.</td></tr>
+            <tr><td><b>(b) Production vs Decomposition</b></td><td>Production <b>BUILDS</b> complex organic matter from inorganic (photosynthesis, needs sunlight); Decomposition <b>BREAKS DOWN</b> complex organic matter into inorganic (needs oxygen, done by decomposers).</td></tr>
+            <tr><td><b>(c) Upright vs Inverted pyramid</b></td><td>Upright: base (producers) is the <b>largest</b>, narrowing to the apex. Inverted: base is <b>smaller</b> than the levels above (tree → numbers; sea → biomass).</td></tr>
+            <tr><td><b>(d) Food chain vs Food web</b></td><td>Food chain = a <b>single linear</b> sequence; food web = <b>many interconnected</b> food chains. Only the web actually exists in nature.</td></tr>
+            <tr><td><b>(e) Litter vs Detritus</b></td><td><b>Litter</b> = the surface layer of <b>dead PLANT material</b> (fallen leaves, twigs, bark) lying on the soil. <b>Detritus</b> is <b>broader</b> — <b>all</b> dead organic matter: dead plant remains <b>AND</b> dead animal remains <b>AND faecal matter</b>. Litter is one part of detritus.</td></tr>
+            <tr><td><b>(f) Primary vs Secondary productivity</b></td><td>Primary = rate of biomass production by <b>PRODUCERS</b> (photosynthesis). Secondary = rate of formation of new organic matter by <b>CONSUMERS</b>.</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Exercise answer key (fill-in-the-blanks &amp; MCQs)</h4>
+        <table class="cmp">
+          <thead><tr><th>Question</th><th>Answer</th></tr></thead>
+          <tbody>
+            <tr><td>1(a) Plants are called ___ because they fix carbon dioxide</td><td><b>Producers / Autotrophs</b></td></tr>
+            <tr><td>1(b) In an ecosystem dominated by trees, the pyramid of numbers is ___ type</td><td><b>INVERTED</b></td></tr>
+            <tr><td>1(c) In aquatic ecosystems, the limiting factor for productivity is ___</td><td><b>LIGHT</b></td></tr>
+            <tr><td>1(d) Common detritivores in our ecosystem are ___</td><td><b>Earthworms</b></td></tr>
+            <tr><td>1(e) The major reservoir of carbon on earth is ___</td><td><b>OCEANS</b></td></tr>
+            <tr><td>2. Largest population in a food chain</td><td><b>Producers</b></td></tr>
+            <tr><td>3. The second trophic level in a lake</td><td><b>Zooplankton</b> (phytoplankton are the FIRST)</td></tr>
+            <tr><td>4. Secondary producers are</td><td><b>Herbivores</b> — they are the first consumers, and secondary productivity is the rate of new organic matter formed by consumers</td></tr>
+            <tr><td>5. Percentage of PAR in incident solar radiation</td><td><b>50%</b> (option (d) "2&ndash;10%" is the trap — that's the fraction of PAR CAPTURED)</td></tr>
+          </tbody>
+        </table>
+
+        <h4>The "always/never" list</h4>
+        <ul>
+          <li>Energy flow is <b>ALWAYS unidirectional</b>.</li>
+          <li>The pyramid of energy is <b>ALWAYS upright — it can NEVER be inverted</b>.</li>
+          <li>Energy at a lower trophic level is <b>ALWAYS more</b> than at a higher level.</li>
+          <li>The sun is the <b>ONLY</b> energy source for all ecosystems — <b>except</b> the deep-sea hydrothermal ecosystem.</li>
+          <li>All five decomposition steps operate <b>SIMULTANEOUSLY</b> on the detritus.</li>
+          <li>Dry weight is <b>ALWAYS more accurate</b> than fresh weight for measuring biomass.</li>
+        </ul>
+      
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Define an ecosystem.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">A functional unit of nature where living organisms interact among themselves AND with the surrounding physical environment.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/ecosystem/" class="related-card">
+                <h5>Ecosystem</h5>
+                <p>Functional unit of nature where organisms interact with each...</p>
+              </a>
+            
+              <a href="../../glossary/species-composition/" class="related-card">
+                <h5>Species composition</h5>
+                <p>Identification and enumeration of the plant and animal speci...</p>
+              </a>
+            
+              <a href="../../glossary/stratification/" class="related-card">
+                <h5>Stratification</h5>
+                <p>Vertical distribution of species at different levels</p>
+              </a>
+            
+              <a href="../../glossary/trees-shrubs-herbs-and-grasses/" class="related-card">
+                <h5>Trees, shrubs, herbs and grasses</h5>
+                <p>Top, second and bottom strata of a forest</p>
+              </a>
+            
+              <a href="../../glossary/abiotic-components/" class="related-card">
+                <h5>Abiotic components</h5>
+                <p>Air, water and soil</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+      <div class="related-links-section">
+        <h4>NCERT Comparison Sheets</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Review the key distinctions and contrast tables from this chapter:</p>
+        <div class="related-grid">
+          
+            <a href="../../compare/category-vs-ncert-examples/" class="related-card">
+              <h5>Category vs NCERT examples</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/feature-vs-definition/" class="related-card">
+              <h5>Feature vs Definition</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/type-vs-what-it-includes/" class="related-card">
+              <h5>Type vs What it includes</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/component-vs-in-the-pond/" class="related-card">
+              <h5>Component vs In the pond</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Ecosystem!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Define an ecosystem.","back":"A functional unit of nature where living organisms interact among themselves AND with the surrounding physical environment."},{"front":"What is the largest ecosystem of all?","back":"The entire BIOSPHERE — regarded by many ecologists as a global ecosystem, a composite of all local ecosystems on Earth."},{"front":"Name the two basic categories of ecosystems, with NCERT's examples.","back":"TERRESTRIAL — forest, grassland, desert. AQUATIC — pond, lake, wetland, river, estuary."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

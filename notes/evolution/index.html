@@ -1,0 +1,631 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolution Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Evolution.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Evolution Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Evolution.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Evolution"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 6</span>
+      <h1>🦕 Evolution Study Notes</h1>
+      <p>Origin of life · evidences · Darwin · mechanisms · Hardy-Weinberg · human evolution</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/evolution/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/evolution/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/evolution/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.1 1 · Origin of the Universe & Earth
+      </h3>
+      
+        <p>The <span class="kw">Big Bang theory</span> explains the origin of the universe: a huge explosion (~<b>20 billion years ago</b>) caused the universe to expand and cool, forming galaxies, stars and planets.</p>
+        <div class="flow">
+          <span class="node">Big Bang (~20 bya)</span><span class="arr">→</span>
+          <span class="node">Earth forms (~4.5 bya)</span><span class="arr">→</span>
+          <span class="node">Early atmosphere (CH₄, NH₃, H₂, water vapour)</span><span class="arr">→</span>
+          <span class="node">Oceans, then life (~3.5–4 bya)</span>
+        </div>
+        <ul>
+          <li>The <b>Earth</b> formed about <b>4.5 billion years ago</b>; there was no atmosphere at first.</li>
+          <li>Water vapour, methane, ammonia and carbon dioxide were released from the molten core; UV rays split water into H₂ and O₂.</li>
+          <li>As Earth cooled, water vapour condensed into <b>rain, forming the oceans</b> where life later appeared.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.2 2 · Theories of the Origin of Life
+      </h3>
+      
+        <table class="cmp">
+          <thead><tr><th>Theory</th><th>Idea / Status</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Panspermia</span></td><td>Life (spores) came from outer space — an early belief of some astronomers.</td></tr>
+            <tr><td><span class="kw">Spontaneous generation (abiogenesis)</span></td><td>Life arose from non-living/decaying matter — <b>disproved by Louis Pasteur</b>.</td></tr>
+            <tr><td><span class="kw">Chemical evolution (Oparin–Haldane)</span></td><td>First life arose from <b>pre-existing non-living organic molecules</b> under a reducing atmosphere.</td></tr>
+          </tbody>
+        </table>
+        <h4>Pasteur's swan-neck flask experiment</h4>
+        <p>Pasteur showed that life comes only from pre-existing life: <b>pre-sterilised, sealed/curved-neck flasks stayed lifeless</b>, while flasks open to air (letting in germs) grew microbes — disproving spontaneous generation.</p>
+        <h4>Miller–Urey experiment (1953)</h4>
+        <div class="flow">
+          <span class="node">CH₄ + H₂ + NH₃ + water vapour</span><span class="arr">→ electric discharge</span>
+          <span class="node">Amino acids formed</span>
+        </div>
+        <p>Stanley Miller created early-Earth conditions in a closed flask and passed <b>electric discharge</b> through a mix of methane, hydrogen, ammonia and water vapour, producing <b>amino acids</b> — experimental support for <b>chemical evolution</b>.</p>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.3 3 · Evidence — Palaeontology (Fossils)
+      </h3>
+      
+        <p><span class="kw">Fossils</span> are remains/impressions of past organisms found in rocks. Different-aged sedimentary layers hold different life forms, showing how organisms have <b>changed over time</b>.</p>
+        <ul>
+          <li>Fossils in deeper (older) rock layers represent more ancient life.</li>
+          <li>They provide a <b>record of extinct organisms</b> and the sequence of evolution (a geological time scale).</li>
+        </ul>
+        <div class="callout"><b>Key point:</b> fossils are direct evidence that life forms have evolved and that many are now extinct.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.4 4 · Evidence — Comparative Anatomy (Homology vs Analogy)
+      </h3>
+      
+        <table class="cmp">
+          <thead><tr><th>Feature</th><th>Homologous organs</th><th>Analogous organs</th></tr></thead>
+          <tbody>
+            <tr><td>Structure/origin</td><td><b>Same</b> fundamental structure & origin</td><td><b>Different</b> structure & origin</td></tr>
+            <tr><td>Function</td><td>Different functions</td><td>Similar functions</td></tr>
+            <tr><td>Evolution type</td><td><b>Divergent</b> evolution</td><td><b>Convergent</b> evolution</td></tr>
+            <tr><td>Animal examples</td><td>Forelimbs of whale, bat, cheetah, human (same bones)</td><td>Wings of butterfly & bird; eye of octopus & mammal; flippers of penguin & dolphin</td></tr>
+            <tr><td>Plant examples</td><td>Thorn & tendril of Bougainvillea & Cucurbita</td><td>Sweet potato (root) & potato (stem)</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Remember:</b> Homologous = <b>same origin, different job</b> (divergent). Analogous = <b>different origin, same job</b> (convergent).</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.5 5 · Adaptive Radiation
+      </h3>
+      
+        <p><span class="kw">Adaptive radiation</span> is the evolution of many different species from a single ancestral form in a given geographical area, each adapted to a different habitat.</p>
+        <ul>
+          <li><b>Darwin's finches</b> (Galapagos Islands) — from a seed-eating ancestor, many types with different beaks (insect-eaters, etc.) evolved.</li>
+          <li><b>Australian marsupials</b> — a variety of marsupials radiated from one ancestral stock.</li>
+        </ul>
+        <div class="callout"><b>Convergent evolution:</b> when two unrelated adaptive radiations in isolated areas produce similar forms (e.g. placental wolf and the Tasmanian wolf/marsupial resemble each other).</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.6 6 · Darwin's Theory of Natural Selection
+      </h3>
+      
+        <p><span class="kw">Charles Darwin</span>, after his voyage on <b>HMS Beagle</b>, proposed <b>evolution by natural selection</b>. <b>Alfred Russel Wallace</b> reached similar conclusions independently.</p>
+        <h4>Core ideas</h4>
+        <ul>
+          <li>Existing life forms share similarities and <b>common ancestors</b> (branching descent).</li>
+          <li>Populations show <b>heritable variation</b>; more offspring are produced than can survive.</li>
+          <li>Individuals better <b>fit</b> to the environment survive and reproduce more (differential reproduction) — nature 'selects' them.</li>
+          <li><b>Fitness</b> = reproductive success (leaving more progeny).</li>
+        </ul>
+        <h4>Industrial melanism — natural selection observed</h4>
+        <p>In the <b>peppered moth (Biston betularia)</b> in England: before industrialisation, <b>light moths</b> were common (camouflaged on lichen-covered trees). After industrial soot darkened the trees, <b>dark (melanic) moths</b> survived better as birds picked off the now-visible light ones — a clear case of natural selection. Similarly, <b>DDT-resistant mosquitoes</b> and <b>antibiotic-resistant microbes</b> show evolution in action.</p>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.7 7 · Lamarck & de Vries — Other Mechanisms
+      </h3>
+      
+        <table class="cmp">
+          <thead><tr><th>Lamarck</th><th>de Vries (Mutation theory)</th></tr></thead>
+          <tbody>
+            <tr><td><b>Inheritance of acquired characters</b> via <b>use and disuse</b> of organs.</td><td>Evolution driven by <b>mutations</b> (large, sudden changes = <b>saltation</b>).</td></tr>
+            <tr><td>Example: giraffe's long neck from stretching to reach leaves.</td><td>Based on the evening primrose, <b>Oenothera lamarckiana</b>.</td></tr>
+            <tr><td>Now discredited (acquired traits are not inherited).</td><td>Variation is random and directionless — unlike Darwin's small, directional variations.</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Darwin vs de Vries:</b> Darwin's variations are <b>small and gradual</b>; de Vries's mutations are <b>large and discontinuous (saltation)</b>.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.8 8 · Hardy–Weinberg Principle
+      </h3>
+      
+        <p>In an ideal population, <b>allele frequencies remain constant</b> across generations — this is <span class="kw">genetic equilibrium</span>. The sum of all allele frequencies is the <b>gene pool</b>.</p>
+        <div class="callout"><b>Equation:</b> p² + 2pq + q² = 1, where p + q = 1. (p = frequency of allele A, q = frequency of allele a; p² = AA, 2pq = Aa, q² = aa.)</div>
+        <h4>Five factors that disturb equilibrium (→ evolution)</h4>
+        <table class="cmp">
+          <thead><tr><th>Factor</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Gene migration (gene flow)</td><td>Alleles move in/out with migrating individuals</td></tr>
+            <tr><td>Genetic drift</td><td>Random change in allele frequency (strong in small populations); the <b>founder effect</b> is a case of drift</td></tr>
+            <tr><td>Mutation</td><td>Source of new alleles</td></tr>
+            <tr><td>Genetic recombination</td><td>New allele combinations</td></tr>
+            <tr><td>Natural selection</td><td>Non-random survival/reproduction</td></tr>
+          </tbody>
+        </table>
+        <h4>Types of natural selection</h4>
+        <table class="cmp">
+          <thead><tr><th>Type</th><th>Effect on the population</th></tr></thead>
+          <tbody>
+            <tr><td>Stabilising</td><td>Favours the <b>average</b>; removes extremes (no change in mean)</td></tr>
+            <tr><td>Directional</td><td>Favours <b>one extreme</b>; shifts the mean</td></tr>
+            <tr><td>Disruptive</td><td>Favours <b>both extremes</b>; splits into two peaks</td></tr>
+          </tbody>
+        </table>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.9 9 · A Brief Account of Evolution
+      </h3>
+      
+        <div class="flow">
+          <span class="node">First cellular life (~2000 mya)</span><span class="arr">→</span>
+          <span class="node">Invertebrates (~500 mya)</span><span class="arr">→</span>
+          <span class="node">Fish / amphibians</span><span class="arr">→</span>
+          <span class="node">Reptiles (dinosaurs)</span><span class="arr">→</span>
+          <span class="node">Birds & Mammals</span>
+        </div>
+        <ul>
+          <li>Jawless fish evolved ~350 mya; lobefins gave rise to the first amphibians.</li>
+          <li>Amphibians → reptiles, which dominated (the dinosaurs).</li>
+          <li>Some reptiles gave rise to <b>birds</b> and others to <b>mammals</b>.</li>
+          <li>Dinosaurs suddenly went extinct (~65 mya) in a mass extinction.</li>
+          <li><b>Continental drift</b> isolated Australia → its unique marsupials.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        6.10 10 · Origin & Evolution of Man
+      </h3>
+      
+        <table class="cmp">
+          <thead><tr><th>Form</th><th>Time / brain</th><th>Key feature</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Dryopithecus & Ramapithecus</span></td><td>~15 mya</td><td>Ape-like; Ramapithecus more man-like, Dryopithecus more ape-like</td></tr>
+            <tr><td><span class="kw">Australopithecus</span></td><td>~3–4 mya</td><td>East African grasslands; walked <b>upright</b>; ate fruit</td></tr>
+            <tr><td><span class="kw">Homo habilis</span></td><td>~2 mya; 650–800 cc</td><td>First human-like being; probably did not eat meat</td></tr>
+            <tr><td><span class="kw">Homo erectus</span></td><td>~1.5 mya; ~900 cc</td><td>Probably ate meat (fossils in Java)</td></tr>
+            <tr><td><span class="kw">Homo neanderthalensis</span></td><td>1400 cc; ~1 lakh–40,000 ya</td><td>Used hides, buried the dead; Near East & Central Asia</td></tr>
+            <tr><td><span class="kw">Homo sapiens</span></td><td>Arose in Africa</td><td>Modern humans; migrated across continents</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>Ice Age between 75,000 and 10,000 years ago.</li>
+          <li>Agriculture began ~10,000 years ago; human settlements formed.</li>
+          <li>Pre-historic cave art (e.g. <b>Bhimbetka</b>, MP) is ~18,000 years old.</li>
+          <li>Ice Age between 75,000 and 10,000 years ago.</li>
+        </ul>
+      
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Which theory explains the origin of the universe?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">The Big Bang theory (~20 billion years ago).</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/big-bang/" class="related-card">
+                <h5>Big Bang</h5>
+                <p>Origin of the universe (~20 bya)</p>
+              </a>
+            
+              <a href="../../glossary/panspermia/" class="related-card">
+                <h5>Panspermia</h5>
+                <p>Life came from outer space</p>
+              </a>
+            
+              <a href="../../glossary/louis-pasteur/" class="related-card">
+                <h5>Louis Pasteur</h5>
+                <p>Disproved spontaneous generation</p>
+              </a>
+            
+              <a href="../../glossary/oparinhaldane/" class="related-card">
+                <h5>Oparin–Haldane</h5>
+                <p>Chemical evolution</p>
+              </a>
+            
+              <a href="../../glossary/millerurey/" class="related-card">
+                <h5>Miller–Urey</h5>
+                <p>Amino acids from simple gases</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+      <div class="related-links-section">
+        <h4>NCERT Comparison Sheets</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Review the key distinctions and contrast tables from this chapter:</p>
+        <div class="related-grid">
+          
+            <a href="../../compare/theory-vs-idea-status/" class="related-card">
+              <h5>Theory vs Idea / Status</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/4-evidence-comparative-anatomy-homology-vs-analogy/" class="related-card">
+              <h5>4 · Evidence — Comparative Anatomy (Homology vs Analogy)</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/lamarck-vs-de-vries-mutation-theory/" class="related-card">
+              <h5>Lamarck vs de Vries (Mutation theory)</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/factor-vs-effect/" class="related-card">
+              <h5>Factor vs Effect</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Evolution!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Which theory explains the origin of the universe?","back":"The Big Bang theory (~20 billion years ago)."},{"front":"When did the Earth form?","back":"About 4.5 billion years ago."},{"front":"When did life first appear on Earth?","back":"About 3.5–4 billion years ago, in the oceans."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

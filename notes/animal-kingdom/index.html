@@ -1,0 +1,531 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Kingdom Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Animal Kingdom.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Animal Kingdom Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Animal Kingdom.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Animal Kingdom"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 4</span>
+      <h1>🦋 Animal Kingdom Study Notes</h1>
+      <p>Basis of classification · Porifera to Mammalia</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/animal-kingdom/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/animal-kingdom/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/animal-kingdom/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        4.1 Basis of Classification
+      </h3>
+      
+<p>Over a million animal species are known, so a shared framework is essential. Animals are grouped using fundamental features that cut across appearances.</p>
+<h4>1. Levels of organisation</h4>
+<ul>
+<li><b>Cellular level</b> — cells loosely arranged (Porifera).</li>
+<li><b>Tissue level</b> — cells form tissues (Coelenterata, Ctenophora).</li>
+<li><b>Organ level</b> — tissues form organs (Platyhelminthes onward).</li>
+<li><b>Organ-system level</b> — organs form systems (Aschelminthes onward).</li>
+</ul>
+<h4>2. Symmetry</h4>
+<ul>
+<li><b>Asymmetrical</b> — no plane divides into equal halves (most sponges).</li>
+<li><b>Radial</b> — any plane through the central axis gives equal halves (Coelenterates, Ctenophores, adult echinoderms).</li>
+<li><b>Bilateral</b> — only one plane divides into identical left & right halves (most animals).</li>
+</ul>
+<h4>3. Germ layers</h4>
+<ul>
+<li><b>Diploblastic</b> — two layers: ectoderm + endoderm, with mesoglea between (Coelenterates).</li>
+<li><b>Triploblastic</b> — three layers: ecto-, meso-, endoderm (Platyhelminthes → Chordates).</li>
+</ul>
+<h4>4. Coelom (body cavity)</h4>
+<table class="cmp"><thead><tr><th>Type</th><th>Body cavity</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Coelomate</b></td><td>True coelom lined by mesoderm</td><td>Annelids, arthropods, molluscs, echinoderms, hemichordates, chordates</td></tr>
+<tr><td><b>Pseudocoelomate</b></td><td>Cavity not lined by mesoderm (mesoderm in scattered pouches)</td><td>Aschelminthes (round worms)</td></tr>
+<tr><td><b>Acoelomate</b></td><td>No body cavity</td><td>Platyhelminthes</td></tr>
+</tbody></table>
+<h4>5. Segmentation & 6. Notochord</h4>
+<p><b>Metameric segmentation</b> — body externally & internally divided into serial segments (Annelida). <b>Notochord</b> — a rod formed on the dorsal side during embryonic development; animals <span class="kw">with</span> it = Chordates, <span class="kw">without</span> it = Non-chordates.</p>
+
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        4.2 Porifera → Aschelminthes
+      </h3>
+      
+<table class="cmp"><thead><tr><th>Phylum</th><th>Key features</th><th>Symmetry / layers / coelom</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Porifera</b> (sponges)</td><td>Cellular level; <span class="kw">water canal system</span> (ostia→spongocoel→osculum); <b>choanocytes</b> (collar cells) line canals; spicules/spongin skeleton; hermaphrodite; indirect development</td><td>Mostly asymmetrical; "porocyte" body</td><td><i>Sycon, Spongilla, Euspongia</i></td></tr>
+<tr><td><b>Coelenterata / Cnidaria</b></td><td>Tissue level; <span class="kw">cnidoblasts</span> (stinging cells) for defence/prey; central gastro-vascular cavity (coelenteron) with one opening; two forms — <b>polyp</b> (fixed) & <b>medusa</b> (free), with metagenesis</td><td>Radial; diploblastic</td><td><i>Hydra, Adamsia, Physalia, Aurelia, Pennatula</i></td></tr>
+<tr><td><b>Ctenophora</b> (comb jellies)</td><td>Marine; 8 external <b>comb plates (ctenes)</b> for locomotion; <span class="kw">bioluminescent</span>; digestion both extra- & intracellular</td><td>Radial; diploblastic</td><td><i>Pleurobrachia, Ctenoplana</i></td></tr>
+<tr><td><b>Platyhelminthes</b> (flatworms)</td><td>Organ level; dorso-ventrally flattened; mostly endoparasites; <span class="kw">flame cells</span> for osmoregulation/excretion; hooks & suckers in parasites</td><td>Bilateral; triploblastic; <b>acoelomate</b></td><td><i>Taenia</i> (tapeworm), <i>Fasciola</i> (liver fluke), <i>Planaria</i></td></tr>
+<tr><td><b>Aschelminthes</b> (round worms)</td><td>Organ-system level; circular in cross-section; many parasitic; sexes separate (<span class="kw">dioecious</span>) with sexual dimorphism</td><td>Bilateral; triploblastic; <b>pseudocoelomate</b></td><td><i>Ascaris, Wuchereria</i> (filaria), <i>Ancylostoma</i> (hookworm)</td></tr>
+</tbody></table>
+<div class="callout"><b>Choanocytes</b> = the signature cell of sponges. <b>Cnidoblasts</b> = the signature cell of cnidarians. <b>Flame cells</b> = the signature cell of flatworms.</div>
+
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        4.3 Annelida → Echinodermata → Hemichordata
+      </h3>
+      
+<table class="cmp"><thead><tr><th>Phylum</th><th>Key features</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Annelida</b></td><td><span class="kw">Metameric segmentation</span>; coelomate; closed circulation; <b>nephridia</b> for excretion & osmoregulation; longitudinal & circular muscles; <i>Nereis</i> has parapodia</td><td><i>Nereis, Pheretima</i> (earthworm), <i>Hirudinaria</i> (leech)</td></tr>
+<tr><td><b>Arthropoda</b> (largest phylum)</td><td><span class="kw">Jointed appendages</span>; chitinous <b>exoskeleton</b>; body = head, thorax, abdomen; <b>open</b> circulatory system; respiration via gills/book gills/book lungs/trachea; sensory & compound eyes</td><td><i>Apis</i> (bee), <i>Bombyx</i> (silkworm), <i>Laccifer</i> (lac insect), <i>Anopheles, Locusta, Limulus</i> (king crab, a living fossil)</td></tr>
+<tr><td><b>Mollusca</b> (2nd largest)</td><td>Soft body covered by a <b>mantle</b>; usually a calcareous shell; muscular foot; <span class="kw">radula</span> (rasping feeding organ); gills for respiration</td><td><i>Pila</i> (apple snail), <i>Pinctada</i> (pearl oyster), <i>Sepia, Loligo, Octopus, Aplysia</i> (sea hare), <i>Dentalium, Chaetopleura</i></td></tr>
+<tr><td><b>Echinodermata</b></td><td>Spiny endoskeleton of calcareous ossicles; unique <span class="kw">water vascular system</span> (tube feet) for locomotion, food capture & respiration; <b>marine</b>; adults radial but larvae bilateral</td><td><i>Asterias</i> (starfish), <i>Echinus</i> (sea urchin), <i>Antedon</i> (sea lily), <i>Cucumaria</i> (sea cucumber), <i>Ophiura</i> (brittle star)</td></tr>
+<tr><td><b>Hemichordata</b></td><td>Worm-like marine animals; have a rudimentary <span class="kw">stomochord</span> in the collar (not a true notochord); proboscis–collar–trunk body</td><td><i>Balanoglossus, Saccoglossus</i></td></tr>
+</tbody></table>
+<div class="callout"><b>Water vascular system</b> = the unique identity of echinoderms. <b>Radula</b> = molluscs. <b>Metameric segmentation + nephridia</b> = annelids.</div>
+
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        4.4 Chordata — fundamental features & lower groups
+      </h3>
+      
+<p>Four features define <b>Chordata</b> (at least at some life stage):</p>
+<div class="flow">
+<span class="node">Notochord</span><span class="node">Dorsal hollow nerve cord</span><span class="node">Pharyngeal gill slits</span><span class="node">Post-anal tail</span>
+</div>
+<table class="cmp"><thead><tr><th>Subphylum</th><th>Notochord</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Urochordata</b> (Tunicata)</td><td>Present only in the <span class="kw">larval tail</span></td><td><i>Ascidia, Salpa, Doliolum</i></td></tr>
+<tr><td><b>Cephalochordata</b></td><td>Extends from head to tail, <span class="kw">persists throughout life</span></td><td><i>Branchiostoma</i> (Amphioxus / lancelet)</td></tr>
+<tr><td><b>Vertebrata</b></td><td>Notochord replaced by a <b>vertebral column</b> in the adult; have a cranium</td><td>Fishes → Mammals</td></tr>
+</tbody></table>
+<div class="callout"><b>All vertebrates are chordates, but all chordates are not vertebrates.</b> Vertebrates additionally have a backbone and a skull.</div>
+
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        4.5 Vertebrata — the seven classes
+      </h3>
+      
+<table class="cmp"><thead><tr><th>Class</th><th>Hallmarks</th><th>Examples</th></tr></thead><tbody>
+<tr><td><b>Cyclostomata</b></td><td><span class="kw">Jawless</span>; circular sucking mouth; no scales/paired fins; ectoparasites on fish; cartilaginous skeleton</td><td><i>Petromyzon</i> (lamprey), <i>Myxine</i> (hagfish)</td></tr>
+<tr><td><b>Chondrichthyes</b></td><td>Marine; <span class="kw">cartilaginous</span> endoskeleton; placoid scales; ventral mouth; no air bladder so must swim; internal fertilisation</td><td><i>Scoliodon</i> (dogfish), <i>Pristis</i> (sawfish), <i>Carcharodon</i> (great white), <i>Trygon</i> (sting ray)</td></tr>
+<tr><td><b>Osteichthyes</b></td><td><span class="kw">Bony</span> endoskeleton; cycloid/ctenoid scales; <b>air bladder</b> regulates buoyancy; operculum over gills; mostly external fertilisation, oviparous</td><td><i>Labeo</i> (rohu), <i>Catla, Clarias</i> (magur), <i>Exocoetus</i> (flying fish), <i>Hippocampus</i> (sea horse)</td></tr>
+<tr><td><b>Amphibia</b></td><td>Live on land & water; moist skin (no scales); two pairs of limbs; 3-chambered heart; <span class="kw">external fertilisation</span>, oviparous</td><td><i>Rana</i> (frog), <i>Bufo</i> (toad), <i>Hyla</i> (tree frog), <i>Salamandra, Ichthyophis</i> (limbless)</td></tr>
+<tr><td><b>Reptilia</b></td><td>Creeping; dry, <span class="kw">scaly</span> skin; mostly 3-chambered heart (crocodile 4); <b>cold-blooded</b>; internal fertilisation; lay shelled eggs on land</td><td><i>Chelone</i> (turtle), <i>Testudo</i> (tortoise), <i>Naja</i> (cobra), <i>Crocodilus, Hemidactylus</i> (wall lizard)</td></tr>
+<tr><td><b>Aves</b> (birds)</td><td><span class="kw">Feathers</span>; forelimbs → wings; beak; <b>4-chambered</b> heart; warm-blooded; bones pneumatic (air-filled); oviparous</td><td><i>Corvus</i> (crow), <i>Columba</i> (pigeon), <i>Struthio</i> (ostrich), <i>Neophron</i> (vulture)</td></tr>
+<tr><td><b>Mammalia</b></td><td><span class="kw">Mammary glands</span> (milk); hair/fur; external ears (pinna); <b>4-chambered</b> heart; warm-blooded; mostly viviparous</td><td><i>Ornithorhynchus</i> (egg-laying platypus), <i>Macropus</i> (kangaroo), <i>Pteropus</i> (flying fox), <i>Balaenoptera</i> (blue whale), <i>Panthera, Homo</i></td></tr>
+</tbody></table>
+<div class="callout"><b>Warm-blooded (homeothermic):</b> only <b>Aves & Mammalia</b>. <b>4-chambered heart:</b> Aves, Mammalia, and crocodiles. Everything else is cold-blooded.</div>
+
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">What is the primary characteristic of Porifera's level of organisation?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">Cellular level with loose cell aggregates.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/porifera/" class="related-card">
+                <h5>Porifera</h5>
+                <p>Choanocytes; water canal system</p>
+              </a>
+            
+              <a href="../../glossary/coelenterata/" class="related-card">
+                <h5>Coelenterata</h5>
+                <p>Cnidoblasts; polyp & medusa</p>
+              </a>
+            
+              <a href="../../glossary/ctenophora/" class="related-card">
+                <h5>Ctenophora</h5>
+                <p>Comb plates; bioluminescent</p>
+              </a>
+            
+              <a href="../../glossary/platyhelminthes/" class="related-card">
+                <h5>Platyhelminthes</h5>
+                <p>Flame cells; acoelomate</p>
+              </a>
+            
+              <a href="../../glossary/aschelminthes/" class="related-card">
+                <h5>Aschelminthes</h5>
+                <p>Round worms; pseudocoelomate</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+      <div class="related-links-section">
+        <h4>NCERT Comparison Sheets</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Review the key distinctions and contrast tables from this chapter:</p>
+        <div class="related-grid">
+          
+            <a href="../../compare/type-vs-body-cavity/" class="related-card">
+              <h5>Type vs Body cavity</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/phylum-vs-key-features/" class="related-card">
+              <h5>Phylum vs Key features</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/phylum-vs-key-features/" class="related-card">
+              <h5>Phylum vs Key features</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/subphylum-vs-notochord/" class="related-card">
+              <h5>Subphylum vs Notochord</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Animal Kingdom!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"What is the primary characteristic of Porifera's level of organisation?","back":"Cellular level with loose cell aggregates."},{"front":"What are the specialized stinging cells in Coelenterates called?","back":"Cnidoblasts or cnidocytes."},{"front":"Which phylum is known as the 'comb jellies'?","back":"Ctenophora."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

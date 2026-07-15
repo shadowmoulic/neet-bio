@@ -1,18 +1,18 @@
 const Razorpay = require('razorpay');
 
 const PLAN_MAP = {
-  'class11_monthly': 'plan_TCElNINz3RWOP8',
-  'class12_monthly': 'plan_TCElNINz3RWOP8',
+  'class11_monthly': 'plan_TDsERfQh0b7x0a',
+  'class12_monthly': 'plan_TDsERfQh0b7x0a',
   'class11_yearly': 'plan_TCEmNDngMsz3SQ',
   'class12_yearly': 'plan_TCEmNDngMsz3SQ',
-  'both_monthly': 'plan_TCEmbnoKxPkIBV',
+  'both_monthly': 'plan_TDsEnT65rVMbpF',
   'both_yearly': 'plan_TCEmvI14LeKtOI'
 };
 
 const UPFRONT_MAP = {
-  'class11_monthly': 33000, // 789 - 459 = 330 INR
-  'class12_monthly': 33000,
-  'both_monthly': 55000, // 1239 - 689 = 550 INR
+  'class11_monthly': 14900, // ₹149 first month
+  'class12_monthly': 14900, // ₹149 first month
+  'both_monthly': 28900, // ₹289 first month
   'class11_yearly': 0,
   'class12_yearly': 0,
   'both_yearly': 0
@@ -55,12 +55,15 @@ module.exports = async (req, res) => {
     let start_at = undefined;
     let is_100_percent_free_trial = false;
 
+    if (billingCycle === 'monthly') {
+      const now = Math.floor(Date.now() / 1000);
+      start_at = now + (30 * 24 * 60 * 60); // 30 days trial
+    }
+
     // Handle 100% discount coupon
     if (coupon === 'NEET@100#') {
       is_100_percent_free_trial = true;
       upfront_amount = 0; // No upfront fee if it's 100% off first month
-      
-      // Delay subscription start by 1 month (30 days) to give the first month free
       const now = Math.floor(Date.now() / 1000);
       start_at = now + (30 * 24 * 60 * 60); 
     } else if (coupon === 'NEET@1#') {

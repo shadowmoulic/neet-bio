@@ -1,0 +1,383 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category vs Numbers Comparison & Key Differences | Smart Bio Notes</title>
+  <meta name="description" content="Understand differences and similarities of Category vs Numbers for NEET biology. Comprehensive table explanation.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Category and Numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Core difference sheet comparing Category and Numbers for NCERT class 11 & 12 exam prep."
+      }
+    }
+  ]
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">NCERT Comparison Sheet</span>
+      <h1>Category vs Numbers</h1>
+      <p>Key differences, features, and comparative analysis of Category and Numbers.</p>
+    </div>
+
+    <div style="margin-top: 30px; overflow-x: auto;">
+      <table class="cmp">
+          <thead><tr><th>Category</th><th>Numbers</th></tr></thead>
+          <tbody>
+            <tr><td><b>Global species</b></td><td>Described (IUCN 2004): <b>&gt;1.5 million</b> · Robert May's estimate: <b>7 million</b> · Extreme estimates: <b>20&ndash;50 million</b></td></tr>
+            <tr><td><b>Composition</b></td><td>Animals <b>&gt;70%</b> · Plants <b>≤22%</b> · Insects = <b>70% of animals</b> (7 of every 10 animals) · Fungi &gt; fishes + amphibians + reptiles + mammals combined</td></tr>
+            <tr><td><b>India</b></td><td>Land area <b>2.4%</b> · Species share <b>8.1%</b> · One of <b>12</b> mega-diversity countries · <b>45,000</b> plants · <b>90,000</b> animals · yet to find: <b>&gt;1,00,000</b> plants, <b>&gt;3,00,000</b> animals</td></tr>
+            <tr><td><b>Latitude</b></td><td>Tropics = <b>23.5° N to 23.5° S</b> · Colombia <b>1,400</b> birds · India <b>&gt;1,200</b> · New York (41° N) <b>105</b> · Greenland (71° N) <b>56</b> · Ecuador forest = <b>10&times;</b> the vascular plants of a Midwest-USA forest</td></tr>
+            <tr><td><b>Amazon</b></td><td>Plants <b>&gt;40,000</b> · Fishes <b>3,000</b> · Birds <b>1,300</b> · Mammals <b>427</b> · Amphibians <b>427</b> · Reptiles <b>378</b> · Invertebrates <b>&gt;1,25,000</b> · Undiscovered insects <b>≥2 million</b> · Produces <b>20%</b> of atmospheric oxygen · Called the <b>'lungs of the planet'</b></td></tr>
+            <tr><td><b>Extinction</b></td><td>Pacific Island birds lost: <b>&gt;2,000</b> · IUCN 2004: <b>784</b> = <b>338</b> vertebrates + <b>359</b> invertebrates + <b>87</b> plants (in <b>500</b> years) · Last 20 years: <b>27</b> species · Currently threatened: <b>15,500</b> · Rate: <b>100&ndash;1,000&times;</b> faster than pre-human · <b>Half</b> of all species could go in <b>100</b> years</td></tr>
+            <tr><td><b>% facing extinction</b></td><td>Amphibians <b>32%</b> &gt; Gymnosperms <b>31%</b> &gt; Mammals <b>23%</b> &gt; Birds <b>12%</b></td></tr>
+            <tr><td><b>Habitat loss</b></td><td>Tropical rain forests: once <b>&gt;14%</b> of land surface → now <b>≤6%</b></td></tr>
+            <tr><td><b>Alien invasion</b></td><td>Nile perch in Lake Victoria wiped out <b>&gt;200</b> species of cichlid fish</td></tr>
+            <tr><td><b>Medicine</b></td><td><b>&gt;25%</b> of drugs sold worldwide come from plants · <b>25,000</b> plant species used in traditional medicine</td></tr>
+            <tr><td><b>Hotspots</b></td><td><b>25 + 9 = 34</b> · cover <b>&lt;2%</b> of land · strict protection could cut mass extinctions by <b>~30%</b> · <b>3</b> in India</td></tr>
+            <tr><td><b>India's protected areas</b></td><td><b>14</b> biosphere reserves · <b>90</b> national parks · <b>448</b> wildlife sanctuaries</td></tr>
+            <tr><td><b>Summits</b></td><td>Rio de Janeiro <b>1992</b> (Earth Summit) · Johannesburg <b>2002</b> (World Summit on Sustainable Development, <b>190</b> countries, <b>2010</b> target)</td></tr>
+          </tbody>
+        </table>
+    </div>
+
+    <!-- Context Chapter and Internal Links -->
+    <div style="margin-top: 40px; padding: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel2);">
+      <h3 style="font-family: var(--serif); color: var(--gold); margin-top: 0; margin-bottom: 10px;">Context Chapter</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">This comparison table is part of the chapter notes for <strong>Biodiversity and Conservation</strong>. Get complete notes, flashcards, active recall sheets, and test prep modes:</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="../../notes/biodiversity-and-conservation/" class="cta-btn" style="font-size: 13px; padding: 8px 18px; box-shadow: none;">View Chapter Notes</a>
+        <a href="../../mcq/biodiversity-and-conservation/" class="cta-btn" style="font-size: 13px; padding: 8px 18px; box-shadow: none; background: var(--panel); border: 1px solid var(--line2); color: var(--gold);">Practice MCQs</a>
+        <a href="../../flashcards/biodiversity-and-conservation/" class="cta-btn" style="font-size: 13px; padding: 8px 18px; box-shadow: none; background: var(--panel); border: 1px solid var(--line2); color: var(--gold);">Study Flashcards</a>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Other contrast sheets in Biodiversity and Conservation</h4>
+        <div class="related-grid">
+          
+            <a href="../../compare/level-vs-what-it-means/" class="related-card">
+              <h5>Level vs What it means</h5>
+              <p>NCERT side-by-side contrast analysis.</p>
+            </a>
+          
+            <a href="../../compare/statement-vs-number/" class="related-card">
+              <h5>Statement vs Number</h5>
+              <p>NCERT side-by-side contrast analysis.</p>
+            </a>
+          
+            <a href="../../compare/statement-vs-number/" class="related-card">
+              <h5>Statement vs Number</h5>
+              <p>NCERT side-by-side contrast analysis.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+    
+    <div class="related-links-section">
+      <h4>Popular NEET Differences Sheets</h4>
+      <div class="related-grid">
+        
+          <a href="../../compare/theory-vs-idea-status/" class="related-card">
+            <h5>Theory vs Idea / Status</h5>
+            <p>Learn core differences in Evolution.</p>
+          </a>
+        
+          <a href="../../compare/pair-vs-who-benefits/" class="related-card">
+            <h5>Pair vs Who benefits</h5>
+            <p>Learn core differences in Organisms and Populations.</p>
+          </a>
+        
+          <a href="../../compare/type-of-cycle-vs-reservoir/" class="related-card">
+            <h5>Type of cycle vs Reservoir</h5>
+            <p>Learn core differences in Ecosystem.</p>
+          </a>
+        
+      </div>
+    </div>
+  
+
+    <!-- CTA Banner -->
+    <div class="cta-banner" style="margin-top: 40px;">
+      <h2>Unlock All Study Aids</h2>
+      <p>Level up your NEET 2027 preparation. Interactive pathway diagrams, mock test series, study schedules, and customized AI revision plans!</p>
+      <a href="/" class="cta-btn">Upgrade to Premium</a>
+    </div>
+    
+  </div>
+</body>
+</html>
+  

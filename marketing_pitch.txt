@@ -1,0 +1,37 @@
+# The Naturalist's Codex - Marketing Overview
+
+## App Features & Value Proposition
+- Target Audience: NEET 2027 Aspirants (Medical Entrance Exam in India).
+- Subjects Covered: Class 11 & 12 Biology, Physics, and Chemistry.
+- Key Selling Points: "Study smarter, not harder."
+- Interactive Study Modes: 
+  - AI-optimized active recall
+  - Flashcards for memorization
+  - MCQ Battles and Boss Battles (Gamified learning)
+  - Mnemonics for hard-to-remember concepts
+  - "Build the Pathway" and "Match-Up" exercises
+
+## Subscription Plans & Pricing (Razorpay)
+1. Single Class (Class 11 OR Class 12):
+   - First Month Trial: ₹149
+   - Recurring Monthly Plan: ₹349/month onwards
+
+2. Both Classes (Class 11 AND Class 12):
+   - First Month Trial: ₹289
+   - Recurring Monthly Plan: ₹389/month onwards
+
+## Pitch Ideas for Marketing Expert
+- Focus on the gamification of NEET prep (MCQ battles, Boss battles).
+- Highlight the comprehensive coverage of the NCERT syllabus.
+- Emphasize the AI-driven active recall for long-term retention.
+- Great value proposition for the Yearly plan (heavy discounts for committed students).
+
+## App Logic & User Flow
+- **Authentication System:** Secure email & password signup/login powered by Supabase. Captures Full Name and optional Phone Number during signup.
+- **Freemium Model:** Users can sign up for a free account to track their mastery on free chapters.
+- **Premium Paywall:** Attempting to access premium chapters triggers an "Unlock Premium" modal.
+- **Subscription Checkout:**
+  - Users select their Target Class (Class 11, Class 12, or Both).
+  - Users select their Billing Cycle (Monthly or Yearly).
+  - Support for Coupon Codes to offer promotional discounts.
+- **Payment Gateway:** Fully integrated with Razorpay for secure recurring billing.

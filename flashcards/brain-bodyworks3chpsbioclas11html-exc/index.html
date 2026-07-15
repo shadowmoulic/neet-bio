@@ -1,0 +1,395 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excretory Products & Their Elimination Flashcards Set | Smart Bio Notes</title>
+  <meta name="description" content="Study with interactive, digital flashcards for Class 11/12 NEET Biology: Excretory Products & Their Elimination.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why must animals excrete nitrogenous wastes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Metabolism of proteins and nucleic acids produces ammonia, urea and uric acid, which are toxic and must be removed to keep body fluids balanced."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The three main nitrogenous wastes & their toxicity/water need",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ammonia (most toxic, needs most water), urea (less toxic, moderate water), uric acid (least toxic, least water)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ammonotelism — definition & examples",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Excreting ammonia (mostly by diffusion across the body surface or gills). Seen in many bony fishes, aquatic amphibians and aquatic insects."
+      }
+    }
+  ]
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Flashcards</span>
+      <h1>🦠 Excretory Products & Their Elimination Flashcards</h1>
+      <p>Memorise key terms and core biological concepts with active recall.</p>
+    </div>
+
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/brain-bodyworks3chpsbioclas11html-exc/" class="silo-link" style="">Study Notes</a>
+      <a href="../../mcq/brain-bodyworks3chpsbioclas11html-exc/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/brain-bodyworks3chpsbioclas11html-exc/" class="silo-link" style="background: var(--line2); color: #fff;">Flashcards</a>
+    </div>
+    
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box" style="margin-top: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h3 style="margin: 0;">⚡ Flashcard Simulator</h3>
+        <span id="fc-progress" style="font-size: 14px; color: var(--ink-dim);">Card 1 of 3</span>
+      </div>
+      
+      <div id="fc-widget-card" class="widget-card" onclick="flipFcCard()" style="height: 200px;">
+        <div class="widget-card-inner" id="fc-card-inner" style="position: relative; height: 100%; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Front</strong>
+            <span id="fc-front-text" style="font-size: 18px; font-weight: 500;">Why must animals excrete nitrogenous wastes?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Back</strong>
+            <span id="fc-back-text" style="font-size: 16px; color: var(--ink);">Metabolism of proteins and nucleic acids produces ammonia, urea and uric acid, which are toxic and must be removed to keep body fluids balanced.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+        <button onclick="nextFcCard(false, event)" class="cta-btn" style="background: var(--bad); color: #fff; padding: 6px 16px; font-size: 13px; box-shadow: none;">↻ Again</button>
+        <button onclick="nextFcCard(true, event)" class="cta-btn" style="background: var(--ok); color: #fff; padding: 6px 16px; font-size: 13px; box-shadow: none;">✓ Known</button>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Gain Your Unfair Advantage</h2>
+      <p>Track your mastery level with our custom spaced-repetition algorithm. Unlock all 42 flashcards in this deck now!</p>
+      <a href="/" class="cta-btn">Unlock Full Deck</a>
+    </div>
+
+    <script>
+      const fcCards = [{"front":"Why must animals excrete nitrogenous wastes?","back":"Metabolism of proteins and nucleic acids produces ammonia, urea and uric acid, which are toxic and must be removed to keep body fluids balanced."},{"front":"The three main nitrogenous wastes & their toxicity/water need","back":"Ammonia (most toxic, needs most water), urea (less toxic, moderate water), uric acid (least toxic, least water)."},{"front":"Ammonotelism — definition & examples","back":"Excreting ammonia (mostly by diffusion across the body surface or gills). Seen in many bony fishes, aquatic amphibians and aquatic insects."}];
+      let currentFcIdx = 0;
+      let masteredCount = 0;
+
+      function flipFcCard() {
+        document.getElementById('fc-card-inner').style.transform = 
+          document.getElementById('fc-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+
+      function nextFcCard(isKnown, event) {
+        event.stopPropagation();
+        if (isKnown) masteredCount++;
+        
+        // Reset flip
+        document.getElementById('fc-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentFcIdx++;
+          if (currentFcIdx >= fcCards.length) {
+            document.getElementById('fc-widget-card').innerHTML = `
+              <div style="text-align: center; padding: 20px;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🏁</div>
+                <h4 style="font-size: 20px; font-family: var(--serif); color: var(--gold); margin-bottom: 8px;">Review Complete!</h4>
+                <p style="font-size: 16px; color: var(--ink-dim);">You mastered ${masteredCount} out of ${fcCards.length} cards.</p>
+              </div>
+            `;
+            document.getElementById('fc-progress').style.display = 'none';
+            return;
+          }
+          
+          document.getElementById('fc-front-text').textContent = fcCards[currentFcIdx].front;
+          document.getElementById('fc-back-text').textContent = fcCards[currentFcIdx].back;
+          document.getElementById('fc-progress').textContent = "Card " + (currentFcIdx + 1) + " of " + fcCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

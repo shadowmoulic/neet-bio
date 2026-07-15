@@ -1,0 +1,615 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biotechnology: Principles and Processes Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Biotechnology: Principles and Processes.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Biotechnology: Principles and Processes Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Biotechnology: Principles and Processes.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Biotechnology: Principles and Processes"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 9</span>
+      <h1>🧬 Biotechnology: Principles and Processes Study Notes</h1>
+      <p>Genetic engineering, rDNA tools, PCR, bioreactors & downstream processing</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/biotechnology-principles-and-processes/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/biotechnology-principles-and-processes/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/biotechnology-principles-and-processes/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.1 1. What is Biotechnology?
+      </h3>
+      
+        <p><b>Biotechnology</b> deals with techniques of using <span class="kw">live organisms</span> or <span class="kw">enzymes</span> from organisms to produce products and processes useful to humans.</p>
+        <p>The <b>EFB (European Federation of Biotechnology)</b> definition covers both traditional and modern forms: <i>"The integration of natural science and organisms, cells, parts thereof, and molecular analogues for products and services."</i></p>
+        <h4>Traditional vs Modern</h4>
+        <table class="cmp">
+          <thead><tr><th>Traditional biotechnology</th><th>Modern biotechnology</th></tr></thead>
+          <tbody>
+            <tr><td>Making curd, bread, wine, cheese; in-vitro fertilisation</td><td>Genetically modified organisms (GMOs), rDNA technology</td></tr>
+            <tr><td>Uses microbes as-is</td><td>Alters the chemistry of genetic material (DNA/RNA)</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Two core techniques of modern biotechnology:</b> (1) <b>Genetic engineering</b> — changing the chemistry of genetic material (DNA & RNA) to introduce it into host organisms and alter the phenotype; (2) <b>Bioprocess engineering</b> — maintaining a <span class="kw">sterile (contamination-free) ambience</span> so that only the desired microbe/eukaryotic cell grows in large quantities to make antibiotics, vaccines, enzymes, etc.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.2 2. Principles of Biotechnology
+      </h3>
+      
+        <p>The two founding principles are <b>genetic engineering</b> and <b>maintenance of sterile conditions in chemical engineering processes</b> (bioprocessing).</p>
+        <h4>The first recombinant DNA</h4>
+        <p><b>Stanley Cohen</b> and <b>Herbert Boyer</b> (1972) made the first artificial recombinant DNA by isolating an <span class="kw">antibiotic resistance gene</span> (cut from a plasmid using a restriction enzyme) and linking it with a native plasmid of <i>Salmonella typhimurium</i>. The plasmid acts as a <b>vector</b> that carries and multiplies the linked (alien) DNA.</p>
+        <div class="callout"><b>Key idea:</b> Alien DNA must be joined to the <span class="kw">origin of replication (ori)</span> of the vector, only then can it replicate and multiply inside the host. Multiple identical copies = <b>cloning</b>.</div>
+        <h4>Three basic steps in genetically modifying an organism</h4>
+        <div class="flow"><span class="node">1. Identify DNA with desirable gene</span><span class="arr">→</span><span class="node">2. Introduce it into the host</span><span class="arr">→</span><span class="node">3. Maintain it & pass to progeny</span></div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.3 3. Tools I — Restriction Enzymes
+      </h3>
+      
+        <p>Key tools of rDNA technology: <b>restriction enzymes, polymerases, ligases, vectors, and a host organism.</b></p>
+        <h4>Discovery</h4>
+        <ul>
+          <li>In <b>1963</b>, two enzymes restricting bacteriophage growth in <i>E. coli</i> were found: one added <span class="kw">methyl groups</span> (methylase), the other cut DNA — the <b>restriction endonuclease</b>.</li>
+          <li><b>Hind II</b> = first restriction endonuclease; always cuts DNA at a specific point by recognising a specific sequence of <b>6 base pairs</b> (the <span class="kw">recognition sequence</span>).</li>
+          <li>Today &gt;<b>900</b> restriction enzymes are known from over <b>230</b> bacterial strains.</li>
+        </ul>
+        <h4>Nomenclature — example EcoRI</h4>
+        <table class="cmp">
+          <thead><tr><th>Letter</th><th>Stands for</th></tr></thead>
+          <tbody>
+            <tr><td>E</td><td>Genus <i>Escherichia</i></td></tr>
+            <tr><td>co</td><td>Species <i>coli</i></td></tr>
+            <tr><td>R</td><td>Strain RY13</td></tr>
+            <tr><td>I</td><td>Order isolated (Roman numeral)</td></tr>
+          </tbody>
+        </table>
+        <h4>Nucleases</h4>
+        <table class="cmp">
+          <thead><tr><th>Exonuclease</th><th>Endonuclease</th></tr></thead>
+          <tbody><tr><td>Removes nucleotides from the <b>ends</b></td><td>Makes cuts at specific positions <b>within</b> the DNA</td></tr></tbody>
+        </table>
+        <h4>Palindrome & sticky ends</h4>
+        <p>A <b>palindrome</b> reads the same on both strands in the same (5'→3') orientation, e.g. EcoRI site:</p>
+        <div class="callout">5'—G A A T T C—3'<br>3'—C T T A A G—5'</div>
+        <p>The enzyme cuts a little away from the centre, between the same two bases on both strands, leaving overhanging single-stranded <span class="kw">sticky ends</span>. Fragments cut by the <b>same enzyme</b> have complementary sticky ends and are joined by <b>DNA ligase</b>.</p>
+        <div class="flow"><span class="node">Recognise palindrome</span><span class="arr">→</span><span class="node">Cut sugar-phosphate backbone</span><span class="arr">→</span><span class="node">Sticky ends</span><span class="arr">→</span><span class="node">Ligase joins</span></div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.4 4. Tools II — Cloning Vectors
+      </h3>
+      
+        <p><b>Plasmids</b> and <b>bacteriophages</b> replicate within bacteria independent of chromosomal DNA and are used as vectors. Alien DNA linked to them is multiplied to the copy number of the vector.</p>
+        <h4>Features a good vector needs</h4>
+        <table class="cmp">
+          <thead><tr><th>Feature</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td><b>Origin of replication (ori)</b></td><td>Where replication starts; controls copy number</td></tr>
+            <tr><td><b>Selectable marker</b></td><td>Identifies & eliminates non-transformants; usually antibiotic-resistance genes (amp, tet, kan, chloramphenicol)</td></tr>
+            <tr><td><b>Cloning sites</b></td><td>Preferably a single recognition site per restriction enzyme to link alien DNA</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Transformation:</b> the process by which a piece of DNA is introduced into a host bacterium.</div>
+        <h4>Insertional inactivation</h4>
+        <p><b>pBR322</b> has two resistance genes: <span class="kw">ampR</span> and <span class="kw">tetR</span>. Inserting alien DNA into the <i>BamHI</i> site of tetR inactivates tetracycline resistance. Recombinants grow on ampicillin but are tet-<b>sensitive</b> — but this needs two plates (cumbersome).</p>
+        <h4>Blue–white selection (better)</h4>
+        <p>Insert DNA into the coding sequence of enzyme <b>β-galactosidase</b> → inactivates it.</p>
+        <table class="cmp">
+          <thead><tr><th>Colony colour (with chromogenic substrate)</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><b>Blue</b></td><td>No insert → active β-gal → <b>non-recombinant</b></td></tr>
+            <tr><td><b>White / colourless</b></td><td>Insert present → β-gal inactivated → <b>recombinant</b></td></tr>
+          </tbody>
+        </table>
+        <h4>Vectors for plants & animals</h4>
+        <ul>
+          <li><b>Ti plasmid</b> of <i>Agrobacterium tumefaciens</i> (a dicot pathogen) delivers <span class="kw">T-DNA</span>; disarmed and used to transform plant cells.</li>
+          <li><b>Retroviruses</b> in animals (normally transform cells to cancerous) are disarmed to deliver genes into animal cells.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.5 5. Tools III — Making a Competent Host
+      </h3>
+      
+        <p>DNA is <span class="kw">hydrophilic</span> and cannot cross the cell membrane. So the host must be made <b>competent</b> to take up DNA.</p>
+        <h4>Chemical (heat-shock) method</h4>
+        <div class="flow"><span class="node">Treat cells with divalent cation (CaCl₂)</span><span class="arr">→</span><span class="node">Incubate with rDNA on ice</span><span class="arr">→</span><span class="node">Brief 42°C heat shock</span><span class="arr">→</span><span class="node">Back on ice → DNA taken up</span></div>
+        <p>Ca²⁺ increases pore efficiency in the cell wall so DNA enters.</p>
+        <h4>Other delivery methods</h4>
+        <table class="cmp">
+          <thead><tr><th>Method</th><th>How</th></tr></thead>
+          <tbody>
+            <tr><td><b>Micro-injection</b></td><td>rDNA injected directly into the nucleus of an animal cell</td></tr>
+            <tr><td><b>Biolistics / gene gun</b></td><td>Cells bombarded with high-velocity gold/tungsten micro-particles coated with DNA (plants)</td></tr>
+            <tr><td><b>Disarmed pathogen vectors</b></td><td>Vector infects the cell and transfers rDNA into the host</td></tr>
+          </tbody>
+        </table>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.6 6. Separation & Isolation of DNA Fragments
+      </h3>
+      
+        <p><b>Agarose gel electrophoresis</b> separates DNA fragments by <span class="kw">size</span>.</p>
+        <ul>
+          <li>DNA is <b>negatively charged</b> → moves toward the <span class="kw">anode (+)</span> through the agarose matrix.</li>
+          <li><b>Smaller fragments move farther</b>; larger ones lag near the wells.</li>
+          <li>Stained with <b>ethidium bromide</b>, visualised as bright <b>orange</b> bands under <span class="kw">UV light</span> (invisible in visible light).</li>
+        </ul>
+        <div class="callout"><b>Elution:</b> the separated DNA bands are cut out from the gel and extracted from the gel piece — this purified DNA is used to build recombinant DNA with vectors.</div>
+        <div class="flow"><span class="node">Load DNA</span><span class="arr">→</span><span class="node">Run current</span><span class="arr">→</span><span class="node">Stain (EtBr)</span><span class="arr">→</span><span class="node">View under UV</span><span class="arr">→</span><span class="node">Elute band</span></div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.7 7. Processes of rDNA Technology
+      </h3>
+      
+        <p>The full workflow has the following ordered steps:</p>
+        <div class="flow"><span class="node">Isolate DNA</span><span class="arr">→</span><span class="node">Cut with restriction enzyme</span><span class="arr">→</span><span class="node">Amplify (PCR)</span><span class="arr">→</span><span class="node">Ligate into vector</span><span class="arr">→</span><span class="node">Insert into host</span><span class="arr">→</span><span class="node">Obtain product</span><span class="arr">→</span><span class="node">Downstream processing</span></div>
+        <h4>(a) Isolation of genetic material</h4>
+        <p>Break cells open using enzymes: <b>lysozyme</b> (bacteria), <b>cellulase</b> (plant), <b>chitinase</b> (fungi). Remove RNA with <span class="kw">ribonuclease</span>, proteins with <span class="kw">protease</span>. Add chilled <b>ethanol</b> → DNA precipitates as fine collectable threads.</p>
+        <h4>(b) Cutting DNA</h4>
+        <p>Incubate purified DNA with restriction enzyme at optimal conditions; check progress by gel electrophoresis; cut the vector with the same enzyme; mix + <b>ligase</b> → recombinant DNA.</p>
+        <h4>(c) Amplification by PCR</h4>
+        <p>Make many copies in vitro using two <b>primers</b> and <b>DNA polymerase</b>.</p>
+        <div class="flow"><span class="node">Denaturation (high temp separates strands)</span><span class="arr">→</span><span class="node">Annealing (primers bind)</span><span class="arr">→</span><span class="node">Extension (polymerase extends)</span></div>
+        <p>Repeated cycles amplify DNA to ~<b>1 billion (10⁹)</b> copies. Uses <span class="kw">Taq polymerase</span> from <i>Thermus aquaticus</i> — thermostable, survives the high-temp denaturation.</p>
+        <h4>(d) Insertion into host</h4>
+        <p>rDNA (e.g. carrying an ampicillin-resistance marker) is put into competent <i>E. coli</i>; only transformants grow on ampicillin plates → marker enables selection.</p>
+        <h4>(e) Obtaining the foreign gene product</h4>
+        <p>A protein made in a heterologous host = <b>recombinant protein</b>. Grown in a <span class="kw">continuous culture system</span> (fresh medium in, spent medium out) to keep cells in the active log phase for higher yield; scaled up in a <b>bioreactor</b>.</p>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.8 8. Bioreactors & Downstream Processing
+      </h3>
+      
+        <p><b>Bioreactors</b> are vessels where raw materials are biologically converted into products/enzymes using microbial, plant, animal or human cells. They provide optimal <span class="kw">temperature, pH, substrate, salts, vitamins and oxygen</span>.</p>
+        <h4>Types of stirred-tank bioreactor</h4>
+        <table class="cmp">
+          <thead><tr><th>Simple stirred-tank</th><th>Sparged stirred-tank</th></tr></thead>
+          <tbody>
+            <tr><td>Cylindrical / curved base; stirrer mixes contents & provides O₂</td><td>Air is <b>bubbled (sparged)</b> through to raise O₂ transfer</td></tr>
+          </tbody>
+        </table>
+        <h4>A bioreactor has</h4>
+        <ul>
+          <li>Agitator system</li>
+          <li>Oxygen delivery system</li>
+          <li>Foam control system</li>
+          <li>Temperature & pH control systems</li>
+          <li>Sampling ports (withdraw small culture volumes periodically)</li>
+        </ul>
+        <div class="callout"><b>Downstream processing:</b> after biosynthesis, the product is <span class="kw">separated and purified</span>, then formulated with preservatives; drug products undergo clinical trials and strict quality control. It varies product to product.</div>
+      
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Define biotechnology.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">Techniques of using live organisms or their enzymes to make products and processes useful to humans.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/efb/" class="related-card">
+                <h5>EFB</h5>
+                <p>European Federation of Biotechnology</p>
+              </a>
+            
+              <a href="../../glossary/ori/" class="related-card">
+                <h5>Ori</h5>
+                <p>Origin of replication — controls copy number</p>
+              </a>
+            
+              <a href="../../glossary/hind-ii/" class="related-card">
+                <h5>Hind II</h5>
+                <p>First restriction endonuclease discovered</p>
+              </a>
+            
+              <a href="../../glossary/ecori/" class="related-card">
+                <h5>EcoRI</h5>
+                <p>Cuts between G and A in palindrome GAATTC</p>
+              </a>
+            
+              <a href="../../glossary/sticky-ends/" class="related-card">
+                <h5>Sticky ends</h5>
+                <p>Single-stranded overhangs after off-centre cut</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+      <div class="related-links-section">
+        <h4>NCERT Comparison Sheets</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Review the key distinctions and contrast tables from this chapter:</p>
+        <div class="related-grid">
+          
+            <a href="../../compare/traditional-biotechnology-vs-modern-biotechnology/" class="related-card">
+              <h5>Traditional biotechnology vs Modern biotechnology</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/letter-vs-stands-for/" class="related-card">
+              <h5>Letter vs Stands for</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/exonuclease-vs-endonuclease/" class="related-card">
+              <h5>Exonuclease vs Endonuclease</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/feature-vs-role/" class="related-card">
+              <h5>Feature vs Role</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Biotechnology: Principles and Processes!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Define biotechnology.","back":"Techniques of using live organisms or their enzymes to make products and processes useful to humans."},{"front":"Which body's definition covers both traditional & modern biotech?","back":"EFB — European Federation of Biotechnology."},{"front":"Two core techniques of modern biotechnology?","back":"(1) Genetic engineering (altering DNA/RNA); (2) Bioprocessing — maintaining sterile conditions for large-scale growth."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

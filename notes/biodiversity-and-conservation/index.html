@@ -1,0 +1,1002 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodiversity and Conservation Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Biodiversity and Conservation.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Biodiversity and Conservation Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Biodiversity and Conservation.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Biodiversity and Conservation"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 13</span>
+      <h1>🦋 Biodiversity and Conservation Study Notes</h1>
+      <p>Three levels of diversity · Latitudinal gradients · Species–Area relationship · Rivet Popper · The Evil Quartet · In situ & ex situ conservation</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/biodiversity-and-conservation/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/biodiversity-and-conservation/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/biodiversity-and-conservation/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.1 1. Biodiversity — Definition & The Three Levels
+      </h3>
+      
+        <p>Immense diversity (heterogeneity) exists <b>not only at the species level but at ALL levels of biological organisation</b> — ranging from <b>macromolecules within cells</b> to <b>biomes</b>.</p>
+
+        <div class="callout"><b>BIODIVERSITY</b> is the term popularised by the <b>sociobiologist EDWARD WILSON</b> to describe the <b>combined diversity at all the levels of biological organisation</b>.<br><br><b>Learn the name.</b> "Who popularised the term biodiversity?" is asked almost every year.</div>
+
+        <h4>The three important components (levels) of biodiversity</h4>
+        <table class="cmp">
+          <thead><tr><th>Level</th><th>What it means</th><th>NCERT's examples — memorise these exactly</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>1. GENETIC diversity</b></td>
+              <td>Diversity shown by a <b>SINGLE species at the genetic level</b>, over its distributional range</td>
+              <td>• <b><i>Rauwolfia vomitoria</i></b> — a medicinal plant growing in different <b>Himalayan ranges</b> — shows genetic variation in the <b>potency and concentration of the active chemical RESERPINE</b> that it produces.<br>• India has more than <b>50,000 genetically different strains of RICE</b>.<br>• India has <b>1,000 varieties of MANGO</b>.</td>
+            </tr>
+            <tr>
+              <td><b>2. SPECIES diversity</b></td>
+              <td>Diversity <b>at the species level</b> — the number of species in an ecological community</td>
+              <td>The <b>WESTERN GHATS have a greater AMPHIBIAN species diversity than the Eastern Ghats</b>.</td>
+            </tr>
+            <tr>
+              <td><b>3. ECOLOGICAL diversity</b></td>
+              <td>Diversity <b>at the ecosystem level</b></td>
+              <td><b>INDIA</b> — with its <b>deserts, rain forests, mangroves, coral reefs, wetlands, estuaries and alpine meadows</b> — has a <b>greater ecosystem diversity than a Scandinavian country like NORWAY</b>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="flow">
+          <span class="node">Genes within a species<br>(Rauwolfia, rice, mango)</span><span class="arr">→</span>
+          <span class="node">Species within a community<br>(Western Ghats amphibians)</span><span class="arr">→</span>
+          <span class="node">Ecosystems within a region<br>(India vs Norway)</span>
+        </div>
+
+        <div class="callout"><b>Trap:</b> "Genetic diversity" is <b>within ONE species</b>. If the question says "different species of amphibians", that is <b>SPECIES</b> diversity, not genetic.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.2 2. How Many Species Are There? — The Global & Indian Number Bank
+      </h3>
+      
+        <h4>Global species numbers</h4>
+        <table class="cmp">
+          <thead><tr><th>Statement</th><th>Number</th></tr></thead>
+          <tbody>
+            <tr><td><b>IUCN (2004)</b> — total plant + animal species <b>described so far</b></td><td>slightly more than <b>1.5 million</b></td></tr>
+            <tr><td><b>Robert May's</b> conservative, scientifically sound estimate of <b>global species diversity</b></td><td>about <b>7 MILLION</b></td></tr>
+            <tr><td>Extreme (unreliable) estimates range</td><td><b>20 to 50 million</b></td></tr>
+            <tr><td>Of described species, <b>ANIMALS</b></td><td>more than <b>70 per cent</b></td></tr>
+            <tr><td>Of described species, <b>PLANTS</b> (algae, fungi, bryophytes, gymnosperms, angiosperms)</td><td><b>no more than 22 per cent</b></td></tr>
+            <tr><td>Among animals, <b>INSECTS</b> — the most species-rich taxonomic group</td><td><b>70 per cent</b> of all animals</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>THE KILLER ONE-LINER:</b> Out of every <b>10 animals</b> on this planet, <b>7 are INSECTS</b>.<br><br>
+        <b>THE OTHER ONE:</b> The number of <b>FUNGI</b> species in the world is <b>MORE than the COMBINED total</b> of the species of <b>fishes + amphibians + reptiles + mammals</b>.</div>
+
+        <h4>Why prokaryotes are under-counted</h4>
+        <ul>
+          <li><b>Conventional taxonomic methods are NOT suitable</b> for identifying microbial species.</li>
+          <li>Many prokaryotes are <b>NOT CULTURABLE under laboratory conditions</b>.</li>
+          <li>If <b>biochemical or molecular criteria</b> were applied, their diversity would rise to <b>"biblical proportions"</b>.</li>
+        </ul>
+
+        <h4>India's share</h4>
+        <table class="cmp">
+          <thead><tr><th>Statement</th><th>Number</th></tr></thead>
+          <tbody>
+            <tr><td>India's share of the <b>world's LAND area</b></td><td>only <b>2.4 per cent</b></td></tr>
+            <tr><td>India's share of <b>global SPECIES diversity</b></td><td>an impressive <b>8.1 per cent</b></td></tr>
+            <tr><td>India is one of the world's</td><td><b>12 MEGA-DIVERSITY COUNTRIES</b></td></tr>
+            <tr><td>Plant species recorded from India</td><td>nearly <b>45,000</b></td></tr>
+            <tr><td>Animal species recorded from India</td><td><b>twice as many</b> — nearly <b>90,000</b></td></tr>
+            <tr><td>If only <b>22 per cent</b> of species have been recorded, India still has yet to discover…</td><td>more than <b>1,00,000 plant species</b> and more than <b>3,00,000 animal species</b></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>Mnemonic: "Small land (2.4%), big life (8.1%)."</b></div>
+
+        <h4>How do ecologists ESTIMATE the total number of species? (Exercise Q2)</h4>
+        <p>Species inventories are <b>more complete in TEMPERATE than in TROPICAL countries</b>, yet an overwhelmingly large proportion of undiscovered species live in the <b>tropics</b>. So biologists:</p>
+        <div class="flow">
+          <span class="node">Take an exhaustively studied group of INSECTS</span><span class="arr">→</span>
+          <span class="node">Make a STATISTICAL comparison of its temperate vs tropical species richness</span><span class="arr">→</span>
+          <span class="node">EXTRAPOLATE that ratio to other groups of animals and plants</span><span class="arr">→</span>
+          <span class="node">Arrive at a gross estimate of global species diversity</span>
+        </div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.3 3. Pattern 1 — Latitudinal Gradients
+      </h3>
+      
+        <div class="callout"><b>THE RULE:</b> Species diversity <b>DECREASES as we move AWAY from the equator TOWARDS the poles</b>.<br><br>
+        With very few exceptions, <b>TROPICS</b> (latitudinal range of <b>23.5° N to 23.5° S</b>) harbour <b>MORE species</b> than temperate or polar areas.</div>
+
+        <h4>The bird gradient — memorise the four numbers</h4>
+        <table class="cmp">
+          <thead><tr><th>Place</th><th>Latitude</th><th>Bird species</th></tr></thead>
+          <tbody>
+            <tr><td><b>Colombia</b></td><td>near the <b>equator</b></td><td>nearly <b>1,400</b></td></tr>
+            <tr><td><b>India</b></td><td>much land in tropical latitudes</td><td>more than <b>1,200</b></td></tr>
+            <tr><td><b>New York</b></td><td><b>41° N</b></td><td><b>105</b></td></tr>
+            <tr><td><b>Greenland</b></td><td><b>71° N</b></td><td>only <b>56</b></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>The plant gradient:</b> a forest in a tropical region like <b>ECUADOR</b> has <b>up to 10 TIMES as many species of VASCULAR PLANTS</b> as a forest of equal area in a temperate region like the <b>MIDWEST of the USA</b>.</div>
+
+        <h4>The Amazonian rain forest — the greatest biodiversity on Earth</h4>
+        <table class="cmp">
+          <thead><tr><th>Group</th><th>Number of species</th></tr></thead>
+          <tbody>
+            <tr><td>Plants</td><td>more than <b>40,000</b></td></tr>
+            <tr><td>Fishes</td><td><b>3,000</b></td></tr>
+            <tr><td>Birds</td><td><b>1,300</b></td></tr>
+            <tr><td>Mammals</td><td><b>427</b></td></tr>
+            <tr><td>Amphibians</td><td><b>427</b></td></tr>
+            <tr><td>Reptiles</td><td><b>378</b></td></tr>
+            <tr><td>Invertebrates</td><td>more than <b>1,25,000</b></td></tr>
+            <tr><td>Insects <b>waiting to be discovered</b></td><td>at least <b>2 MILLION</b></td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Memory hook:</b> mammals and amphibians are <b>BOTH 427</b>. That coincidence is your anchor — build the rest around it.</div>
+
+        <h4>The THREE hypotheses for tropical richness (Exercise Q3) — "TIME, CONSTANCY, ENERGY"</h4>
+        <table class="cmp">
+          <thead><tr><th>Hypothesis</th><th>The argument</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>(a) TIME</b><br><i>Speciation is a function of time</i></td>
+              <td>Unlike temperate regions — which were subjected to <b>frequent GLACIATIONS in the past</b> — <b>tropical latitudes have remained relatively UNDISTURBED for millions of years</b>. They therefore had a <b>long evolutionary time for species diversification</b>.</td>
+            </tr>
+            <tr>
+              <td><b>(b) CONSTANCY</b><br><i>Less seasonal, more predictable</i></td>
+              <td>Tropical environments, unlike temperate ones, are <b>LESS SEASONAL, relatively more CONSTANT and PREDICTABLE</b>. Such constant environments <b>promote NICHE SPECIALISATION</b>, which leads to <b>greater species diversity</b>.</td>
+            </tr>
+            <tr>
+              <td><b>(c) ENERGY</b><br><i>More solar energy</i></td>
+              <td>There is <b>more SOLAR ENERGY available in the tropics</b>, which contributes to <b>HIGHER PRODUCTIVITY</b> — and this in turn <b>might contribute INDIRECTLY to greater diversity</b>.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Note the hedge:</b> the energy hypothesis is stated as contributing <b>INDIRECTLY</b>. Examiners love the word "indirectly" here.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.4 4. Pattern 2 — The Species–Area Relationship (THE FORMULA)
+      </h3>
+      
+        <p><span class="kw">Alexander von Humboldt</span> — during his <b>pioneering and extensive explorations in the SOUTH AMERICAN JUNGLES</b> — observed that within a region <b>species richness INCREASED with increasing explored AREA, but only UP TO A LIMIT</b>.</p>
+
+        <div class="flow">
+          <span class="node">Plot species richness (S) vs area (A)</span><span class="arr">→</span>
+          <span class="node">Curve is a RECTANGULAR HYPERBOLA</span><span class="arr">→</span>
+          <span class="node">Convert both axes to a LOGARITHMIC scale</span><span class="arr">→</span>
+          <span class="node">The relationship becomes a STRAIGHT LINE</span>
+        </div>
+
+        <div class="callout"><b>THE EQUATION — write it exactly:</b><br><br>
+          <b>log S = log C + Z log A</b><br><br>
+          <b>S</b> = Species richness<br>
+          <b>A</b> = Area<br>
+          <b>Z</b> = <b>Slope of the line</b> (also called the <b>REGRESSION COEFFICIENT</b>)<br>
+          <b>C</b> = <b>Y-intercept</b><br><br>
+          <i>(In non-log form: S = C·A<sup>Z</sup>)</i></div>
+
+        <h4>The Z values — three numbers, three contexts</h4>
+        <table class="cmp">
+          <thead><tr><th>Context</th><th>Z value</th><th>NCERT's examples</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>SMALL areas</b> — within a region</td>
+              <td><b>0.1 to 0.2</b></td>
+              <td>Amazingly similar <b>regardless of the taxonomic group or the region</b> — whether it is <b>plants in Britain, birds in California, or molluscs in New York state</b>.</td>
+            </tr>
+            <tr>
+              <td><b>VERY LARGE areas</b> — entire continents</td>
+              <td><b>0.6 to 1.2</b><br>(the slope is <b>much STEEPER</b>)</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><b>Frugivorous (fruit-eating) birds and mammals</b> in the tropical forests of different continents</td>
+              <td><b>1.15</b></td>
+              <td>The single most-tested specific Z value.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><b>Which taxa did Humboldt-style analyses cover?</b> Angiosperm plants, <b>birds, bats, freshwater fishes</b> — a wide variety of taxa, all giving the same rectangular hyperbola.</div>
+
+        <div class="callout"><b>Significance of the slope (Exercise Q4):</b> <b>Z tells you HOW FAST species richness rises with area.</b> A <b>small Z (0.1&ndash;0.2)</b> means richness climbs <b>slowly</b> — you are sampling <b>within one region</b>, so you keep meeting the same species pool. A <b>large Z (0.6&ndash;1.2)</b> means richness climbs <b>steeply</b> — across <b>continents</b>, each new area brings an entirely <b>different</b> species pool. That the small-area Z is so consistent across taxa and continents is what makes the relationship a genuine <b>ecological law</b>, not an accident.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.5 5. The Importance of Species Diversity — Tilman & the Rivet Popper
+      </h3>
+      
+        <p><b>Does the number of species in a community really matter to the functioning of an ecosystem?</b> Ecologists have <b>not been able to give a definitive answer</b> — but the evidence points one way.</p>
+
+        <div class="callout"><b>The core belief:</b> Communities with <b>MORE species</b> tend to be <b>MORE STABLE</b> than those with fewer species.</div>
+
+        <h4>What does STABILITY actually mean? (three conditions)</h4>
+        <table class="cmp">
+          <thead><tr><th>#</th><th>A stable community…</th></tr></thead>
+          <tbody>
+            <tr><td><b>1</b></td><td>does <b>NOT show much variation in PRODUCTIVITY from year to year</b></td></tr>
+            <tr><td><b>2</b></td><td>is either <b>RESISTANT or RESILIENT to occasional DISTURBANCES</b> (natural or man-made)</td></tr>
+            <tr><td><b>3</b></td><td>is <b>RESISTANT to INVASIONS by ALIEN species</b></td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Mnemonic: "Steady, Sturdy, Sealed."</b> Steady productivity · Sturdy against disturbance · Sealed against aliens.</div>
+
+        <h4>David Tilman's outdoor-plot experiments</h4>
+        <p>Tilman ran <b>long-term ecosystem experiments using OUTDOOR PLOTS</b>. His findings:</p>
+        <ul>
+          <li>Plots with <b>MORE SPECIES</b> showed <b>LESS year-to-year VARIATION in total BIOMASS</b>.</li>
+          <li><b>Increased diversity contributed to HIGHER PRODUCTIVITY.</b></li>
+        </ul>
+        <div class="callout"><b>Two results, two different variables:</b> more species → <b>less variation</b> AND <b>more productivity</b>. Questions often swap them. Learn both.</div>
+
+        <h4>Paul Ehrlich's RIVET POPPER HYPOTHESIS</h4>
+        <table class="cmp">
+          <thead><tr><th>In the analogy</th><th>In reality</th></tr></thead>
+          <tbody>
+            <tr><td>The <b>AIRPLANE</b></td><td>The <b>ECOSYSTEM</b></td></tr>
+            <tr><td>The thousands of <b>RIVETS</b> holding it together</td><td>The <b>SPECIES</b></td></tr>
+            <tr><td>A <b>PASSENGER popping a rivet</b> to take home</td><td>A <b>species driven to EXTINCTION</b> by humans</td></tr>
+            <tr><td>Rivets on the <b>WINGS</b></td><td><b>KEY species</b> — losing them is a serious threat</td></tr>
+            <tr><td>Rivets on the <b>SEATS or WINDOWS</b></td><td><b>Less critical species</b> — losing a few is survivable</td></tr>
+          </tbody>
+        </table>
+        <div class="flow">
+          <span class="node">Passengers start popping rivets</span><span class="arr">→</span>
+          <span class="node">Initially flight safety is NOT affected</span><span class="arr">→</span>
+          <span class="node">As more rivets are removed, the plane becomes DANGEROUSLY WEAK</span><span class="arr">→</span>
+          <span class="node">WHICH rivet is popped is critical — WING rivets matter far more than SEAT rivets</span>
+        </div>
+        <div class="callout"><b>NCERT's conclusion:</b> Rich biodiversity is <b>not only essential for ecosystem health but IMPERATIVE for the very SURVIVAL OF THE HUMAN RACE on this planet</b>.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.6 6. Loss of Biodiversity — The Sixth Extinction
+      </h3>
+      
+        <p>It is doubtful whether any new species are being <b>added</b> (through speciation) to the Earth's treasury — but there is <b>no doubt about the continuing losses</b>. The accusing finger points clearly at <b>human activities</b>.</p>
+
+        <h4>The extinction number bank</h4>
+        <table class="cmp">
+          <thead><tr><th>Statement</th><th>Number</th></tr></thead>
+          <tbody>
+            <tr><td>Native bird species lost to the <b>colonisation of tropical Pacific Islands</b> by humans</td><td>more than <b>2,000</b></td></tr>
+            <tr><td><b>IUCN Red List (2004)</b> — species extinct in the <b>last 500 years</b></td><td><b>784</b></td></tr>
+            <tr><td>&nbsp;&nbsp;→ of which <b>vertebrates</b></td><td><b>338</b></td></tr>
+            <tr><td>&nbsp;&nbsp;→ of which <b>invertebrates</b></td><td><b>359</b></td></tr>
+            <tr><td>&nbsp;&nbsp;→ of which <b>plants</b></td><td><b>87</b></td></tr>
+            <tr><td>Species that disappeared in the <b>last 20 years alone</b></td><td><b>27</b></td></tr>
+            <tr><td>Species <b>currently facing the threat of extinction</b> worldwide</td><td><b>15,500</b></td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Check the arithmetic:</b> 338 + 359 + 87 = <b>784</b>. Note that <b>invertebrates (359) OUTNUMBER vertebrates (338)</b> — a favourite trick option.</div>
+
+        <h4>Recent extinctions — species and their homes</h4>
+        <table class="cmp">
+          <thead><tr><th>Species</th><th>Region</th></tr></thead>
+          <tbody>
+            <tr><td><b>Dodo</b></td><td><b>Mauritius</b></td></tr>
+            <tr><td><b>Quagga</b></td><td><b>Africa</b></td></tr>
+            <tr><td><b>Thylacine</b></td><td><b>Australia</b></td></tr>
+            <tr><td><b>Steller's Sea Cow</b></td><td><b>Russia</b></td></tr>
+            <tr><td><b>Three subspecies of TIGER</b></td><td><b>Bali, Javan, Caspian</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>Extinctions are NOT random</h4>
+        <p>Careful analysis shows that <b>extinctions across taxa are not random</b> — some groups are <b>more vulnerable</b>. NCERT singles out <b>AMPHIBIANS</b>.</p>
+        <table class="cmp">
+          <thead><tr><th>Group</th><th>% of all species facing the threat of extinction</th></tr></thead>
+          <tbody>
+            <tr><td><b>Amphibians</b></td><td><b>32%</b> &nbsp;← highest</td></tr>
+            <tr><td><b>Gymnosperms</b></td><td><b>31%</b></td></tr>
+            <tr><td><b>Mammals</b></td><td><b>23%</b></td></tr>
+            <tr><td><b>Birds</b></td><td><b>12%</b> &nbsp;← lowest</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Mnemonic — descending order: A &gt; G &gt; M &gt; B</b> → <b>32, 31, 23, 12</b>. ("Amphibians Get Massacred Badly.")</div>
+
+        <h4>THE SIXTH EXTINCTION</h4>
+        <div class="callout">
+          Current species extinction rates are estimated to be <b>100 to 1,000 TIMES FASTER</b> than in pre-human times — and <b>our activities are responsible</b>.<br><br>
+          Ecologists warn that if the present trends continue, <b>NEARLY HALF OF ALL THE SPECIES ON EARTH might be wiped out within the next 100 YEARS</b>.
+        </div>
+
+        <h4>Consequences of biodiversity loss in a region (three)</h4>
+        <ol>
+          <li><b>Decline in plant PRODUCTION</b></li>
+          <li><b>Lowered RESISTANCE to environmental perturbations</b> such as drought</li>
+          <li><b>Increased VARIABILITY in certain ecosystem processes</b> — plant productivity, water use, and pest and disease cycles</li>
+        </ol>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.7 7. Causes of Biodiversity Loss — THE EVIL QUARTET
+      </h3>
+      
+        <div class="callout"><b>Mnemonic: "Humans Over-Ate Creation" → H-O-A-C</b><br>
+          <b>H</b>abitat loss and fragmentation · <b>O</b>ver-exploitation · <b>A</b>lien species invasions · <b>C</b>o-extinctions</div>
+
+        <h4>1. HABITAT LOSS AND FRAGMENTATION — the MOST IMPORTANT cause</h4>
+        <ul>
+          <li>This is the <b>most important cause</b> driving animals and plants to extinction.</li>
+          <li>Most dramatic example: the <b>TROPICAL RAIN FORESTS</b> — once covering more than <b>14 per cent</b> of the earth's land surface, they now cover <b>no more than 6 per cent</b>.</li>
+          <li>The <b>Amazon rain forest</b> — so huge it is called the <b>'LUNGS OF THE PLANET'</b> — harbours probably millions of species and is being <b>cut and cleared for cultivating SOYA BEANS</b> or for <b>conversion to grasslands for raising BEEF CATTLE</b>.</li>
+          <li>Besides total loss, the <b>DEGRADATION of many habitats by POLLUTION</b> also threatens the survival of many species.</li>
+          <li>When large habitats are <b>broken up into small FRAGMENTS</b>, <b>mammals and birds requiring LARGE TERRITORIES</b>, and certain <b>animals with MIGRATORY habits</b>, are <b>badly affected</b> — leading to <b>population declines</b>.</li>
+        </ul>
+        <div class="flow">
+          <span class="node">14% of land surface</span><span class="arr">→ tropical rain forests →</span>
+          <span class="node">now no more than 6%</span>
+        </div>
+
+        <h4>2. OVER-EXPLOITATION</h4>
+        <ul>
+          <li>Humans have always depended on nature, but <b>when 'NEED' turns to 'GREED'</b>, it leads to <b>over-exploitation</b>.</li>
+          <li>Many species extinctions in the last 500 years — the <b>STELLER'S SEA COW</b> and the <b>PASSENGER PIGEON</b> — were due to <b>over-exploitation by humans</b>.</li>
+          <li>Presently many <b>MARINE FISH populations</b> around the world are <b>over-harvested</b>, endangering the continued existence of some <b>commercially important species</b>.</li>
+        </ul>
+
+        <h4>3. ALIEN SPECIES INVASIONS</h4>
+        <table class="cmp">
+          <thead><tr><th>Invader</th><th>Where</th><th>Damage</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>Nile perch</b></td>
+              <td>Introduced into <b>LAKE VICTORIA</b>, east Africa</td>
+              <td>Led eventually to the <b>extinction of an ecologically unique assemblage of MORE THAN 200 SPECIES of CICHLID FISH</b> in the lake</td>
+            </tr>
+            <tr>
+              <td><b>Carrot grass (<i>Parthenium</i>), Lantana, Water hyacinth (<i>Eichhornia</i>)</b></td>
+              <td>India</td>
+              <td>Invasive <b>WEED species</b> causing environmental damage and posing a threat to native species</td>
+            </tr>
+            <tr>
+              <td><b>African catfish (<i>Clarias gariepinus</i>)</b></td>
+              <td>Illegally introduced into Indian rivers for <b>AQUACULTURE</b></td>
+              <td>Posing a threat to the <b>indigenous catfishes</b> in our rivers</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Definition:</b> alien species may be introduced <b>unintentionally OR deliberately</b>. Some turn <b>invasive</b> and cause <b>decline or extinction of indigenous species</b>.</div>
+
+        <h4>4. CO-EXTINCTIONS</h4>
+        <ul>
+          <li>When a species becomes extinct, the plant and animal species <b>associated with it in an OBLIGATORY way</b> also become extinct.</li>
+          <li><b>Example 1:</b> when a <b>HOST FISH species becomes extinct, its unique assemblage of PARASITES also meets the same fate</b>.</li>
+          <li><b>Example 2:</b> a <b>CO-EVOLVED PLANT&ndash;POLLINATOR MUTUALISM</b> — the extinction of one <b>invariably leads to the extinction of the other</b>.</li>
+        </ul>
+        <div class="callout"><b>Cross-link to Ch 11:</b> the fig–wasp one-to-one mutualism and the <i>Ophrys</i>–bee system are exactly the kind of relationships that would produce co-extinction.</div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.8 8. Why Should We Conserve Biodiversity? — Three Categories
+      </h3>
+      
+        <div class="callout"><b>Mnemonic: "Nature's Bounty and Ethics" → N-B-E</b><br>
+          <b>N</b>arrowly utilitarian · <b>B</b>roadly utilitarian · <b>E</b>thical</div>
+
+        <h4>1. NARROWLY UTILITARIAN — direct economic benefits</h4>
+        <table class="cmp">
+          <thead><tr><th>Benefit</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td><b>Food</b></td><td>cereals, pulses, fruits</td></tr>
+            <tr><td><b>Materials</b></td><td>firewood, fibre, construction material</td></tr>
+            <tr><td><b>Industrial products</b></td><td>tannins, lubricants, dyes, resins, perfumes</td></tr>
+            <tr><td><b>Medicines</b></td><td>products of medicinal importance</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>More than <b>25 per cent of the drugs currently sold in the market worldwide are derived from PLANTS</b>.</li>
+          <li><b>25,000 species of plants</b> contribute to the <b>traditional medicines</b> used by native peoples around the world.</li>
+          <li><span class="kw">BIOPROSPECTING</span> = <b>exploring molecular, genetic and species-level diversity for products of economic importance</b>. Nations endowed with rich biodiversity can expect to <b>reap enormous benefits</b> from it.</li>
+        </ul>
+
+        <h4>2. BROADLY UTILITARIAN — ecosystem services</h4>
+        <table class="cmp">
+          <thead><tr><th>Service</th><th>Detail</th></tr></thead>
+          <tbody>
+            <tr><td><b>Oxygen</b></td><td>The fast-dwindling <b>AMAZON forest</b> is estimated to produce, through photosynthesis, <b>20 PER CENT of the total oxygen in the earth's atmosphere</b></td></tr>
+            <tr><td><b>Pollination</b></td><td>Without it, plants cannot give us fruits or seeds. Provided by <b>BEES, BUMBLEBEES, BIRDS and BATS</b></td></tr>
+            <tr><td><b>Intangible / aesthetic</b></td><td>The <b>aesthetic pleasures</b> — walking through thick woods, watching spring flowers in full bloom, waking up to a <b>bulbul's song</b>. <b>Can we put a price tag on them?</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>3. ETHICAL</h4>
+        <div class="callout"><b>Every species has an INTRINSIC VALUE</b>, even if it may not be of current or any economic value to us. We have a <b>MORAL DUTY to care for their well-being</b> and to <b>pass on our biological legacy in good order to future generations</b>.</div>
+
+        <h4>Flood & soil-erosion control by biotic components (Exercise Q8)</h4>
+        <ul>
+          <li><b>Roots BIND soil particles</b> together, preventing erosion by wind and water.</li>
+          <li>The <b>canopy INTERCEPTS rainfall</b>, reducing the force with which drops strike the soil.</li>
+          <li><b>Litter and humus INCREASE INFILTRATION</b> and the soil's water-holding capacity.</li>
+          <li><b>Vegetation SLOWS surface run-off</b>, so water percolates instead of rushing off as flood.</li>
+          <li>Deforestation therefore directly increases <b>flooding, siltation and soil erosion</b>.</li>
+        </ul>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.9 9. How Do We Conserve Biodiversity? — In Situ vs Ex Situ
+      </h3>
+      
+        <table class="cmp">
+          <thead><tr><th>Feature</th><th>IN SITU (on site)</th><th>EX SITU (off site)</th></tr></thead>
+          <tbody>
+            <tr><td>Where</td><td><b>In the natural habitat</b></td><td><b>Outside the natural habitat</b></td></tr>
+            <tr><td>What is protected</td><td>The <b>WHOLE ECOSYSTEM</b> — so biodiversity at <b>all levels</b> is protected</td><td><b>Individual threatened species</b>, given special care</td></tr>
+            <tr><td>Slogan</td><td>"<b>Save the entire FOREST to save the TIGER</b>"</td><td>"Take it out and protect it"</td></tr>
+            <tr><td>Examples</td><td><b>Biodiversity hotspots, biosphere reserves, national parks, wildlife sanctuaries, sacred groves</b></td><td><b>Zoological parks, botanical gardens, wildlife safari parks, cryopreservation, in vitro fertilisation, tissue culture, seed banks</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>IN SITU — Biodiversity Hotspots</h4>
+        <p>Conservationists identified regions with <b>(a) very high levels of SPECIES RICHNESS</b> and <b>(b) a high degree of ENDEMISM</b> — species <b>confined to that region and not found anywhere else</b> — for <b>maximum protection</b>. These are <span class="kw">biodiversity hotspots</span>.</p>
+
+        <table class="cmp">
+          <thead><tr><th>Fact</th><th>Number</th></tr></thead>
+          <tbody>
+            <tr><td>Hotspots identified <b>initially</b></td><td><b>25</b></td></tr>
+            <tr><td><b>Subsequently added</b></td><td><b>9 more</b></td></tr>
+            <tr><td><b>TOTAL hotspots in the world</b></td><td><b>34</b></td></tr>
+            <tr><td>Land area they cover, all put together</td><td><b>LESS THAN 2 per cent</b> of the earth's land area</td></tr>
+            <tr><td>Reduction in ongoing mass extinctions from strict protection of hotspots</td><td>by almost <b>30 PER CENT</b></td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Hotspots are also regions of ACCELERATED HABITAT LOSS.</b> That is precisely why they are urgent.<br><br>
+          <b>THE THREE INDIAN HOTSPOTS</b> — mnemonic <b>"We Indians Have"</b>:<br>
+          (i) <b>W</b>estern Ghats and Sri Lanka<br>
+          (ii) <b>I</b>ndo-Burma<br>
+          (iii) <b>H</b>imalaya</div>
+
+        <h4>IN SITU — India's legally protected areas</h4>
+        <div class="flow">
+          <span class="node">14 Biosphere Reserves</span><span class="arr">|</span>
+          <span class="node">90 National Parks</span><span class="arr">|</span>
+          <span class="node">448 Wildlife Sanctuaries</span>
+        </div>
+
+        <h4>IN SITU — SACRED GROVES (Exercise Q7)</h4>
+        <p>India has a history of <b>religious and cultural traditions that emphasised protection of nature</b>. In many cultures, <b>tracts of forest were set aside</b>, and <b>all the trees and wildlife within were VENERATED and given TOTAL PROTECTION</b>.</p>
+        <table class="cmp">
+          <thead><tr><th>Where sacred groves are found</th><th>Region</th></tr></thead>
+          <tbody>
+            <tr><td><b>Khasi and Jaintia Hills</b></td><td>Meghalaya</td></tr>
+            <tr><td><b>Aravalli Hills</b></td><td>Rajasthan</td></tr>
+            <tr><td><b>Western Ghat regions</b></td><td>Karnataka and Maharashtra</td></tr>
+            <tr><td><b>Sarguja, Chanda and Bastar areas</b></td><td>Madhya Pradesh</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>In MEGHALAYA, the sacred groves are the LAST REFUGES for a large number of RARE and THREATENED PLANTS.</b><br><br>
+        <b>Their role:</b> community-driven, culturally enforced <b>IN SITU</b> conservation — the whole habitat is protected, not just a species.</div>
+
+        <h4>EX SITU — the modern toolkit</h4>
+        <table class="cmp">
+          <thead><tr><th>Method</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td><b>Zoological parks, botanical gardens, wildlife safari parks</b></td><td>Threatened plants and animals are <b>taken out of their natural habitat</b> and placed in a <b>special setting</b> with protection and special care. <b>Many animals extinct in the wild continue to be maintained in zoological parks.</b></td></tr>
+            <tr><td><b>CRYOPRESERVATION</b></td><td><b>Gametes</b> of threatened species preserved in <b>viable and fertile condition for long periods</b></td></tr>
+            <tr><td><b>IN VITRO fertilisation</b></td><td><b>Eggs can be fertilised in vitro</b></td></tr>
+            <tr><td><b>TISSUE CULTURE</b></td><td><b>Plants can be propagated</b> using tissue culture methods</td></tr>
+            <tr><td><b>SEED BANKS</b></td><td><b>Seeds of different genetic strains</b> of commercially important plants kept for long periods</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Mnemonic for the modern ex situ toolkit: "C-I-T-S"</b> — <b>C</b>ryopreservation · <b>I</b>n vitro fertilisation · <b>T</b>issue culture · <b>S</b>eed banks.</div>
+
+        <h4>International conservation efforts</h4>
+        <p><b>Biodiversity knows no political boundaries</b> — its conservation is therefore a <b>collective responsibility of all nations</b>.</p>
+        <table class="cmp">
+          <thead><tr><th>Year</th><th>Event</th><th>Outcome</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>1992</b></td>
+              <td>The <b>EARTH SUMMIT</b>, held in <b>RIO DE JANEIRO</b></td>
+              <td>Called upon all nations to take appropriate measures for the <b>conservation of biodiversity</b> and the <b>sustainable utilisation of its benefits</b></td>
+            </tr>
+            <tr>
+              <td><b>2002</b></td>
+              <td>The <b>WORLD SUMMIT ON SUSTAINABLE DEVELOPMENT</b>, held in <b>JOHANNESBURG, SOUTH AFRICA</b></td>
+              <td><b>190 COUNTRIES</b> pledged their commitment to achieve, by <b>2010</b>, a <b>significant reduction in the current rate of biodiversity loss</b> at <b>global, regional and local levels</b></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout"><b>Do not mix these up:</b> <b>Rio = 1992</b>. <b>Johannesburg = 2002, 190 countries, 2010 target.</b></div>
+      
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        13.10 10. Cheat Sheet — Every Number, Name & Exercise Answer
+      </h3>
+      
+        <h4>THE FORMULA</h4>
+        <div class="callout"><b>log S = log C + Z log A</b><br>
+        S = species richness · A = area · <b>Z = slope of the line = regression coefficient</b> · <b>C = Y-intercept</b><br>
+        Small areas: <b>Z = 0.1&ndash;0.2</b> · Continents: <b>Z = 0.6&ndash;1.2</b> · Frugivorous birds &amp; mammals: <b>Z = 1.15</b></div>
+
+        <h4>THE PEOPLE</h4>
+        <table class="cmp">
+          <thead><tr><th>Name</th><th>What they did</th></tr></thead>
+          <tbody>
+            <tr><td><b>Edward Wilson</b></td><td><b>Sociobiologist</b> who <b>popularised the term BIODIVERSITY</b></td></tr>
+            <tr><td><b>Alexander von Humboldt</b></td><td>Observed the <b>species&ndash;area relationship</b> during explorations of the <b>South American jungles</b></td></tr>
+            <tr><td><b>Robert May</b></td><td>Conservative global species estimate: <b>about 7 million</b></td></tr>
+            <tr><td><b>David Tilman</b></td><td><b>Outdoor-plot experiments</b>: more species → <b>less year-to-year variation in biomass</b> AND <b>higher productivity</b></td></tr>
+            <tr><td><b>Paul Ehrlich</b></td><td>The <b>RIVET POPPER hypothesis</b></td></tr>
+          </tbody>
+        </table>
+
+        <h4>THE FULL NUMBER BANK</h4>
+        <table class="cmp">
+          <thead><tr><th>Category</th><th>Numbers</th></tr></thead>
+          <tbody>
+            <tr><td><b>Global species</b></td><td>Described (IUCN 2004): <b>&gt;1.5 million</b> · Robert May's estimate: <b>7 million</b> · Extreme estimates: <b>20&ndash;50 million</b></td></tr>
+            <tr><td><b>Composition</b></td><td>Animals <b>&gt;70%</b> · Plants <b>≤22%</b> · Insects = <b>70% of animals</b> (7 of every 10 animals) · Fungi &gt; fishes + amphibians + reptiles + mammals combined</td></tr>
+            <tr><td><b>India</b></td><td>Land area <b>2.4%</b> · Species share <b>8.1%</b> · One of <b>12</b> mega-diversity countries · <b>45,000</b> plants · <b>90,000</b> animals · yet to find: <b>&gt;1,00,000</b> plants, <b>&gt;3,00,000</b> animals</td></tr>
+            <tr><td><b>Latitude</b></td><td>Tropics = <b>23.5° N to 23.5° S</b> · Colombia <b>1,400</b> birds · India <b>&gt;1,200</b> · New York (41° N) <b>105</b> · Greenland (71° N) <b>56</b> · Ecuador forest = <b>10&times;</b> the vascular plants of a Midwest-USA forest</td></tr>
+            <tr><td><b>Amazon</b></td><td>Plants <b>&gt;40,000</b> · Fishes <b>3,000</b> · Birds <b>1,300</b> · Mammals <b>427</b> · Amphibians <b>427</b> · Reptiles <b>378</b> · Invertebrates <b>&gt;1,25,000</b> · Undiscovered insects <b>≥2 million</b> · Produces <b>20%</b> of atmospheric oxygen · Called the <b>'lungs of the planet'</b></td></tr>
+            <tr><td><b>Extinction</b></td><td>Pacific Island birds lost: <b>&gt;2,000</b> · IUCN 2004: <b>784</b> = <b>338</b> vertebrates + <b>359</b> invertebrates + <b>87</b> plants (in <b>500</b> years) · Last 20 years: <b>27</b> species · Currently threatened: <b>15,500</b> · Rate: <b>100&ndash;1,000&times;</b> faster than pre-human · <b>Half</b> of all species could go in <b>100</b> years</td></tr>
+            <tr><td><b>% facing extinction</b></td><td>Amphibians <b>32%</b> &gt; Gymnosperms <b>31%</b> &gt; Mammals <b>23%</b> &gt; Birds <b>12%</b></td></tr>
+            <tr><td><b>Habitat loss</b></td><td>Tropical rain forests: once <b>&gt;14%</b> of land surface → now <b>≤6%</b></td></tr>
+            <tr><td><b>Alien invasion</b></td><td>Nile perch in Lake Victoria wiped out <b>&gt;200</b> species of cichlid fish</td></tr>
+            <tr><td><b>Medicine</b></td><td><b>&gt;25%</b> of drugs sold worldwide come from plants · <b>25,000</b> plant species used in traditional medicine</td></tr>
+            <tr><td><b>Hotspots</b></td><td><b>25 + 9 = 34</b> · cover <b>&lt;2%</b> of land · strict protection could cut mass extinctions by <b>~30%</b> · <b>3</b> in India</td></tr>
+            <tr><td><b>India's protected areas</b></td><td><b>14</b> biosphere reserves · <b>90</b> national parks · <b>448</b> wildlife sanctuaries</td></tr>
+            <tr><td><b>Summits</b></td><td>Rio de Janeiro <b>1992</b> (Earth Summit) · Johannesburg <b>2002</b> (World Summit on Sustainable Development, <b>190</b> countries, <b>2010</b> target)</td></tr>
+          </tbody>
+        </table>
+
+        <h4>EXERCISE ANSWER KEY</h4>
+        <table class="cmp">
+          <thead><tr><th>Q</th><th>Answer in one line</th></tr></thead>
+          <tbody>
+            <tr><td><b>1.</b> Three components of biodiversity</td><td><b>Genetic, Species and Ecological diversity</b></td></tr>
+            <tr><td><b>2.</b> How ecologists estimate total species</td><td><b>Statistical comparison</b> of temperate vs tropical species richness of an <b>exhaustively studied insect group</b>, then <b>extrapolate</b> the ratio to other taxa</td></tr>
+            <tr><td><b>3.</b> Three hypotheses for tropical richness</td><td><b>TIME</b> (undisturbed by glaciations, long evolutionary time) · <b>CONSTANCY</b> (less seasonal, predictable → niche specialisation) · <b>ENERGY</b> (more solar energy → higher productivity → indirectly more diversity)</td></tr>
+            <tr><td><b>4.</b> Significance of the slope of regression</td><td><b>Z</b> shows how fast richness rises with area. It is <b>0.1&ndash;0.2 within a region regardless of taxon</b>, but <b>0.6&ndash;1.2 across continents</b>. The consistency of the small-area Z is what makes it a real ecological law.</td></tr>
+            <tr><td><b>5.</b> Major causes of species loss</td><td><b>The EVIL QUARTET</b> — habitat loss and fragmentation, over-exploitation, alien species invasions, co-extinctions</td></tr>
+            <tr><td><b>6.</b> Importance of biodiversity for ecosystem functioning</td><td><b>Stability</b> (steady productivity, resistance/resilience to disturbance, resistance to invasion) · <b>Tilman</b> (more species → less biomass variation and higher productivity) · <b>Rivet Popper</b> (loss of key species threatens the whole system)</td></tr>
+            <tr><td><b>7.</b> Sacred groves and their role</td><td><b>Tracts of forest set aside</b>, with all trees and wildlife <b>venerated and given TOTAL protection</b>. Found in <b>Khasi &amp; Jaintia Hills (Meghalaya)</b>, <b>Aravalli Hills (Rajasthan)</b>, <b>Western Ghats (Karnataka &amp; Maharashtra)</b>, <b>Sarguja, Chanda &amp; Bastar (MP)</b>. In Meghalaya they are the <b>last refuges of many rare and threatened plants</b>. They are <b>community-driven IN SITU conservation</b>.</td></tr>
+            <tr><td><b>8.</b> Flood and soil-erosion control</td><td><b>Roots bind soil</b> · <b>canopy intercepts rain</b> · <b>litter increases infiltration</b> · <b>vegetation slows run-off</b> so water percolates instead of flooding</td></tr>
+            <tr><td><b>9.</b> Why animals (72%) diversified more than plants (22%)</td><td><b>Greater MOTILITY</b> — animals can escape adverse conditions and colonise new habitats · <b>Complex, sensitive NERVOUS SYSTEMS</b> to perceive and respond to the environment · <b>Rigid EXOSKELETON in arthropods</b>, giving protection and support · better overall adaptability</td></tr>
+            <tr><td><b>10.</b> A species we deliberately want extinct</td><td><b>YES</b> — disease-causing pathogens. The <b>SMALLPOX VIRUS</b> was deliberately eradicated worldwide through vaccination. <b>Justification:</b> human welfare — it caused enormous suffering and death, and its removal harms no ecosystem service.</td></tr>
+          </tbody>
+        </table>
+      
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Who popularised the term 'biodiversity', and what was his profession?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);">EDWARD WILSON — a SOCIOBIOLOGIST.</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/edward-wilson/" class="related-card">
+                <h5>Edward Wilson</h5>
+                <p>Sociobiologist who popularised the term 'biodiversity'</p>
+              </a>
+            
+              <a href="../../glossary/alexander-von-humboldt/" class="related-card">
+                <h5>Alexander von Humboldt</h5>
+                <p>Discovered the species-area relationship in the South Americ...</p>
+              </a>
+            
+              <a href="../../glossary/robert-may/" class="related-card">
+                <h5>Robert May</h5>
+                <p>Estimated global species diversity at about 7 million</p>
+              </a>
+            
+              <a href="../../glossary/david-tilman/" class="related-card">
+                <h5>David Tilman</h5>
+                <p>Outdoor-plot experiments: more species means less biomass va...</p>
+              </a>
+            
+              <a href="../../glossary/paul-ehrlich/" class="related-card">
+                <h5>Paul Ehrlich</h5>
+                <p>Proposed the Rivet Popper hypothesis</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+      <div class="related-links-section">
+        <h4>NCERT Comparison Sheets</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Review the key distinctions and contrast tables from this chapter:</p>
+        <div class="related-grid">
+          
+            <a href="../../compare/level-vs-what-it-means/" class="related-card">
+              <h5>Level vs What it means</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/statement-vs-number/" class="related-card">
+              <h5>Statement vs Number</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/statement-vs-number/" class="related-card">
+              <h5>Statement vs Number</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+            <a href="../../compare/place-vs-latitude/" class="related-card">
+              <h5>Place vs Latitude</h5>
+              <p>Direct difference table & concepts contrast.</p>
+            </a>
+          
+        </div>
+      </div>
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Biodiversity and Conservation!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Who popularised the term 'biodiversity', and what was his profession?","back":"EDWARD WILSON — a SOCIOBIOLOGIST."},{"front":"Define biodiversity.","back":"The combined diversity at ALL the levels of biological organisation — from macromolecules within cells to biomes."},{"front":"Name the three important components (levels) of biodiversity.","back":"1. GENETIC diversity, 2. SPECIES diversity, 3. ECOLOGICAL diversity."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  

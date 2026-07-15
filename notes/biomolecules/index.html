@@ -1,0 +1,579 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biomolecules Study Notes | Smart Bio Notes</title>
+  <meta name="description" content="Study guide, notes, and interactive revision material for Class 11/12 NEET Biology: Biomolecules.">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Biomolecules Study Notes",
+  "description": "Comprehensive study notes and revision materials for Class 11/12 NEET Biology chapter: Biomolecules.",
+  "learningResourceType": "Study Guide",
+  "educationalLevel": "NEET Preparation",
+  "about": {
+    "@type": "Thing",
+    "name": "Biomolecules"
+  }
+}
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../index.css">
+  
+  <style>
+    body {
+      background-image: radial-gradient(1200px 600px at 80% -10%, #1b3527 0, transparent 60%);
+      background-attachment: fixed;
+    }
+    .pseo-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: clamp(20px, 5vw, 40px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pseo-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .pseo-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pseo-header p {
+      color: var(--ink-dim);
+      font-size: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+    .widget-box {
+      margin-top: 40px;
+      background: var(--bg2);
+      border: 1px solid var(--line2);
+      border-radius: var(--rs);
+      padding: 24px;
+    }
+    .widget-box h3 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-banner {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--panel2), var(--bg2));
+      border: 1px solid var(--gold);
+      padding: 30px;
+      border-radius: var(--r);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '👑';
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.05;
+      right: -20px;
+      bottom: -30px;
+    }
+    .cta-banner h2 {
+      font-family: var(--serif);
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a130a;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(226, 179, 95, 0.2);
+    }
+    .cta-btn:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+    
+    /* Widget Styles */
+    .widget-card {
+      min-height: 180px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      perspective: 1000px;
+    }
+    .widget-card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .widget-card.flipped .widget-card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--panel2);
+      color: var(--ink);
+    }
+    .widget-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .widget-opt {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: left;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .widget-opt:hover {
+      border-color: var(--gold);
+      background: var(--panel2);
+    }
+    .widget-opt.correct {
+      border-color: var(--ok);
+      background: rgba(95, 194, 126, 0.1);
+      color: var(--ok);
+    }
+    .widget-opt.wrong {
+      border-color: var(--bad);
+      background: rgba(233, 116, 95, 0.1);
+      color: var(--bad);
+    }
+
+    /* Silo Internal Link Styles */
+    .silo-nav {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .silo-nav span {
+      font-weight: 600;
+      color: var(--ink-dim);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .silo-link {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .silo-link:hover {
+      background: var(--line2);
+      color: #fff;
+    }
+    .related-links-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .related-links-section h4 {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .related-card:hover {
+      border-color: var(--gold);
+      background: var(--line);
+    }
+    .related-card h5 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .related-card p {
+      color: var(--ink-faint);
+      font-size: 12px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pseo-container">
+    <a href="../../" class="back-btn">← Back to Codex Home</a>
+
+    <div class="pseo-header">
+      <span class="chip" style="background: var(--line2); color: var(--gold); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block;">Chapter 9</span>
+      <h1>🦠 Biomolecules Study Notes</h1>
+      <p>Proteins · Carbs · Lipids · Nucleic acids · Enzymes</p>
+    </div>
+    
+    
+    <div class="silo-nav">
+      <span>Chapter Content:</span>
+      <a href="../../notes/biomolecules/" class="silo-link" style="background: var(--line2); color: #fff;">Study Notes</a>
+      <a href="../../mcq/biomolecules/" class="silo-link" style="">MCQ Practice</a>
+      <a href="../../flashcards/biomolecules/" class="silo-link" style="">Flashcards</a>
+    </div>
+    
+
+    <div class="notes-content">
+      
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.1 Analysing Chemical Composition
+      </h3>
+      
+<p class="lead-in">What is a living body made of? Grind any tissue, treat it with acid, and the chemicals separate into two pools — this is how we inventory the molecules of life.</p>
+<h4>The two pools</h4>
+<p>When tissue is ground in <b>trichloroacetic acid</b> and filtered:</p>
+<ul>
+<li><b>Acid-soluble pool</b> — the <b>micromolecules</b> (small biomolecules): amino acids, nucleotides, sugars, etc., with molecular weights roughly <b>18–800 Da</b>.</li>
+<li><b>Acid-insoluble pool</b> — the <b>macromolecules</b>: proteins, nucleic acids, polysaccharides and lipids (molecular weights in the thousands+).</li>
+</ul>
+<p><i>(Lipids, though their building blocks are small, end up in the insoluble pool because they form large membrane structures.)</i> Burning tissue drives off C, H, O (as gases) and leaves <b>'ash'</b> — the <b>inorganic</b> elements (Ca, Mg, etc.).</p>
+<div class="tbl-wrap"><table class="data"><caption>Table 9.1 — Relative abundance of elements (living vs Earth's crust)</caption>
+<thead><tr><th>Element</th><th>% in Earth's crust</th><th>% in a human body</th></tr></thead><tbody>
+<tr><th>Hydrogen (H)</th><td>0.14</td><td>0.5</td></tr>
+<tr><th>Carbon (C)</th><td>0.03</td><td>18.5</td></tr>
+<tr><th>Oxygen (O)</th><td>46.6</td><td>65.0</td></tr>
+<tr><th>Nitrogen (N)</th><td>very little</td><td>3.3</td></tr>
+</tbody></table></div>
+<p><b>Key point:</b> C, H, O and N are <b>much higher in living organisms</b> than in the Earth's crust. The <b>most abundant molecule</b> overall is <b>water</b>.</p>
+<h4>Primary vs secondary metabolites</h4>
+<div class="tbl-wrap"><table class="data"><caption>Table 9.3 — Two classes of metabolites</caption>
+<thead><tr><th>Primary metabolites</th><th>Secondary metabolites</th></tr></thead><tbody>
+<tr><td>Amino acids, sugars, nucleotides, lipids</td><td>Alkaloids, flavonoids, rubber, essential oils, antibiotics, pigments, drugs</td></tr>
+<tr><td>Clear roles in normal physiology (growth, development)</td><td>Roles often not direct; many useful to humans (medicine, industry)</td></tr>
+</tbody></table></div>
+<p>Secondary metabolites (e.g., morphine, codeine, rubber, gums, vinblastin, curcumin) are especially common in plants and microbes.</p>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.2 Amino Acids & Proteins
+      </h3>
+      
+<h4>Amino acids</h4>
+<p>The building blocks of proteins. Each has a central carbon bearing an <b>amino group (–NH₂)</b>, a <b>carboxyl group (–COOH)</b>, a hydrogen, and a variable <b>R group</b> (side chain). There are <b>20</b> standard amino acids.</p>
+<ul>
+<li>R = H → <b>glycine</b>; R = CH₃ → <b>alanine</b>; R = CH₂OH → <b>serine</b>.</li>
+<li>By R group they are <b>acidic</b> (e.g., glutamic acid), <b>basic</b> (lysine), <b>neutral</b>, or <b>aromatic</b> (e.g., tyrosine).</li>
+<li>Amino acids are <b>ionisable</b>; the ionic form depends on pH. In solution they exist as a <b>zwitterion</b> (simultaneously +NH₃ and –COO⁻).</li>
+</ul>
+<h4>Proteins — heteropolymers of amino acids</h4>
+<p>Amino acids join by a <b>peptide bond</b> (between the –COOH of one and the –NH₂ of the next) to form a <b>polypeptide</b>. A protein is a <b>heteropolymer</b> (many different amino acids), not a homopolymer.</p>
+<div class="callout"><div class="co-h">🏆 Two record-holding proteins</div>
+<p style="margin:0;color:#cfdcd2;font-size:.9rem"><b>Collagen</b> — the most abundant protein in the <b>animal world</b>. <b>RuBisCO</b> (Ribulose bisphosphate Carboxylase-Oxygenase) — the most abundant protein in the <b>whole biosphere</b>.</p></div>
+<div class="mnemo"><div class="mn-tag">🧠 Most-abundant proteins</div><div class="phrase">"<b>C</b>ollagen in <b>C</b>ritters · <b>R</b>uBisCO <b>R</b>ules the biosphere"</div><div class="key">Animal world → Collagen. Entire biosphere → RuBisCO.</div></div>
+<h4>Levels of protein structure</h4>
+<div class="flow"><div class="step">Primary<small>amino-acid sequence</small></div><div class="arr">→</div><div class="step">Secondary<small>helix / sheet</small></div><div class="arr">→</div><div class="step">Tertiary<small>3-D folding</small></div><div class="arr">→</div><div class="step accent">Quaternary<small>multiple chains</small></div></div>
+<ul>
+<li><b>Primary</b> — the order of amino acids (the first is the N-terminal, the last the C-terminal).</li>
+<li><b>Secondary</b> — local folding into helices/sheets.</li>
+<li><b>Tertiary</b> — the overall 3-D shape (like a hollow woollen ball) needed for biological activity.</li>
+<li><b>Quaternary</b> — assembly of more than one polypeptide. <b>Haemoglobin</b> has <b>4 subunits: 2α + 2β</b>.</li>
+</ul>
+<div class="mnemo"><div class="mn-tag">🧠 Structure levels</div><div class="phrase">"<b>P</b>lease <b>S</b>top <b>T</b>ouching <b>Q</b>uokkas"</div><div class="key"><b>P</b>rimary · <b>S</b>econdary · <b>T</b>ertiary · <b>Q</b>uaternary</div></div>
+<p>Proteins do nearly everything (Table 9.5): enzymes catalyse, antibodies fight pathogens, receptors sense signals, transporters (like GLUT-4) move glucose, collagen gives structure, and many act as hormones.</p>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.3 Carbohydrates & Lipids
+      </h3>
+      
+<h4>Carbohydrates (sugars)</h4>
+<ul>
+<li><b>Monosaccharides</b> — simple sugars: <b>glucose, fructose, ribose</b> (single units).</li>
+<li><b>Disaccharides / oligosaccharides</b> — a few units joined, e.g., sucrose, maltose, lactose.</li>
+<li><b>Polysaccharides</b> — long chains joined by <b>glycosidic bonds</b>. The right end of a chain is the <b>reducing end</b>, the left the <b>non-reducing end</b>.</li>
+</ul>
+<div class="tbl-wrap"><table class="data"><caption>Important polysaccharides</caption>
+<thead><tr><th>Polysaccharide</th><th>Built from</th><th>Key feature</th></tr></thead><tbody>
+<tr><th>Cellulose</th><td>Glucose</td><td><b>Homopolymer</b>; plant cell walls; no helix; no iodine colour</td></tr>
+<tr><th>Starch</th><td>Glucose</td><td>Plant storage; forms a <b>helix</b> that holds I₂ → <b>blue</b> colour</td></tr>
+<tr><th>Glycogen</th><td>Glucose</td><td>Animal storage; highly <b>branched</b></td></tr>
+<tr><th>Inulin</th><td>Fructose</td><td>A polymer of fructose</td></tr>
+<tr><th>Chitin</th><td>Amino-sugars</td><td>Exoskeletons of arthropods; fungal walls</td></tr>
+</tbody></table></div>
+<div class="mnemo"><div class="mn-tag">🧠 Starch test</div><div class="phrase">Starch + Iodine → <b>blue-black</b> (helix traps I₂)</div><div class="key">Cellulose gives no colour (no helix). Glycogen is the branched animal store; inulin = fructose polymer.</div></div>
+<h4>Lipids</h4>
+<ul>
+<li>Generally <b>water-insoluble</b>; may be simple fatty acids or complex.</li>
+<li>A <b>fatty acid</b> has a carboxyl group attached to an R group (a hydrocarbon chain). <b>Palmitic acid</b> has 16 carbons (incl. the carboxyl C); <b>arachidonic acid</b> has 20 carbons.</li>
+<li><b>Saturated</b> fatty acids have no C=C double bonds; <b>unsaturated</b> ones have one or more.</li>
+<li><b>Glycerol</b> is trihydroxy propane. Fatty acids esterified to glycerol give <b>monoglycerides, diglycerides and triglycerides</b> (= fats and oils; oils have lower melting points, e.g., gingelly oil, and stay liquid in winter).</li>
+<li><b>Phospholipids</b> contain phosphorus and a phosphorylated group; <b>lecithin</b> (in cell membranes) is an example.</li>
+</ul>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.4 Nucleic Acids
+      </h3>
+      
+<p>Nucleic acids (<b>DNA</b> and <b>RNA</b>) are the macromolecules of inheritance, built from <b>nucleotides</b>.</p>
+<h4>Building a nucleotide</h4>
+<div class="flow"><div class="step">Nitrogen base</div><div class="arr">+</div><div class="step">Sugar<small>ribose / deoxyribose</small></div><div class="arr">=</div><div class="step">Nucleoside</div><div class="arr">+</div><div class="step accent">Phosphate</div><div class="arr">=</div><div class="step">Nucleotide</div></div>
+<ul>
+<li><b>Purines</b> (double ring): <b>Adenine (A)</b> and <b>Guanine (G)</b>.</li>
+<li><b>Pyrimidines</b> (single ring): <b>Cytosine (C)</b>, <b>Uracil (U)</b> and <b>Thymine (T)</b>.</li>
+<li>Sugar = <b>ribose</b> in RNA, <b>deoxyribose</b> in DNA. RNA uses <b>U</b>; DNA uses <b>T</b>.</li>
+<li>Nucleotides link through a <b>phosphodiester bond</b> (between phosphate and sugars) to form a chain.</li>
+</ul>
+<div class="mnemo"><div class="mn-tag">🧠 Bases</div><div class="phrase">Purines = "<b>Pure As Gold</b>" (A, G) · Pyrimidines = "<b>CUT</b>" (C, U, T)</div><div class="key">Two-ring purines: Adenine, Guanine. One-ring pyrimidines: Cytosine, Uracil, Thymine.</div></div>
+<h4>The Watson–Crick double helix (B-DNA)</h4>
+<ul>
+<li>Two strands run <b>antiparallel</b> (opposite directions), coiled into a right-handed helix.</li>
+<li><b>Base pairing:</b> <b>A pairs with T</b> via <b>2 hydrogen bonds</b>; <b>G pairs with C</b> via <b>3 hydrogen bonds</b>.</li>
+<li><b>Dimensions:</b> pitch = <b>34 Å</b> (3.4 nm); rise per base pair = <b>3.4 Å</b>; therefore about <b>10 base pairs per turn</b> (each step rotates ~36°).</li>
+</ul>
+<div class="callout numbers"><div class="co-h">📐 DNA numbers</div>
+<div class="numgrid">
+<div class="ni"><b>2</b><span>H-bonds in A–T</span></div>
+<div class="ni"><b>3</b><span>H-bonds in G–C</span></div>
+<div class="ni"><b>34 Å</b><span>pitch</span></div>
+<div class="ni"><b>3.4 Å</b><span>rise / bp</span></div>
+<div class="ni"><b>10</b><span>bp per turn</span></div>
+<div class="ni"><b>36°</b><span>twist / step</span></div>
+</div></div>
+<div class="mnemo"><div class="mn-tag">🧠 H-bond rule</div><div class="phrase">"<b>A</b>–<b>T</b> = 2 · <b>G</b>–<b>C</b> = 3"</div><div class="key">And 34 Å pitch ÷ 10 bp = 3.4 Å rise per base pair.</div></div>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.5 Metabolism & the Living State
+      </h3>
+      
+<p class="lead-in">Every biomolecule is constantly being made and broken. The sum of all these chemical conversions is <span class="term">metabolism</span>, and no biomolecule ever exists in isolation.</p>
+<h4>Two directions of metabolism</h4>
+<div class="flow"><div class="step">Anabolic<small>build up · consume energy</small></div><div class="arr">⇄</div><div class="step accent">Catabolic<small>break down · release energy</small></div></div>
+<ul>
+<li><b>Anabolic</b> pathways build complex molecules from simpler ones (e.g., amino acids → protein) and <b>consume energy</b>.</li>
+<li><b>Catabolic</b> pathways break molecules down (e.g., glucose → lactic acid) and <b>release energy</b>.</li>
+<li>Energy released in catabolism is trapped as the 'energy currency' <b>ATP</b>; it powers anabolism, heat, movement and other work.</li>
+</ul>
+<h4>Glycolysis — a metabolic pathway</h4>
+<div class="flow"><div class="step">Glucose (6C)</div><div class="arr">→ (10 steps)</div><div class="step accent">2 × Pyruvic acid (3C)</div><div class="arr">→</div><div class="step">Lactic acid / Ethanol</div></div>
+<p>Metabolites are converted through such pathways by enzymes; intermediates flow in a steady line from substrate to product.</p>
+<h4>The living state = a dynamic steady state</h4>
+<p>The living state is a <b>non-equilibrium steady state</b> able to perform work — metabolite concentrations stay roughly constant not because nothing happens, but because reactions flow continuously. <b>At equilibrium, no work can be done</b>, so reaching equilibrium would mean death. Metabolism and the living state are therefore inseparable.</p>
+    </div>
+  
+    <div class="note-sec" style="margin-bottom: 40px;">
+      <h3 style="font-family: var(--serif); color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">
+        9.6 Enzymes
+      </h3>
+      
+<p>Almost all enzymes are <b>proteins</b> (a few RNAs called <b>ribozymes</b> also act as enzymes). Enzymes are biological catalysts that speed up reactions enormously.</p>
+<h4>How enzymes work</h4>
+<ul>
+<li>An enzyme has an <b>active site</b> — a pocket the substrate fits into. The substrate (S) binds to give an <b>enzyme–substrate (ES) complex</b>, passes through a transition state, and is released as product (P): <b>E + S → ES → EP → E + P</b>.</li>
+<li>Enzymes work by <b>lowering the activation energy</b> of a reaction (they do not change the overall energy difference).</li>
+</ul>
+<div class="flow"><div class="step">Substrate binds active site</div><div class="arr">→</div><div class="step">ES complex (transition state)</div><div class="arr">→</div><div class="step accent">Bonds altered → product forms</div><div class="arr">→</div><div class="step">Product released</div></div>
+<h4>Factors affecting enzyme activity</h4>
+<p><b>Temperature</b> and <b>pH</b> (each enzyme has an optimum; extremes denature it), and <b>substrate concentration</b> (rate rises then plateaus at the maximum velocity, <b>V<sub>max</sub></b>).</p>
+<h4>Inhibition</h4>
+<p>A <b>competitive inhibitor</b> resembles the substrate and competes for the active site. Classic example: <b>malonate</b> inhibits <b>succinic dehydrogenase</b> by mimicking its substrate <b>succinate</b>.</p>
+<h4>Six classes of enzymes</h4>
+<div class="tbl-wrap"><table class="data"><caption>Enzyme classification by reaction type</caption>
+<thead><tr><th>Class</th><th>Reaction catalysed</th></tr></thead><tbody>
+<tr><th>Oxidoreductases</th><td>Oxidation–reduction (transfer of electrons/H)</td></tr>
+<tr><th>Transferases</th><td>Transfer of a group between molecules</td></tr>
+<tr><th>Hydrolases</th><td>Hydrolysis (breaking bonds using water)</td></tr>
+<tr><th>Lyases</th><td>Add/remove groups to form/break double bonds (not by hydrolysis)</td></tr>
+<tr><th>Isomerases</th><td>Rearrange atoms within a molecule (isomerisation)</td></tr>
+<tr><th>Ligases</th><td>Join two molecules (using ATP)</td></tr>
+</tbody></table></div>
+<div class="mnemo"><div class="mn-tag">🧠 Six enzyme classes</div><div class="phrase">"<b>O</b>ver <b>T</b>he <b>H</b>ill <b>L</b>ions <b>I</b>nspect <b>L</b>igers"</div><div class="key"><b>O</b>xidoreductases · <b>T</b>ransferases · <b>H</b>ydrolases · <b>L</b>yases · <b>I</b>somerases · <b>L</b>igases</div></div>
+<h4>Cofactors</h4>
+<p>Many enzymes need a non-protein <b>cofactor</b>; the protein part alone is the <b>apoenzyme</b>. Three kinds of cofactor:</p>
+<ul>
+<li><b>Prosthetic groups</b> — tightly bound (e.g., haem in peroxidase/catalase).</li>
+<li><b>Coenzymes</b> — loosely bound organic helpers, often vitamin-derived: <b>NAD and NADP contain niacin</b>.</li>
+<li><b>Metal ions</b> — e.g., <b>zinc</b> in carboxypeptidase.</li>
+</ul>
+<p><b>Carbonic anhydrase</b> is among the fastest enzymes known, illustrating how dramatically catalysts accelerate reactions.</p>
+    </div>
+  
+    </div>
+
+    <!-- Mini Widget: Flashcards Preview -->
+    <div class="widget-box">
+      <h3>⚡ Mini-Review: Interactive Flashcards</h3>
+      <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 20px;">Test your knowledge below. Tap the card to flip it!</p>
+      
+      <div id="flashcard-widget" class="widget-card" onclick="flipWidgetCard()">
+        <div class="widget-card-inner" id="widget-card-inner" style="position: relative; height: 180px; width: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+          <div class="card-face card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Question</strong>
+            <span id="widget-front-text" style="font-size: 18px; font-weight: 500;">Which acid is used to separate biomolecules into pools?</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Reveal</div>
+          </div>
+          <div class="card-face card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotateY(180deg); background: var(--panel2);">
+            <strong style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">Answer</strong>
+            <span id="widget-back-text" style="font-size: 16px; color: var(--ink);"><b>Trichloroacetic acid</b> (TCA).</span>
+            <div style="font-size: 11px; color: var(--ink-faint); margin-top: 15px;">Tap to Flip Back</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="card-progress" style="font-size: 13px; color: var(--ink-dim);">Card 1 of 3</span>
+        <button onclick="nextWidgetCard(event)" class="cta-btn" style="padding: 6px 16px; font-size: 13px; box-shadow: none;">Next Card →</button>
+      </div>
+    </div>
+
+    
+      <div class="related-links-section">
+        <h4>Glossary & Defined Terms</h4>
+        <p style="color: var(--ink-dim); font-size: 14px; margin-bottom: 15px;">Definitions of critical concepts covered in this chapter:</p>
+        <div class="related-grid">
+          
+              <a href="../../glossary/collagen/" class="related-card">
+                <h5>Collagen</h5>
+                <p>Most abundant animal protein</p>
+              </a>
+            
+              <a href="../../glossary/rubisco/" class="related-card">
+                <h5>RuBisCO</h5>
+                <p>Most abundant biosphere protein</p>
+              </a>
+            
+              <a href="../../glossary/glycine/" class="related-card">
+                <h5>Glycine</h5>
+                <p>R group = H</p>
+              </a>
+            
+              <a href="../../glossary/peptide-bond/" class="related-card">
+                <h5>Peptide bond</h5>
+                <p>Joins amino acids</p>
+              </a>
+            
+              <a href="../../glossary/zwitterion/" class="related-card">
+                <h5>Zwitterion</h5>
+                <p>Dual-charged amino acid</p>
+              </a>
+            
+        </div>
+      </div>
+    
+    
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2>Unlock the Full Study System</h2>
+      <p>Get immediate access to the full platform including Active Recall sheets, Mnemonics devices, drag-and-drop Pathway steps, and Boss Battles for Biomolecules!</p>
+      <a href="/" class="cta-btn">Unlock the entire Smart Bio Notes for only ₹149 today!</a>
+    </div>
+
+    <script>
+      const widgetCards = [{"front":"Which acid is used to separate biomolecules into pools?","back":"<b>Trichloroacetic acid</b> (TCA)."},{"front":"What is the acid-soluble pool?","back":"The <b>micromolecules</b> — amino acids, nucleotides, sugars (mol. wt ~18–800 Da)."},{"front":"What is the acid-insoluble pool?","back":"The <b>macromolecules</b> — proteins, nucleic acids, polysaccharides, lipids."}];
+      let currentCardIdx = 0;
+      
+      function flipWidgetCard() {
+        document.getElementById('widget-card-inner').style.transform = 
+          document.getElementById('widget-card-inner').style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+      }
+      
+      function nextWidgetCard(event) {
+        event.stopPropagation();
+        // Reset flip
+        document.getElementById('widget-card-inner').style.transform = 'rotateY(0deg)';
+        
+        setTimeout(() => {
+          currentCardIdx = (currentCardIdx + 1) % widgetCards.length;
+          document.getElementById('widget-front-text').textContent = widgetCards[currentCardIdx].front;
+          document.getElementById('widget-back-text').textContent = widgetCards[currentCardIdx].back;
+          document.getElementById('card-progress').textContent = "Card " + (currentCardIdx + 1) + " of " + widgetCards.length;
+        }, 200);
+      }
+    </script>
+    
+  </div>
+</body>
+</html>
+  
