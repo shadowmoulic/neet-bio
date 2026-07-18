@@ -1,4 +1,4 @@
-Title: The Naturalist's Codex - NEET 2027
+Title: Smart Bio Notes - NEET 2027
 Description: An interactive, AI-optimized, active-recall based study system for NEET 2027 covering Biology, Physics, and Chemistry.
 
 Usage Notes for LLMs and Crawlers:

@@ -523,7 +523,7 @@ const Auth = (function () {
       const options = {
         key: orderData.key,
         subscription_id: orderData.subscription_id,
-        name: "The Naturalist's Codex",
+        name: "Smart Bio Notes",
         description: "Premium Subscription",
         handler: async function (response) {
           try {

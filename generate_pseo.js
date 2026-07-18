@@ -348,7 +348,7 @@ function getBaseHeader(title, desc, depth = 2, schemas = null) {
 </head>
 <body>
   <div class="pseo-container">
-    <a href="${relPath}" class="back-btn">← Back to Codex Home</a>
+    <a href="${relPath}" class="back-btn">← Back to Smart Bio Notes Home</a>
 `;
 }
 
@@ -361,11 +361,11 @@ function getBaseFooter() {
 
 // Keep track of sitemap urls
 const sitemapUrls = [
-  { loc: 'https://smartbionotes.vercel.app/', priority: '1.0', changefreq: 'daily' },
-  { loc: 'https://smartbionotes.vercel.app/terms/', priority: '0.5', changefreq: 'monthly' },
-  { loc: 'https://smartbionotes.vercel.app/privacy/', priority: '0.5', changefreq: 'monthly' },
-  { loc: 'https://smartbionotes.vercel.app/guide/', priority: '0.8', changefreq: 'weekly' },
-  { loc: 'https://smartbionotes.vercel.app/pricing/', priority: '0.8', changefreq: 'monthly' }
+  { loc: 'https://smartbionotes.in/', priority: '1.0', changefreq: 'daily' },
+  { loc: 'https://smartbionotes.in/terms/', priority: '0.5', changefreq: 'monthly' },
+  { loc: 'https://smartbionotes.in/privacy/', priority: '0.5', changefreq: 'monthly' },
+  { loc: 'https://smartbionotes.in/guide/', priority: '0.8', changefreq: 'weekly' },
+  { loc: 'https://smartbionotes.in/pricing/', priority: '0.8', changefreq: 'monthly' }
 ];
 
 const glossaryTerms = [];
@@ -450,9 +450,9 @@ Object.keys(DATA.chapters).forEach(id => {
   ensureDir(mcqDir);
   ensureDir(flashDir);
 
-  sitemapUrls.push({ loc: `https://smartbionotes.vercel.app/notes/${slug}/`, priority: '0.8', changefreq: 'weekly' });
-  sitemapUrls.push({ loc: `https://smartbionotes.vercel.app/mcq/${slug}/`, priority: '0.8', changefreq: 'weekly' });
-  sitemapUrls.push({ loc: `https://smartbionotes.vercel.app/flashcards/${slug}/`, priority: '0.8', changefreq: 'weekly' });
+  sitemapUrls.push({ loc: `https://smartbionotes.in/notes/${slug}/`, priority: '0.8', changefreq: 'weekly' });
+  sitemapUrls.push({ loc: `https://smartbionotes.in/mcq/${slug}/`, priority: '0.8', changefreq: 'weekly' });
+  sitemapUrls.push({ loc: `https://smartbionotes.in/flashcards/${slug}/`, priority: '0.8', changefreq: 'weekly' });
 
   // Get related elements for this chapter
   const thisChapterTerms = glossaryTerms.filter(t => t.chapterId === id).slice(0, 5);
@@ -878,7 +878,7 @@ glossaryTerms.forEach((item, idx) => {
   const glossaryDir = path.join(rootDir, 'glossary', termSlug);
   ensureDir(glossaryDir);
 
-  sitemapUrls.push({ loc: `https://smartbionotes.vercel.app/glossary/${termSlug}/`, priority: '0.6', changefreq: 'monthly' });
+  sitemapUrls.push({ loc: `https://smartbionotes.in/glossary/${termSlug}/`, priority: '0.6', changefreq: 'monthly' });
 
   // Matching game items
   const shuffledOthers = glossaryTerms
@@ -943,7 +943,7 @@ glossaryTerms.forEach((item, idx) => {
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
       "name": "NEET Biology Glossary",
-      "url": "https://smartbionotes.vercel.app/glossary/"
+      "url": "https://smartbionotes.in/glossary/"
     }
   };
 
@@ -1052,7 +1052,7 @@ comparisonPages.forEach((item, idx) => {
   const compareDir = path.join(rootDir, 'compare', item.slug);
   ensureDir(compareDir);
 
-  sitemapUrls.push({ loc: `https://smartbionotes.vercel.app/compare/${item.slug}/`, priority: '0.7', changefreq: 'monthly' });
+  sitemapUrls.push({ loc: `https://smartbionotes.in/compare/${item.slug}/`, priority: '0.7', changefreq: 'monthly' });
 
   // Get peer comparisons
   const peerComparisons = comparisonPages

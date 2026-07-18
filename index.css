@@ -187,7 +187,7 @@
       .brand h1 {
         font-size: 15px; /* slight bump for readability */
         letter-spacing: 0;
-        white-space: nowrap; /* prevent 'The Codex' from wrapping to two lines */
+        white-space: nowrap; /* prevent 'The Smart Bio Notes' from wrapping to two lines */
       }
       .brand h1 span {
         display: none;
