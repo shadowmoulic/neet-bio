@@ -73,6 +73,7 @@
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script src="components.js"></script>
   <script src="auth.js"></script>
+  <script src="diagrams.js"></script>
   <script>
     /* ============ ENGINE ============ */
     /* ============================================================
@@ -139,6 +140,7 @@
       { k: "quiz", mi: "⚔️", t: "Quiz Battle", d: "Rapid MCQs with instant explanations." },
       { k: "match", mi: "🔗", t: "Match-Up", d: "Race the clock to pair terms with their meanings." },
       { k: "pathway", mi: "🧩", t: "Build the Pathway", d: "Drag the steps into the correct sequence." },
+      { k: "diagrams", mi: "🏷️", t: "Diagram Labeling", d: "Practice labeling key biological structures and pathways." },
       { k: "boss", mi: "👑", t: "Boss Battle", d: "Every concept & hard name in one long run. 3 lives — clear them all." }
     ];
 
@@ -321,6 +323,7 @@
               else if (modeKey === 'quiz') { modeTitle = "Quiz Battle"; modeDesc = `Solve multiple-choice questions on ${ch.title} with instant explanations.`; }
               else if (modeKey === 'match') { modeTitle = "Match-Up"; modeDesc = `Match terms with their definitions for ${ch.title} in a race against the clock.`; }
               else if (modeKey === 'pathway') { modeTitle = "Pathway"; modeDesc = `Sequence biological steps in order for ${ch.title} to master NCERT flows.`; }
+              else if (modeKey === 'diagrams') { modeTitle = "Diagram Labeling"; modeDesc = `Practice labeling key biological structures and pathways for ${ch.title}.`; }
               else if (modeKey === 'boss') { modeTitle = "Boss Battle"; modeDesc = `Clear every hard question in ${ch.title} without running out of lives.`; }
 
               updateMeta(
@@ -692,7 +695,9 @@
         const ch = DATA.chapters[id]; setAccent(ch);
         const p = chapProgress(id);
         const slug = getSlug(id);
-        const grid = MODES.map(m => `
+        const hasDiag = getDiagramId(ch);
+        const showModes = MODES.filter(m => m.k !== 'diagrams' || hasDiag);
+        const grid = showModes.map(m => `
       <a href="/${slug}/${m.k}" class="mode-card" style="text-decoration: none; display: block;" onclick="event.preventDefault(); App.go('/${slug}/${m.k}')">
         <div class="mi">${m.mi}</div><h4>${m.t}</h4><p>${m.d}</p>
         <span class="go">Open ${m.mi === "👑" ? "boss" : "mode"} →</span>
@@ -726,6 +731,7 @@
         if (k === "boss") return quiz(ch, true);
         if (k === "match") return match(ch);
         if (k === "pathway") return pathway(ch);
+        if (k === "diagrams") return diagramsMode(ch);
       }
 
       function head(ch, title, sub) {
@@ -1028,6 +1034,36 @@
         <div class="actions"><button class="btn btn-ghost" onclick="App.chapter('${pw.ch.id}')">← Modes</button>
         <button class="btn btn-primary" onclick="App.mode('${pw.ch.id}','pathway')">New pathway</button></div></div>`), 700);
         } else showToast(`${correct} of ${pw.answer.length} in the right place — tap a slot to remove & retry`);
+      }
+
+      function getDiagramId(ch) {
+        if (!window.DIAGRAM_DATA || !window.DIAGRAM_DATA.diagrams) return null;
+        const chTitle = (ch.title || "").toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '');
+        for (const [diagId, diag] of Object.entries(window.DIAGRAM_DATA.diagrams)) {
+          const diagTitle = (diag.chapter || "").toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '');
+          if (chTitle === diagTitle || ch.id === diagId) {
+            return diagId;
+          }
+        }
+        const manualMap = {
+          'brain_biolab11_neural': 'neuron',
+          'brain_biolabphotosynthesisandresphtml_c13': 'chloroplast'
+        };
+        return manualMap[ch.id] || null;
+      }
+
+      function diagramsMode(ch) {
+        const diagId = getDiagramId(ch);
+        if (!diagId) return home();
+        
+        render(`${head(ch, "Diagram Labeling", "Practice labeling key biological structures and pathways.")}
+        <div class="ar-stage" style="background:#ffffff; border-radius:12px; padding:20px; color:#1c1c1e; min-height:300px; margin-top:20px; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+          <div id="diagram-container"></div>
+        </div>`);
+        
+        if (window.DiagramLearner) {
+          window.DiagramLearner.mount(document.getElementById('diagram-container'), diagId);
+        }
       }
 
       /* ============================ RESET ============================ */
