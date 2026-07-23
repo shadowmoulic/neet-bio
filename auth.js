@@ -485,6 +485,20 @@ const Auth = (function () {
     }
   }
 
+  function ensureRazorpayLoaded() {
+    return new Promise((resolve, reject) => {
+      if (typeof window.Razorpay !== 'undefined') {
+        return resolve();
+      }
+      const script = document.createElement('script');
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      script.async = true;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error('Failed to load Razorpay SDK. Please check your internet connection.'));
+      document.head.appendChild(script);
+    });
+  }
+
   async function payWithRazorpay() {
     showPremiumError('');
     if (!currentUser) {
@@ -497,10 +511,13 @@ const Auth = (function () {
     const payBtn = document.getElementById('payBtn');
     if (payBtn) {
       payBtn.disabled = true;
-      payBtn.textContent = 'Processing...';
+      payBtn.textContent = 'Loading checkout...';
     }
 
     try {
+      await ensureRazorpayLoaded();
+      if (payBtn) payBtn.textContent = 'Processing...';
+
       const planType = document.getElementById('planType').value;
       const billingCycle = document.getElementById('billingCycle').value;
       const coupon = document.getElementById('couponCode').value.trim();
