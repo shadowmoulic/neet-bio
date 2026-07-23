@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "NEET game platform",
   "main": "index.html",
-
+  "scripts": {
+    "build:pseo": "node generate_pseo.js",
+    "build:home": "node generate_home_static.js",
+    "build:home-demo": "node generate_home_demo.js",
+    "build:seo": "npm run build:pseo && npm run build:home && npm run build:home-demo"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.8",
     "razorpay": "^2.9.2"

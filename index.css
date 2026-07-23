@@ -470,6 +470,69 @@ main {
   color: var(--c)
 }
 
+/* ---------- Why-it-works grid (home) ---------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px
+}
+
+@media (max-width: 800px) {
+  .why-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+.why-card {
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--panel);
+  padding: 22px
+}
+
+.why-card .n {
+  font-family: var(--mono);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px
+}
+
+.why-card h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin-bottom: 8px
+}
+
+.why-card p {
+  font-size: 13px;
+  color: var(--ink-dim);
+  line-height: 1.6
+}
+
+/* ---------- FAQ (home) ---------- */
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0
+}
+
+.faq-item h4 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: var(--ink)
+}
+
+.faq-item p {
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  line-height: 1.6
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
