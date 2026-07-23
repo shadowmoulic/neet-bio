@@ -1,9 +1,20 @@
-Title: Smart Bio Notes - NEET 2027
-Description: An interactive, AI-optimized, active-recall based study system for NEET 2027 covering Biology, Physics, and Chemistry.
+# Smart Bio Notes — NEET Biology & Science Study Platform
 
-Usage Notes for LLMs and Crawlers:
-- This platform requires JavaScript to render its content dynamically.
-- The platform contains 35+ chapters, 1000+ flashcards, and hundreds of MCQs.
-- Core content is protected behind authentication and premium subscriptions.
-- Please refer to /terms/ for terms of service.
-- The platform uses flashcards, quizzes, and spaced repetition.
+> Smart Bio Notes is an interactive, AI-optimized active-recall study system built for NEET 2027 aspirants. It covers the full NCERT Class 11 and Class 12 Biology, Physics, and Chemistry syllabus with adaptive flashcards, spaced-repetition quizzes, smart mnemonics, and pre-rendered study notes.
+
+## Primary Resources & Navigation
+
+- [Homepage](https://smartbionotes.in/): Main interactive platform and chapter dashboard.
+- [Study Notes & Syllabus](https://smartbionotes.in/#chap-grid): Complete NCERT chapter notes with flow diagrams, comparison tables, and formulas.
+- [Interactive Guide](https://smartbionotes.in/guide/): Detailed walkthrough on active recall, spaced repetition, and how to study effectively for NEET.
+- [Sitemap](https://smartbionotes.in/sitemap.xml): Full XML index of all pre-rendered pSEO pages, notes, flashcards, and MCQs.
+
+## Legal & Compliance
+
+- [Terms of Service](https://smartbionotes.in/terms/): Usage terms and subscription policies.
+- [Privacy Policy](https://smartbionotes.in/privacy/): Data handling and user privacy guidelines.
+
+## Technical & Crawler Guidance
+
+- **Content Structure**: Contains 35+ NCERT chapters, 1,700+ interactive flashcards, 1,600+ MCQs, and 170+ mnemonics.
+- **Rendering**: Static pre-rendered pages exist for all chapters (`/notes/*`, `/mcq/*`, `/flashcards/*`), while the core app hydrates dynamically for authenticated users.

@@ -116,7 +116,7 @@ function chapCardHTML(c) {
   return `<a href="/notes/${slug}/" class="chap-card" style="--cc:${c.color}; text-decoration:none; display:block;">
         <span class="subject-badge ${SUBJECT_BADGE_CLASS[subj] || ''}">${SUBJECT_LABEL[subj] || subj}</span>
         <div class="glyph">${c.glyph}</div>
-        <h4 style="color:#ffffff;">${esc(c.title)}</h4>
+        <h3 style="color:#ffffff;">${esc(c.title)}</h3>
         <div class="sub">${esc(c.subtitle)}</div>
         <div class="pct"><span>${(c.flashcards || []).length} cards</span><span>${(c.mcqs || []).length} MCQs</span></div>
         <div class="static-links" style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
@@ -157,8 +157,8 @@ const FAQ_ITEMS = [
   { q: "Can I try a chapter before paying?", a: "Yes — every chapter has a public Study Notes page, a live MCQ demo, and a flashcard preview you can use right now without an account." }
 ];
 
-const whyHTML = WHY_ITEMS.map((w, i) => `<div class="why-card"><div class="n">0${i + 1}</div><h4>${w.h}</h4><p>${w.p}</p></div>`).join('');
-const faqHTML = FAQ_ITEMS.map(f => `<div class="faq-item"><h4>${f.q}</h4><p>${f.a}</p></div>`).join('');
+const whyHTML = WHY_ITEMS.map((w, i) => `<div class="why-card"><div class="n">0${i + 1}</div><h3>${w.h}</h3><p>${w.p}</p></div>`).join('');
+const faqHTML = FAQ_ITEMS.map(f => `<div class="faq-item"><h3>${f.q}</h3><p>${f.a}</p></div>`).join('');
 
 const STATIC_MAIN = `
       <section class="hero">
