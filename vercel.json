@@ -2,6 +2,6 @@
   "rewrites": [
     { "source": "/admin", "destination": "/admin.html" },
     { "source": "/admin/", "destination": "/admin.html" },
-    { "source": "/((?!api|admin|privacy|terms|guide|notes|mcq|compare|flashcards|glossary|pricing|.*\\.).*)", "destination": "/index.html" }
+    { "source": "/((?!api|admin|privacy|terms|guide|notes|mcq|compare|flashcards|glossary|pricing|home-demo|.*\\.).*)", "destination": "/index.html" }
   ]
 }
